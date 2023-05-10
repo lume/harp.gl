@@ -1,0 +1,2061 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>DisplacedBufferGeometry | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_mapview.html">harp-mapview</a>
+				</li>
+				<li>
+					<a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>
+				</li>
+			</ul>
+			<h1>Class DisplacedBufferGeometry</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<dl class="tsd-comment-tags">
+						<dt>internal</dt>
+						<dd><p>BufferGeometry decorator that displaces on the fly the position attribute using a specified
+							displacement map.</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="tsd-signature-type">BufferGeometry</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">DisplacedBufferGeometry</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="harp_mapview.displacedbuffergeometry.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#attributes" class="tsd-kind-icon">attributes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#boundingbox" class="tsd-kind-icon">bounding<wbr>Box</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#boundingsphere" class="tsd-kind-icon">bounding<wbr>Sphere</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_mapview.displacedbuffergeometry.html#displacementrange" class="tsd-kind-icon">displacement<wbr>Range</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#drawrange" class="tsd-kind-icon">draw<wbr>Range</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#drawcalls" class="tsd-kind-icon">drawcalls</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#groups" class="tsd-kind-icon">groups</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#index" class="tsd-kind-icon">index</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#isbuffergeometry" class="tsd-kind-icon">is<wbr>Buffer<wbr>Geometry</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#morphattributes" class="tsd-kind-icon">morph<wbr>Attributes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#morphtargetsrelative" class="tsd-kind-icon">morph<wbr>Targets<wbr>Relative</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#offsets" class="tsd-kind-icon">offsets</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_mapview.displacedbuffergeometry.html#originalgeometry" class="tsd-kind-icon">original<wbr>Geometry</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#userdata" class="tsd-kind-icon">user<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#uuid" class="tsd-kind-icon">uuid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="harp_mapview.displacedbuffergeometry.html#maxindex" class="tsd-kind-icon">Max<wbr>Index</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#addattribute" class="tsd-kind-icon">add<wbr>Attribute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#adddrawcall" class="tsd-kind-icon">add<wbr>Draw<wbr>Call</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#addgroup" class="tsd-kind-icon">add<wbr>Group</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#addindex" class="tsd-kind-icon">add<wbr>Index</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#applymatrix4" class="tsd-kind-icon">apply<wbr>Matrix4</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#applyquaternion" class="tsd-kind-icon">apply<wbr>Quaternion</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#center" class="tsd-kind-icon">center</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#cleardrawcalls" class="tsd-kind-icon">clear<wbr>Draw<wbr>Calls</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#cleargroups" class="tsd-kind-icon">clear<wbr>Groups</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#clone" class="tsd-kind-icon">clone</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="harp_mapview.displacedbuffergeometry.html#computeboundingbox" class="tsd-kind-icon">compute<wbr>Bounding<wbr>Box</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="harp_mapview.displacedbuffergeometry.html#computeboundingsphere" class="tsd-kind-icon">compute<wbr>Bounding<wbr>Sphere</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#computetangents" class="tsd-kind-icon">compute<wbr>Tangents</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#computevertexnormals" class="tsd-kind-icon">compute<wbr>Vertex<wbr>Normals</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#copy" class="tsd-kind-icon">copy</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#deleteattribute" class="tsd-kind-icon">delete<wbr>Attribute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#dispose" class="tsd-kind-icon">dispose</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#getattribute" class="tsd-kind-icon">get<wbr>Attribute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#getindex" class="tsd-kind-icon">get<wbr>Index</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#hasattribute" class="tsd-kind-icon">has<wbr>Attribute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#haseventlistener" class="tsd-kind-icon">has<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#lookat" class="tsd-kind-icon">look<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#merge" class="tsd-kind-icon">merge</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#normalizenormals" class="tsd-kind-icon">normalize<wbr>Normals</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#removeattribute" class="tsd-kind-icon">remove<wbr>Attribute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.displacedbuffergeometry.html#reset" class="tsd-kind-icon">reset</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#rotatex" class="tsd-kind-icon">rotateX</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#rotatey" class="tsd-kind-icon">rotateY</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#rotatez" class="tsd-kind-icon">rotateZ</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#scale" class="tsd-kind-icon">scale</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#setattribute" class="tsd-kind-icon">set<wbr>Attribute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#setdrawrange" class="tsd-kind-icon">set<wbr>Draw<wbr>Range</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#setfrompoints" class="tsd-kind-icon">set<wbr>From<wbr>Points</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#setindex" class="tsd-kind-icon">set<wbr>Index</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#tojson" class="tsd-kind-icon">toJSON</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#tononindexed" class="tsd-kind-icon">to<wbr>Non<wbr>Indexed</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.displacedbuffergeometry.html#translate" class="tsd-kind-icon">translate</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Displaced<wbr>Buffer<wbr>Geometry<span class="tsd-signature-symbol">(</span>originalGeometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, displacementMap<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DataTexture</span>, displacementRange<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.displacementrange.html" class="tsd-signature-type">DisplacementRange</a>, displacedPositions<span class="tsd-signature-symbol">?: </span><a href="harp_mapview.displacedbufferattribute.html" class="tsd-signature-type">DisplacedBufferAttribute</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.displacedbuffergeometry.html" class="tsd-signature-type">DisplacedBufferGeometry</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides BufferGeometry.__constructor</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts#L54">@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts:54</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates an instance of displaced buffer geometry.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>originalGeometry: <span class="tsd-signature-type">BufferGeometry</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The goeometry to be displaced.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>displacementMap: <span class="tsd-signature-type">DataTexture</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A texture with the displacement values.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>displacementRange: <a href="../interfaces/harp_mapview.displacementrange.html" class="tsd-signature-type">DisplacementRange</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The displacement value range found in the displacement map.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> displacedPositions: <a href="harp_mapview.displacedbufferattribute.html" class="tsd-signature-type">DisplacedBufferAttribute</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Buffer attribute that will be used for displaced positions if
+											provided, otherwise a new buffer attribute will be created.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.displacedbuffergeometry.html" class="tsd-signature-type">DisplacedBufferGeometry</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="attributes" class="tsd-anchor"></a>
+					<h3>attributes</h3>
+					<div class="tsd-signature tsd-kind-icon">attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#attributes">attributes</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:51</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>{}</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="boundingbox" class="tsd-anchor"></a>
+					<h3>bounding<wbr>Box</h3>
+					<div class="tsd-signature tsd-kind-icon">bounding<wbr>Box<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Box3</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#boundingbox">boundingBox</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:75</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="boundingsphere" class="tsd-anchor"></a>
+					<h3>bounding<wbr>Sphere</h3>
+					<div class="tsd-signature tsd-kind-icon">bounding<wbr>Sphere<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Sphere</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#boundingsphere">boundingSphere</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:80</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="displacementrange" class="tsd-anchor"></a>
+					<h3>displacement<wbr>Range</h3>
+					<div class="tsd-signature tsd-kind-icon">displacement<wbr>Range<span class="tsd-signature-symbol">:</span> <a href="../interfaces/harp_mapview.displacementrange.html" class="tsd-signature-type">DisplacementRange</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts#L67">@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts:67</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The displacement value range found in the displacement map.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="drawrange" class="tsd-anchor"></a>
+					<h3>draw<wbr>Range</h3>
+					<div class="tsd-signature tsd-kind-icon">draw<wbr>Range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#drawrange">drawRange</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:85</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>{ start: 0, count: Infinity }</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="drawcalls" class="tsd-anchor"></a>
+					<h3>drawcalls</h3>
+					<div class="tsd-signature tsd-kind-icon">drawcalls<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#drawcalls">drawcalls</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:166</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use {@link BufferGeometry#groups .groups} instead.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="groups" class="tsd-anchor"></a>
+					<h3>groups</h3>
+					<div class="tsd-signature tsd-kind-icon">groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>materialIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#groups">groups</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:70</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>[]</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#id">id</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:30</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Unique number of this buffergeometry instance</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="index" class="tsd-anchor"></a>
+					<h3>index</h3>
+					<div class="tsd-signature tsd-kind-icon">index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#index">index</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:46</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="isbuffergeometry" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Buffer<wbr>Geometry</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Buffer<wbr>Geometry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#isbuffergeometry">isBufferGeometry</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:91</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="morphattributes" class="tsd-anchor"></a>
+					<h3>morph<wbr>Attributes</h3>
+					<div class="tsd-signature tsd-kind-icon">morph<wbr>Attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#morphattributes">morphAttributes</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:58</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>{}</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="morphtargetsrelative" class="tsd-anchor"></a>
+					<h3>morph<wbr>Targets<wbr>Relative</h3>
+					<div class="tsd-signature tsd-kind-icon">morph<wbr>Targets<wbr>Relative<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#morphtargetsrelative">morphTargetsRelative</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:65</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#name">name</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:36</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>&#39;&#39;</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="offsets" class="tsd-anchor"></a>
+					<h3>offsets</h3>
+					<div class="tsd-signature tsd-kind-icon">offsets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#offsets">offsets</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:171</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use {@link BufferGeometry#groups .groups} instead.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="originalgeometry" class="tsd-anchor"></a>
+					<h3>original<wbr>Geometry</h3>
+					<div class="tsd-signature tsd-kind-icon">original<wbr>Geometry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BufferGeometry</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts#L65">@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts:65</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The goeometry to be displaced.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="type" class="tsd-anchor"></a>
+					<h3>type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#type">type</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:41</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>&#39;BufferGeometry&#39;</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="userdata" class="tsd-anchor"></a>
+					<h3>user<wbr>Data</h3>
+					<div class="tsd-signature tsd-kind-icon">user<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#userdata">userData</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:90</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>{}</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="uuid" class="tsd-anchor"></a>
+					<h3>uuid</h3>
+					<div class="tsd-signature tsd-kind-icon">uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#uuid">uuid</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:31</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="maxindex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Max<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">Max<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#maxindex">MaxIndex</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:25</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="addattribute" class="tsd-anchor"></a>
+					<h3>add<wbr>Attribute</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Attribute<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, attribute<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Attribute<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, itemSize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#addattribute">addAttribute</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:191</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use {@link BufferGeometry#setAttribute .setAttribute()} instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>attribute: <span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#addattribute">addAttribute</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:192</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>array: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>itemSize: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="adddrawcall" class="tsd-anchor"></a>
+					<h3>add<wbr>Draw<wbr>Call</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Draw<wbr>Call<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, indexOffset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#adddrawcall">addDrawCall</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:181</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use {@link BufferGeometry#addGroup .addGroup()} instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>start: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>count: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> indexOffset: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="addeventlistener" class="tsd-anchor"></a>
+					<h3>add<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_materials.rawshadermaterial-1.html">RawShaderMaterial</a>.<a href="harp_materials.rawshadermaterial-1.html#addeventlistener">addEventListener</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:26</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a listener to an event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of event to listen to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function that gets called when the event is fired.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>event: <span class="tsd-signature-type">Event</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="addgroup" class="tsd-anchor"></a>
+					<h3>add<wbr>Group</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Group<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, materialIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#addgroup">addGroup</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:104</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>start: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>count: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> materialIndex: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="addindex" class="tsd-anchor"></a>
+					<h3>add<wbr>Index</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Index<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#addindex">addIndex</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:176</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use {@link BufferGeometry#setIndex .setIndex()} instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="applymatrix4" class="tsd-anchor"></a>
+					<h3>apply<wbr>Matrix4</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">apply<wbr>Matrix4<span class="tsd-signature-symbol">(</span>matrix<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Matrix4</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#applymatrix4">applyMatrix4</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:112</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Bakes matrix transform directly into vertex coordinates.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>matrix: <span class="tsd-signature-type">Matrix4</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="applyquaternion" class="tsd-anchor"></a>
+					<h3>apply<wbr>Quaternion</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">apply<wbr>Quaternion<span class="tsd-signature-symbol">(</span>q<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Quaternion</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#applyquaternion">applyQuaternion</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:113</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>q: <span class="tsd-signature-type">Quaternion</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="center" class="tsd-anchor"></a>
+					<h3>center</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">center<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#center">center</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:122</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="cleardrawcalls" class="tsd-anchor"></a>
+					<h3>clear<wbr>Draw<wbr>Calls</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Draw<wbr>Calls<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#cleardrawcalls">clearDrawCalls</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:186</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use {@link BufferGeometry#clearGroups .clearGroups()} instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="cleargroups" class="tsd-anchor"></a>
+					<h3>clear<wbr>Groups</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Groups<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#cleargroups">clearGroups</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:105</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="clone" class="tsd-anchor"></a>
+					<h3>clone</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">clone<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#clone">clone</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:154</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="computeboundingbox" class="tsd-anchor"></a>
+					<h3>compute<wbr>Bounding<wbr>Box</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">compute<wbr>Bounding<wbr>Box<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides BufferGeometry.computeBoundingBox</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts#L109">@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts:109</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="computeboundingsphere" class="tsd-anchor"></a>
+					<h3>compute<wbr>Bounding<wbr>Sphere</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">compute<wbr>Bounding<wbr>Sphere<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides BufferGeometry.computeBoundingSphere</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts#L131">@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts:131</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="computetangents" class="tsd-anchor"></a>
+					<h3>compute<wbr>Tangents</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">compute<wbr>Tangents<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#computetangents">computeTangents</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:141</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes and adds tangent attribute to this geometry.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="computevertexnormals" class="tsd-anchor"></a>
+					<h3>compute<wbr>Vertex<wbr>Normals</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">compute<wbr>Vertex<wbr>Normals<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#computevertexnormals">computeVertexNormals</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:146</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes vertex normals by averaging face normals.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="copy" class="tsd-anchor"></a>
+					<h3>copy</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">copy<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#copy">copy</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:155</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>source: <span class="tsd-signature-type">BufferGeometry</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="deleteattribute" class="tsd-anchor"></a>
+					<h3>delete<wbr>Attribute</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Attribute<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#deleteattribute">deleteAttribute</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:101</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="dispatchevent" class="tsd-anchor"></a>
+					<h3>dispatch<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">dispatch<wbr>Event<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_materials.rawshadermaterial-1.html">RawShaderMaterial</a>.<a href="harp_materials.rawshadermaterial-1.html#dispatchevent">dispatchEvent</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:46</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fire an event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-symbol">{ </span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-index-signature">
+											<h5><span class="tsd-signature-symbol">[</span>attachment: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="dispose" class="tsd-anchor"></a>
+					<h3>dispose</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#dispose">dispose</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:161</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Disposes the object from memory.
+									You need to call this when you want the bufferGeometry removed while the application is running.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getattribute" class="tsd-anchor"></a>
+					<h3>get<wbr>Attribute</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Attribute<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#getattribute">getAttribute</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:100</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getindex" class="tsd-anchor"></a>
+					<h3>get<wbr>Index</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Index<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#getindex">getIndex</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:93</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="hasattribute" class="tsd-anchor"></a>
+					<h3>has<wbr>Attribute</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Attribute<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#hasattribute">hasAttribute</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:102</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="haseventlistener" class="tsd-anchor"></a>
+					<h3>has<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_materials.rawshadermaterial-1.html">RawShaderMaterial</a>.<a href="harp_materials.rawshadermaterial-1.html#haseventlistener">hasEventListener</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:33</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if listener is added to an event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of event to listen to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function that gets called when the event is fired.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>event: <span class="tsd-signature-type">Event</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="lookat" class="tsd-anchor"></a>
+					<h3>look<wbr>At</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">look<wbr>At<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#lookat">lookAt</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:120</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>v: <span class="tsd-signature-type">Vector3</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="merge" class="tsd-anchor"></a>
+					<h3>merge</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">merge<span class="tsd-signature-symbol">(</span>geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#merge">merge</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:148</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>geometry: <span class="tsd-signature-type">BufferGeometry</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> offset: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="normalizenormals" class="tsd-anchor"></a>
+					<h3>normalize<wbr>Normals</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">normalize<wbr>Normals<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#normalizenormals">normalizeNormals</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:149</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removeattribute" class="tsd-anchor"></a>
+					<h3>remove<wbr>Attribute</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Attribute<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#removeattribute">removeAttribute</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:197</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use {@link BufferGeometry#deleteAttribute .deleteAttribute()} instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removeeventlistener" class="tsd-anchor"></a>
+					<h3>remove<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_materials.rawshadermaterial-1.html">RawShaderMaterial</a>.<a href="harp_materials.rawshadermaterial-1.html#removeeventlistener">removeEventListener</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:40</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes a listener from an event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of the listener that gets removed.</p>
+									</div>
+								</li>
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The listener function that gets removed.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>event: <span class="tsd-signature-type">Event</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="reset" class="tsd-anchor"></a>
+					<h3>reset</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">reset<span class="tsd-signature-symbol">(</span>geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, displacementMap<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DataTexture</span>, displacementRange<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.displacementrange.html" class="tsd-signature-type">DisplacementRange</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts#L90">@here/harp-mapview/lib/geometry/DisplacedBufferGeometry.ts:90</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Resets the displaced buffer geometry to use new geometry or displacement map.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>geometry: <span class="tsd-signature-type">BufferGeometry</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The goeometry to be displaced.</p>
+									</div>
+								</li>
+								<li>
+									<h5>displacementMap: <span class="tsd-signature-type">DataTexture</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A texture with the displacement values.</p>
+									</div>
+								</li>
+								<li>
+									<h5>displacementRange: <a href="../interfaces/harp_mapview.displacementrange.html" class="tsd-signature-type">DisplacementRange</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The displacement value range found in the displacement map.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="rotatex" class="tsd-anchor"></a>
+					<h3>rotateX</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">rotateX<span class="tsd-signature-symbol">(</span>angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#rotatex">rotateX</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:115</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>angle: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="rotatey" class="tsd-anchor"></a>
+					<h3>rotateY</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">rotateY<span class="tsd-signature-symbol">(</span>angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#rotatey">rotateY</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:116</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>angle: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="rotatez" class="tsd-anchor"></a>
+					<h3>rotateZ</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">rotateZ<span class="tsd-signature-symbol">(</span>angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#rotatez">rotateZ</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:117</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>angle: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="scale" class="tsd-anchor"></a>
+					<h3>scale</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">scale<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#scale">scale</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:119</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>z: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setattribute" class="tsd-anchor"></a>
+					<h3>set<wbr>Attribute</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Attribute<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span>, attribute<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#setattribute">setAttribute</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:96</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+								<li>
+									<h5>attribute: <span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setdrawrange" class="tsd-anchor"></a>
+					<h3>set<wbr>Draw<wbr>Range</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Draw<wbr>Range<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#setdrawrange">setDrawRange</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:107</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>start: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>count: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setfrompoints" class="tsd-anchor"></a>
+					<h3>set<wbr>From<wbr>Points</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>From<wbr>Points<span class="tsd-signature-symbol">(</span>points<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Vector2</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#setfrompoints">setFromPoints</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:124</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>points: <span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Vector2</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setindex" class="tsd-anchor"></a>
+					<h3>set<wbr>Index</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Index<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#setindex">setIndex</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:94</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="tojson" class="tsd-anchor"></a>
+					<h3>toJSON</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">toJSON<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#tojson">toJSON</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:153</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="tononindexed" class="tsd-anchor"></a>
+					<h3>to<wbr>Non<wbr>Indexed</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Non<wbr>Indexed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#tononindexed">toNonIndexed</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:151</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="translate" class="tsd-anchor"></a>
+					<h3>translate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">translate<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, z<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.displacedbuffergeometry.html">DisplacedBufferGeometry</a>.<a href="harp_mapview.displacedbuffergeometry.html#translate">translate</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:118</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>z: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html">harp-<wbr>mapview</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.camerautils-1.html">Camera<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.copyrightinfo-1.html">Copyright<wbr>Info</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.mapviewutils-1.html">Map<wbr>View<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.object3dutils.html">Object3DUtils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.tileoffsetutils-1.html">Tile<wbr>Offset<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+						<ul>
+							<li class="current tsd-kind-class tsd-parent-kind-module">
+								<a href="harp_mapview.displacedbuffergeometry.html" class="tsd-kind-icon">Displaced<wbr>Buffer<wbr>Geometry</a>
+								<ul>
+									<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+										<a href="harp_mapview.displacedbuffergeometry.html#constructor" class="tsd-kind-icon">constructor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#attributes" class="tsd-kind-icon">attributes</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#boundingbox" class="tsd-kind-icon">bounding<wbr>Box</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#boundingsphere" class="tsd-kind-icon">bounding<wbr>Sphere</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_mapview.displacedbuffergeometry.html#displacementrange" class="tsd-kind-icon">displacement<wbr>Range</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#drawrange" class="tsd-kind-icon">draw<wbr>Range</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#drawcalls" class="tsd-kind-icon">drawcalls</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#groups" class="tsd-kind-icon">groups</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#id" class="tsd-kind-icon">id</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#index" class="tsd-kind-icon">index</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#isbuffergeometry" class="tsd-kind-icon">is<wbr>Buffer<wbr>Geometry</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#morphattributes" class="tsd-kind-icon">morph<wbr>Attributes</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#morphtargetsrelative" class="tsd-kind-icon">morph<wbr>Targets<wbr>Relative</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#name" class="tsd-kind-icon">name</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#offsets" class="tsd-kind-icon">offsets</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_mapview.displacedbuffergeometry.html#originalgeometry" class="tsd-kind-icon">original<wbr>Geometry</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#type" class="tsd-kind-icon">type</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#userdata" class="tsd-kind-icon">user<wbr>Data</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#uuid" class="tsd-kind-icon">uuid</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<a href="harp_mapview.displacedbuffergeometry.html#maxindex" class="tsd-kind-icon">Max<wbr>Index</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#addattribute" class="tsd-kind-icon">add<wbr>Attribute</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#adddrawcall" class="tsd-kind-icon">add<wbr>Draw<wbr>Call</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#addgroup" class="tsd-kind-icon">add<wbr>Group</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#addindex" class="tsd-kind-icon">add<wbr>Index</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#applymatrix4" class="tsd-kind-icon">apply<wbr>Matrix4</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#applyquaternion" class="tsd-kind-icon">apply<wbr>Quaternion</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#center" class="tsd-kind-icon">center</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#cleardrawcalls" class="tsd-kind-icon">clear<wbr>Draw<wbr>Calls</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#cleargroups" class="tsd-kind-icon">clear<wbr>Groups</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#clone" class="tsd-kind-icon">clone</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+										<a href="harp_mapview.displacedbuffergeometry.html#computeboundingbox" class="tsd-kind-icon">compute<wbr>Bounding<wbr>Box</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+										<a href="harp_mapview.displacedbuffergeometry.html#computeboundingsphere" class="tsd-kind-icon">compute<wbr>Bounding<wbr>Sphere</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#computetangents" class="tsd-kind-icon">compute<wbr>Tangents</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#computevertexnormals" class="tsd-kind-icon">compute<wbr>Vertex<wbr>Normals</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#copy" class="tsd-kind-icon">copy</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#deleteattribute" class="tsd-kind-icon">delete<wbr>Attribute</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#dispose" class="tsd-kind-icon">dispose</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#getattribute" class="tsd-kind-icon">get<wbr>Attribute</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#getindex" class="tsd-kind-icon">get<wbr>Index</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#hasattribute" class="tsd-kind-icon">has<wbr>Attribute</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#haseventlistener" class="tsd-kind-icon">has<wbr>Event<wbr>Listener</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#lookat" class="tsd-kind-icon">look<wbr>At</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#merge" class="tsd-kind-icon">merge</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#normalizenormals" class="tsd-kind-icon">normalize<wbr>Normals</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#removeattribute" class="tsd-kind-icon">remove<wbr>Attribute</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.displacedbuffergeometry.html#reset" class="tsd-kind-icon">reset</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#rotatex" class="tsd-kind-icon">rotateX</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#rotatey" class="tsd-kind-icon">rotateY</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#rotatez" class="tsd-kind-icon">rotateZ</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#scale" class="tsd-kind-icon">scale</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#setattribute" class="tsd-kind-icon">set<wbr>Attribute</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#setdrawrange" class="tsd-kind-icon">set<wbr>Draw<wbr>Range</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#setfrompoints" class="tsd-kind-icon">set<wbr>From<wbr>Points</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#setindex" class="tsd-kind-icon">set<wbr>Index</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#tojson" class="tsd-kind-icon">toJSON</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#tononindexed" class="tsd-kind-icon">to<wbr>Non<wbr>Indexed</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.displacedbuffergeometry.html#translate" class="tsd-kind-icon">translate</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

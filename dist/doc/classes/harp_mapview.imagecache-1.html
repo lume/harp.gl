@@ -1,0 +1,531 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ImageCache | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_mapview.html">harp-mapview</a>
+				</li>
+				<li>
+					<a href="harp_mapview.imagecache-1.html">ImageCache</a>
+				</li>
+			</ul>
+			<h1>Class ImageCache</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<dl class="tsd-comment-tags">
+						<dt>internal</dt>
+						<dd><p><code>ImageCache</code> is a singleton, so it can be used with multiple owners on a single page.</p>
+						</dd>
+						<dt>remarks</dt>
+						<dd><p>This allows to have an image loaded only once for multiple views.
+								THREE is doing something similar,
+								but does not allow to share images that have been loaded from a canvas (which we may need to do
+							if we use SVG images for textures).</p>
+							<p>One application that makes our own cache necessary is the generation of our own textures from
+							data that is not an URL.</p>
+							<p>The <code>ImageCache</code> can be improved by adding statistics for memory footprint as well.</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ImageCache</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="harp_mapview.imagecache-1.html#size" class="tsd-kind-icon">size</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="harp_mapview.imagecache-1.html#instance" class="tsd-kind-icon">instance</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.imagecache-1.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.imagecache-1.html#findimage" class="tsd-kind-icon">find<wbr>Image</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.imagecache-1.html#registerimage" class="tsd-kind-icon">register<wbr>Image</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.imagecache-1.html#removeimage" class="tsd-kind-icon">remove<wbr>Image</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_mapview.imagecache-1.html#dispose" class="tsd-kind-icon">dispose</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="size" class="tsd-anchor"></a>
+					<h3>size</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/image/ImageCache.ts#L143">@here/harp-mapview/lib/image/ImageCache.ts:143</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the number of all cached <a href="../modules/harp_mapview.html#imageitem">ImageItem</a>s.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
+					<a name="instance" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> instance</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> instance<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.imagecache-1.html" class="tsd-signature-type">ImageCache</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/image/ImageCache.ts#L48">@here/harp-mapview/lib/image/ImageCache.ts:48</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the singleton <code>instance</code> of the <code>ImageCache</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.imagecache-1.html" class="tsd-signature-type">ImageCache</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clear" class="tsd-anchor"></a>
+					<h3>clear</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/image/ImageCache.ts#L134">@here/harp-mapview/lib/image/ImageCache.ts:134</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Clear all <a href="../modules/harp_mapview.html#imageitem">ImageItem</a>s belonging to an owner.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd><p>May remove cached items if no owner is registered anymore.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>owner: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>specify to remove all items registered by {@link any}.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<p>Number of images removed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="findimage" class="tsd-anchor"></a>
+					<h3>find<wbr>Image</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Image<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.imageitem-1.html" class="tsd-signature-type">ImageItem</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/image/ImageCache.ts#L117">@here/harp-mapview/lib/image/ImageCache.ts:117</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Find <a href="../modules/harp_mapview.html#imageitem">ImageItem</a> for the specified URL.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>URL of image.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.imageitem-1.html" class="tsd-signature-type">ImageItem</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p><code>ImageItem</code> for the URL if the URL is registered, <code>undefined</code> otherwise.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="registerimage" class="tsd-anchor"></a>
+					<h3>register<wbr>Image</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Image<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, image<span class="tsd-signature-symbol">?: </span><a href="../modules/harp_mapview.html#texturizableimage" class="tsd-signature-type">TexturizableImage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.imageitem-1.html" class="tsd-signature-type">ImageItem</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/image/ImageCache.ts#L76">@here/harp-mapview/lib/image/ImageCache.ts:76</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add an image definition to the global cache. Useful when the image data is already loaded.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>owner: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Specify which {@link any} requests the image.</p>
+									</div>
+								</li>
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>URL of image.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> image: <a href="../modules/harp_mapview.html#texturizableimage" class="tsd-signature-type">TexturizableImage</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional <a href="../modules/harp_mapview.html#texturizableimage">TexturizableImage</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.imageitem-1.html" class="tsd-signature-type">ImageItem</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removeimage" class="tsd-anchor"></a>
+					<h3>remove<wbr>Image</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Image<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/image/ImageCache.ts#L102">@here/harp-mapview/lib/image/ImageCache.ts:102</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove an image from the cache..</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>URL of the image.</p>
+									</div>
+								</li>
+								<li>
+									<h5>owner: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Owner removing the image.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if image has been removed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="dispose" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> dispose</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/image/ImageCache.ts#L61">@here/harp-mapview/lib/image/ImageCache.ts:61</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Dispose the singleton object.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd><p>Not normally implemented for singletons, but good for debugging.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html">harp-<wbr>mapview</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.camerautils-1.html">Camera<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.copyrightinfo-1.html">Copyright<wbr>Info</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.mapviewutils-1.html">Map<wbr>View<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.object3dutils.html">Object3DUtils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.tileoffsetutils-1.html">Tile<wbr>Offset<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+						<ul>
+							<li class="current tsd-kind-class tsd-parent-kind-module">
+								<a href="harp_mapview.imagecache-1.html" class="tsd-kind-icon">Image<wbr>Cache</a>
+								<ul>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+										<a href="harp_mapview.imagecache-1.html#size" class="tsd-kind-icon">size</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
+										<a href="harp_mapview.imagecache-1.html#instance" class="tsd-kind-icon">instance</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.imagecache-1.html#clear" class="tsd-kind-icon">clear</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.imagecache-1.html#findimage" class="tsd-kind-icon">find<wbr>Image</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.imagecache-1.html#registerimage" class="tsd-kind-icon">register<wbr>Image</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.imagecache-1.html#removeimage" class="tsd-kind-icon">remove<wbr>Image</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_mapview.imagecache-1.html#dispose" class="tsd-kind-icon">dispose</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1076 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FontCatalog | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_text_canvas.html">harp-text-canvas</a>
+				</li>
+				<li>
+					<a href="harp_text_canvas.fontcatalog-1.html">FontCatalog</a>
+				</li>
+			</ul>
+			<h1>Class FontCatalog</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Collection of font assets used to render glyphs when using a <a href="../modules/harp_text_canvas.html#textcanvas">TextCanvas</a>.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>summary</dt>
+						<dd><p>A <code>FontCatalog</code> works as a stack of SDF bitmap fonts (using the BMFont format) designed
+								to cover the widest Unicode code point range possible. In order to manage all these assets
+								elegantly, the assets inside the <code>FontCatalog</code> are stored on a per-Unicode-Block basis, and
+							assets for a block are only loaded once a glyph belonging to that block is requested.</p>
+							<p>Bitmap information coming from all different fonts is then stored in a unified WebGL GPU Texture
+							resource, which can be sampled to render all currently loaded glyphs.</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">FontCatalog</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#distancerange" class="tsd-kind-icon">distance<wbr>Range</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#fonts" class="tsd-kind-icon">fonts</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#maxcodepointcount" class="tsd-kind-icon">max<wbr>Code<wbr>Point<wbr>Count</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#maxheight" class="tsd-kind-icon">max<wbr>Height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#maxwidth" class="tsd-kind-icon">max<wbr>Width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#showreplacementglyphs" class="tsd-kind-icon">show<wbr>Replacement<wbr>Glyphs</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#size" class="tsd-kind-icon">size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#unicodeblocks" class="tsd-kind-icon">unicode<wbr>Blocks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#url" class="tsd-kind-icon">url</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#isloading" class="tsd-kind-icon">is<wbr>Loading</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#texture" class="tsd-kind-icon">texture</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#texturesize" class="tsd-kind-icon">texture<wbr>Size</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#dispose" class="tsd-kind-icon">dispose</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#getfont" class="tsd-kind-icon">get<wbr>Font</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#getglyph" class="tsd-kind-icon">get<wbr>Glyph</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#getglyphs" class="tsd-kind-icon">get<wbr>Glyphs</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#loadblock" class="tsd-kind-icon">load<wbr>Block</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#loadcharset" class="tsd-kind-icon">load<wbr>Charset</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#removeblock" class="tsd-kind-icon">remove<wbr>Block</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_text_canvas.fontcatalog-1.html#updatememoryusage" class="tsd-kind-icon">update<wbr>Memory<wbr>Usage</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_text_canvas.fontcatalog-1.html#load" class="tsd-kind-icon">load</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_text_canvas.fontcatalog-1.html#loadjson" class="tsd-kind-icon">loadJSON</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_text_canvas.fontcatalog-1.html#loadtexture" class="tsd-kind-icon">load<wbr>Texture</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="distancerange" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> distance<wbr>Range</h3>
+					<div class="tsd-signature tsd-kind-icon">distance<wbr>Range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L195">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:195</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Distance range used to generate the SDF bitmaps.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="fonts" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> fonts</h3>
+					<div class="tsd-signature tsd-kind-icon">fonts<span class="tsd-signature-symbol">:</span> <a href="../interfaces/harp_text_canvas.font-1.html" class="tsd-signature-type">Font</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L196">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:196</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Array of supported fonts.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="maxcodepointcount" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> max<wbr>Code<wbr>Point<wbr>Count</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Code<wbr>Point<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L198">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:198</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Maximum number of unique code points bitmaps this <code>FontCatalog</code>&#39;s
+							internal texture can store simultaneously.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="maxheight" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> max<wbr>Height</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L194">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:194</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>FontCatalog&#39;s maximum glyph height (pixels).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="maxwidth" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> max<wbr>Width</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L193">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:193</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>FontCatalog&#39;s maximum glyph width (pixels).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L190">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:190</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>FontCatalog&#39;s name.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="showreplacementglyphs" class="tsd-anchor"></a>
+					<h3>show<wbr>Replacement<wbr>Glyphs</h3>
+					<div class="tsd-signature tsd-kind-icon">show<wbr>Replacement<wbr>Glyphs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L166">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:166</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If <code>true</code>, a replacement glyph is returned for every missing glyph.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="size" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> size</h3>
+					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L192">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:192</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>FontCatalog&#39;s glyph size (pixels).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="type" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L191">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:191</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>FontCatalog&#39;s type (sdf or msdf).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="unicodeblocks" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> unicode<wbr>Blocks</h3>
+					<div class="tsd-signature tsd-kind-icon">unicode<wbr>Blocks<span class="tsd-signature-symbol">:</span> <a href="../interfaces/harp_text_canvas.unicodeblock-1.html" class="tsd-signature-type">UnicodeBlock</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L197">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:197</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Array of supported Unicode blocks.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="url" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> url</h3>
+					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L189">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:189</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>FontCatalog&#39;s URL.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="isloading" class="tsd-anchor"></a>
+					<h3>is<wbr>Loading</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isLoading<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L270">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:270</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Current internal loading state.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="texture" class="tsd-anchor"></a>
+					<h3>texture</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> texture<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Texture</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L256">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:256</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Internal WebGL Texture.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Texture</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="texturesize" class="tsd-anchor"></a>
+					<h3>texture<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> textureSize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector2</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L263">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:263</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Internal WebGL Texture size.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vector2</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clear" class="tsd-anchor"></a>
+					<h3>clear</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L233">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:233</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes all loaded (and loading) assets.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="dispose" class="tsd-anchor"></a>
+					<h3>dispose</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L218">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:218</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Release all allocated resources.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getfont" class="tsd-anchor"></a>
+					<h3>get<wbr>Font</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Font<span class="tsd-signature-symbol">(</span>codePoint<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fontName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_text_canvas.font-1.html" class="tsd-signature-type">Font</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L493">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:493</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the best matched font for a specific character.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>codePoint: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Character&#39;s Unicode code point.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fontName: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Font name suggestion.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_text_canvas.font-1.html" class="tsd-signature-type">Font</a></h4>
+							<p>Best matched font.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getglyph" class="tsd-anchor"></a>
+					<h3>get<wbr>Glyph</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Glyph<span class="tsd-signature-symbol">(</span>codePoint<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, font<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_text_canvas.font-1.html" class="tsd-signature-type">Font</a>, fontStyle<span class="tsd-signature-symbol">: </span><a href="../enums/harp_text_canvas.fontstyle-1.html" class="tsd-signature-type">FontStyle</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_text_canvas.glyphdata-1.html" class="tsd-signature-type">GlyphData</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L434">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:434</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieves the loaded <a href="../modules/harp_text_canvas.html#glyphdata">GlyphData</a> for a specific character.
+									Returns <code>undefined</code> if the assets for this glyph haven&#39;t been loaded yet.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>codePoint: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Character&#39;s Unicode code point.</p>
+									</div>
+								</li>
+								<li>
+									<h5>font: <a href="../interfaces/harp_text_canvas.font-1.html" class="tsd-signature-type">Font</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p><a href="../modules/harp_text_canvas.html#font">Font</a> to get this glyph from.</p>
+									</div>
+								</li>
+								<li>
+									<h5>fontStyle: <a href="../enums/harp_text_canvas.fontstyle-1.html" class="tsd-signature-type">FontStyle</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Specific <a href="../modules/harp_text_canvas.html#fontstyle">FontStyle</a> to get glyphs for.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_text_canvas.glyphdata-1.html" class="tsd-signature-type">GlyphData</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p><a href="../modules/harp_text_canvas.html#glyphdata">GlyphData</a> for this code point.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getglyphs" class="tsd-anchor"></a>
+					<h3>get<wbr>Glyphs</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Glyphs<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, style<span class="tsd-signature-symbol">: </span><a href="harp_text_canvas.textrenderstyle-1.html" class="tsd-signature-type">TextRenderStyle</a>, letterCaseArray<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_text_canvas.glyphdata-1.html" class="tsd-signature-type">GlyphData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L452">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:452</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieves the loaded <a href="../modules/harp_text_canvas.html#glyphdata">GlyphData</a> for the specified text.
+									Returns <code>undefined</code> if the assets for these glyphs haven&#39;t been loaded yet.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Input text.</p>
+									</div>
+								</li>
+								<li>
+									<h5>style: <a href="harp_text_canvas.textrenderstyle-1.html" class="tsd-signature-type">TextRenderStyle</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Specific <a href="../modules/harp_text_canvas.html#textrenderstyle">TextRenderStyle</a> to get glyphs for.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> letterCaseArray: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Array containing the original letter case for the requested glyphs.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_text_canvas.glyphdata-1.html" class="tsd-signature-type">GlyphData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>Array containing <a href="../modules/harp_text_canvas.html#glyphdata">GlyphData</a> for each character of the input text.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadblock" class="tsd-anchor"></a>
+					<h3>load<wbr>Block</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Block<span class="tsd-signature-symbol">(</span>block<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_text_canvas.unicodeblock-1.html" class="tsd-signature-type">UnicodeBlock</a>, font<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_text_canvas.font-1.html" class="tsd-signature-type">Font</a>, fontStyle<span class="tsd-signature-symbol">: </span><a href="../enums/harp_text_canvas.fontstyle-1.html" class="tsd-signature-type">FontStyle</a>, loadPages<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L289">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:289</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Loads the description file for a specific <a href="../modules/harp_text_canvas.html#unicodeblock">UnicodeBlock</a>. This speeds up consequent calls
+									to <code>FontCatalog</code>.loadCharset() that require glyphs from this block to be loaded.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>block: <a href="../interfaces/harp_text_canvas.unicodeblock-1.html" class="tsd-signature-type">UnicodeBlock</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Requested <a href="../modules/harp_text_canvas.html#unicodeblock">UnicodeBlock</a>.</p>
+									</div>
+								</li>
+								<li>
+									<h5>font: <a href="../interfaces/harp_text_canvas.font-1.html" class="tsd-signature-type">Font</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p><a href="../modules/harp_text_canvas.html#font">Font</a> to retrieve this Unicode block from.</p>
+									</div>
+								</li>
+								<li>
+									<h5>fontStyle: <a href="../enums/harp_text_canvas.fontstyle-1.html" class="tsd-signature-type">FontStyle</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p><a href="../modules/harp_text_canvas.html#fontstyle">FontStyle</a> assets to load.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> loadPages: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If <code>true</code>, all pages in this Unicode block will also be loaded.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Loaded Unicode Block json.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadcharset" class="tsd-anchor"></a>
+					<h3>load<wbr>Charset</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Charset<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, style<span class="tsd-signature-symbol">: </span><a href="harp_text_canvas.textrenderstyle-1.html" class="tsd-signature-type">TextRenderStyle</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="harp_text_canvas.glyphdata-1.html" class="tsd-signature-type">GlyphData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L361">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:361</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Loads all the required glyphs needed to render the input text. Character repetition will not
+										be considered, and only styled assets (with applied font selection, style and variants) will
+									be loaded.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Input text.</p>
+									</div>
+								</li>
+								<li>
+									<h5>style: <a href="harp_text_canvas.textrenderstyle-1.html" class="tsd-signature-type">TextRenderStyle</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Specific <a href="../modules/harp_text_canvas.html#textrenderstyle">TextRenderStyle</a> for which glyphs will be loaded.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="harp_text_canvas.glyphdata-1.html" class="tsd-signature-type">GlyphData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Promise containing an array of all loaded <a href="../modules/harp_text_canvas.html#glyphdata">GlyphData</a> for the input text.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removeblock" class="tsd-anchor"></a>
+					<h3>remove<wbr>Block</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Block<span class="tsd-signature-symbol">(</span>block<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_text_canvas.unicodeblock-1.html" class="tsd-signature-type">UnicodeBlock</a>, font<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_text_canvas.font-1.html" class="tsd-signature-type">Font</a>, fontStyle<span class="tsd-signature-symbol">: </span><a href="../enums/harp_text_canvas.fontstyle-1.html" class="tsd-signature-type">FontStyle</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L336">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:336</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Releases the description file for a specific <a href="../modules/harp_text_canvas.html#unicodeblock">UnicodeBlock</a> (and all downloaded pages).
+									Safe to call when no assets for this block have been loaded.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>block: <a href="../interfaces/harp_text_canvas.unicodeblock-1.html" class="tsd-signature-type">UnicodeBlock</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Requested <a href="../modules/harp_text_canvas.html#unicodeblock">UnicodeBlock</a>.</p>
+									</div>
+								</li>
+								<li>
+									<h5>font: <a href="../interfaces/harp_text_canvas.font-1.html" class="tsd-signature-type">Font</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p><a href="../modules/harp_text_canvas.html#font">Font</a> to remove this Unicode block from.</p>
+									</div>
+								</li>
+								<li>
+									<h5>fontStyle: <a href="../enums/harp_text_canvas.fontstyle-1.html" class="tsd-signature-type">FontStyle</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p><a href="../modules/harp_text_canvas.html#fontstyle">FontStyle</a> assets to remove.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L249">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:249</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Updates the internal WebGLRenderTarget.
+									The update will copy the newly introduced glyphs since the previous update.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>renderer: <span class="tsd-signature-type">WebGLRenderer</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>WebGLRenderer.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updatememoryusage" class="tsd-anchor"></a>
+					<h3>update<wbr>Memory<wbr>Usage</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Memory<wbr>Usage<span class="tsd-signature-symbol">(</span>info<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_text_canvas.memoryusage-1.html" class="tsd-signature-type">MemoryUsage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L518">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:518</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Update the info with the memory footprint caused by objects owned by the <code>FontCatalog</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>info: <a href="../interfaces/harp_text_canvas.memoryusage-1.html" class="tsd-signature-type">MemoryUsage</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The info object to increment with the values from this <code>FontCatalog</code>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="load" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> load</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">load<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, maxCodePointCount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="harp_text_canvas.fontcatalog-1.html" class="tsd-signature-type">FontCatalog</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L91">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:91</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Loads a <code>FontCatalog</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>maxCodePointCount: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Maximum number of unique code points bitmaps this <code>FontCatalog</code>&#39;s
+										internal texture can store simultaneously.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="harp_text_canvas.fontcatalog-1.html" class="tsd-signature-type">FontCatalog</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p><code>FontCatalog</code> Promise.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="loadjson" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> loadJSON</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">loadJSON<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L147">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:147</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="loadtexture" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> load<wbr>Texture</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Texture<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Texture</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-text-canvas/lib/rendering/FontCatalog.ts#L141">@here/harp-text-canvas/lib/rendering/FontCatalog.ts:141</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Texture</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html">harp-<wbr>text-<wbr>canvas</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_text_canvas.defaulttextstyle-1.html">Default<wbr>Text<wbr>Style</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_text_canvas.typesettingutils-1.html">Typesetting<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_text_canvas.unicodeutils-1.html">Unicode<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+						<ul>
+							<li class="current tsd-kind-class tsd-parent-kind-module">
+								<a href="harp_text_canvas.fontcatalog-1.html" class="tsd-kind-icon">Font<wbr>Catalog</a>
+								<ul>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#distancerange" class="tsd-kind-icon">distance<wbr>Range</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#fonts" class="tsd-kind-icon">fonts</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#maxcodepointcount" class="tsd-kind-icon">max<wbr>Code<wbr>Point<wbr>Count</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#maxheight" class="tsd-kind-icon">max<wbr>Height</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#maxwidth" class="tsd-kind-icon">max<wbr>Width</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#name" class="tsd-kind-icon">name</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#showreplacementglyphs" class="tsd-kind-icon">show<wbr>Replacement<wbr>Glyphs</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#size" class="tsd-kind-icon">size</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#type" class="tsd-kind-icon">type</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#unicodeblocks" class="tsd-kind-icon">unicode<wbr>Blocks</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#url" class="tsd-kind-icon">url</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#isloading" class="tsd-kind-icon">is<wbr>Loading</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#texture" class="tsd-kind-icon">texture</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#texturesize" class="tsd-kind-icon">texture<wbr>Size</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#clear" class="tsd-kind-icon">clear</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#dispose" class="tsd-kind-icon">dispose</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#getfont" class="tsd-kind-icon">get<wbr>Font</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#getglyph" class="tsd-kind-icon">get<wbr>Glyph</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#getglyphs" class="tsd-kind-icon">get<wbr>Glyphs</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#loadblock" class="tsd-kind-icon">load<wbr>Block</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#loadcharset" class="tsd-kind-icon">load<wbr>Charset</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#removeblock" class="tsd-kind-icon">remove<wbr>Block</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#update" class="tsd-kind-icon">update</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_text_canvas.fontcatalog-1.html#updatememoryusage" class="tsd-kind-icon">update<wbr>Memory<wbr>Usage</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_text_canvas.fontcatalog-1.html#load" class="tsd-kind-icon">load</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_text_canvas.fontcatalog-1.html#loadjson" class="tsd-kind-icon">loadJSON</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_text_canvas.fontcatalog-1.html#loadtexture" class="tsd-kind-icon">load<wbr>Texture</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

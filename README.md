@@ -1,10 +1,14 @@
+<!--
+TODO "titleLink": "/" to control the API doc title link.
+-->
+
 # harp.gl
 
-[![CI](https://github.com/heremaps/harp.gl/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/heremaps/harp.gl/actions/workflows/ci.yaml?query=branch%3Amaster++) [![codecov](https://codecov.io/gh/heremaps/harp.gl/branch/master/graph/badge.svg)](https://codecov.io/gh/heremaps/harp.gl) [![twitter](https://img.shields.io/badge/tweet-harp.gl-blue)](https://twitter.com/intent/tweet?text=harp.gl)
+[![CI](https://github.com/lume/harp.gl/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/lume/harp.gl/actions/workflows/ci.yaml?query=branch%3Amain++) [![codecov](https://codecov.io/gh/lume/harp.gl/branch/main/graph/badge.svg)](https://codecov.io/gh/lume/harp.gl) [![twitter](https://img.shields.io/badge/tweet-harp.gl-blue)](https://twitter.com/intent/tweet?text=harp.gl)
 
 `harp.gl` is an _experimental and work in progress_ open-source 3D map rendering engine written in [TypeScript](https://github.com/microsoft/TypeScript).
 
-This was forked from [HERE's repo](https://github.com/heremaps/harp.gl) because they stopped working on this and are moving to a closed-source API instead.
+This was forked from [HERE's repo](https://github.com/lume/harp.gl) because they stopped working on this and are moving to a closed-source API instead.
 
 <!--
 
@@ -35,7 +39,7 @@ There are three methods to get up and running with harp.gl quickly, in order of 
 
 1. Using the [yeoman generator](https://developer.here.com/tutorials/harpgl/#method-1-using-the-harp.gl-yeoman-generator-beginner).
 1. linking a [simple bundle as a `<script>` tag in your html](https://developer.here.com/tutorials/harpgl/#method-2-linking-a-single-script-bundle-to-your-html-intermediate)
-1. installing a [set of node modules from npm](https://github.com/heremaps/harp.gl/blob/master/docs/GettingStartedGuide.md#integrate)
+1. installing a [set of node modules from npm](https://github.com/lume/harp.gl/blob/main/docs/GettingStartedGuide.md#integrate)
 
 If you want to learn more about the applications you can create, please check the [Getting Started Guide](docs/GettingStartedGuide.md).
 
@@ -105,7 +109,6 @@ yarn start-tests
 
 Open `http://localhost:8080/` in your favorite browser to run the tests.
 
-
 ### Run unit & integration tests in Browser environment
 
 Run:
@@ -132,7 +135,7 @@ Performance test steps
 1. Establish baseline results.
 
 ```
-$ git checkout master
+$ git checkout main
 PROFILEHELPER_COMMAND=baseline yarn performance-test-node # create baseline of measurements for your particular platform
 ```
 
@@ -162,32 +165,34 @@ performance createLineGeometry segments=2
 ### Debug Tests with VSCode
 
 Run
+
 ```sh
    yarn test-debug
 ```
-Add  and start this configuration to your launch.json :
+
+Add and start this configuration to your launch.json :
 
 ```json
- {
-            "type": "chrome",
-            "request": "attach",
-            "name": "Karma Tests",
-            "sourceMaps": true,
-            "webRoot": "${workspaceRoot}/test",
-            "address": "localhost",
-            "port": 9333,
-            "pathMapping": {
-                "/": "${workspaceRoot}",
-                "/base/": "${workspaceRoot}/"
-            },
-            "sourceMapPathOverrides": {
-                "webpack:///./*": "${webRoot}/*",
-                "webpack:///src/*": "${webRoot}/*",
-                "webpack:///*": "*",
-                "webpack:///./~/*": "${webRoot}/node_modules/*",
-                "meteor://app/*": "${webRoot}/*"
-            }
-        }
+{
+    "type": "chrome",
+    "request": "attach",
+    "name": "Karma Tests",
+    "sourceMaps": true,
+    "webRoot": "${workspaceRoot}/test",
+    "address": "localhost",
+    "port": 9333,
+    "pathMapping": {
+        "/": "${workspaceRoot}",
+        "/base/": "${workspaceRoot}/"
+    },
+    "sourceMapPathOverrides": {
+        "webpack:///./*": "${webRoot}/*",
+        "webpack:///src/*": "${webRoot}/*",
+        "webpack:///*": "*",
+        "webpack:///./~/*": "${webRoot}/node_modules/*",
+        "meteor://app/*": "${webRoot}/*"
+    }
+}
 ```
 
 ### Generate documentation
@@ -206,6 +211,6 @@ Copyright (C) 2017-2021 HERE Europe B.V.
 
 See the [LICENSE](./LICENSE) file in the root of this project for license details about using `harp.gl`.
 
-In addition, please note that the [fonts](https://github.com/heremaps/harp-fontcatalog) are under a different set of licenses.
+In addition, please note that the [fonts](https://github.com/lume/harp-fontcatalog) are under a different set of licenses.
 
 For other use cases not listed in the license terms, please [contact us](https://developer.here.com/contact-us).

@@ -1,0 +1,1215 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>VisibleTileSet | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_mapview.html">harp-mapview</a>
+				</li>
+				<li>
+					<a href="harp_mapview.visibletileset-1.html">VisibleTileSet</a>
+				</li>
+			</ul>
+			<h1>Class VisibleTileSet</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Manages visible <a href="../modules/harp_mapview.html#tile">Tile</a>s for <a href="../modules/harp_mapview.html#mapview">MapView</a>.</p>
+					</div>
+					<p>Responsible for election of rendered tiles:</p>
+					<ul>
+						<li>quad-tree traversal</li>
+						<li>frustum culling</li>
+						<li>sorting tiles by relevance (visible area) to prioritize load</li>
+						<li>limiting number of visible tiles</li>
+						<li>caching tiles</li>
+						<li>searching cache to replace visible but yet empty tiles with already loaded siblings in nearby
+						zoom levels</li>
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">VisibleTileSet</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#allvisibletilesloaded" class="tsd-kind-icon">all<wbr>Visible<wbr>Tiles<wbr>Loaded</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#datasourcetilelist" class="tsd-kind-icon">data<wbr>Source<wbr>Tile<wbr>List</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#options" class="tsd-kind-icon">options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#maxtilesperframe" class="tsd-kind-icon">max<wbr>Tiles<wbr>Per<wbr>Frame</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#resourcecomputationtype" class="tsd-kind-icon">resource<wbr>Computation<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#cleartilecache" class="tsd-kind-icon">clear<wbr>Tile<wbr>Cache</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#disposependingtiles" class="tsd-kind-icon">dispose<wbr>Pending<wbr>Tiles</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#disposetile" class="tsd-kind-icon">dispose<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#foreachcachedtile" class="tsd-kind-icon">for<wbr>Each<wbr>Cached<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#foreachvisibletile" class="tsd-kind-icon">for<wbr>Each<wbr>Visible<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#getcachedtile" class="tsd-kind-icon">get<wbr>Cached<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#getdatasourcecachesize" class="tsd-kind-icon">get<wbr>Data<wbr>Source<wbr>Cache<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#getnumberofvisibletiles" class="tsd-kind-icon">get<wbr>Number<wbr>OfVisible<wbr>Tiles</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#getrenderedtile" class="tsd-kind-icon">get<wbr>Rendered<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#getrenderedtileatlocation" class="tsd-kind-icon">get<wbr>Rendered<wbr>Tile<wbr>AtLocation</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#marktilesdirty" class="tsd-kind-icon">mark<wbr>Tiles<wbr>Dirty</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#removedatasource" class="tsd-kind-icon">remove<wbr>Data<wbr>Source</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#setdatasourcecachesize" class="tsd-kind-icon">set<wbr>Data<wbr>Source<wbr>Cache<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#setnumberofvisibletiles" class="tsd-kind-icon">set<wbr>Number<wbr>OfVisible<wbr>Tiles</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#updateclipplanes" class="tsd-kind-icon">update<wbr>Clip<wbr>Planes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.visibletileset-1.html#updaterenderlist" class="tsd-kind-icon">update<wbr>Render<wbr>List</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Visible<wbr>Tile<wbr>Set<span class="tsd-signature-symbol">(</span>m_frustumIntersection<span class="tsd-signature-symbol">: </span><a href="harp_mapview.frustumintersection.html" class="tsd-signature-type">FrustumIntersection</a>, m_tileGeometryManager<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tilegeometrymanager.html" class="tsd-signature-type">TileGeometryManager</a>, options<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.visibletilesetoptions-1.html" class="tsd-signature-type">VisibleTileSetOptions</a>, m_taskQueue<span class="tsd-signature-symbol">: </span><a href="harp_utils.taskqueue-3.html" class="tsd-signature-type">TaskQueue</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.visibletileset-1.html" class="tsd-signature-type">VisibleTileSet</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L422">@here/harp-mapview/lib/VisibleTileSet.ts:422</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>m_frustumIntersection: <a href="harp_mapview.frustumintersection.html" class="tsd-signature-type">FrustumIntersection</a></h5>
+								</li>
+								<li>
+									<h5>m_tileGeometryManager: <a href="harp_mapview.tilegeometrymanager.html" class="tsd-signature-type">TileGeometryManager</a></h5>
+								</li>
+								<li>
+									<h5>options: <a href="../interfaces/harp_mapview.visibletilesetoptions-1.html" class="tsd-signature-type">VisibleTileSetOptions</a></h5>
+								</li>
+								<li>
+									<h5>m_taskQueue: <a href="harp_utils.taskqueue-3.html" class="tsd-signature-type">TaskQueue</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.visibletileset-1.html" class="tsd-signature-type">VisibleTileSet</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="allvisibletilesloaded" class="tsd-anchor"></a>
+					<h3>all<wbr>Visible<wbr>Tiles<wbr>Loaded</h3>
+					<div class="tsd-signature tsd-kind-icon">all<wbr>Visible<wbr>Tiles<wbr>Loaded<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L406">@here/harp-mapview/lib/VisibleTileSet.ts:406</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="datasourcetilelist" class="tsd-anchor"></a>
+					<h3>data<wbr>Source<wbr>Tile<wbr>List</h3>
+					<div class="tsd-signature tsd-kind-icon">data<wbr>Source<wbr>Tile<wbr>List<span class="tsd-signature-symbol">:</span> <a href="../interfaces/harp_mapview.datasourcetilelist-1.html" class="tsd-signature-type">DataSourceTileList</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L405">@here/harp-mapview/lib/VisibleTileSet.ts:405</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="options" class="tsd-anchor"></a>
+					<h3>options</h3>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/harp_mapview.visibletilesetoptions-1.html" class="tsd-signature-type">VisibleTileSetOptions</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L427">@here/harp-mapview/lib/VisibleTileSet.ts:427</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="maxtilesperframe" class="tsd-anchor"></a>
+					<h3>max<wbr>Tiles<wbr>Per<wbr>Frame</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> maxTilesPerFrame<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> maxTilesPerFrame<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L487">@here/harp-mapview/lib/VisibleTileSet.ts:487</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the maximum number of tiles that can be added to the scene per frame</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>beta</dt>
+									<dd></dd>
+									<dt>internal</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L497">@here/harp-mapview/lib/VisibleTileSet.ts:497</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the maximum number of tiles that can be added to the scene per frame</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>beta</dt>
+									<dd></dd>
+									<dt>internal</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="resourcecomputationtype" class="tsd-anchor"></a>
+					<h3>resource<wbr>Computation<wbr>Type</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> resourceComputationType<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/harp_mapview.resourcecomputationtype-1.html" class="tsd-signature-type">ResourceComputationType</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> resourceComputationType<span class="tsd-signature-symbol">(</span>computationType<span class="tsd-signature-symbol">: </span><a href="../enums/harp_mapview.resourcecomputationtype-1.html" class="tsd-signature-type">ResourceComputationType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L508">@here/harp-mapview/lib/VisibleTileSet.ts:508</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The way the cache usage is computed, either based on size in MB (mega bytes) or in number of
+									tiles.</p>
+								</div>
+								<p>Cache may be either keeping number of elements stored or the memory consumed by them.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/harp_mapview.resourcecomputationtype-1.html" class="tsd-signature-type">ResourceComputationType</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L520">@here/harp-mapview/lib/VisibleTileSet.ts:520</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the way tile cache is managing its elements.</p>
+								</div>
+								<p>Cache may be either keeping number of elements stored or the memory consumed by them.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>computationType: <a href="../enums/harp_mapview.resourcecomputationtype-1.html" class="tsd-signature-type">ResourceComputationType</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Type of algorith used in cache for checking full saturation,
+										may be counting number of elements or memory consumed by them.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="cleartilecache" class="tsd-anchor"></a>
+					<h3>clear<wbr>Tile<wbr>Cache</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Tile<wbr>Cache<span class="tsd-signature-symbol">(</span>dataSource<span class="tsd-signature-symbol">?: </span><a href="../modules/harp_mapview.html#datasource" class="tsd-signature-type">DataSource</a>, filter<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L826">@here/harp-mapview/lib/VisibleTileSet.ts:826</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Clear the tile cache.</p>
+								</div>
+								<p>Remove the <a href="../modules/harp_mapview.html#tile">Tile</a> objects created by cacheable <a href="../modules/harp_mapview.html#datasource">DataSource</a>.
+									If a <a href="../modules/harp_mapview.html#datasource">DataSource</a> name is
+									provided, this method restricts the eviction
+								the <a href="../modules/harp_mapview.html#datasource">DataSource</a> with the given name.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dataSource: <a href="../modules/harp_mapview.html#datasource" class="tsd-signature-type">DataSource</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> filter: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional tile filter</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="disposependingtiles" class="tsd-anchor"></a>
+					<h3>dispose<wbr>Pending<wbr>Tiles</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">dispose<wbr>Pending<wbr>Tiles<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L867">@here/harp-mapview/lib/VisibleTileSet.ts:867</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Dispose tiles that are marked for removal by {@link @here/harp-lrucache#LRUCache} algorithm.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="disposetile" class="tsd-anchor"></a>
+					<h3>dispose<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">dispose<wbr>Tile<span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L898">@here/harp-mapview/lib/VisibleTileSet.ts:898</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Dispose a <code>Tile</code> from cache, &#39;dispose()&#39; is also called on the tile to free its resources.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tile: <a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="foreachcachedtile" class="tsd-anchor"></a>
+					<h3>for<wbr>Each<wbr>Cached<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Each<wbr>Cached<wbr>Tile<span class="tsd-signature-symbol">(</span>fun<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span>, dataSource<span class="tsd-signature-symbol">?: </span><a href="../modules/harp_mapview.html#datasource" class="tsd-signature-type">DataSource</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L891">@here/harp-mapview/lib/VisibleTileSet.ts:891</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Process callback function [[fun]] with each tile in the cache.</p>
+								</div>
+								<p>Optional <a href="../interfaces/harp_mapview.datasourcetilelist-1.html#datasource">dataSource</a> parameter limits processing to the tiles that belongs to
+								DataSource passed in.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fun: <span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The callback function to be called.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>tile: <a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dataSource: <a href="../modules/harp_mapview.html#datasource" class="tsd-signature-type">DataSource</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The optional DataSource reference for tiles selection.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="foreachvisibletile" class="tsd-anchor"></a>
+					<h3>for<wbr>Each<wbr>Visible<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Each<wbr>Visible<wbr>Tile<span class="tsd-signature-symbol">(</span>fun<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L876">@here/harp-mapview/lib/VisibleTileSet.ts:876</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Process callback function [[fun]] with each visible tile in set.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fun: <span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The callback function to be called.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>tile: <a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcachedtile" class="tsd-anchor"></a>
+					<h3>get<wbr>Cached<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Cached<wbr>Tile<span class="tsd-signature-symbol">(</span>dataSource<span class="tsd-signature-symbol">: </span><a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a>, tileKey<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a>, offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, frameNumber<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L691">@here/harp-mapview/lib/VisibleTileSet.ts:691</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the tile corresponding to the given data source, key and offset from the cache.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dataSource: <a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data source the tile belongs to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>tileKey: <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The key identifying the tile.</p>
+									</div>
+								</li>
+								<li>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Tile offset.</p>
+									</div>
+								</li>
+								<li>
+									<h5>frameNumber: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Frame in which the tile was requested</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>The tile if found in cache, undefined otherwise.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getdatasourcecachesize" class="tsd-anchor"></a>
+					<h3>get<wbr>Data<wbr>Source<wbr>Cache<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Data<wbr>Source<wbr>Cache<wbr>Size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L445">@here/harp-mapview/lib/VisibleTileSet.ts:445</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns cache size.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getnumberofvisibletiles" class="tsd-anchor"></a>
+					<h3>get<wbr>Number<wbr>OfVisible<wbr>Tiles</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Number<wbr>OfVisible<wbr>Tiles<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L469">@here/harp-mapview/lib/VisibleTileSet.ts:469</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieves maximum number of visible tiles.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getrenderedtile" class="tsd-anchor"></a>
+					<h3>get<wbr>Rendered<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Rendered<wbr>Tile<span class="tsd-signature-symbol">(</span>dataSource<span class="tsd-signature-symbol">: </span><a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a>, tileKey<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a>, offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L710">@here/harp-mapview/lib/VisibleTileSet.ts:710</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the tile corresponding to the given data source, key and offset from the rendered tiles.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dataSource: <a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data source the tile belongs to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>tileKey: <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The key identifying the tile.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> offset: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Tile offset.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>The tile if found among the rendered tiles, undefined otherwise.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getrenderedtileatlocation" class="tsd-anchor"></a>
+					<h3>get<wbr>Rendered<wbr>Tile<wbr>AtLocation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Rendered<wbr>Tile<wbr>AtLocation<span class="tsd-signature-symbol">(</span>dataSource<span class="tsd-signature-symbol">: </span><a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a>, geoPoint<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a>, offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L735">@here/harp-mapview/lib/VisibleTileSet.ts:735</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the tile corresponding to the given data source and location from the rendered tiles.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dataSource: <a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data source the tile belongs to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>geoPoint: <a href="harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The geolocation included within the tile.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> offset: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>The tile if found among the rendered tiles, undefined otherwise.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gettile" class="tsd-anchor"></a>
+					<h3>get<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<span class="tsd-signature-symbol">(</span>dataSource<span class="tsd-signature-symbol">: </span><a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a>, tileKey<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a>, offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, frameNumber<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L672">@here/harp-mapview/lib/VisibleTileSet.ts:672</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the tile corresponding to the given data source, key and offset, creating it if
+									necessary.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dataSource: <a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data source the tile belongs to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>tileKey: <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The key identifying the tile.</p>
+									</div>
+								</li>
+								<li>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Tile offset.</p>
+									</div>
+								</li>
+								<li>
+									<h5>frameNumber: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Frame in which the tile was requested</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>The tile if it was found or created, undefined otherwise.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="marktilesdirty" class="tsd-anchor"></a>
+					<h3>mark<wbr>Tiles<wbr>Dirty</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">mark<wbr>Tiles<wbr>Dirty<span class="tsd-signature-symbol">(</span>dataSource<span class="tsd-signature-symbol">?: </span><a href="../modules/harp_mapview.html#datasource" class="tsd-signature-type">DataSource</a>, filter<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L850">@here/harp-mapview/lib/VisibleTileSet.ts:850</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Visit each tile in visible, rendered, and cached sets.</p>
+								</div>
+								<ul>
+									<li>Visible and temporarily rendered tiles will be marked for update and retained.</li>
+									<li>Cached but not rendered/visible will be evicted.</li>
+								</ul>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dataSource: <a href="../modules/harp_mapview.html#datasource" class="tsd-signature-type">DataSource</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If passed, only the tiles from this <a href="../modules/harp_mapview.html#datasource">DataSource</a> instance
+										are processed. If <code>undefined</code>, tiles from all <a href="../modules/harp_mapview.html#datasource">DataSource</a>s are processed.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> filter: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional tile filter</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removedatasource" class="tsd-anchor"></a>
+					<h3>remove<wbr>Data<wbr>Source</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Data<wbr>Source<span class="tsd-signature-symbol">(</span>dataSource<span class="tsd-signature-symbol">: </span><a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L808">@here/harp-mapview/lib/VisibleTileSet.ts:808</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes all internal bookkeeping entries and cache related to specified datasource.</p>
+								</div>
+								<p>Called by <a href="../modules/harp_mapview.html#mapview">MapView</a> when <a href="../modules/harp_mapview.html#datasource">DataSource</a> has been removed from <a href="../modules/harp_mapview.html#mapview">MapView</a>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dataSource: <a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setdatasourcecachesize" class="tsd-anchor"></a>
+					<h3>set<wbr>Data<wbr>Source<wbr>Cache<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Data<wbr>Source<wbr>Cache<wbr>Size<span class="tsd-signature-symbol">(</span>size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, computationType<span class="tsd-signature-symbol">?: </span><a href="../enums/harp_mapview.resourcecomputationtype-1.html" class="tsd-signature-type">ResourceComputationType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L457">@here/harp-mapview/lib/VisibleTileSet.ts:457</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets cache size.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>size: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>cache size</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> computationType: <a href="../enums/harp_mapview.resourcecomputationtype-1.html" class="tsd-signature-type">ResourceComputationType</a><span class="tsd-signature-symbol"> = ResourceComputationType.EstimationInMb</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional value specifying the way a <a href="../modules/harp_mapview.html#tile">Tile</a>s cache usage is
+											computed, either based on size in MB (mega bytes) or in number of tiles. Defaults to
+										<code>ResourceComputationType.EstimationInMb</code>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setnumberofvisibletiles" class="tsd-anchor"></a>
+					<h3>set<wbr>Number<wbr>OfVisible<wbr>Tiles</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Number<wbr>OfVisible<wbr>Tiles<span class="tsd-signature-symbol">(</span>size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L478">@here/harp-mapview/lib/VisibleTileSet.ts:478</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets maximum number of visible tiles.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>size: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>size of visible tiles array</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updateclipplanes" class="tsd-anchor"></a>
+					<h3>update<wbr>Clip<wbr>Planes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Clip<wbr>Planes<span class="tsd-signature-symbol">(</span>maxElevation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, minElevation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L528">@here/harp-mapview/lib/VisibleTileSet.ts:528</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Evaluate frustum near/far clip planes and visibility ranges.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> maxElevation: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> minElevation: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updaterenderlist" class="tsd-anchor"></a>
+					<h3>update<wbr>Render<wbr>List</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Render<wbr>List<span class="tsd-signature-symbol">(</span>storageLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, dataSources<span class="tsd-signature-symbol">: </span><a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a><span class="tsd-signature-symbol">[]</span>, frameNumber<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, elevationRangeSource<span class="tsd-signature-symbol">?: </span><a href="../modules/harp_mapview.html#elevationrangesource" class="tsd-signature-type">ElevationRangeSource</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>viewRanges<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a><span class="tsd-signature-symbol">; </span>viewRangesChanged<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/VisibleTileSet.ts#L552">@here/harp-mapview/lib/VisibleTileSet.ts:552</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculates a new set of visible tiles.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>storageLevel: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The camera storage level, see <a href="harp_mapview.mapview-1.html#storagelevel">MapView.storageLevel</a>.</p>
+									</div>
+								</li>
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The camera zoom level.</p>
+									</div>
+								</li>
+								<li>
+									<h5>dataSources: <a href="harp_mapview.datasource-1.html" class="tsd-signature-type">DataSource</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data sources for which the visible tiles will be calculated.</p>
+									</div>
+								</li>
+								<li>
+									<h5>frameNumber: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> elevationRangeSource: <a href="../modules/harp_mapview.html#elevationrangesource" class="tsd-signature-type">ElevationRangeSource</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Source of elevation range data if any.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>viewRanges<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a><span class="tsd-signature-symbol">; </span>viewRangesChanged<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>view ranges and their status since last update (changed or not).</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>view<wbr>Ranges<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>view<wbr>Ranges<wbr>Changed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html">harp-<wbr>mapview</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.camerautils-1.html">Camera<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.copyrightinfo-1.html">Copyright<wbr>Info</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.mapviewutils-1.html">Map<wbr>View<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.object3dutils.html">Object3DUtils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.tileoffsetutils-1.html">Tile<wbr>Offset<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+						<ul>
+							<li class="current tsd-kind-class tsd-parent-kind-module">
+								<a href="harp_mapview.visibletileset-1.html" class="tsd-kind-icon">Visible<wbr>Tile<wbr>Set</a>
+								<ul>
+									<li class=" tsd-kind-constructor tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#constructor" class="tsd-kind-icon">constructor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#allvisibletilesloaded" class="tsd-kind-icon">all<wbr>Visible<wbr>Tiles<wbr>Loaded</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#datasourcetilelist" class="tsd-kind-icon">data<wbr>Source<wbr>Tile<wbr>List</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#options" class="tsd-kind-icon">options</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#maxtilesperframe" class="tsd-kind-icon">max<wbr>Tiles<wbr>Per<wbr>Frame</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#resourcecomputationtype" class="tsd-kind-icon">resource<wbr>Computation<wbr>Type</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#cleartilecache" class="tsd-kind-icon">clear<wbr>Tile<wbr>Cache</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#disposependingtiles" class="tsd-kind-icon">dispose<wbr>Pending<wbr>Tiles</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#disposetile" class="tsd-kind-icon">dispose<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#foreachcachedtile" class="tsd-kind-icon">for<wbr>Each<wbr>Cached<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#foreachvisibletile" class="tsd-kind-icon">for<wbr>Each<wbr>Visible<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#getcachedtile" class="tsd-kind-icon">get<wbr>Cached<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#getdatasourcecachesize" class="tsd-kind-icon">get<wbr>Data<wbr>Source<wbr>Cache<wbr>Size</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#getnumberofvisibletiles" class="tsd-kind-icon">get<wbr>Number<wbr>OfVisible<wbr>Tiles</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#getrenderedtile" class="tsd-kind-icon">get<wbr>Rendered<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#getrenderedtileatlocation" class="tsd-kind-icon">get<wbr>Rendered<wbr>Tile<wbr>AtLocation</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#marktilesdirty" class="tsd-kind-icon">mark<wbr>Tiles<wbr>Dirty</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#removedatasource" class="tsd-kind-icon">remove<wbr>Data<wbr>Source</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#setdatasourcecachesize" class="tsd-kind-icon">set<wbr>Data<wbr>Source<wbr>Cache<wbr>Size</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#setnumberofvisibletiles" class="tsd-kind-icon">set<wbr>Number<wbr>OfVisible<wbr>Tiles</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#updateclipplanes" class="tsd-kind-icon">update<wbr>Clip<wbr>Planes</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.visibletileset-1.html#updaterenderlist" class="tsd-kind-icon">update<wbr>Render<wbr>List</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

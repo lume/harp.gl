@@ -1,0 +1,598 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TextElementBuilder | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_mapview.html">harp-mapview</a>
+				</li>
+				<li>
+					<a href="harp_mapview.textelementbuilder.html">TextElementBuilder</a>
+				</li>
+			</ul>
+			<h1>Class TextElementBuilder</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Constructs <a href="../modules/harp_mapview.html#textelement">TextElement</a> objects from {@link @here/harp-datasource-protocol/Technique},
+						text, coordinates and optional icon.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">TextElementBuilder</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="harp_mapview.textelementbuilder.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_mapview.textelementbuilder.html#renderorderupbound" class="tsd-kind-icon">render<wbr>Order<wbr>UpBound</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="harp_mapview.textelementbuilder.html#render_order_up_bound" class="tsd-kind-icon">RENDER_<wbr>ORDER_<wbr>UP_<wbr>BOUND</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.textelementbuilder.html#build" class="tsd-kind-icon">build</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.textelementbuilder.html#withicon" class="tsd-kind-icon">with<wbr>Icon</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.textelementbuilder.html#withtechnique" class="tsd-kind-icon">with<wbr>Technique</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_mapview.textelementbuilder.html#alignzoomlevelranges" class="tsd-kind-icon">align<wbr>Zoom<wbr>Level<wbr>Ranges</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_mapview.textelementbuilder.html#composerenderorder" class="tsd-kind-icon">compose<wbr>Render<wbr>Order</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Text<wbr>Element<wbr>Builder<span class="tsd-signature-symbol">(</span>m_env<span class="tsd-signature-symbol">: </span><a href="harp_datasource_protocol.mapenv-3.html" class="tsd-signature-type">MapEnv</a><span class="tsd-signature-symbol"> | </span><a href="harp_datasource_protocol.env-3.html" class="tsd-signature-type">Env</a>, m_styleCache<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tiletextstylecache.html" class="tsd-signature-type">TileTextStyleCache</a>, m_baseRenderOrder<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.textelementbuilder.html" class="tsd-signature-type">TextElementBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/text/TextElementBuilder.ts#L96">@here/harp-mapview/lib/text/TextElementBuilder.ts:96</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructor</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>m_env: <a href="harp_datasource_protocol.mapenv-3.html" class="tsd-signature-type">MapEnv</a><span class="tsd-signature-symbol"> | </span><a href="harp_datasource_protocol.env-3.html" class="tsd-signature-type">Env</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The {@link @link @here/harp-datasource-protocol#MapEnv} used to evaluate
+											technique properties.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>m_styleCache: <a href="harp_mapview.tiletextstylecache.html" class="tsd-signature-type">TileTextStyleCache</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>To cache instances of {@link @here/harp-text-canvas/TextRenderStyle}
+											and {@link @here/harp-text-canvas/TextLayoutStyle}.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>m_baseRenderOrder: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.textelementbuilder.html" class="tsd-signature-type">TextElementBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="renderorderupbound" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> render<wbr>Order<wbr>UpBound</h3>
+					<div class="tsd-signature tsd-kind-icon">render<wbr>Order<wbr>UpBound<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/text/TextElementBuilder.ts#L63">@here/harp-mapview/lib/text/TextElementBuilder.ts:63</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="render_order_up_bound" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> RENDER_<wbr>ORDER_<wbr>UP_<wbr>BOUND</h3>
+					<div class="tsd-signature tsd-kind-icon">RENDER_<wbr>ORDER_<wbr>UP_<wbr>BOUND<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">10000000</span><span class="tsd-signature-symbol"> = 10000000</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/text/TextElementBuilder.ts#L59">@here/harp-mapview/lib/text/TextElementBuilder.ts:59</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="build" class="tsd-anchor"></a>
+					<h3>build</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">build<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, points<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">[]</span>, tileOffset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, dataSourceName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, dataSourceOrder<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, attributes<span class="tsd-signature-symbol">?: </span><a href="../modules/harp_datasource_protocol.html#attributemap-1" class="tsd-signature-type">AttributeMap</a>, pathLengthSqr<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, offsetDirection<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.textelement-1.html" class="tsd-signature-type">TextElement</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/text/TextElementBuilder.ts#L203">@here/harp-mapview/lib/text/TextElementBuilder.ts:203</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a <a href="../modules/harp_mapview.html#textelement">TextElement</a> with the given properties.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The text to be displayed.</p>
+									</div>
+								</li>
+								<li>
+									<h5>points: <span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position(s) for the text element.</p>
+									</div>
+								</li>
+								<li>
+									<h5>tileOffset: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The TextElement&#39;s tile offset, see <a href="harp_mapview.tile-1.html#offset">Tile.offset</a>.</p>
+									</div>
+								</li>
+								<li>
+									<h5>dataSourceName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the data source.</p>
+									</div>
+								</li>
+								<li>
+									<h5>dataSourceOrder: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> attributes: <a href="../modules/harp_datasource_protocol.html#attributemap-1" class="tsd-signature-type">AttributeMap</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>TextElement attribute map.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> pathLengthSqr: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Precomputed path length squared for path labels.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> offsetDirection: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.textelement-1.html" class="tsd-signature-type">TextElement</a></h4>
+							<p>The created text element.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="withicon" class="tsd-anchor"></a>
+					<h3>with<wbr>Icon</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">with<wbr>Icon<span class="tsd-signature-symbol">(</span>imageTextureName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, shieldGroupIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/text/TextElementBuilder.ts#L185">@here/harp-mapview/lib/text/TextElementBuilder.ts:185</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets an icon that will be used to create text elements on subsequent calls to
+									<a href="harp_mapview.textelementbuilder.html#build">TextElementBuilder.build</a> until the next call to this method.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> imageTextureName: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the icon image.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> shieldGroupIndex: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Index to the shield group.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+							<p>This builder.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="withtechnique" class="tsd-anchor"></a>
+					<h3>with<wbr>Technique</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">with<wbr>Technique<span class="tsd-signature-symbol">(</span>technique<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.poitechnique-1.html" class="tsd-signature-type">PoiTechnique</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_datasource_protocol.linemarkertechnique-1.html" class="tsd-signature-type">LineMarkerTechnique</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_datasource_protocol.texttechnique-1.html" class="tsd-signature-type">TextTechnique</a><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/harp_datasource_protocol.indexedtechniqueparams-1.html" class="tsd-signature-type">IndexedTechniqueParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/text/TextElementBuilder.ts#L138">@here/harp-mapview/lib/text/TextElementBuilder.ts:138</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets a technique that will be used to create text elements on subsequent calls to
+									<a href="harp_mapview.textelementbuilder.html#build">TextElementBuilder.build</a> until the next call to this method.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>technique: <a href="../interfaces/harp_datasource_protocol.poitechnique-1.html" class="tsd-signature-type">PoiTechnique</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_datasource_protocol.linemarkertechnique-1.html" class="tsd-signature-type">LineMarkerTechnique</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_datasource_protocol.texttechnique-1.html" class="tsd-signature-type">TextTechnique</a><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/harp_datasource_protocol.indexedtechniqueparams-1.html" class="tsd-signature-type">IndexedTechniqueParams</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The {@link @here/harp-datasource-protocol/Technique}.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+							<p>This builder.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="alignzoomlevelranges" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> align<wbr>Zoom<wbr>Level<wbr>Ranges</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">align<wbr>Zoom<wbr>Level<wbr>Ranges<span class="tsd-signature-symbol">(</span>textElement<span class="tsd-signature-symbol">: </span><a href="harp_mapview.textelement-1.html" class="tsd-signature-type">TextElement</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/text/TextElementBuilder.ts#L72">@here/harp-mapview/lib/text/TextElementBuilder.ts:72</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Aligns a <a href="../modules/harp_mapview.html#textelement">TextElement</a>&#39;s minZoomLevel and maxZoomLevel with values set in
+									<a href="../modules/harp_mapview.html#poiinfo">PoiInfo</a>.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd><p>Selects the smaller/larger one of the two min/max values for icon and text, because
+										the TextElement is a container for both.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>textElement: <a href="harp_mapview.textelement-1.html" class="tsd-signature-type">TextElement</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../modules/harp_mapview.html#textelement">TextElement</a> whose zoom level ranges will be aligned.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="composerenderorder" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> compose<wbr>Render<wbr>Order</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">compose<wbr>Render<wbr>Order<span class="tsd-signature-symbol">(</span>baseRenderOrder<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/text/TextElementBuilder.ts#L94">@here/harp-mapview/lib/text/TextElementBuilder.ts:94</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Combines two render order numbers into a single one.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>baseRenderOrder: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The most significative part of the render order.</p>
+									</div>
+								</li>
+								<li>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The least significative part of the render order. It must be within the
+										interval (-RENDER_ORDER_UP_BOUND, RENDER_ORDER_UP_BOUND).</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The combined render order.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html">harp-<wbr>mapview</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.camerautils-1.html">Camera<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.copyrightinfo-1.html">Copyright<wbr>Info</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.mapviewutils-1.html">Map<wbr>View<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.object3dutils.html">Object3DUtils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.tileoffsetutils-1.html">Tile<wbr>Offset<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+						<ul>
+							<li class="current tsd-kind-class tsd-parent-kind-module">
+								<a href="harp_mapview.textelementbuilder.html" class="tsd-kind-icon">Text<wbr>Element<wbr>Builder</a>
+								<ul>
+									<li class=" tsd-kind-constructor tsd-parent-kind-class">
+										<a href="harp_mapview.textelementbuilder.html#constructor" class="tsd-kind-icon">constructor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_mapview.textelementbuilder.html#renderorderupbound" class="tsd-kind-icon">render<wbr>Order<wbr>UpBound</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+										<a href="harp_mapview.textelementbuilder.html#render_order_up_bound" class="tsd-kind-icon">RENDER_<wbr>ORDER_<wbr>UP_<wbr>BOUND</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.textelementbuilder.html#build" class="tsd-kind-icon">build</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.textelementbuilder.html#withicon" class="tsd-kind-icon">with<wbr>Icon</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.textelementbuilder.html#withtechnique" class="tsd-kind-icon">with<wbr>Technique</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_mapview.textelementbuilder.html#alignzoomlevelranges" class="tsd-kind-icon">align<wbr>Zoom<wbr>Level<wbr>Ranges</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_mapview.textelementbuilder.html#composerenderorder" class="tsd-kind-icon">compose<wbr>Render<wbr>Order</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

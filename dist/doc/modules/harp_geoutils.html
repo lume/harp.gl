@@ -1,0 +1,1734 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>harp-geoutils | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="harp_geoutils.html">harp-geoutils</a>
+				</li>
+			</ul>
+			<h1>Package harp-geoutils</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<a href="#hereharp-geoutils" id="hereharp-geoutils" style="color: inherit; text-decoration: none;">
+						<h1>@here/harp-geoutils</h1>
+					</a>
+					<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
+						<h2>Overview</h2>
+					</a>
+					<p>This module contains utility classes for working with geospatial data.</p>
+					<p>It includes functionality for:</p>
+					<ul>
+						<li><a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>-compliant coordinates</li>
+						<li>supporting tiling schemes, such as <a href="https://en.wikipedia.org/wiki/Web_Mercator_projection">Web Mercator</a> or <a href="https://developer.here.com/olp/documentation/data-user-guide/shared_content/topics/olp/concepts/partitions.html">HERE tile</a></li>
+						<li>supporting map projections, such as <a href="https://en.wikipedia.org/wiki/Web_Mercator_projection">Web Mercator</a> or <a href="https://en.wikipedia.org/wiki/Equirectangular_projection">Equirectangular</a></li>
+						<li>math utility functions for working with radians and degrees</li>
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>References</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#box3like" class="tsd-kind-icon">Box3<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#earthconstants" class="tsd-kind-icon">Earth<wbr>Constants</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#flattileboundingboxgenerator" class="tsd-kind-icon">Flat<wbr>Tile<wbr>Bounding<wbr>Box<wbr>Generator</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#geobox" class="tsd-kind-icon">Geo<wbr>Box</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#geoboxextentlike" class="tsd-kind-icon">Geo<wbr>Box<wbr>Extent<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#geocoordinates" class="tsd-kind-icon">Geo<wbr>Coordinates</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#geocoordinateslike" class="tsd-kind-icon">Geo<wbr>Coordinates<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#geopointlike" class="tsd-kind-icon">Geo<wbr>Point<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#geopolygon" class="tsd-kind-icon">Geo<wbr>Polygon</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#geopolygoncoordinates" class="tsd-kind-icon">Geo<wbr>Polygon<wbr>Coordinates</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#geopolygonlike" class="tsd-kind-icon">Geo<wbr>Polygon<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#latlnglike" class="tsd-kind-icon">Lat<wbr>Lng<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#max_latitude" class="tsd-kind-icon">MAX_<wbr>LATITUDE</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#max_longitude" class="tsd-kind-icon">MAX_<wbr>LONGITUDE</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#min_latitude" class="tsd-kind-icon">MIN_<wbr>LATITUDE</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#min_longitude" class="tsd-kind-icon">MIN_<wbr>LONGITUDE</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#mathutils" class="tsd-kind-icon">Math<wbr>Utils</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#mercatorconstants" class="tsd-kind-icon">Mercator<wbr>Constants</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#orientedbox3" class="tsd-kind-icon">Oriented<wbr>Box3</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#orientedbox3like" class="tsd-kind-icon">Oriented<wbr>Box3<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#projection" class="tsd-kind-icon">Projection</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#projectiontype" class="tsd-kind-icon">Projection<wbr>Type</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#quadtree" class="tsd-kind-icon">Quad<wbr>Tree</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#subtiles" class="tsd-kind-icon">Sub<wbr>Tiles</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#subdivisionscheme" class="tsd-kind-icon">Subdivision<wbr>Scheme</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#tilekey" class="tsd-kind-icon">Tile<wbr>Key</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#tilekeyutils" class="tsd-kind-icon">Tile<wbr>Key<wbr>Utils</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#tiletreetraverse" class="tsd-kind-icon">Tile<wbr>Tree<wbr>Traverse</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#tilingscheme" class="tsd-kind-icon">Tiling<wbr>Scheme</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#transformlike" class="tsd-kind-icon">Transform<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#transversemercatorutils" class="tsd-kind-icon">Transverse<wbr>Mercator<wbr>Utils</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#vector2like" class="tsd-kind-icon">Vector2<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#vector3like" class="tsd-kind-icon">Vector3<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#equirectangularprojection" class="tsd-kind-icon">equirectangular<wbr>Projection</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#halfquadtreesubdivisionscheme" class="tsd-kind-icon">half<wbr>Quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#heretilingscheme" class="tsd-kind-icon">here<wbr>Tiling<wbr>Scheme</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#identityprojection" class="tsd-kind-icon">identity<wbr>Projection</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#isantimeridiancrossing" class="tsd-kind-icon">is<wbr>Antimeridian<wbr>Crossing</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#isbox3like" class="tsd-kind-icon">is<wbr>Box3<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#isgeoboxextentlike" class="tsd-kind-icon">is<wbr>Geo<wbr>Box<wbr>Extent<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#isgeocoordinateslike" class="tsd-kind-icon">is<wbr>Geo<wbr>Coordinates<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#isgeopointlike" class="tsd-kind-icon">is<wbr>Geo<wbr>Point<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#isgeopolygonlike" class="tsd-kind-icon">is<wbr>Geo<wbr>Polygon<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#islatlnglike" class="tsd-kind-icon">is<wbr>Lat<wbr>Lng<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#isorientedbox3like" class="tsd-kind-icon">is<wbr>Oriented<wbr>Box3<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#istransformlike" class="tsd-kind-icon">is<wbr>Transform<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#isvector2like" class="tsd-kind-icon">is<wbr>Vector2<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#isvector3like" class="tsd-kind-icon">is<wbr>Vector3<wbr>Like</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#mercatorprojection" class="tsd-kind-icon">mercator<wbr>Projection</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#mercatortilingscheme" class="tsd-kind-icon">mercator<wbr>Tiling<wbr>Scheme</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#normalizedequirectangularprojection" class="tsd-kind-icon">normalized<wbr>Equirectangular<wbr>Projection</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#polartilingscheme" class="tsd-kind-icon">polar<wbr>Tiling<wbr>Scheme</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#poweroftwo" class="tsd-kind-icon">power<wbr>OfTwo</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#quadtreesubdivisionscheme" class="tsd-kind-icon">quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#sphereprojection" class="tsd-kind-icon">sphere<wbr>Projection</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#transversemercatorprojection" class="tsd-kind-icon">transverse<wbr>Mercator<wbr>Projection</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#webmercatorprojection" class="tsd-kind-icon">web<wbr>Mercator<wbr>Projection</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_geoutils.html#webmercatortilingscheme" class="tsd-kind-icon">web<wbr>Mercator<wbr>Tiling<wbr>Scheme</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Namespaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="harp_geoutils.mathutils-1.html" class="tsd-kind-icon">Math<wbr>Utils</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="harp_geoutils.tilekeyutils-1.html" class="tsd-kind-icon">Tile<wbr>Key<wbr>Utils</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/harp_geoutils.projectiontype-1.html" class="tsd-kind-icon">Projection<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.earthconstants-1.html" class="tsd-kind-icon">Earth<wbr>Constants</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.flattileboundingboxgenerator-1.html" class="tsd-kind-icon">Flat<wbr>Tile<wbr>Bounding<wbr>Box<wbr>Generator</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.geobox-1.html" class="tsd-kind-icon">Geo<wbr>Box</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-kind-icon">Geo<wbr>Coordinates</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.geopolygon-1.html" class="tsd-kind-icon">Geo<wbr>Polygon</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.mercatorconstants-1.html" class="tsd-kind-icon">Mercator<wbr>Constants</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.orientedbox3-1.html" class="tsd-kind-icon">Oriented<wbr>Box3</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.projection-1.html" class="tsd-kind-icon">Projection</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.quadtree-1.html" class="tsd-kind-icon">Quad<wbr>Tree</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.subtiles-1.html" class="tsd-kind-icon">Sub<wbr>Tiles</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.tilekey-1.html" class="tsd-kind-icon">Tile<wbr>Key</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.tiletreetraverse-1.html" class="tsd-kind-icon">Tile<wbr>Tree<wbr>Traverse</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-kind-icon">Tiling<wbr>Scheme</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_geoutils.transversemercatorutils-1.html" class="tsd-kind-icon">Transverse<wbr>Mercator<wbr>Utils</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_geoutils.box3like-1.html" class="tsd-kind-icon">Box3<wbr>Like</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_geoutils.geoboxextentlike-1.html" class="tsd-kind-icon">Geo<wbr>Box<wbr>Extent<wbr>Like</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-kind-icon">Geo<wbr>Coordinates<wbr>Like</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_geoutils.geopolygonlike-1.html" class="tsd-kind-icon">Geo<wbr>Polygon<wbr>Like</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_geoutils.latlnglike-1.html" class="tsd-kind-icon">Lat<wbr>Lng<wbr>Like</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_geoutils.orientedbox3like-1.html" class="tsd-kind-icon">Oriented<wbr>Box3<wbr>Like</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_geoutils.subdivisionscheme-1.html" class="tsd-kind-icon">Subdivision<wbr>Scheme</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_geoutils.transformlike-1.html" class="tsd-kind-icon">Transform<wbr>Like</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_geoutils.vector2like-1.html" class="tsd-kind-icon">Vector2<wbr>Like</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-kind-icon">Vector3<wbr>Like</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="harp_geoutils.html#geocoordlike" class="tsd-kind-icon">Geo<wbr>Coord<wbr>Like</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="harp_geoutils.html#geopointlike-1" class="tsd-kind-icon">Geo<wbr>Point<wbr>Like</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="harp_geoutils.html#geopolygoncoordinates-1" class="tsd-kind-icon">Geo<wbr>Polygon<wbr>Coordinates</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#max_latitude-1" class="tsd-kind-icon">MAX_<wbr>LATITUDE</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#max_longitude-1" class="tsd-kind-icon">MAX_<wbr>LONGITUDE</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#min_latitude-1" class="tsd-kind-icon">MIN_<wbr>LATITUDE</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#min_longitude-1" class="tsd-kind-icon">MIN_<wbr>LONGITUDE</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#equirectangularprojection-1" class="tsd-kind-icon">equirectangular<wbr>Projection</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#halfquadtreesubdivisionscheme-1" class="tsd-kind-icon">half<wbr>Quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#heretilingscheme-1" class="tsd-kind-icon">here<wbr>Tiling<wbr>Scheme</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#identityprojection-1" class="tsd-kind-icon">identity<wbr>Projection</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#mercatorprojection-1" class="tsd-kind-icon">mercator<wbr>Projection</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#mercatortilingscheme-1" class="tsd-kind-icon">mercator<wbr>Tiling<wbr>Scheme</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#normalizedequirectangularprojection-1" class="tsd-kind-icon">normalized<wbr>Equirectangular<wbr>Projection</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#polartilingscheme-1" class="tsd-kind-icon">polar<wbr>Tiling<wbr>Scheme</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#poweroftwo-1" class="tsd-kind-icon">power<wbr>OfTwo</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#quadtreesubdivisionscheme-1" class="tsd-kind-icon">quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#sphereprojection-1" class="tsd-kind-icon">sphere<wbr>Projection</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#transversemercatorprojection-1" class="tsd-kind-icon">transverse<wbr>Mercator<wbr>Projection</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#webmercatorprojection-1" class="tsd-kind-icon">web<wbr>Mercator<wbr>Projection</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_geoutils.html#webmercatortilingscheme-1" class="tsd-kind-icon">web<wbr>Mercator<wbr>Tiling<wbr>Scheme</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#geocoordliketogeocoordinateslike" class="tsd-kind-icon">geo<wbr>Coord<wbr>Like<wbr>ToGeo<wbr>Coordinates<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#geocoordliketogeopointlike" class="tsd-kind-icon">geo<wbr>Coord<wbr>Like<wbr>ToGeo<wbr>Point<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#isantimeridiancrossing-1" class="tsd-kind-icon">is<wbr>Antimeridian<wbr>Crossing</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#isbox3like-1" class="tsd-kind-icon">is<wbr>Box3<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#isgeoboxextentlike-1" class="tsd-kind-icon">is<wbr>Geo<wbr>Box<wbr>Extent<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#isgeocoordlike" class="tsd-kind-icon">is<wbr>Geo<wbr>Coord<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#isgeocoordinateslike-1" class="tsd-kind-icon">is<wbr>Geo<wbr>Coordinates<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#isgeopointlike-1" class="tsd-kind-icon">is<wbr>Geo<wbr>Point<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#isgeopolygonlike-1" class="tsd-kind-icon">is<wbr>Geo<wbr>Polygon<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#islatlnglike-1" class="tsd-kind-icon">is<wbr>Lat<wbr>Lng<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#isorientedbox3like-1" class="tsd-kind-icon">is<wbr>Oriented<wbr>Box3<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#istransformlike-1" class="tsd-kind-icon">is<wbr>Transform<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#isvector2like-1" class="tsd-kind-icon">is<wbr>Vector2<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_geoutils.html#isvector3like-1" class="tsd-kind-icon">is<wbr>Vector3<wbr>Like</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>References</h2>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="box3like" class="tsd-anchor"></a>
+					<h3>Box3<wbr>Like</h3>
+					Re-exports <a href="../interfaces/harp_geoutils.box3like-1.html">Box3Like</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="earthconstants" class="tsd-anchor"></a>
+					<h3>Earth<wbr>Constants</h3>
+					Re-exports <a href="../classes/harp_geoutils.earthconstants-1.html">EarthConstants</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="flattileboundingboxgenerator" class="tsd-anchor"></a>
+					<h3>Flat<wbr>Tile<wbr>Bounding<wbr>Box<wbr>Generator</h3>
+					Re-exports <a href="../classes/harp_geoutils.flattileboundingboxgenerator-1.html">FlatTileBoundingBoxGenerator</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geobox" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Box</h3>
+					Re-exports <a href="../classes/harp_geoutils.geobox-1.html">GeoBox</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geoboxextentlike" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Box<wbr>Extent<wbr>Like</h3>
+					Re-exports <a href="../interfaces/harp_geoutils.geoboxextentlike-1.html">GeoBoxExtentLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geocoordinates" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Coordinates</h3>
+					Re-exports <a href="../classes/harp_geoutils.geocoordinates-1.html">GeoCoordinates</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geocoordinateslike" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Coordinates<wbr>Like</h3>
+					Re-exports <a href="../interfaces/harp_geoutils.geocoordinateslike-1.html">GeoCoordinatesLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geopointlike" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Point<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#geopointlike-1">GeoPointLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geopolygon" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Polygon</h3>
+					Re-exports <a href="../classes/harp_geoutils.geopolygon-1.html">GeoPolygon</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geopolygoncoordinates" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Polygon<wbr>Coordinates</h3>
+					Re-exports <a href="harp_geoutils.html#geopolygoncoordinates-1">GeoPolygonCoordinates</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geopolygonlike" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Polygon<wbr>Like</h3>
+					Re-exports <a href="../interfaces/harp_geoutils.geopolygonlike-1.html">GeoPolygonLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="latlnglike" class="tsd-anchor"></a>
+					<h3>Lat<wbr>Lng<wbr>Like</h3>
+					Re-exports <a href="../interfaces/harp_geoutils.latlnglike-1.html">LatLngLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="max_latitude" class="tsd-anchor"></a>
+					<h3>MAX_<wbr>LATITUDE</h3>
+					Re-exports <a href="harp_geoutils.html#max_latitude-1">MAX_LATITUDE</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="max_longitude" class="tsd-anchor"></a>
+					<h3>MAX_<wbr>LONGITUDE</h3>
+					Re-exports <a href="harp_geoutils.html#max_longitude-1">MAX_LONGITUDE</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="min_latitude" class="tsd-anchor"></a>
+					<h3>MIN_<wbr>LATITUDE</h3>
+					Re-exports <a href="harp_geoutils.html#min_latitude-1">MIN_LATITUDE</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="min_longitude" class="tsd-anchor"></a>
+					<h3>MIN_<wbr>LONGITUDE</h3>
+					Re-exports <a href="harp_geoutils.html#min_longitude-1">MIN_LONGITUDE</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="mathutils" class="tsd-anchor"></a>
+					<h3>Math<wbr>Utils</h3>
+					Re-exports <a href="harp_geoutils.mathutils-1.html">MathUtils</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="mercatorconstants" class="tsd-anchor"></a>
+					<h3>Mercator<wbr>Constants</h3>
+					Re-exports <a href="../classes/harp_geoutils.mercatorconstants-1.html">MercatorConstants</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="orientedbox3" class="tsd-anchor"></a>
+					<h3>Oriented<wbr>Box3</h3>
+					Re-exports <a href="../classes/harp_geoutils.orientedbox3-1.html">OrientedBox3</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="orientedbox3like" class="tsd-anchor"></a>
+					<h3>Oriented<wbr>Box3<wbr>Like</h3>
+					Re-exports <a href="../interfaces/harp_geoutils.orientedbox3like-1.html">OrientedBox3Like</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="projection" class="tsd-anchor"></a>
+					<h3>Projection</h3>
+					Re-exports <a href="../classes/harp_geoutils.projection-1.html">Projection</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="projectiontype" class="tsd-anchor"></a>
+					<h3>Projection<wbr>Type</h3>
+					Re-exports <a href="../enums/harp_geoutils.projectiontype-1.html">ProjectionType</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="quadtree" class="tsd-anchor"></a>
+					<h3>Quad<wbr>Tree</h3>
+					Re-exports <a href="../classes/harp_geoutils.quadtree-1.html">QuadTree</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="subtiles" class="tsd-anchor"></a>
+					<h3>Sub<wbr>Tiles</h3>
+					Re-exports <a href="../classes/harp_geoutils.subtiles-1.html">SubTiles</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="subdivisionscheme" class="tsd-anchor"></a>
+					<h3>Subdivision<wbr>Scheme</h3>
+					Re-exports <a href="../interfaces/harp_geoutils.subdivisionscheme-1.html">SubdivisionScheme</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="tilekey" class="tsd-anchor"></a>
+					<h3>Tile<wbr>Key</h3>
+					Re-exports <a href="../classes/harp_geoutils.tilekey-1.html">TileKey</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="tilekeyutils" class="tsd-anchor"></a>
+					<h3>Tile<wbr>Key<wbr>Utils</h3>
+					Re-exports <a href="harp_geoutils.tilekeyutils-1.html">TileKeyUtils</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="tiletreetraverse" class="tsd-anchor"></a>
+					<h3>Tile<wbr>Tree<wbr>Traverse</h3>
+					Re-exports <a href="../classes/harp_geoutils.tiletreetraverse-1.html">TileTreeTraverse</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="tilingscheme" class="tsd-anchor"></a>
+					<h3>Tiling<wbr>Scheme</h3>
+					Re-exports <a href="../classes/harp_geoutils.tilingscheme-1.html">TilingScheme</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="transformlike" class="tsd-anchor"></a>
+					<h3>Transform<wbr>Like</h3>
+					Re-exports <a href="../interfaces/harp_geoutils.transformlike-1.html">TransformLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="transversemercatorutils" class="tsd-anchor"></a>
+					<h3>Transverse<wbr>Mercator<wbr>Utils</h3>
+					Re-exports <a href="../classes/harp_geoutils.transversemercatorutils-1.html">TransverseMercatorUtils</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="vector2like" class="tsd-anchor"></a>
+					<h3>Vector2<wbr>Like</h3>
+					Re-exports <a href="../interfaces/harp_geoutils.vector2like-1.html">Vector2Like</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="vector3like" class="tsd-anchor"></a>
+					<h3>Vector3<wbr>Like</h3>
+					Re-exports <a href="../interfaces/harp_geoutils.vector3like-1.html">Vector3Like</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="equirectangularprojection" class="tsd-anchor"></a>
+					<h3>equirectangular<wbr>Projection</h3>
+					Re-exports <a href="harp_geoutils.html#equirectangularprojection-1">equirectangularProjection</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="halfquadtreesubdivisionscheme" class="tsd-anchor"></a>
+					<h3>half<wbr>Quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</h3>
+					Re-exports <a href="harp_geoutils.html#halfquadtreesubdivisionscheme-1">halfQuadTreeSubdivisionScheme</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="heretilingscheme" class="tsd-anchor"></a>
+					<h3>here<wbr>Tiling<wbr>Scheme</h3>
+					Re-exports <a href="harp_geoutils.html#heretilingscheme-1">hereTilingScheme</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="identityprojection" class="tsd-anchor"></a>
+					<h3>identity<wbr>Projection</h3>
+					Re-exports <a href="harp_geoutils.html#identityprojection-1">identityProjection</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isantimeridiancrossing" class="tsd-anchor"></a>
+					<h3>is<wbr>Antimeridian<wbr>Crossing</h3>
+					Re-exports <a href="harp_geoutils.html#isantimeridiancrossing-1">isAntimeridianCrossing</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isbox3like" class="tsd-anchor"></a>
+					<h3>is<wbr>Box3<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#isbox3like-1">isBox3Like</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isgeoboxextentlike" class="tsd-anchor"></a>
+					<h3>is<wbr>Geo<wbr>Box<wbr>Extent<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#isgeoboxextentlike-1">isGeoBoxExtentLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isgeocoordinateslike" class="tsd-anchor"></a>
+					<h3>is<wbr>Geo<wbr>Coordinates<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#isgeocoordinateslike-1">isGeoCoordinatesLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isgeopointlike" class="tsd-anchor"></a>
+					<h3>is<wbr>Geo<wbr>Point<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#isgeopointlike-1">isGeoPointLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isgeopolygonlike" class="tsd-anchor"></a>
+					<h3>is<wbr>Geo<wbr>Polygon<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#isgeopolygonlike-1">isGeoPolygonLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="islatlnglike" class="tsd-anchor"></a>
+					<h3>is<wbr>Lat<wbr>Lng<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#islatlnglike-1">isLatLngLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isorientedbox3like" class="tsd-anchor"></a>
+					<h3>is<wbr>Oriented<wbr>Box3<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#isorientedbox3like-1">isOrientedBox3Like</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="istransformlike" class="tsd-anchor"></a>
+					<h3>is<wbr>Transform<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#istransformlike-1">isTransformLike</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isvector2like" class="tsd-anchor"></a>
+					<h3>is<wbr>Vector2<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#isvector2like-1">isVector2Like</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isvector3like" class="tsd-anchor"></a>
+					<h3>is<wbr>Vector3<wbr>Like</h3>
+					Re-exports <a href="harp_geoutils.html#isvector3like-1">isVector3Like</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="mercatorprojection" class="tsd-anchor"></a>
+					<h3>mercator<wbr>Projection</h3>
+					Re-exports <a href="harp_geoutils.html#mercatorprojection-1">mercatorProjection</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="mercatortilingscheme" class="tsd-anchor"></a>
+					<h3>mercator<wbr>Tiling<wbr>Scheme</h3>
+					Re-exports <a href="harp_geoutils.html#mercatortilingscheme-1">mercatorTilingScheme</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="normalizedequirectangularprojection" class="tsd-anchor"></a>
+					<h3>normalized<wbr>Equirectangular<wbr>Projection</h3>
+					Re-exports <a href="harp_geoutils.html#normalizedequirectangularprojection-1">normalizedEquirectangularProjection</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="polartilingscheme" class="tsd-anchor"></a>
+					<h3>polar<wbr>Tiling<wbr>Scheme</h3>
+					Re-exports <a href="harp_geoutils.html#polartilingscheme-1">polarTilingScheme</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="poweroftwo" class="tsd-anchor"></a>
+					<h3>power<wbr>OfTwo</h3>
+					Re-exports <a href="harp_geoutils.html#poweroftwo-1">powerOfTwo</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="quadtreesubdivisionscheme" class="tsd-anchor"></a>
+					<h3>quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</h3>
+					Re-exports <a href="harp_geoutils.html#quadtreesubdivisionscheme-1">quadTreeSubdivisionScheme</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="sphereprojection" class="tsd-anchor"></a>
+					<h3>sphere<wbr>Projection</h3>
+					Re-exports <a href="harp_geoutils.html#sphereprojection-1">sphereProjection</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="transversemercatorprojection" class="tsd-anchor"></a>
+					<h3>transverse<wbr>Mercator<wbr>Projection</h3>
+					Re-exports <a href="harp_geoutils.html#transversemercatorprojection-1">transverseMercatorProjection</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="webmercatorprojection" class="tsd-anchor"></a>
+					<h3>web<wbr>Mercator<wbr>Projection</h3>
+					Re-exports <a href="harp_geoutils.html#webmercatorprojection-1">webMercatorProjection</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="webmercatortilingscheme" class="tsd-anchor"></a>
+					<h3>web<wbr>Mercator<wbr>Tiling<wbr>Scheme</h3>
+					Re-exports <a href="harp_geoutils.html#webmercatortilingscheme-1">webMercatorTilingScheme</a>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="geocoordlike" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Coord<wbr>Like</h3>
+					<div class="tsd-signature tsd-kind-icon">Geo<wbr>Coord<wbr>Like<span class="tsd-signature-symbol">:</span> <a href="harp_geoutils.html#geopointlike" class="tsd-signature-type">GeoPointLike</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_geoutils.latlnglike-1.html" class="tsd-signature-type">LatLngLike</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoCoordLike.ts#L13">@here/harp-geoutils/lib/coordinates/GeoCoordLike.ts:13</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Represents an object in different geo coordinate formats</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="geopointlike-1" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Point<wbr>Like</h3>
+					<div class="tsd-signature tsd-kind-icon">Geo<wbr>Point<wbr>Like<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoPointLike.ts#L10">@here/harp-geoutils/lib/coordinates/GeoPointLike.ts:10</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An [[Array]] following the order longitude, latitude, altitude.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="geopolygoncoordinates-1" class="tsd-anchor"></a>
+					<h3>Geo<wbr>Polygon<wbr>Coordinates</h3>
+					<div class="tsd-signature tsd-kind-icon">Geo<wbr>Polygon<wbr>Coordinates<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MinThreeItemsArray</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a><span class="tsd-signature-symbol"> | </span><a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a><span class="tsd-signature-symbol"> | </span><a href="harp_geoutils.html#geocoordlike" class="tsd-signature-type">GeoCoordLike</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoPolygon.ts#L35">@here/harp-geoutils/lib/coordinates/GeoPolygon.ts:35</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="max_latitude-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MAX_<wbr>LATITUDE</h3>
+					<div class="tsd-signature tsd-kind-icon">MAX_<wbr>LATITUDE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">90</span><span class="tsd-signature-symbol"> = 90</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoCoordinates.ts#L13">@here/harp-geoutils/lib/coordinates/GeoCoordinates.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="max_longitude-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MAX_<wbr>LONGITUDE</h3>
+					<div class="tsd-signature tsd-kind-icon">MAX_<wbr>LONGITUDE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">180</span><span class="tsd-signature-symbol"> = 180</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoCoordinates.ts#L15">@here/harp-geoutils/lib/coordinates/GeoCoordinates.ts:15</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="min_latitude-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MIN_<wbr>LATITUDE</h3>
+					<div class="tsd-signature tsd-kind-icon">MIN_<wbr>LATITUDE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">-90</span><span class="tsd-signature-symbol"> = -90</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoCoordinates.ts#L14">@here/harp-geoutils/lib/coordinates/GeoCoordinates.ts:14</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="min_longitude-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MIN_<wbr>LONGITUDE</h3>
+					<div class="tsd-signature tsd-kind-icon">MIN_<wbr>LONGITUDE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">-180</span><span class="tsd-signature-symbol"> = -180</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoCoordinates.ts#L16">@here/harp-geoutils/lib/coordinates/GeoCoordinates.ts:16</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="equirectangularprojection-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> equirectangular<wbr>Projection</h3>
+					<div class="tsd-signature tsd-kind-icon">equirectangular<wbr>Projection<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> = new EquirectangularProjection(EarthConstants.EQUATORIAL_CIRCUMFERENCE)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/EquirectangularProjection.ts#L166">@here/harp-geoutils/lib/projection/EquirectangularProjection.ts:166</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Equirectangular <a href="harp_geoutils.html#projection">Projection</a> used to convert geo coordinates to world coordinates and vice
+							versa.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="halfquadtreesubdivisionscheme-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> half<wbr>Quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</h3>
+					<div class="tsd-signature tsd-kind-icon">half<wbr>Quad<wbr>Tree<wbr>Subdivision<wbr>Scheme<span class="tsd-signature-symbol">:</span> <a href="../interfaces/harp_geoutils.subdivisionscheme-1.html" class="tsd-signature-type">SubdivisionScheme</a><span class="tsd-signature-symbol"> = new HalfQuadTreeSubdivisionScheme()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/HalfQuadTreeSubdivisionScheme.ts#L32">@here/harp-geoutils/lib/tiling/HalfQuadTreeSubdivisionScheme.ts:32</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A <a href="harp_geoutils.html#subdivisionscheme">SubdivisionScheme</a> used to represent half quadtrees.
+								This particular subdivision scheme is
+							used by the HERE tiling scheme.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="heretilingscheme-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> here<wbr>Tiling<wbr>Scheme</h3>
+					<div class="tsd-signature tsd-kind-icon">here<wbr>Tiling<wbr>Scheme<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a><span class="tsd-signature-symbol"> = new TilingScheme(halfQuadTreeSubdivisionScheme,normalizedEquirectangularProjection)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/HereTilingScheme.ts#L17">@here/harp-geoutils/lib/tiling/HereTilingScheme.ts:17</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><a href="harp_geoutils.html#tilingscheme">TilingScheme</a> used by most of the data published by HERE.</p>
+						</div>
+						<p>The <code>hereTilingScheme</code> features a half quadtree subdivision scheme and an equirectangular
+						projection.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="identityprojection-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> identity<wbr>Projection</h3>
+					<div class="tsd-signature tsd-kind-icon">identity<wbr>Projection<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> = new IdentityProjection(1)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/IdentityProjection.ts#L139">@here/harp-geoutils/lib/projection/IdentityProjection.ts:139</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Identity <a href="harp_geoutils.html#projection">Projection</a> used to convert geo coordinates to unit coordinates and vice versa.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="mercatorprojection-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> mercator<wbr>Projection</h3>
+					<div class="tsd-signature tsd-kind-icon">mercator<wbr>Projection<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> = new MercatorProjection(EarthConstants.EQUATORIAL_CIRCUMFERENCE)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/MercatorProjection.ts#L345">@here/harp-geoutils/lib/projection/MercatorProjection.ts:345</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Mercator <a href="harp_geoutils.html#projection">Projection</a> used to convert geo coordinates to world coordinates and vice versa.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="mercatortilingscheme-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> mercator<wbr>Tiling<wbr>Scheme</h3>
+					<div class="tsd-signature tsd-kind-icon">mercator<wbr>Tiling<wbr>Scheme<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a><span class="tsd-signature-symbol"> = new TilingScheme(quadTreeSubdivisionScheme, mercatorProjection)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/MercatorTilingScheme.ts#L16">@here/harp-geoutils/lib/tiling/MercatorTilingScheme.ts:16</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The <a href="harp_geoutils.html#tilingscheme">TilingScheme</a> used by the HERE web tiles.</p>
+						</div>
+						<p>The <code>mercatorTilingScheme</code> features a quadtree subdivision scheme and a Mercator projection.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="normalizedequirectangularprojection-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> normalized<wbr>Equirectangular<wbr>Projection</h3>
+					<div class="tsd-signature tsd-kind-icon">normalized<wbr>Equirectangular<wbr>Projection<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> = new EquirectangularProjection(1)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/EquirectangularProjection.ts#L160">@here/harp-geoutils/lib/projection/EquirectangularProjection.ts:160</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Equirectangular <a href="harp_geoutils.html#projection">Projection</a> used to convert geo coordinates to unit coordinates and vice
+							versa.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="polartilingscheme-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> polar<wbr>Tiling<wbr>Scheme</h3>
+					<div class="tsd-signature tsd-kind-icon">polar<wbr>Tiling<wbr>Scheme<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a><span class="tsd-signature-symbol"> = new TilingScheme(quadTreeSubdivisionScheme,transverseMercatorProjection)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/PolarTilingScheme.ts#L15">@here/harp-geoutils/lib/tiling/PolarTilingScheme.ts:15</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A <a href="harp_geoutils.html#tilingscheme">TilingScheme</a> featuring quadtree subdivision scheme and
+							transverse Mercator projection.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="poweroftwo-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> power<wbr>OfTwo</h3>
+					<div class="tsd-signature tsd-kind-icon">power<wbr>OfTwo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = (() &#x3D;&gt; {let val &#x3D; 0.5;return new Array(53).fill(0).map(() &#x3D;&gt; (val *&#x3D; 2));})()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKeyUtils.ts#L14">@here/harp-geoutils/lib/tiling/TileKeyUtils.ts:14</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="quadtreesubdivisionscheme-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</h3>
+					<div class="tsd-signature tsd-kind-icon">quad<wbr>Tree<wbr>Subdivision<wbr>Scheme<span class="tsd-signature-symbol">:</span> <a href="../interfaces/harp_geoutils.subdivisionscheme-1.html" class="tsd-signature-type">SubdivisionScheme</a><span class="tsd-signature-symbol"> = new QuadTreeSubdivisionScheme()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/QuadTreeSubdivisionScheme.ts#L30">@here/harp-geoutils/lib/tiling/QuadTreeSubdivisionScheme.ts:30</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><a href="harp_geoutils.html#subdivisionscheme">SubdivisionScheme</a> representing a quadtree.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="sphereprojection-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> sphere<wbr>Projection</h3>
+					<div class="tsd-signature tsd-kind-icon">sphere<wbr>Projection<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> = new SphereProjection(EarthConstants.EQUATORIAL_RADIUS)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/SphereProjection.ts#L442">@here/harp-geoutils/lib/projection/SphereProjection.ts:442</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="transversemercatorprojection-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> transverse<wbr>Mercator<wbr>Projection</h3>
+					<div class="tsd-signature tsd-kind-icon">transverse<wbr>Mercator<wbr>Projection<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> = new TransverseMercatorProjection(EarthConstants.EQUATORIAL_CIRCUMFERENCE)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/TransverseMercatorProjection.ts#L395">@here/harp-geoutils/lib/projection/TransverseMercatorProjection.ts:395</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Transverse Mercator <a href="harp_geoutils.html#projection">Projection</a> used to convert geo coordinates to world coordinates
+							and vice versa.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="webmercatorprojection-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> web<wbr>Mercator<wbr>Projection</h3>
+					<div class="tsd-signature tsd-kind-icon">web<wbr>Mercator<wbr>Projection<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> = new WebMercatorProjection(EarthConstants.EQUATORIAL_CIRCUMFERENCE)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/MercatorProjection.ts#L353">@here/harp-geoutils/lib/projection/MercatorProjection.ts:353</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Web Mercator <a href="harp_geoutils.html#projection">Projection</a> used to convert geo coordinates to world coordinates
+							and vice versa.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="webmercatortilingscheme-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> web<wbr>Mercator<wbr>Tiling<wbr>Scheme</h3>
+					<div class="tsd-signature tsd-kind-icon">web<wbr>Mercator<wbr>Tiling<wbr>Scheme<span class="tsd-signature-symbol">:</span> <a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a><span class="tsd-signature-symbol"> = new TilingScheme(quadTreeSubdivisionScheme,webMercatorProjection)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/WebMercatorTilingScheme.ts#L14">@here/harp-geoutils/lib/tiling/WebMercatorTilingScheme.ts:14</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A <a href="harp_geoutils.html#tilingscheme">TilingScheme</a> featuring quadtree subdivision scheme and web Mercator projection.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="geocoordliketogeocoordinateslike" class="tsd-anchor"></a>
+					<h3>geo<wbr>Coord<wbr>Like<wbr>ToGeo<wbr>Coordinates<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">geo<wbr>Coord<wbr>Like<wbr>ToGeo<wbr>Coordinates<wbr>Like<span class="tsd-signature-symbol">(</span>coord<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.html#geocoordlike" class="tsd-signature-type">GeoCoordLike</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoCoordLike.ts#L15">@here/harp-geoutils/lib/coordinates/GeoCoordLike.ts:15</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>coord: <a href="harp_geoutils.html#geocoordlike" class="tsd-signature-type">GeoCoordLike</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="geocoordliketogeopointlike" class="tsd-anchor"></a>
+					<h3>geo<wbr>Coord<wbr>Like<wbr>ToGeo<wbr>Point<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">geo<wbr>Coord<wbr>Like<wbr>ToGeo<wbr>Point<wbr>Like<span class="tsd-signature-symbol">(</span>coord<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.html#geocoordlike" class="tsd-signature-type">GeoCoordLike</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.html#geopointlike" class="tsd-signature-type">GeoPointLike</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoCoordLike.ts#L23">@here/harp-geoutils/lib/coordinates/GeoCoordLike.ts:23</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>coord: <a href="harp_geoutils.html#geocoordlike" class="tsd-signature-type">GeoCoordLike</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.html#geopointlike" class="tsd-signature-type">GeoPointLike</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isantimeridiancrossing-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Antimeridian<wbr>Crossing</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Antimeridian<wbr>Crossing<span class="tsd-signature-symbol">(</span>lonStart<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, lonEnd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoPolygon.ts#L26">@here/harp-geoutils/lib/coordinates/GeoPolygon.ts:26</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>lonStart: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>lonEnd: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isbox3like-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Box3<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Box3<wbr>Like<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Box3Like</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/math/Box3Like.ts#L29">@here/harp-geoutils/lib/math/Box3Like.ts:29</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if the given object implements the <a href="harp_geoutils.html#box3like">Box3Like</a> interface.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-symbol">{}</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A valid object.</p>
+									</div>
+									<ul class="tsd-parameters">
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Box3Like</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isgeoboxextentlike-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Geo<wbr>Box<wbr>Extent<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Geo<wbr>Box<wbr>Extent<wbr>Like<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">obj</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">GeoBoxExtentLike</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoBoxExtentLike.ts#L25">@here/harp-geoutils/lib/coordinates/GeoBoxExtentLike.ts:25</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Type guard to assert that <code>object</code> conforms to <a href="harp_geoutils.html#geoboxextentlike">GeoBoxExtentLike</a> interface.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>obj: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">obj</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">GeoBoxExtentLike</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isgeocoordlike" class="tsd-anchor"></a>
+					<h3>is<wbr>Geo<wbr>Coord<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Geo<wbr>Coord<wbr>Like<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoCoordLike.ts#L31">@here/harp-geoutils/lib/coordinates/GeoCoordLike.ts:31</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isgeocoordinateslike-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Geo<wbr>Coordinates<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Geo<wbr>Coordinates<wbr>Like<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">GeoCoordinatesLike</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoCoordinatesLike.ts#L24">@here/harp-geoutils/lib/coordinates/GeoCoordinatesLike.ts:24</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Type guard to assert that <code>object</code> conforms to <a href="harp_geoutils.html#geocoordinateslike">GeoCoordinatesLike</a> data interface.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">GeoCoordinatesLike</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isgeopointlike-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Geo<wbr>Point<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Geo<wbr>Point<wbr>Like<span class="tsd-signature-symbol">(</span>geoPoint<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">geoPoint</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">GeoPointLike</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoPointLike.ts#L15">@here/harp-geoutils/lib/coordinates/GeoPointLike.ts:15</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Type guard to assert that <code>object</code> conforms to <a href="harp_geoutils.html#geopointlike">GeoPointLike</a> interface.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>geoPoint: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">geoPoint</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">GeoPointLike</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isgeopolygonlike-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Geo<wbr>Polygon<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Geo<wbr>Polygon<wbr>Like<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">GeoPolygonLike</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/GeoPolygonLike.ts#L27">@here/harp-geoutils/lib/coordinates/GeoPolygonLike.ts:27</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Type guard to assert that <code>object</code> conforms to <a href="harp_geoutils.html#geopolygonlike">GeoPolygonLike</a> data interface.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>beta,</dt>
+									<dd><p>@internal</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">GeoPolygonLike</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="islatlnglike-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Lat<wbr>Lng<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Lat<wbr>Lng<wbr>Like<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">LatLngLike</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/coordinates/LatLngLike.ts#L21">@here/harp-geoutils/lib/coordinates/LatLngLike.ts:21</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Type guard to assert that <code>object</code> conforms to <a href="harp_geoutils.html#latlnglike">LatLngLike</a> interface.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">LatLngLike</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isorientedbox3like-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Oriented<wbr>Box3<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Oriented<wbr>Box3<wbr>Like<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">OrientedBox3Like</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/math/OrientedBox3Like.ts#L25">@here/harp-geoutils/lib/math/OrientedBox3Like.ts:25</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if the given object implements the interface <a href="harp_geoutils.html#orientedbox3like">OrientedBox3Like</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-symbol">{}</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object.</p>
+									</div>
+									<ul class="tsd-parameters">
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">OrientedBox3Like</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="istransformlike-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Transform<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Transform<wbr>Like<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">TransformLike</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/math/TransformLike.ts#L40">@here/harp-geoutils/lib/math/TransformLike.ts:40</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if the given object implements the interface <a href="harp_geoutils.html#transformlike">TransformLike</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-symbol">{}</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object.</p>
+									</div>
+									<ul class="tsd-parameters">
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">TransformLike</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isvector2like-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Vector2<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Vector2<wbr>Like<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">v</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Vector2Like</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/math/Vector2Like.ts#L22">@here/harp-geoutils/lib/math/Vector2Like.ts:22</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>v: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">v</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Vector2Like</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isvector3like-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Vector3<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Vector3<wbr>Like<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">v</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Vector3Like</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/math/Vector3Like.ts#L27">@here/harp-geoutils/lib/math/Vector3Like.ts:27</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>v: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">v</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Vector3Like</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="harp_geoutils.html">harp-<wbr>geoutils</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_geoutils.mathutils-1.html">Math<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_geoutils.tilekeyutils-1.html">Tile<wbr>Key<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+						<ul>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#box3like" class="tsd-kind-icon">Box3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#earthconstants" class="tsd-kind-icon">Earth<wbr>Constants</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#flattileboundingboxgenerator" class="tsd-kind-icon">Flat<wbr>Tile<wbr>Bounding<wbr>Box<wbr>Generator</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geobox" class="tsd-kind-icon">Geo<wbr>Box</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geoboxextentlike" class="tsd-kind-icon">Geo<wbr>Box<wbr>Extent<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geocoordinates" class="tsd-kind-icon">Geo<wbr>Coordinates</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geocoordinateslike" class="tsd-kind-icon">Geo<wbr>Coordinates<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geopointlike" class="tsd-kind-icon">Geo<wbr>Point<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geopolygon" class="tsd-kind-icon">Geo<wbr>Polygon</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geopolygoncoordinates" class="tsd-kind-icon">Geo<wbr>Polygon<wbr>Coordinates</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geopolygonlike" class="tsd-kind-icon">Geo<wbr>Polygon<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#latlnglike" class="tsd-kind-icon">Lat<wbr>Lng<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#max_latitude" class="tsd-kind-icon">MAX_<wbr>LATITUDE</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#max_longitude" class="tsd-kind-icon">MAX_<wbr>LONGITUDE</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#min_latitude" class="tsd-kind-icon">MIN_<wbr>LATITUDE</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#min_longitude" class="tsd-kind-icon">MIN_<wbr>LONGITUDE</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#mathutils" class="tsd-kind-icon">Math<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#mercatorconstants" class="tsd-kind-icon">Mercator<wbr>Constants</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#orientedbox3" class="tsd-kind-icon">Oriented<wbr>Box3</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#orientedbox3like" class="tsd-kind-icon">Oriented<wbr>Box3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#projection" class="tsd-kind-icon">Projection</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#projectiontype" class="tsd-kind-icon">Projection<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#quadtree" class="tsd-kind-icon">Quad<wbr>Tree</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#subtiles" class="tsd-kind-icon">Sub<wbr>Tiles</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#subdivisionscheme" class="tsd-kind-icon">Subdivision<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#tilekey" class="tsd-kind-icon">Tile<wbr>Key</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#tilekeyutils" class="tsd-kind-icon">Tile<wbr>Key<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#tiletreetraverse" class="tsd-kind-icon">Tile<wbr>Tree<wbr>Traverse</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#tilingscheme" class="tsd-kind-icon">Tiling<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#transformlike" class="tsd-kind-icon">Transform<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#transversemercatorutils" class="tsd-kind-icon">Transverse<wbr>Mercator<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#vector2like" class="tsd-kind-icon">Vector2<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#vector3like" class="tsd-kind-icon">Vector3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#equirectangularprojection" class="tsd-kind-icon">equirectangular<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#halfquadtreesubdivisionscheme" class="tsd-kind-icon">half<wbr>Quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#heretilingscheme" class="tsd-kind-icon">here<wbr>Tiling<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#identityprojection" class="tsd-kind-icon">identity<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isantimeridiancrossing" class="tsd-kind-icon">is<wbr>Antimeridian<wbr>Crossing</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isbox3like" class="tsd-kind-icon">is<wbr>Box3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isgeoboxextentlike" class="tsd-kind-icon">is<wbr>Geo<wbr>Box<wbr>Extent<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isgeocoordinateslike" class="tsd-kind-icon">is<wbr>Geo<wbr>Coordinates<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isgeopointlike" class="tsd-kind-icon">is<wbr>Geo<wbr>Point<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isgeopolygonlike" class="tsd-kind-icon">is<wbr>Geo<wbr>Polygon<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#islatlnglike" class="tsd-kind-icon">is<wbr>Lat<wbr>Lng<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isorientedbox3like" class="tsd-kind-icon">is<wbr>Oriented<wbr>Box3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#istransformlike" class="tsd-kind-icon">is<wbr>Transform<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isvector2like" class="tsd-kind-icon">is<wbr>Vector2<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isvector3like" class="tsd-kind-icon">is<wbr>Vector3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#mercatorprojection" class="tsd-kind-icon">mercator<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#mercatortilingscheme" class="tsd-kind-icon">mercator<wbr>Tiling<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#normalizedequirectangularprojection" class="tsd-kind-icon">normalized<wbr>Equirectangular<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#polartilingscheme" class="tsd-kind-icon">polar<wbr>Tiling<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#poweroftwo" class="tsd-kind-icon">power<wbr>OfTwo</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#quadtreesubdivisionscheme" class="tsd-kind-icon">quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#sphereprojection" class="tsd-kind-icon">sphere<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#transversemercatorprojection" class="tsd-kind-icon">transverse<wbr>Mercator<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#webmercatorprojection" class="tsd-kind-icon">web<wbr>Mercator<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_geoutils.html#webmercatortilingscheme" class="tsd-kind-icon">web<wbr>Mercator<wbr>Tiling<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_geoutils.mathutils-1.html" class="tsd-kind-icon">Math<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_geoutils.tilekeyutils-1.html" class="tsd-kind-icon">Tile<wbr>Key<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-enum tsd-parent-kind-module">
+								<a href="../enums/harp_geoutils.projectiontype-1.html" class="tsd-kind-icon">Projection<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.earthconstants-1.html" class="tsd-kind-icon">Earth<wbr>Constants</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.flattileboundingboxgenerator-1.html" class="tsd-kind-icon">Flat<wbr>Tile<wbr>Bounding<wbr>Box<wbr>Generator</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.geobox-1.html" class="tsd-kind-icon">Geo<wbr>Box</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-kind-icon">Geo<wbr>Coordinates</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.geopolygon-1.html" class="tsd-kind-icon">Geo<wbr>Polygon</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.mercatorconstants-1.html" class="tsd-kind-icon">Mercator<wbr>Constants</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.orientedbox3-1.html" class="tsd-kind-icon">Oriented<wbr>Box3</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.projection-1.html" class="tsd-kind-icon">Projection</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.quadtree-1.html" class="tsd-kind-icon">Quad<wbr>Tree</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.subtiles-1.html" class="tsd-kind-icon">Sub<wbr>Tiles</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.tilekey-1.html" class="tsd-kind-icon">Tile<wbr>Key</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.tiletreetraverse-1.html" class="tsd-kind-icon">Tile<wbr>Tree<wbr>Traverse</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-kind-icon">Tiling<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_geoutils.transversemercatorutils-1.html" class="tsd-kind-icon">Transverse<wbr>Mercator<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_geoutils.box3like-1.html" class="tsd-kind-icon">Box3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_geoutils.geoboxextentlike-1.html" class="tsd-kind-icon">Geo<wbr>Box<wbr>Extent<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-kind-icon">Geo<wbr>Coordinates<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_geoutils.geopolygonlike-1.html" class="tsd-kind-icon">Geo<wbr>Polygon<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_geoutils.latlnglike-1.html" class="tsd-kind-icon">Lat<wbr>Lng<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_geoutils.orientedbox3like-1.html" class="tsd-kind-icon">Oriented<wbr>Box3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_geoutils.subdivisionscheme-1.html" class="tsd-kind-icon">Subdivision<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_geoutils.transformlike-1.html" class="tsd-kind-icon">Transform<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_geoutils.vector2like-1.html" class="tsd-kind-icon">Vector2<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-kind-icon">Vector3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geocoordlike" class="tsd-kind-icon">Geo<wbr>Coord<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geopointlike-1" class="tsd-kind-icon">Geo<wbr>Point<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geopolygoncoordinates-1" class="tsd-kind-icon">Geo<wbr>Polygon<wbr>Coordinates</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#max_latitude-1" class="tsd-kind-icon">MAX_<wbr>LATITUDE</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#max_longitude-1" class="tsd-kind-icon">MAX_<wbr>LONGITUDE</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#min_latitude-1" class="tsd-kind-icon">MIN_<wbr>LATITUDE</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#min_longitude-1" class="tsd-kind-icon">MIN_<wbr>LONGITUDE</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#equirectangularprojection-1" class="tsd-kind-icon">equirectangular<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#halfquadtreesubdivisionscheme-1" class="tsd-kind-icon">half<wbr>Quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#heretilingscheme-1" class="tsd-kind-icon">here<wbr>Tiling<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#identityprojection-1" class="tsd-kind-icon">identity<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#mercatorprojection-1" class="tsd-kind-icon">mercator<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#mercatortilingscheme-1" class="tsd-kind-icon">mercator<wbr>Tiling<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#normalizedequirectangularprojection-1" class="tsd-kind-icon">normalized<wbr>Equirectangular<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#polartilingscheme-1" class="tsd-kind-icon">polar<wbr>Tiling<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#poweroftwo-1" class="tsd-kind-icon">power<wbr>OfTwo</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#quadtreesubdivisionscheme-1" class="tsd-kind-icon">quad<wbr>Tree<wbr>Subdivision<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#sphereprojection-1" class="tsd-kind-icon">sphere<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#transversemercatorprojection-1" class="tsd-kind-icon">transverse<wbr>Mercator<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#webmercatorprojection-1" class="tsd-kind-icon">web<wbr>Mercator<wbr>Projection</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_geoutils.html#webmercatortilingscheme-1" class="tsd-kind-icon">web<wbr>Mercator<wbr>Tiling<wbr>Scheme</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geocoordliketogeocoordinateslike" class="tsd-kind-icon">geo<wbr>Coord<wbr>Like<wbr>ToGeo<wbr>Coordinates<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#geocoordliketogeopointlike" class="tsd-kind-icon">geo<wbr>Coord<wbr>Like<wbr>ToGeo<wbr>Point<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isantimeridiancrossing-1" class="tsd-kind-icon">is<wbr>Antimeridian<wbr>Crossing</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isbox3like-1" class="tsd-kind-icon">is<wbr>Box3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isgeoboxextentlike-1" class="tsd-kind-icon">is<wbr>Geo<wbr>Box<wbr>Extent<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isgeocoordlike" class="tsd-kind-icon">is<wbr>Geo<wbr>Coord<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isgeocoordinateslike-1" class="tsd-kind-icon">is<wbr>Geo<wbr>Coordinates<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isgeopointlike-1" class="tsd-kind-icon">is<wbr>Geo<wbr>Point<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isgeopolygonlike-1" class="tsd-kind-icon">is<wbr>Geo<wbr>Polygon<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#islatlnglike-1" class="tsd-kind-icon">is<wbr>Lat<wbr>Lng<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isorientedbox3like-1" class="tsd-kind-icon">is<wbr>Oriented<wbr>Box3<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#istransformlike-1" class="tsd-kind-icon">is<wbr>Transform<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isvector2like-1" class="tsd-kind-icon">is<wbr>Vector2<wbr>Like</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_geoutils.html#isvector3like-1" class="tsd-kind-icon">is<wbr>Vector3<wbr>Like</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

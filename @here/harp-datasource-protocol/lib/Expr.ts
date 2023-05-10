@@ -226,7 +226,7 @@ export enum ExprScope {
 
 /**
  * Abstract class representing the
- * {@link https://github.com/heremaps/harp.gl/blob/master/%40here/harp-datasource-protocol/StyleExpressions.md | style expressions}
+ * {@link https://github.com/lume/harp.gl/blob/master/%40here/harp-datasource-protocol/StyleExpressions.md | style expressions}
  * used in {@link Theme}.
  */
 export abstract class Expr {
@@ -257,7 +257,7 @@ export abstract class Expr {
      *
      * @remarks
      * The optional set of {@link Theme.definitions | definitions} is used
-     * to resolve the {@link https://github.com/heremaps/harp.gl/blob/master/%40here/harp-datasource-protocol/StyleExpressions.md#ref | ref expressions}.
+     * to resolve the {@link https://github.com/lume/harp.gl/blob/master/%40here/harp-datasource-protocol/StyleExpressions.md#ref | ref expressions}.
      *
      * @param json - JSON object representing the expression to parse.
      * @param definitions - Optional set of definitions used to expand references.

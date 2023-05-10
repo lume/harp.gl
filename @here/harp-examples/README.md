@@ -34,9 +34,9 @@ We can group the examples by several categories, looking at what kind of feature
 
 1. [OMV Data](https://www.harp.gl/docs/master/examples/#getting-started_hello-world_npm.html) with our default map style.
 1. [Webtiles with the mercator projection](https://www.harp.gl/docs/master/examples/#datasource_webtile.html) and [with globe](https://www.harp.gl/docs/master/examples/#datasource_webtile_globe.html).
-1. [Satellite tiles](https://www.harp.gl/docs/master/examples/#datasource_satellite-tile.html) using the [webtile-datasource](https://github.com/heremaps/harp.gl/blob/master/%40here/harp-webtile-datasource/README.md), along with a [globe version](https://www.harp.gl/docs/master/examples/#datasource_satellite-tile_globe.html).
+1. [Satellite tiles](https://www.harp.gl/docs/master/examples/#datasource_satellite-tile.html) using the [webtile-datasource](https://github.com/lume/harp.gl/blob/master/%40here/harp-webtile-datasource/README.md), along with a [globe version](https://www.harp.gl/docs/master/examples/#datasource_satellite-tile_globe.html).
 1. [OSM MVT Data](https://www.harp.gl/docs/master/examples/#datasource_xyzmvt.html) with our default map style.
-1. [User based map features (lines and points)](https://www.harp.gl/docs/master/examples/#datasource_features_lines-and-points.html) using the [featuresDataSource](https://github.com/heremaps/harp.gl/blob/master/%40here/harp-features-datasource/README.md). Polygons are also demonstrated [here](https://www.harp.gl/docs/master/examples/#datasource_features_polygons.html)
+1. [User based map features (lines and points)](https://www.harp.gl/docs/master/examples/#datasource_features_lines-and-points.html) using the [featuresDataSource](https://github.com/lume/harp.gl/blob/master/%40here/harp-features-datasource/README.md). Polygons are also demonstrated [here](https://www.harp.gl/docs/master/examples/#datasource_features_polygons.html)
 1. [Advanced custom data source](https://www.harp.gl/docs/master/examples/#datasource_custom.html) demonstrating the implementation of a custom data source that uses the harp.gl styling engine, offloads CPU intense work to web-workers and uses three.js to create objects.
 
 ### Rendering
@@ -59,5 +59,5 @@ We can group the examples by several categories, looking at what kind of feature
 
 1. [A GeoJSON viewer](https://www.harp.gl/docs/master/examples/#geojson-viewer.html) allows to view and edit `GeoJSON` with the `FeaturesDataSource`.
 1. [Elevation provider](https://www.harp.gl/docs/master/examples/#elevation-provider.html) shows how to handle scene height given a user input.
-1. Showcase of the [dynamic text rendering](https://www.harp.gl/docs/master/examples/#textcanvas.html) capabilities of our [text rendering library](https://github.com/heremaps/harp.gl/blob/master/%40here/harp-text-canvas/README.md).
+1. Showcase of the [dynamic text rendering](https://www.harp.gl/docs/master/examples/#textcanvas.html) capabilities of our [text rendering library](https://github.com/lume/harp.gl/blob/master/%40here/harp-text-canvas/README.md).
 1. [Display three map views, side by side](https://www.harp.gl/docs/master/examples/#synchronized-views.html), in which we show the a map with three different styles at the same time, using OMV Data.

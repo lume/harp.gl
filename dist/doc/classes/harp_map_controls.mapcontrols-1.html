@@ -1,0 +1,1510 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MapControls | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_map_controls.html">harp-map-controls</a>
+				</li>
+				<li>
+					<a href="harp_map_controls.mapcontrols-1.html">MapControls</a>
+				</li>
+			</ul>
+			<h1>Class MapControls</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This map control provides basic map-related building blocks to interact with the map. It also
+							provides a default way of handling user input. Currently we support basic mouse interaction and
+						touch input interaction.</p>
+					</div>
+					<p>Mouse interaction:</p>
+					<ul>
+						<li>Left mouse button + move = Panning the map.</li>
+						<li>Right mouse button + move = Orbits the camera around the focus point.</li>
+						<li>Middle mouse button + move = Rotating the view. Up down movement changes the pitch. Left/right
+						movement changes the yaw.</li>
+						<li>Mouse wheel = Zooms up and down by one zoom level, zooms on target.</li>
+					</ul>
+					<p>Touch interaction:</p>
+					<ul>
+						<li>One finger = Panning the map.</li>
+						<li>Two fingers = Scale, rotate and panning the map.</li>
+						<li>Three fingers = Orbiting the map. Up down movements influences the current orbit altitude.
+						Left/right changes the azimuth.</li>
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="harp_mapview.eventdispatcher-1.html" class="tsd-signature-type">EventDispatcher</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">MapControls</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#camera" class="tsd-kind-icon">camera</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#domelement" class="tsd-kind-icon">dom<wbr>Element</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#doubletaptime" class="tsd-kind-icon">double<wbr>Tap<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#enabled" class="tsd-kind-icon">enabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#inertiaenabled" class="tsd-kind-icon">inertia<wbr>Enabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#mapview" class="tsd-kind-icon">map<wbr>View</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#maxzoomlevel" class="tsd-kind-icon">max<wbr>Zoom<wbr>Level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#mincameraheight" class="tsd-kind-icon">min<wbr>Camera<wbr>Height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#minzoomlevel" class="tsd-kind-icon">min<wbr>Zoom<wbr>Level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#northresetanimationduration" class="tsd-kind-icon">north<wbr>Reset<wbr>Animation<wbr>Duration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#orbitingmousedeltafactor" class="tsd-kind-icon">orbiting<wbr>Mouse<wbr>Delta<wbr>Factor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#orbitingtouchdeltafactor" class="tsd-kind-icon">orbiting<wbr>Touch<wbr>Delta<wbr>Factor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#panenabled" class="tsd-kind-icon">pan<wbr>Enabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#paninertiadampingduration" class="tsd-kind-icon">pan<wbr>Inertia<wbr>Damping<wbr>Duration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#rotateenabled" class="tsd-kind-icon">rotate<wbr>Enabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#rotationmousedeltafactor" class="tsd-kind-icon">rotation<wbr>Mouse<wbr>Delta<wbr>Factor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#tiltangle" class="tsd-kind-icon">tilt<wbr>Angle</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#tiltenabled" class="tsd-kind-icon">tilt<wbr>Enabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#tilttoggleduration" class="tsd-kind-icon">tilt<wbr>Toggle<wbr>Duration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#zoomenabled" class="tsd-kind-icon">zoom<wbr>Enabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#zoominertiadampingduration" class="tsd-kind-icon">zoom<wbr>Inertia<wbr>Damping<wbr>Duration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#zoomleveldeltaoncontrol" class="tsd-kind-icon">zoom<wbr>Level<wbr>Delta<wbr>OnControl</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#zoomleveldeltaondoubleclick" class="tsd-kind-icon">zoom<wbr>Level<wbr>Delta<wbr>OnDouble<wbr>Click</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#attitude" class="tsd-kind-icon">attitude</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#cameraheight" class="tsd-kind-icon">camera<wbr>Height</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="harp_map_controls.mapcontrols-1.html#eventtypes" class="tsd-kind-icon">event<wbr>Types</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#maxtiltangle" class="tsd-kind-icon">max<wbr>Tilt<wbr>Angle</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#tiltstate" class="tsd-kind-icon">tilt<wbr>State</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#zoomleveldeltaonmousewheel" class="tsd-kind-icon">zoom<wbr>Level<wbr>Delta<wbr>OnMouse<wbr>Wheel</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#zoomleveltargeted" class="tsd-kind-icon">zoom<wbr>Level<wbr>Targeted</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_map_controls.mapcontrols-1.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_map_controls.mapcontrols-1.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="harp_map_controls.mapcontrols-1.html#dispose" class="tsd-kind-icon">dispose</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_map_controls.mapcontrols-1.html#haseventlistener" class="tsd-kind-icon">has<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_map_controls.mapcontrols-1.html#listeners" class="tsd-kind-icon">listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#pointtonorth" class="tsd-kind-icon">point<wbr>ToNorth</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_map_controls.mapcontrols-1.html#removealleventlisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Event<wbr>Listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_map_controls.mapcontrols-1.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#setzoomlevel" class="tsd-kind-icon">set<wbr>Zoom<wbr>Level</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#toggletilt" class="tsd-kind-icon">toggle<wbr>Tilt</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_map_controls.mapcontrols-1.html#zoomontargetposition" class="tsd-kind-icon">zoom<wbr>OnTarget<wbr>Position</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_map_controls.mapcontrols-1.html#create" class="tsd-kind-icon">create</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Map<wbr>Controls<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a>, disposeWithMapView<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_map_controls.mapcontrols-1.html" class="tsd-signature-type">MapControls</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L344">@here/harp-map-controls/lib/MapControls.ts:344</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs a new <code>MapControls</code> object.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p><a href="harp_mapview.mapview-1.html">MapView</a> this controller modifies.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> disposeWithMapView: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>If <code>true</code>, an event with MapView is registered to dispose of
+											<code>MapControls</code> if MapView itself is disposed.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_map_controls.mapcontrols-1.html" class="tsd-signature-type">MapControls</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="camera" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> camera</h3>
+					<div class="tsd-signature tsd-kind-icon">camera<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Camera</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L253">@here/harp-map-controls/lib/MapControls.ts:253</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Three.js camera that this controller affects.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="domelement" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> dom<wbr>Element</h3>
+					<div class="tsd-signature tsd-kind-icon">dom<wbr>Element<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLCanvasElement</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L258">@here/harp-map-controls/lib/MapControls.ts:258</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Map&#39;s HTML DOM element.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="doubletaptime" class="tsd-anchor"></a>
+					<h3>double<wbr>Tap<wbr>Time</h3>
+					<div class="tsd-signature tsd-kind-icon">double<wbr>Tap<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0.3</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L248">@here/harp-map-controls/lib/MapControls.ts:248</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Double click uses the OS delay through the double click event. Tapping is implemented locally
+								here in <code>MapControls</code> with this duration setting the maximum delay to define a double tap.
+							The value is in seconds. <code>300ms</code> is picked as the default value as jQuery does.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="enabled" class="tsd-anchor"></a>
+					<h3>enabled</h3>
+					<div class="tsd-signature tsd-kind-icon">enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L133">@here/harp-map-controls/lib/MapControls.ts:133</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set to <code>true</code> to enable input handling through this map control, <code>false</code> to disable input
+								handling. Even when disabling input handling, you can manually use the public functions to
+							change the view to the current map.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="inertiaenabled" class="tsd-anchor"></a>
+					<h3>inertia<wbr>Enabled</h3>
+					<div class="tsd-signature tsd-kind-icon">inertia<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L158">@here/harp-map-controls/lib/MapControls.ts:158</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set to <code>true</code> to enable an inertia dampening on zooming and panning. <code>false</code> cancels inertia.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="mapview" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> map<wbr>View</h3>
+					<div class="tsd-signature tsd-kind-icon">map<wbr>View<span class="tsd-signature-symbol">:</span> <a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L353">@here/harp-map-controls/lib/MapControls.ts:353</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><a href="harp_mapview.mapview-1.html">MapView</a> this controller modifies.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="maxzoomlevel" class="tsd-anchor"></a>
+					<h3>max<wbr>Zoom<wbr>Level</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Zoom<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 20</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L231">@here/harp-map-controls/lib/MapControls.ts:231</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Determines the maximum zoom level we can zoom to.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="mincameraheight" class="tsd-anchor"></a>
+					<h3>min<wbr>Camera<wbr>Height</h3>
+					<div class="tsd-signature tsd-kind-icon">min<wbr>Camera<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 3</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L236">@here/harp-map-controls/lib/MapControls.ts:236</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Determines the minimum camera height in meter.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="minzoomlevel" class="tsd-anchor"></a>
+					<h3>min<wbr>Zoom<wbr>Level</h3>
+					<div class="tsd-signature tsd-kind-icon">min<wbr>Zoom<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L226">@here/harp-map-controls/lib/MapControls.ts:226</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Determines the minimum zoom level we can zoom to.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="northresetanimationduration" class="tsd-anchor"></a>
+					<h3>north<wbr>Reset<wbr>Animation<wbr>Duration</h3>
+					<div class="tsd-signature tsd-kind-icon">north<wbr>Reset<wbr>Animation<wbr>Duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1.5</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L185">@here/harp-map-controls/lib/MapControls.ts:185</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Duration of the animation to reset the camera to looking north, in seconds. Independent of
+							inertia.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="orbitingmousedeltafactor" class="tsd-anchor"></a>
+					<h3>orbiting<wbr>Mouse<wbr>Delta<wbr>Factor</h3>
+					<div class="tsd-signature tsd-kind-icon">orbiting<wbr>Mouse<wbr>Delta<wbr>Factor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0.1 * THREE.MathUtils.DEG2RAD</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L119">@here/harp-map-controls/lib/MapControls.ts:119</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This factor will be applied to the delta of the current mouse pointer position and the last
+								mouse pointer position: The result then will be used as an offset to orbit the camera.
+							Default value is <code>0.1</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="orbitingtouchdeltafactor" class="tsd-anchor"></a>
+					<h3>orbiting<wbr>Touch<wbr>Delta<wbr>Factor</h3>
+					<div class="tsd-signature tsd-kind-icon">orbiting<wbr>Touch<wbr>Delta<wbr>Factor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0.1 * THREE.MathUtils.DEG2RAD</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L126">@here/harp-map-controls/lib/MapControls.ts:126</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This factor will be applied to the delta of the current touch pointer position and the last
+								touch pointer position: The result then will be used as an offset to orbit the camera.
+							Default value is <code>0.1</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="panenabled" class="tsd-anchor"></a>
+					<h3>pan<wbr>Enabled</h3>
+					<div class="tsd-signature tsd-kind-icon">pan<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L143">@here/harp-map-controls/lib/MapControls.ts:143</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set to <code>true</code> to enable panning through these controls, <code>false</code> otherwise.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="paninertiadampingduration" class="tsd-anchor"></a>
+					<h3>pan<wbr>Inertia<wbr>Damping<wbr>Duration</h3>
+					<div class="tsd-signature tsd-kind-icon">pan<wbr>Inertia<wbr>Damping<wbr>Duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L168">@here/harp-map-controls/lib/MapControls.ts:168</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Inertia damping duration for the panning, in seconds.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="rotateenabled" class="tsd-anchor"></a>
+					<h3>rotate<wbr>Enabled</h3>
+					<div class="tsd-signature tsd-kind-icon">rotate<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L153">@here/harp-map-controls/lib/MapControls.ts:153</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set to <code>true</code> to enable rotation through this map control, <code>false</code> to disable rotation.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="rotationmousedeltafactor" class="tsd-anchor"></a>
+					<h3>rotation<wbr>Mouse<wbr>Delta<wbr>Factor</h3>
+					<div class="tsd-signature tsd-kind-icon">rotation<wbr>Mouse<wbr>Delta<wbr>Factor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0.1</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L112">@here/harp-map-controls/lib/MapControls.ts:112</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This factor will be applied to the delta of the current mouse pointer position and the last
+								mouse pointer position: The result then will be used as an offset for the rotation then.
+							Default value is <code>0.1</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="tiltangle" class="tsd-anchor"></a>
+					<h3>tilt<wbr>Angle</h3>
+					<div class="tsd-signature tsd-kind-icon">tilt<wbr>Angle<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Math.PI / 4</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L179">@here/harp-map-controls/lib/MapControls.ts:179</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Camera tilt to the target when tilting from the <code>toggleTilt</code> public method.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="tiltenabled" class="tsd-anchor"></a>
+					<h3>tilt<wbr>Enabled</h3>
+					<div class="tsd-signature tsd-kind-icon">tilt<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L148">@here/harp-map-controls/lib/MapControls.ts:148</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set to <code>true</code> to enable tilting through these controls, <code>false</code> otherwise.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="tilttoggleduration" class="tsd-anchor"></a>
+					<h3>tilt<wbr>Toggle<wbr>Duration</h3>
+					<div class="tsd-signature tsd-kind-icon">tilt<wbr>Toggle<wbr>Duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0.5</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L174">@here/harp-map-controls/lib/MapControls.ts:174</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Duration in seconds of the camera animation when the tilt button is clicked. Independent of
+							inertia.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="zoomenabled" class="tsd-anchor"></a>
+					<h3>zoom<wbr>Enabled</h3>
+					<div class="tsd-signature tsd-kind-icon">zoom<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L138">@here/harp-map-controls/lib/MapControls.ts:138</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set to <code>true</code> to enable zooming through these controls, <code>false</code> otherwise.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="zoominertiadampingduration" class="tsd-anchor"></a>
+					<h3>zoom<wbr>Inertia<wbr>Damping<wbr>Duration</h3>
+					<div class="tsd-signature tsd-kind-icon">zoom<wbr>Inertia<wbr>Damping<wbr>Duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0.6</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L163">@here/harp-map-controls/lib/MapControls.ts:163</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Inertia damping duration for the zoom, in seconds.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="zoomleveldeltaoncontrol" class="tsd-anchor"></a>
+					<h3>zoom<wbr>Level<wbr>Delta<wbr>OnControl</h3>
+					<div class="tsd-signature tsd-kind-icon">zoom<wbr>Level<wbr>Delta<wbr>OnControl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L221">@here/harp-map-controls/lib/MapControls.ts:221</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Zoom level delta when using the UI controls.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="zoomleveldeltaondoubleclick" class="tsd-anchor"></a>
+					<h3>zoom<wbr>Level<wbr>Delta<wbr>OnDouble<wbr>Click</h3>
+					<div class="tsd-signature tsd-kind-icon">zoom<wbr>Level<wbr>Delta<wbr>OnDouble<wbr>Click<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L241">@here/harp-map-controls/lib/MapControls.ts:241</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Zoom level delta to apply when double clicking or double tapping. <code>0</code> disables the feature.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="attitude" class="tsd-anchor"></a>
+					<h3>attitude</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> attitude<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.mapviewutils-1.attitude.html" class="tsd-signature-type">Attitude</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L390">@here/harp-map-controls/lib/MapControls.ts:390</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Current viewing angles yaw/pitch/roll in degrees.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_mapview.mapviewutils-1.attitude.html" class="tsd-signature-type">Attitude</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="cameraheight" class="tsd-anchor"></a>
+					<h3>camera<wbr>Height</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> cameraHeight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> cameraHeight<span class="tsd-signature-symbol">(</span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L511">@here/harp-map-controls/lib/MapControls.ts:511</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the current camera height.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L502">@here/harp-map-controls/lib/MapControls.ts:502</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the camera height.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="eventtypes" class="tsd-anchor"></a>
+					<h3>event<wbr>Types</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> eventTypes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.eventdispatcher-1.html">EventDispatcher</a>.<a href="harp_mapview.eventdispatcher-1.html#eventtypes">eventTypes</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/EventDispatcher.ts#L100">@here/harp-mapview/lib/EventDispatcher.ts:100</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieve the registered event types.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>Array of event types.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="maxtiltangle" class="tsd-anchor"></a>
+					<h3>max<wbr>Tilt<wbr>Angle</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> maxTiltAngle<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> maxTiltAngle<span class="tsd-signature-symbol">(</span>angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L533">@here/harp-map-controls/lib/MapControls.ts:533</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the camera max tilt angle in degrees.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L523">@here/harp-map-controls/lib/MapControls.ts:523</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set camera max tilt angle. The value is clamped between 0 and 89 degrees. In sphere
+										projection, at runtime, the value is also clamped so that the camera does not look above the
+									horizon.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>angle: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Angle in degrees.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="tiltstate" class="tsd-anchor"></a>
+					<h3>tilt<wbr>State</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> tiltState<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/harp_map_controls.tiltstate-1.html" class="tsd-signature-type">TiltState</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L548">@here/harp-map-controls/lib/MapControls.ts:548</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Handy getter to know if the view is in the process of looking down or not.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/harp_map_controls.tiltstate-1.html" class="tsd-signature-type">TiltState</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="zoomleveldeltaonmousewheel" class="tsd-anchor"></a>
+					<h3>zoom<wbr>Level<wbr>Delta<wbr>OnMouse<wbr>Wheel</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> zoomLevelDeltaOnMouseWheel<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> zoomLevelDeltaOnMouseWheel<span class="tsd-signature-symbol">(</span>delta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L196">@here/harp-map-controls/lib/MapControls.ts:196</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Determines the zoom level delta for single mouse wheel movement. So after each mouse wheel
+									movement the current zoom level will be added or subtracted by this value.</p>
+								</div>
+								<p>The default values are:</p>
+								<ul>
+									<li><code>0.2</code> when <code>inertiaEnabled</code> is <code>false</code> - this means that every 5th mouse wheel movement
+									you will cross a zoom level.</li>
+									<li><code>0.8</code>, otherwise.</li>
+								</ul>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L209">@here/harp-map-controls/lib/MapControls.ts:209</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the zoom level delta for a single mouse wheel movement.</p>
+								</div>
+								<p><strong>Note</strong>: To reverse the zoom direction, you can provide a negative value.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>delta: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="zoomleveltargeted" class="tsd-anchor"></a>
+					<h3>zoom<wbr>Level<wbr>Targeted</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> zoomLevelTargeted<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L541">@here/harp-map-controls/lib/MapControls.ts:541</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the zoom level targeted by <code>MapControls</code>. Useful when inertia is on, to add incremented
+									values to the target instead of getting the random zoomLevel value during the interpolation.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="addeventlistener" class="tsd-anchor"></a>
+					<h3>add<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.eventdispatcher-1.html">EventDispatcher</a>.<a href="harp_mapview.eventdispatcher-1.html#addeventlistener">addEventListener</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/EventDispatcher.ts#L49">@here/harp-mapview/lib/EventDispatcher.ts:49</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add a new event listener to the event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of event to listen to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function that gets called when the event is fired.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>event: <span class="tsd-signature-type">Event</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="dispatchevent" class="tsd-anchor"></a>
+					<h3>dispatch<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">dispatch<wbr>Event<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.eventdispatcher-1.html">EventDispatcher</a>.<a href="harp_mapview.eventdispatcher-1.html#dispatchevent">dispatchEvent</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/EventDispatcher.ts#L119">@here/harp-mapview/lib/EventDispatcher.ts:119</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Dispatch the event to the registered listeners.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">Event</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The event to dispatch.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="dispose" class="tsd-anchor"></a>
+					<h3>dispose</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="harp_mapview.eventdispatcher-1.html">EventDispatcher</a>.<a href="harp_mapview.eventdispatcher-1.html#dispose">dispose</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L383">@here/harp-map-controls/lib/MapControls.ts:383</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Destroy this <code>MapControls</code> instance.</p>
+								</div>
+								<p>Unregisters all global event handlers used. This is method should be called when you stop
+								using <code>MapControls</code>.</p>
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="haseventlistener" class="tsd-anchor"></a>
+					<h3>has<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.eventdispatcher-1.html">EventDispatcher</a>.<a href="harp_mapview.eventdispatcher-1.html#haseventlistener">hasEventListener</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/EventDispatcher.ts#L35">@here/harp-mapview/lib/EventDispatcher.ts:35</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if listener is added to an event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of event to listen to.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> listener: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function that gets called when the event is fired.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="listeners" class="tsd-anchor"></a>
+					<h3>listeners</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">listeners<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.eventdispatcher-1.html">EventDispatcher</a>.<a href="harp_mapview.eventdispatcher-1.html#listeners">listeners</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/EventDispatcher.ts#L110">@here/harp-mapview/lib/EventDispatcher.ts:110</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieve the registered listeners to the specified event.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of event to listen to.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>Array of event listeners.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="pointtonorth" class="tsd-anchor"></a>
+					<h3>point<wbr>ToNorth</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">point<wbr>ToNorth<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L403">@here/harp-map-controls/lib/MapControls.ts:403</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Reset the camera to looking north, in an orbiting movement around the target point instead
+									of changing the yaw (which would be the camera rotating on itself).</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removealleventlisteners" class="tsd-anchor"></a>
+					<h3>remove<wbr>All<wbr>Event<wbr>Listeners</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>All<wbr>Event<wbr>Listeners<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.eventdispatcher-1.html">EventDispatcher</a>.<a href="harp_mapview.eventdispatcher-1.html#removealleventlisteners">removeAllEventListeners</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/EventDispatcher.ts#L88">@here/harp-mapview/lib/EventDispatcher.ts:88</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove all event listeners for housekeeping.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removeeventlistener" class="tsd-anchor"></a>
+					<h3>remove<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.eventdispatcher-1.html">EventDispatcher</a>.<a href="harp_mapview.eventdispatcher-1.html#removeeventlistener">removeEventListener</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/EventDispatcher.ts#L67">@here/harp-mapview/lib/EventDispatcher.ts:67</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove the listener from the event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of event to listen to.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> listener: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function that gets called when the event is fired. If the value is
+										<code>undefined</code>, all listeners will be removed.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setzoomlevel" class="tsd-anchor"></a>
+					<h3>set<wbr>Zoom<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Zoom<wbr>Level<span class="tsd-signature-symbol">(</span>zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, screenTarget<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Vector2</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L456">@here/harp-map-controls/lib/MapControls.ts:456</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Zooms to the desired location by the provided value.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Zoom level.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> screenTarget: <span class="tsd-signature-symbol">{ </span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Vector2</span><span class="tsd-signature-symbol"> = { x: 0, y: 0 }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Zoom target on screen.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="toggletilt" class="tsd-anchor"></a>
+					<h3>toggle<wbr>Tilt</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">toggle<wbr>Tilt<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L485">@here/harp-map-controls/lib/MapControls.ts:485</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Toggles the camera tilt between 0 (looking down) and the value at <code>this.tiltAngle</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="zoomontargetposition" class="tsd-anchor"></a>
+					<h3>zoom<wbr>OnTarget<wbr>Position</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">zoom<wbr>OnTarget<wbr>Position<span class="tsd-signature-symbol">(</span>targetPositionOnScreenXinNDC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, targetPositionOnScreenYinNDC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L436">@here/harp-map-controls/lib/MapControls.ts:436</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Zooms and moves the map in such a way that the given target position remains at the same
+									position after the zoom.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>targetPositionOnScreenXinNDC: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Target x position in NDC space.</p>
+									</div>
+								</li>
+								<li>
+									<h5>targetPositionOnScreenYinNDC: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Target y position in NDC space.</p>
+									</div>
+								</li>
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="create" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a>, disposeWithMapView<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_map_controls.mapcontrols-1.html" class="tsd-signature-type">MapControls</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/MapControls.ts#L103">@here/harp-map-controls/lib/MapControls.ts:103</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates MapControls object and attaches it specified <a href="harp_mapview.mapview-1.html">MapView</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p><a href="harp_mapview.mapview-1.html">MapView</a> object to which MapControls should be attached to.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> disposeWithMapView: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If <code>true</code>, an event with MapView is registered to dispose of
+										<code>MapControls</code> if MapView itself is disposed.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_map_controls.mapcontrols-1.html" class="tsd-signature-type">MapControls</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_map_controls.html">harp-<wbr>map-<wbr>controls</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+						<ul>
+							<li class="current tsd-kind-class tsd-parent-kind-module">
+								<a href="harp_map_controls.mapcontrols-1.html" class="tsd-kind-icon">Map<wbr>Controls</a>
+								<ul>
+									<li class=" tsd-kind-constructor tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#constructor" class="tsd-kind-icon">constructor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#camera" class="tsd-kind-icon">camera</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#domelement" class="tsd-kind-icon">dom<wbr>Element</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#doubletaptime" class="tsd-kind-icon">double<wbr>Tap<wbr>Time</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#enabled" class="tsd-kind-icon">enabled</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#inertiaenabled" class="tsd-kind-icon">inertia<wbr>Enabled</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#mapview" class="tsd-kind-icon">map<wbr>View</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#maxzoomlevel" class="tsd-kind-icon">max<wbr>Zoom<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#mincameraheight" class="tsd-kind-icon">min<wbr>Camera<wbr>Height</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#minzoomlevel" class="tsd-kind-icon">min<wbr>Zoom<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#northresetanimationduration" class="tsd-kind-icon">north<wbr>Reset<wbr>Animation<wbr>Duration</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#orbitingmousedeltafactor" class="tsd-kind-icon">orbiting<wbr>Mouse<wbr>Delta<wbr>Factor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#orbitingtouchdeltafactor" class="tsd-kind-icon">orbiting<wbr>Touch<wbr>Delta<wbr>Factor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#panenabled" class="tsd-kind-icon">pan<wbr>Enabled</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#paninertiadampingduration" class="tsd-kind-icon">pan<wbr>Inertia<wbr>Damping<wbr>Duration</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#rotateenabled" class="tsd-kind-icon">rotate<wbr>Enabled</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#rotationmousedeltafactor" class="tsd-kind-icon">rotation<wbr>Mouse<wbr>Delta<wbr>Factor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#tiltangle" class="tsd-kind-icon">tilt<wbr>Angle</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#tiltenabled" class="tsd-kind-icon">tilt<wbr>Enabled</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#tilttoggleduration" class="tsd-kind-icon">tilt<wbr>Toggle<wbr>Duration</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#zoomenabled" class="tsd-kind-icon">zoom<wbr>Enabled</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#zoominertiadampingduration" class="tsd-kind-icon">zoom<wbr>Inertia<wbr>Damping<wbr>Duration</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#zoomleveldeltaoncontrol" class="tsd-kind-icon">zoom<wbr>Level<wbr>Delta<wbr>OnControl</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#zoomleveldeltaondoubleclick" class="tsd-kind-icon">zoom<wbr>Level<wbr>Delta<wbr>OnDouble<wbr>Click</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#attitude" class="tsd-kind-icon">attitude</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#cameraheight" class="tsd-kind-icon">camera<wbr>Height</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_map_controls.mapcontrols-1.html#eventtypes" class="tsd-kind-icon">event<wbr>Types</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#maxtiltangle" class="tsd-kind-icon">max<wbr>Tilt<wbr>Angle</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#tiltstate" class="tsd-kind-icon">tilt<wbr>State</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#zoomleveldeltaonmousewheel" class="tsd-kind-icon">zoom<wbr>Level<wbr>Delta<wbr>OnMouse<wbr>Wheel</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#zoomleveltargeted" class="tsd-kind-icon">zoom<wbr>Level<wbr>Targeted</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_map_controls.mapcontrols-1.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_map_controls.mapcontrols-1.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+										<a href="harp_map_controls.mapcontrols-1.html#dispose" class="tsd-kind-icon">dispose</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_map_controls.mapcontrols-1.html#haseventlistener" class="tsd-kind-icon">has<wbr>Event<wbr>Listener</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_map_controls.mapcontrols-1.html#listeners" class="tsd-kind-icon">listeners</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#pointtonorth" class="tsd-kind-icon">point<wbr>ToNorth</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_map_controls.mapcontrols-1.html#removealleventlisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Event<wbr>Listeners</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_map_controls.mapcontrols-1.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#setzoomlevel" class="tsd-kind-icon">set<wbr>Zoom<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#toggletilt" class="tsd-kind-icon">toggle<wbr>Tilt</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_map_controls.mapcontrols-1.html#zoomontargetposition" class="tsd-kind-icon">zoom<wbr>OnTarget<wbr>Position</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_map_controls.mapcontrols-1.html#create" class="tsd-kind-icon">create</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

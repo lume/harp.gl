@@ -1,0 +1,441 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>harp.gl</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#harpgl" id="harpgl" style="color: inherit; text-decoration: none;">
+					<h1>harp.gl</h1>
+				</a>
+				<p><a href="https://github.com/heremaps/harp.gl/actions/workflows/ci.yaml?query=branch%3Amaster++"><img src="https://github.com/heremaps/harp.gl/actions/workflows/ci.yaml/badge.svg?branch=master" alt="CI"></a> <a href="https://codecov.io/gh/heremaps/harp.gl"><img src="https://codecov.io/gh/heremaps/harp.gl/branch/master/graph/badge.svg" alt="codecov"></a> <a href="https://twitter.com/intent/tweet?text=harp.gl"><img src="https://img.shields.io/badge/tweet-harp.gl-blue" alt="twitter"></a></p>
+				<p><code>harp.gl</code> is an <em>experimental and work in progress</em> open-source 3D map rendering engine written in <a href="https://github.com/microsoft/TypeScript">TypeScript</a>.</p>
+				<p>This was forked from <a href="https://github.com/heremaps/harp.gl">HERE&#39;s repo</a> because they stopped working on this and are moving to a closed-source API instead.</p>
+				<!--
+
+### [harp.gl site](https://www.harp.gl/)
+
+### [harp.gl Slack channel](https://heredev.slack.com/messages/harpgl/) Registration available [here](http://t.her.is/slack).
+
+-->
+				<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
+					<h2>Overview</h2>
+				</a>
+				<p>You can use this engine to:</p>
+				<ul>
+					<li>Develop visually appealing 3D maps</li>
+					<li>Create highly animated and dynamic map visualization with WebGL, using the popular <a href="https://threejs.org/">three.js</a> library.</li>
+					<li>Create themeable maps, with themes that can change on the fly.</li>
+					<li>Create a smooth map experience with highly performant map rendering and decoding. Web workers parallelize the CPU intensive tasks, for optimal responsiveness.</li>
+					<li>Design your maps modularly, where you can swap out modules and data providers as required.</li>
+				</ul>
+				<p>With that in mind, we have included some modules that let&#39;s you get started with some simple web applications
+				that can display a map using our default style. You can get results like the one shown below:</p>
+				<p><img src="docs/nyc.jpg" alt="New York City rendered with our default style"></p>
+				<a href="#getting-started-with-harpgl" id="getting-started-with-harpgl" style="color: inherit; text-decoration: none;">
+					<h2>Getting started with harp.gl</h2>
+				</a>
+				<p>There are three methods to get up and running with harp.gl quickly, in order of difficulty:</p>
+				<ol>
+					<li>Using the <a href="https://developer.here.com/tutorials/harpgl/#method-1-using-the-harp.gl-yeoman-generator-beginner">yeoman generator</a>.</li>
+					<li>linking a <a href="https://developer.here.com/tutorials/harpgl/#method-2-linking-a-single-script-bundle-to-your-html-intermediate">simple bundle as a <code>&lt;script&gt;</code> tag in your html</a></li>
+					<li>installing a <a href="https://github.com/heremaps/harp.gl/blob/master/docs/GettingStartedGuide.md#integrate">set of node modules from npm</a></li>
+				</ol>
+				<p>If you want to learn more about the applications you can create, please check the <a href="docs/GettingStartedGuide.md">Getting Started Guide</a>.</p>
+				<a href="#authentication" id="authentication" style="color: inherit; text-decoration: none;">
+					<h2>Authentication</h2>
+				</a>
+				<p>Regardless of how you structure your project, you need some means to authenticate, please see the <a href="https://developer.here.com/tutorials/harpgl/#acquire-credentials">following guide</a> to generate a token.</p>
+				<a href="#about-this-repository" id="about-this-repository" style="color: inherit; text-decoration: none;">
+					<h2>About This Repository</h2>
+				</a>
+				<p>This repository is a monorepo containing the core components of <code>harp.gl</code>,
+				organized in a <code>yarn workspace</code>.</p>
+				<p>All components can be used stand-alone and are in the <code>@here</code> subdirectory.</p>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<a href="#in-nodejs" id="in-nodejs" style="color: inherit; text-decoration: none;">
+					<h3>In Node.js</h3>
+				</a>
+				<p>All <code>harp.gl</code> modules are installable via yarn (or npm):</p>
+				<pre><code class="language-sh">yarn add @here/harp-mapview</code></pre>
+				<pre><code class="language-sh">npm install @here/harp-mapview</code></pre>
+				<a href="#in-browser" id="in-browser" style="color: inherit; text-decoration: none;">
+					<h3>In Browser</h3>
+				</a>
+				<p>Since <code>harp.gl</code> consists of a set of modules, there are no ready-made bundles available. Take a look at the examples on information on how to use tools like <code>webpack</code> to create a bundle for the browser.</p>
+				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
+					<h2>Development</h2>
+				</a>
+				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
+					<h3>Prerequisites</h3>
+				</a>
+				<ul>
+					<li><strong>Node.js</strong> - Please see <a href="https://nodejs.org/">nodejs.org</a> for installation instructions</li>
+					<li><strong>Yarn</strong> - Please see <a href="https://yarnpkg.com/en/">yarnpkg.com</a> for installation instructions.</li>
+				</ul>
+				<a href="#download-dependencies" id="download-dependencies" style="color: inherit; text-decoration: none;">
+					<h3>Download dependencies</h3>
+				</a>
+				<p>Run:</p>
+				<pre><code class="language-sh">yarn install</code></pre>
+				<p>to download and install all required packages and set up the yarn workspace.</p>
+				<a href="#launch-development-server-for-harpgl-examples" id="launch-development-server-for-harpgl-examples" style="color: inherit; text-decoration: none;">
+					<h3>Launch development server for harp.gl examples</h3>
+				</a>
+				<p>Run:</p>
+				<pre><code class="language-sh">yarn start</code></pre>
+				<p>To launch <code>webpack-dev-server</code>. Open <code>http://localhost:8080/</code> in your favorite browser.</p>
+				<a href="#launch-development-server-for-unit-tests" id="launch-development-server-for-unit-tests" style="color: inherit; text-decoration: none;">
+					<h3>Launch development server for unit tests</h3>
+				</a>
+				<p>Run:</p>
+				<pre><code class="language-sh">yarn start-tests</code></pre>
+				<p>Open <code>http://localhost:8080/</code> in your favorite browser to run the tests.</p>
+				<a href="#run-unit-amp-integration-tests-in-browser-environment" id="run-unit-amp-integration-tests-in-browser-environment" style="color: inherit; text-decoration: none;">
+					<h3>Run unit &amp; integration tests in Browser environment</h3>
+				</a>
+				<p>Run:</p>
+				<pre><code class="language-sh">yarn run start-tests
+&gt;: Project is running at http://localhost:8080/</code></pre>
+				<p>Note the URL and invoke tests using <code>mocha-webdriver-runner</code>. Example:</p>
+				<pre><code class="language-sh">npx mocha-webdriver-runner http://localhost:8081/ --chrome
+npx mocha-webdriver-runner http://localhost:8081/ --headless-firefox</code></pre>
+				<a href="#run-performance-tests-in-nodejs-environment" id="run-performance-tests-in-nodejs-environment" style="color: inherit; text-decoration: none;">
+					<h3>Run performance tests in Node.js environment</h3>
+				</a>
+				<p>As for now, there is no baseline for performance tests results, so before examining performance one
+				have to establish baseline:</p>
+				<p>Performance test steps</p>
+				<ol>
+					<li>Establish baseline results.</li>
+				</ol>
+				<pre><code>$ git checkout <span class="hljs-keyword">master</span>
+<span class="hljs-title">PROFILEHELPER_COMMAND</span>=baseline yarn performance-test-<span class="hljs-keyword">node</span> <span class="hljs-title"># create</span> baseline of measurements for your particular platform</code></pre><blockquote>
+					<p>Note, that performance test suite is very limited, so it is highly possible that you
+						have to write new dedicated performance test for code that is about to be optimized.
+					See <code>tests/performance</code> for examples.</p>
+				</blockquote>
+				<ol start="2">
+					<li><p>Go back to your branch, change stuff and</p>
+					</li>
+					<li><p>Rerun tests with your changes</p>
+					</li>
+				</ol>
+				<pre><code>yarn performance-test-<span class="hljs-keyword">node</span> <span class="hljs-title">--grep</span> lines <span class="hljs-comment"># assuming you&#x27;re playing with lines</span></code></pre><ol start="4">
+					<li>Examine output:</li>
+				</ol>
+				<pre><code><span class="hljs-built_in">..</span>.
+
+performance createLineGeometry <span class="hljs-attribute">segments</span>=2
+  <span class="hljs-attribute">min</span>=0.0014ms (-2.44% vs 0.0014ms) <span class="hljs-attribute">sum</span>=999.16ms (0% vs 999.12ms) <span class="hljs-attribute">repeats</span>=499568.00 (-6.47% vs 534131.00) <span class="hljs-attribute">throughput</span>=499988.43/s (-6.47% vs 534600.13/s)
+  <span class="hljs-attribute">avg</span>=0.002ms (6.92% vs 0.0019ms) <span class="hljs-attribute">med</span>=0.0015ms (0.2% vs 0.0015ms) <span class="hljs-attribute">med95</span>=0.0031ms (17.6% vs 0.0026ms)
+  <span class="hljs-attribute">gcTime</span>=39.6195ms (-3.39% vs 41.011ms) <span class="hljs-attribute">sumNoGc</span>=959.54ms (0.15% vs 958.11ms) <span class="hljs-attribute">throughputNoGc</span>=520633.00/s (-6.61% vs 557461.83/s)</code></pre>
+				<a href="#debug-tests-with-vscode" id="debug-tests-with-vscode" style="color: inherit; text-decoration: none;">
+					<h3>Debug Tests with VSCode</h3>
+				</a>
+				<p>Run</p>
+				<pre><code class="language-sh">   yarn test-debug</code></pre>
+				<p>Add  and start this configuration to your launch.json :</p>
+				<pre><code class="language-json"> {
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;chrome&quot;</span>,
+            <span class="hljs-attr">&quot;request&quot;</span>: <span class="hljs-string">&quot;attach&quot;</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Karma Tests&quot;</span>,
+            <span class="hljs-attr">&quot;sourceMaps&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">&quot;webRoot&quot;</span>: <span class="hljs-string">&quot;${workspaceRoot}/test&quot;</span>,
+            <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;localhost&quot;</span>,
+            <span class="hljs-attr">&quot;port&quot;</span>: <span class="hljs-number">9333</span>,
+            <span class="hljs-attr">&quot;pathMapping&quot;</span>: {
+                <span class="hljs-attr">&quot;/&quot;</span>: <span class="hljs-string">&quot;${workspaceRoot}&quot;</span>,
+                <span class="hljs-attr">&quot;/base/&quot;</span>: <span class="hljs-string">&quot;${workspaceRoot}/&quot;</span>
+            },
+            <span class="hljs-attr">&quot;sourceMapPathOverrides&quot;</span>: {
+                <span class="hljs-attr">&quot;webpack:///./*&quot;</span>: <span class="hljs-string">&quot;${webRoot}/*&quot;</span>,
+                <span class="hljs-attr">&quot;webpack:///src/*&quot;</span>: <span class="hljs-string">&quot;${webRoot}/*&quot;</span>,
+                <span class="hljs-attr">&quot;webpack:///*&quot;</span>: <span class="hljs-string">&quot;*&quot;</span>,
+                <span class="hljs-attr">&quot;webpack:///./~/*&quot;</span>: <span class="hljs-string">&quot;${webRoot}/node_modules/*&quot;</span>,
+                <span class="hljs-attr">&quot;meteor://app/*&quot;</span>: <span class="hljs-string">&quot;${webRoot}/*&quot;</span>
+            }
+        }</code></pre>
+				<a href="#generate-documentation" id="generate-documentation" style="color: inherit; text-decoration: none;">
+					<h3>Generate documentation</h3>
+				</a>
+				<p>Run:</p>
+				<pre><code class="language-sh">yarn run typedoc</code></pre>
+				<p>It will output all documentation under <code>/dist/doc</code>.</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>Copyright (C) 2017-2021 HERE Europe B.V.</p>
+				<p>See the <a href="./LICENSE">LICENSE</a> file in the root of this project for license details about using <code>harp.gl</code>.</p>
+				<p>In addition, please note that the <a href="https://github.com/heremaps/harp-fontcatalog">fonts</a> are under a different set of licenses.</p>
+				<p>For other use cases not listed in the license terms, please <a href="https://developer.here.com/contact-us">contact us</a>.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_docs_fallback.html">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_docs_label_rendering.html">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_atlas_tools.html">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_datasource_protocol.html">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_debug_datasource.html">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_examples.html">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_features_datasource.html">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_fetch.html">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_geojson_datasource.html">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_geometry.html">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_geoutils.html">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_lines.html">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_lrucache.html">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_map_controls.html">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_map_theme.html">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_mapview.html">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_mapview_decoder.html">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_materials.html">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_olp_utils.html">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_omv_datasource.html">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_test_utils.html">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_text_canvas.html">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_theme_tools.html">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_transfer_manager.html">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_utils.html">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_vectortile_datasource.html">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_webtile_datasource.html">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

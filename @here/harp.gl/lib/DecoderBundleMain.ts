@@ -8,7 +8,7 @@ if (!(self as any).THREE) {
     // eslint-disable-next-line no-console
     console.warn(
         "harp-decoders.js: It looks like 'Three.js' is not loaded. This script requires 'THREE' " +
-            "object to be defined. See https://github.com/heremaps/harp.gl/@here/harp.gl."
+            "object to be defined. See https://github.com/lume/harp.gl/@here/harp.gl."
     );
 }
 

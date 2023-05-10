@@ -1,0 +1,792 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PoiRenderer | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_mapview.html">harp-mapview</a>
+				</li>
+				<li>
+					<a href="harp_mapview.poirenderer.html">PoiRenderer</a>
+				</li>
+			</ul>
+			<h1>Class PoiRenderer</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<dl class="tsd-comment-tags">
+						<dt>internal</dt>
+						<dd><p>Manage POI rendering. Uses a <a href="harp_mapview.poibatchregistry.html">PoiBatchRegistry</a> to actually create the geometry that is being
+							rendered.</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">PoiRenderer</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#layers" class="tsd-kind-icon">layers</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#renderer" class="tsd-kind-icon">renderer</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#addlayer" class="tsd-kind-icon">add<wbr>Layer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#addpoi" class="tsd-kind-icon">add<wbr>Poi</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#getmemoryusage" class="tsd-kind-icon">get<wbr>Memory<wbr>Usage</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#picktextelements" class="tsd-kind-icon">pick<wbr>Text<wbr>Elements</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#preparerender" class="tsd-kind-icon">prepare<wbr>Render</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#render" class="tsd-kind-icon">render</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#reset" class="tsd-kind-icon">reset</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_mapview.poirenderer.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_mapview.poirenderer.html#computeiconscreenbox" class="tsd-kind-icon">compute<wbr>Icon<wbr>Screen<wbr>Box</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Poi<wbr>Renderer<span class="tsd-signature-symbol">(</span>m_renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, m_poiManager<span class="tsd-signature-symbol">: </span><a href="harp_mapview.poimanager-1.html" class="tsd-signature-type">PoiManager</a>, m_imageCaches<span class="tsd-signature-symbol">: </span><a href="harp_mapview.mapviewimagecache-1.html" class="tsd-signature-type">MapViewImageCache</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.poirenderer.html" class="tsd-signature-type">PoiRenderer</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L458">@here/harp-mapview/lib/poi/PoiRenderer.ts:458</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create the <code>PoiRenderer</code> for the specified <a href="../modules/harp_mapview.html#mapview">MapView</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>m_renderer: <span class="tsd-signature-type">WebGLRenderer</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The {@link THREE.WebGLRenderer} to be rendered to.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>m_poiManager: <a href="harp_mapview.poimanager-1.html" class="tsd-signature-type">PoiManager</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The <a href="../modules/harp_mapview.html#poimanager">PoiManager</a> to be used.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>m_imageCaches: <a href="harp_mapview.mapviewimagecache-1.html" class="tsd-signature-type">MapViewImageCache</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The <a href="../modules/harp_mapview.html#imagecache">ImageCache</a>s to look for loaded images.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.poirenderer.html" class="tsd-signature-type">PoiRenderer</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="layers" class="tsd-anchor"></a>
+					<h3>layers</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> layers<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.poilayer.html" class="tsd-signature-type">PoiLayer</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L591">@here/harp-mapview/lib/poi/PoiRenderer.ts:591</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>internal</dt>
+									<dd><p>Returns all <a href="../interfaces/harp_mapview.poilayer.html">PoiLayer</a>s of this <a href="harp_mapview.poirenderer.html">PoiRenderer</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_mapview.poilayer.html" class="tsd-signature-type">PoiLayer</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="renderer" class="tsd-anchor"></a>
+					<h3>renderer</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> renderer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L475">@here/harp-mapview/lib/poi/PoiRenderer.ts:475</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">WebGLRenderer</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addlayer" class="tsd-anchor"></a>
+					<h3>add<wbr>Layer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Layer<span class="tsd-signature-symbol">(</span>layerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.poilayer.html" class="tsd-signature-type">PoiLayer</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L559">@here/harp-mapview/lib/poi/PoiRenderer.ts:559</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>internal</dt>
+									<dd><p>Adds a layer to the PoiRenderer</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>layerId: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_mapview.poilayer.html" class="tsd-signature-type">PoiLayer</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addpoi" class="tsd-anchor"></a>
+					<h3>add<wbr>Poi</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Poi<span class="tsd-signature-symbol">(</span>poiInfo<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.poiinfo-1.html" class="tsd-signature-type">PoiInfo</a>, screenPosition<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector2</span>, screenCollisions<span class="tsd-signature-symbol">: </span><a href="harp_mapview.screencollisions.html" class="tsd-signature-type">ScreenCollisions</a>, viewDistance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, scale<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, allocateScreenSpace<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, opacity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, env<span class="tsd-signature-symbol">: </span><a href="harp_datasource_protocol.env-3.html" class="tsd-signature-type">Env</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L520">@here/harp-mapview/lib/poi/PoiRenderer.ts:520</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add the icon. Icon will only be added if opacity &gt; 0, otherwise only its space will be
+									allocated.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>poiInfo: <a href="../interfaces/harp_mapview.poiinfo-1.html" class="tsd-signature-type">PoiInfo</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>PoiInfo containing information for rendering the POI icon.</p>
+									</div>
+								</li>
+								<li>
+									<h5>screenPosition: <span class="tsd-signature-type">Vector2</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Position on screen (2D):</p>
+									</div>
+								</li>
+								<li>
+									<h5>screenCollisions: <a href="harp_mapview.screencollisions.html" class="tsd-signature-type">ScreenCollisions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Object handling the collision checks for screen-aligned 2D boxes.</p>
+									</div>
+								</li>
+								<li>
+									<h5>viewDistance: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Box&#39;s distance to camera.</p>
+									</div>
+								</li>
+								<li>
+									<h5>scale: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Scaling factor to apply to text and icon.</p>
+									</div>
+								</li>
+								<li>
+									<h5>allocateScreenSpace: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If <code>true</code> screen space will be allocated for the icon.</p>
+									</div>
+								</li>
+								<li>
+									<h5>opacity: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Opacity of icon to allow fade in/out.</p>
+									</div>
+								</li>
+								<li>
+									<h5>env: <a href="harp_datasource_protocol.env-3.html" class="tsd-signature-type">Env</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<ul>
+								<li><code>true</code> if icon has been actually rendered, <code>false</code> otherwise.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getmemoryusage" class="tsd-anchor"></a>
+					<h3>get<wbr>Memory<wbr>Usage</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Memory<wbr>Usage<span class="tsd-signature-symbol">(</span>info<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_text_canvas.memoryusage-1.html" class="tsd-signature-type">MemoryUsage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L624">@here/harp-mapview/lib/poi/PoiRenderer.ts:624</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Update the info with the memory footprint caused by objects owned by the <code>PoiRenderer</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>info: <a href="../interfaces/harp_text_canvas.memoryusage-1.html" class="tsd-signature-type">MemoryUsage</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The info object to increment with the values from this <code>PoiRenderer</code>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="picktextelements" class="tsd-anchor"></a>
+					<h3>pick<wbr>Text<wbr>Elements</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">pick<wbr>Text<wbr>Elements<span class="tsd-signature-symbol">(</span>screenPosition<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector2</span>, pickCallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>pickData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L612">@here/harp-mapview/lib/poi/PoiRenderer.ts:612</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fill the picking results for the pixel with the given screen coordinate. If multiple
+									<a href="../modules/harp_mapview.html#poiinfo">PoiInfo</a>s are found, the order of the results is unspecified.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>screenPosition: <span class="tsd-signature-type">Vector2</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Screen coordinate of picking position.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pickCallback: <span class="tsd-signature-symbol">(</span>pickData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Callback to be called for every picked element.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>pickData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>pickData: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="preparerender" class="tsd-anchor"></a>
+					<h3>prepare<wbr>Render</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">prepare<wbr>Render<span class="tsd-signature-symbol">(</span>pointLabel<span class="tsd-signature-symbol">: </span><a href="harp_mapview.textelement-1.html" class="tsd-signature-type">TextElement</a>, env<span class="tsd-signature-symbol">: </span><a href="harp_datasource_protocol.env-3.html" class="tsd-signature-type">Env</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L488">@here/harp-mapview/lib/poi/PoiRenderer.ts:488</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Prepare the POI for rendering, and determine which <a href="harp_mapview.poibuffer.html">PoiBuffer</a> should be used. If a
+									<a href="harp_mapview.poibuffer.html">PoiBuffer</a> is assigned, the POI is ready to be rendered.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pointLabel: <a href="harp_mapview.textelement-1.html" class="tsd-signature-type">TextElement</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>TextElement with PoiInfo for rendering the POI icon.</p>
+									</div>
+								</li>
+								<li>
+									<h5>env: <a href="harp_datasource_protocol.env-3.html" class="tsd-signature-type">Env</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>TODO! The current zoomLevel level of <a href="../modules/harp_mapview.html#mapview">MapView</a></p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>True</code> if the space is not already allocated by another object (text label or POI)</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="render" class="tsd-anchor"></a>
+					<h3>render</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">render<span class="tsd-signature-symbol">(</span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">OrthographicCamera</span>, layer<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.poilayer.html" class="tsd-signature-type">PoiLayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L601">@here/harp-mapview/lib/poi/PoiRenderer.ts:601</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Renders the content of this <code>PoiRenderer</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>camera: <span class="tsd-signature-type">OrthographicCamera</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Orthographic camera.</p>
+									</div>
+								</li>
+								<li>
+									<h5>layer: <a href="../interfaces/harp_mapview.poilayer.html" class="tsd-signature-type">PoiLayer</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The Layer to be rendered.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="reset" class="tsd-anchor"></a>
+					<h3>reset</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">reset<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L503">@here/harp-mapview/lib/poi/PoiRenderer.ts:503</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Reset all batches, removing all content from the <a href="harp_mapview.poibatchregistry.html">PoiBatchRegistry</a>. Called at the
+									beginning of a frame before the POIs are placed.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L549">@here/harp-mapview/lib/poi/PoiRenderer.ts:549</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Update the geometry of all [[PoiBatch]]es. Called before rendering.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="computeiconscreenbox" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> compute<wbr>Icon<wbr>Screen<wbr>Box</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">compute<wbr>Icon<wbr>Screen<wbr>Box<span class="tsd-signature-symbol">(</span>poiInfo<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.poiinfo-1.html" class="tsd-signature-type">PoiInfo</a>, screenPosition<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector2</span>, scale<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, env<span class="tsd-signature-symbol">: </span><a href="harp_datasource_protocol.env-3.html" class="tsd-signature-type">Env</a>, screenBox<span class="tsd-signature-symbol">?: </span><a href="harp_utils.math2d-3.box.html" class="tsd-signature-type">Box</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_utils.math2d-3.box.html" class="tsd-signature-type">Box</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/poi/PoiRenderer.ts#L424">@here/harp-mapview/lib/poi/PoiRenderer.ts:424</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Compute screen box for icon. It is required that <code>prepareRender</code> has been successfully called
+									before <code>computeScreenBox</code> may be called.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>poiInfo: <a href="../interfaces/harp_mapview.poiinfo-1.html" class="tsd-signature-type">PoiInfo</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>PoiInfo containing information for rendering the POI icon.</p>
+									</div>
+								</li>
+								<li>
+									<h5>screenPosition: <span class="tsd-signature-type">Vector2</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Position on screen (2D).</p>
+									</div>
+								</li>
+								<li>
+									<h5>scale: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Scale to apply to icon.</p>
+									</div>
+								</li>
+								<li>
+									<h5>env: <a href="harp_datasource_protocol.env-3.html" class="tsd-signature-type">Env</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Current zoom level.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> screenBox: <a href="harp_utils.math2d-3.box.html" class="tsd-signature-type">Box</a><span class="tsd-signature-symbol"> = new Math2D.Box()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Box that will be used to store the result.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_utils.math2d-3.box.html" class="tsd-signature-type">Box</a></h4>
+							<p>The computed screen box for the icon.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html">harp-<wbr>mapview</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.camerautils-1.html">Camera<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.copyrightinfo-1.html">Copyright<wbr>Info</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.mapviewutils-1.html">Map<wbr>View<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.object3dutils.html">Object3DUtils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.tileoffsetutils-1.html">Tile<wbr>Offset<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+						<ul>
+							<li class="current tsd-kind-class tsd-parent-kind-module">
+								<a href="harp_mapview.poirenderer.html" class="tsd-kind-icon">Poi<wbr>Renderer</a>
+								<ul>
+									<li class=" tsd-kind-constructor tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#constructor" class="tsd-kind-icon">constructor</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#layers" class="tsd-kind-icon">layers</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#renderer" class="tsd-kind-icon">renderer</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#addlayer" class="tsd-kind-icon">add<wbr>Layer</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#addpoi" class="tsd-kind-icon">add<wbr>Poi</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#getmemoryusage" class="tsd-kind-icon">get<wbr>Memory<wbr>Usage</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#picktextelements" class="tsd-kind-icon">pick<wbr>Text<wbr>Elements</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#preparerender" class="tsd-kind-icon">prepare<wbr>Render</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#render" class="tsd-kind-icon">render</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#reset" class="tsd-kind-icon">reset</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_mapview.poirenderer.html#update" class="tsd-kind-icon">update</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_mapview.poirenderer.html#computeiconscreenbox" class="tsd-kind-icon">compute<wbr>Icon<wbr>Screen<wbr>Box</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

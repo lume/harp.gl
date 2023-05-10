@@ -1,0 +1,879 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TiltViewClipPlanesEvaluator | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_mapview.html">harp-mapview</a>
+				</li>
+				<li>
+					<a href="harp_mapview.tiltviewclipplanesevaluator-1.html">TiltViewClipPlanesEvaluator</a>
+				</li>
+			</ul>
+			<h1>Class TiltViewClipPlanesEvaluator</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Evaluates camera clipping planes taking into account ground distance and camera tilt (pitch)
+						angle (angle between look-at vector and ground surface normal).</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="harp_mapview.topviewclipplanesevaluator-1.html" class="tsd-signature-type">TopViewClipPlanesEvaluator</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">TiltViewClipPlanesEvaluator</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/harp_mapview.clipplanesevaluator-1.html" class="tsd-signature-type">ClipPlanesEvaluator</a></li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#farmaxratio" class="tsd-kind-icon">far<wbr>Max<wbr>Ratio</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#m_tmpquaternion" class="tsd-kind-icon">m_<wbr>tmp<wbr>Quaternion</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#m_tmpvectors" class="tsd-kind-icon">m_<wbr>tmp<wbr>Vectors</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#nearfarmarginratio" class="tsd-kind-icon">near<wbr>Far<wbr>Margin<wbr>Ratio</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#nearmin" class="tsd-kind-icon">near<wbr>Min</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#maxelevation" class="tsd-kind-icon">max<wbr>Elevation</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#minelevation" class="tsd-kind-icon">min<wbr>Elevation</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#minimumviewrange" class="tsd-kind-icon">minimum<wbr>View<wbr>Range</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#evaluateclipplanes" class="tsd-kind-icon">evaluate<wbr>Clip<wbr>Planes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#evaluatedistanceplanarproj" class="tsd-kind-icon">evaluate<wbr>Distance<wbr>Planar<wbr>Proj</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#evaluatedistancesphericalproj" class="tsd-kind-icon">evaluate<wbr>Distance<wbr>Spherical<wbr>Proj</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="harp_mapview.tiltviewclipplanesevaluator-1.html#getfovbasedfarplane" class="tsd-kind-icon">get<wbr>Fov<wbr>Based<wbr>Far<wbr>Plane</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Tilt<wbr>View<wbr>Clip<wbr>Planes<wbr>Evaluator<span class="tsd-signature-symbol">(</span>maxElevation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, minElevation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, nearMin<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, nearFarMarginRatio<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, farMaxRatio<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.tiltviewclipplanesevaluator-1.html" class="tsd-signature-type">TiltViewClipPlanesEvaluator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#constructor">constructor</a></p>
+								<p>Overrides <a href="harp_mapview.elevationbasedclipplanesevaluator-1.html">ElevationBasedClipPlanesEvaluator</a>.<a href="harp_mapview.elevationbasedclipplanesevaluator-1.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L329">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:329</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Allows to setup near/far offsets (margins), rendered geometry elevation relative to sea
+									level as also minimum near plane and maximum far plane distance constraints.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd><p>It is strongly recommended to set some reasonable [[nearFarMargin]] (offset) between near
+										and far planes to avoid flickering.</p>
+									</dd>
+									<dt>note</dt>
+									<dd><p>Keep in mind that this evaluator does not evaluate terrain (or building) elevation
+											automatically, to keep such features rendered (between frustum planes) use <a href="harp_mapview.tiltviewclipplanesevaluator-1.html#minelevation">minElevation</a>,
+											<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#maxelevation">maxElevation</a> constraints. You may change this parameters at any time, but it requires
+											repeating [[evaluatePlanes]] step, if your camera is moving you need to evaluate planes
+										anyway.</p>
+									</dd>
+									<dt>note</dt>
+									<dd><p>You may treat <a href="harp_mapview.tiltviewclipplanesevaluator-1.html#minelevation">minElevation</a> and <a href="harp_mapview.tiltviewclipplanesevaluator-1.html#maxelevation">maxElevation</a> parameters as the maximum and
+											minimum renderable elevation respectively along the surface normal, when camera is
+											constantly looking downwards (top-down view). If you need <a href="../modules/harp_mapview.html#clipplanesevaluator">ClipPlanesEvaluator</a> for
+										cameras that support tilt or yaw please use <a href="../modules/harp_mapview.html#tiltviewclipplanesevaluator">TiltViewClipPlanesEvaluator</a>.</p>
+									</dd>
+									<dt>note</dt>
+									<dd><p>[[nearFarMaxRatio]] does not limit far plane when spherical projection is in use,
+											the algorithm used there estimates distance to point on tangent where line from camera
+										touches the sphere horizon and there is no reason to clamp it.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> maxElevation: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = EarthConstants.MAX_BUILDING_HEIGHT</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>defines near plane offset from the ground in the surface normal
+												direction, positive values allows to render elevated terrain features (mountains,
+											buildings). Defaults to Burj Khalifa building height.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> minElevation: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>defines far plane offset from the ground surface, negative values moves
+											far plane below the ground level (use it to render depressions). Default zero - sea level.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> nearMin: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>minimum allowable near plane distance from camera, must be bigger than zero.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> nearFarMarginRatio: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0.05</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>minimum distance between near and far plane, as a ratio of
+												average near/far plane distance, it have to be significantly bigger than zero (especially if
+												<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#maxelevation">maxElevation</a> and <a href="harp_mapview.tiltviewclipplanesevaluator-1.html#minelevation">minElevation</a> are equal), otherwise you may notice flickering when
+											rendering, or even render empty scene if frustum planes are almost equal.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> farMaxRatio: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 6</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>maximum ratio between ground and far plane distance, allows to limit
+											viewing distance at overall. Have to be bigger than 1.0.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.tiltviewclipplanesevaluator-1.html" class="tsd-signature-type">TiltViewClipPlanesEvaluator</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="farmaxratio" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> far<wbr>Max<wbr>Ratio</h3>
+					<div class="tsd-signature tsd-kind-icon">far<wbr>Max<wbr>Ratio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#farmaxratio">farMaxRatio</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L368">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:368</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>maximum ratio between ground and far plane distance, allows to limit
+							viewing distance at overall. Have to be bigger than 1.0.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="m_tmpquaternion" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> m_<wbr>tmp<wbr>Quaternion</h3>
+					<div class="tsd-signature tsd-kind-icon">m_<wbr>tmp<wbr>Quaternion<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Quaternion</span><span class="tsd-signature-symbol"> = new THREE.Quaternion()</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#m_tmpquaternion">m_tmpQuaternion</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L327">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:327</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Helper object for reducing performance impact.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="m_tmpvectors" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> m_<wbr>tmp<wbr>Vectors</h3>
+					<div class="tsd-signature tsd-kind-icon">m_<wbr>tmp<wbr>Vectors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [new THREE.Vector3(),new THREE.Vector3(),new THREE.Vector3()]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#m_tmpvectors">m_tmpVectors</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L318">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:318</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Helper for reducing number of objects created at runtime.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="nearfarmarginratio" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> near<wbr>Far<wbr>Margin<wbr>Ratio</h3>
+					<div class="tsd-signature tsd-kind-icon">near<wbr>Far<wbr>Margin<wbr>Ratio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#nearfarmarginratio">nearFarMarginRatio</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L367">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:367</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>minimum distance between near and far plane, as a ratio of
+								average near/far plane distance, it have to be significantly bigger than zero (especially if
+								<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#maxelevation">maxElevation</a> and <a href="harp_mapview.tiltviewclipplanesevaluator-1.html#minelevation">minElevation</a> are equal), otherwise you may notice flickering when
+							rendering, or even render empty scene if frustum planes are almost equal.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="nearmin" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> near<wbr>Min</h3>
+					<div class="tsd-signature tsd-kind-icon">near<wbr>Min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#nearmin">nearMin</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L366">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:366</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>minimum allowable near plane distance from camera, must be bigger than zero.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+					<a name="maxelevation" class="tsd-anchor"></a>
+					<h3>max<wbr>Elevation</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> maxElevation<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> maxElevation<span class="tsd-signature-symbol">(</span>elevation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.elevationbasedclipplanesevaluator-1.html">ElevationBasedClipPlanesEvaluator</a>.<a href="harp_mapview.elevationbasedclipplanesevaluator-1.html#maxelevation">maxElevation</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L265">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:265</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get maximum elevation to be covered by camera frustum.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd></dd>
+									<dt>note</dt>
+									<dd><p>If you set this exactly to the maximum rendered feature height (altitude above
+											the sea, you may notice some flickering or even polygons disappearing related to rounding
+											errors or depth buffer precision. In such cases increase [[nearFarMargin]] or add a little
+										bit offset to your assumed maximum elevation.</p>
+									</dd>
+									<dt>note</dt>
+									<dd><p>Reasonable values are in between (-DeadSeeDepression, MtEverestHeight&gt;, both values
+											are defined in [[EarthConstant]] as [[EarthConstant.MIN_ELEVATION]] and
+										[[EarthConstant.MAX_ELEVATION]] respectively.</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p>minElevation for more information about precision and rounding errors.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.elevationbasedclipplanesevaluator-1.html">ElevationBasedClipPlanesEvaluator</a>.<a href="harp_mapview.elevationbasedclipplanesevaluator-1.html#maxelevation">maxElevation</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L256">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:256</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set maximum elevation above sea level to be rendered.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd></dd>
+									<dt>note</dt>
+									<dd><p>If you set this exactly to the maximum rendered feature height (altitude above
+											the sea, you may notice some flickering or even polygons disappearing related to rounding
+											errors or depth buffer precision. In such cases increase [[nearFarMargin]] or add a little
+										bit offset to your assumed maximum elevation.</p>
+									</dd>
+									<dt>note</dt>
+									<dd><p>Reasonable values are in between (-DeadSeeDepression, MtEverestHeight&gt;, both values
+											are defined in [[EarthConstant]] as [[EarthConstant.MIN_ELEVATION]] and
+										[[EarthConstant.MAX_ELEVATION]] respectively.</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p>minElevation for more information about precision and rounding errors.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>elevation: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the elevation (altitude) value in world units (meters).</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+					<a name="minelevation" class="tsd-anchor"></a>
+					<h3>min<wbr>Elevation</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> minElevation<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> minElevation<span class="tsd-signature-symbol">(</span>elevation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.elevationbasedclipplanesevaluator-1.html">ElevationBasedClipPlanesEvaluator</a>.<a href="harp_mapview.elevationbasedclipplanesevaluator-1.html#minelevation">minElevation</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L294">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:294</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get minimum elevation to be covered by camera frustum.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd></dd>
+									<dt>note</dt>
+									<dd><p>If you set this parameter to zero you may not see any features rendered if they are
+											just below the sea level more than half of [[nearFarMargin]] assumed. Similarly if set to
+											-100m and rendered features lays exactly in such depression, you may notice that problem.
+											The errors usually come from projection precision loss and depth buffer nature (significant
+											precision loss closer to far plane). Thus is such cases either increase the margin (if you
+											are sure features are just at this elevation, or setup bigger offset for <a href="harp_mapview.tiltviewclipplanesevaluator-1.html#minelevation">minElevation</a>.
+											Reasonable values are between &lt;-DeadSeaDepression, MtEverestHeight), where the first denotes
+											lowest depression on the Earth defined as <a href="harp_geoutils.earthconstants-1.html#min_elevation">EarthConstants.MIN_ELEVATION</a> and the second is
+										the highest point our planet.</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://developer.nvidia.com/content/depth-precision-visualized">https://developer.nvidia.com/content/depth-precision-visualized</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.elevationbasedclipplanesevaluator-1.html">ElevationBasedClipPlanesEvaluator</a>.<a href="harp_mapview.elevationbasedclipplanesevaluator-1.html#minelevation">minElevation</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L285">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:285</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set minimum elevation to be rendered, values beneath the sea level are negative.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd></dd>
+									<dt>note</dt>
+									<dd><p>If you set this parameter to zero you may not see any features rendered if they are
+											just below the sea level more than half of [[nearFarMargin]] assumed. Similarly if set to
+											-100m and rendered features lays exactly in such depression, you may notice that problem.
+											The errors usually come from projection precision loss and depth buffer nature (significant
+											precision loss closer to far plane). Thus is such cases either increase the margin (if you
+											are sure features are just at this elevation, or setup bigger offset for <a href="harp_mapview.tiltviewclipplanesevaluator-1.html#minelevation">minElevation</a>.
+											Reasonable values are between &lt;-DeadSeaDepression, MtEverestHeight), where the first denotes
+											lowest depression on the Earth defined as <a href="harp_geoutils.earthconstants-1.html#min_elevation">EarthConstants.MIN_ELEVATION</a> and the second is
+										the highest point our planet.</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://developer.nvidia.com/content/depth-precision-visualized">https://developer.nvidia.com/content/depth-precision-visualized</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>elevation: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the minimum elevation (depression) in world units (meters).</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="minimumviewrange" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> minimum<wbr>View<wbr>Range</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> minimumViewRange<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#minimumviewrange">minimumViewRange</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L404">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:404</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get minimum view range that is possible to achieve with current evaluator settings.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>note</dt>
+									<dd><p>This value will not change after evaluator is constructed.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="evaluateclipplanes" class="tsd-anchor"></a>
+					<h3>evaluate<wbr>Clip<wbr>Planes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">evaluate<wbr>Clip<wbr>Planes<span class="tsd-signature-symbol">(</span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, projection<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a>, elevationProvider<span class="tsd-signature-symbol">?: </span><a href="../modules/harp_mapview.html#elevationprovider" class="tsd-signature-type">ElevationProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/harp_mapview.clipplanesevaluator-1.html">ClipPlanesEvaluator</a>.<a href="../interfaces/harp_mapview.clipplanesevaluator-1.html#evaluateclipplanes">evaluateClipPlanes</a></p>
+								<p>Inherited from <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#evaluateclipplanes">evaluateClipPlanes</a></p>
+								<p>Overrides <a href="harp_mapview.elevationbasedclipplanesevaluator-1.html">ElevationBasedClipPlanesEvaluator</a>.<a href="harp_mapview.elevationbasedclipplanesevaluator-1.html#evaluateclipplanes">evaluateClipPlanes</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L384">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:384</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>camera: <span class="tsd-signature-type">Camera</span></h5>
+								</li>
+								<li>
+									<h5>projection: <a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> elevationProvider: <a href="../modules/harp_mapview.html#elevationprovider" class="tsd-signature-type">ElevationProvider</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<a name="evaluatedistanceplanarproj" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> evaluate<wbr>Distance<wbr>Planar<wbr>Proj</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">evaluate<wbr>Distance<wbr>Planar<wbr>Proj<span class="tsd-signature-symbol">(</span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PerspectiveCamera</span>, projection<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a>, elevationProvider<span class="tsd-signature-symbol">?: </span><a href="../modules/harp_mapview.html#elevationprovider" class="tsd-signature-type">ElevationProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#evaluatedistanceplanarproj">evaluateDistancePlanarProj</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L600">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:600</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>camera: <span class="tsd-signature-type">PerspectiveCamera</span></h5>
+								</li>
+								<li>
+									<h5>projection: <a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> elevationProvider: <a href="../modules/harp_mapview.html#elevationprovider" class="tsd-signature-type">ElevationProvider</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<a name="evaluatedistancesphericalproj" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> evaluate<wbr>Distance<wbr>Spherical<wbr>Proj</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">evaluate<wbr>Distance<wbr>Spherical<wbr>Proj<span class="tsd-signature-symbol">(</span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PerspectiveCamera</span>, projection<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a>, elevationProvider<span class="tsd-signature-symbol">?: </span><a href="../modules/harp_mapview.html#elevationprovider" class="tsd-signature-type">ElevationProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#evaluatedistancesphericalproj">evaluateDistanceSphericalProj</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L681">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:681</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>camera: <span class="tsd-signature-type">PerspectiveCamera</span></h5>
+								</li>
+								<li>
+									<h5>projection: <a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> elevationProvider: <a href="../modules/harp_mapview.html#elevationprovider" class="tsd-signature-type">ElevationProvider</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_datasource_protocol.viewranges.html" class="tsd-signature-type">ViewRanges</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="getfovbasedfarplane" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Fov<wbr>Based<wbr>Far<wbr>Plane</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Fov<wbr>Based<wbr>Far<wbr>Plane<span class="tsd-signature-symbol">(</span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PerspectiveCamera</span>, d<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, r<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fovAngle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, projection<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.topviewclipplanesevaluator-1.html">TopViewClipPlanesEvaluator</a>.<a href="harp_mapview.topviewclipplanesevaluator-1.html#getfovbasedfarplane">getFovBasedFarPlane</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/ClipPlanesEvaluator.ts#L513">@here/harp-mapview/lib/ClipPlanesEvaluator.ts:513</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>camera: <span class="tsd-signature-type">PerspectiveCamera</span></h5>
+								</li>
+								<li>
+									<h5>d: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>r: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>fovAngle: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>projection: <a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html">harp-<wbr>mapview</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.camerautils-1.html">Camera<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.copyrightinfo-1.html">Copyright<wbr>Info</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.mapviewutils-1.html">Map<wbr>View<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.object3dutils.html">Object3DUtils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_mapview.tileoffsetutils-1.html">Tile<wbr>Offset<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+						<ul>
+							<li class="current tsd-kind-class tsd-parent-kind-module">
+								<a href="harp_mapview.tiltviewclipplanesevaluator-1.html" class="tsd-kind-icon">Tilt<wbr>View<wbr>Clip<wbr>Planes<wbr>Evaluator</a>
+								<ul>
+									<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#constructor" class="tsd-kind-icon">constructor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#farmaxratio" class="tsd-kind-icon">far<wbr>Max<wbr>Ratio</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#m_tmpquaternion" class="tsd-kind-icon">m_<wbr>tmp<wbr>Quaternion</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#m_tmpvectors" class="tsd-kind-icon">m_<wbr>tmp<wbr>Vectors</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#nearfarmarginratio" class="tsd-kind-icon">near<wbr>Far<wbr>Margin<wbr>Ratio</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#nearmin" class="tsd-kind-icon">near<wbr>Min</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#maxelevation" class="tsd-kind-icon">max<wbr>Elevation</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#minelevation" class="tsd-kind-icon">min<wbr>Elevation</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#minimumviewrange" class="tsd-kind-icon">minimum<wbr>View<wbr>Range</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#evaluateclipplanes" class="tsd-kind-icon">evaluate<wbr>Clip<wbr>Planes</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#evaluatedistanceplanarproj" class="tsd-kind-icon">evaluate<wbr>Distance<wbr>Planar<wbr>Proj</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#evaluatedistancesphericalproj" class="tsd-kind-icon">evaluate<wbr>Distance<wbr>Spherical<wbr>Proj</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+										<a href="harp_mapview.tiltviewclipplanesevaluator-1.html#getfovbasedfarplane" class="tsd-kind-icon">get<wbr>Fov<wbr>Based<wbr>Far<wbr>Plane</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

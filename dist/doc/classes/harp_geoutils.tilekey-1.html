@@ -1,0 +1,1134 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TileKey | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_geoutils.html">harp-geoutils</a>
+				</li>
+				<li>
+					<a href="harp_geoutils.tilekey-1.html">TileKey</a>
+				</li>
+			</ul>
+			<h1>Class TileKey</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The <code>TileKey</code> instances are used to address a tile in a quadtree.</p>
+					</div>
+					<p>A tile key is defined by a row, a column, and a level. The tree has a root at level 0, with one
+						single tile. On every level, each tile is divided into four children (therefore the name
+					quadtree).</p>
+					<p>Within each <a href="harp_geoutils.tilekey-1.html#level">level</a>, any particular tile is addressed with <a href="harp_geoutils.tilekey-1.html#row">row</a> and <a href="harp_geoutils.tilekey-1.html#column">column</a>. The number
+						of rows and columns in each level is 2 to the power of the level. This means: On level 0, only
+						one tile exists, <a href="harp_geoutils.tilekey-1.html#columnsatlevel">columnsAtLevel</a>() and <a href="harp_geoutils.tilekey-1.html#rowsatlevel">rowsAtLevel</a>() are both 1. On level 1, 4 tiles
+					exist, in 2 rows and 2 columns. On level 2 we have 16 tiles, in 4 rows and 4 columns. And so on.</p>
+					<p>A tile key is usually created using <a href="harp_geoutils.tilekey-1.html#fromrowcolumnlevel">fromRowColumnLevel</a>() method.</p>
+					<p><code>TileKey</code> instances are immutable, all members return new instances of <code>TileKey</code> and do not
+					modify the original object.</p>
+					<p>Utility functions like <a href="harp_geoutils.tilekey-1.html#parent">parent</a>(), <a href="harp_geoutils.tilekey-1.html#changedlevelby">changedLevelBy</a>(), and <a href="harp_geoutils.tilekey-1.html#changedlevelto">changedLevelTo</a>() allow for
+						easy vertical navigation of the tree. The number of available rows and columns in the tile&#39;s
+					level is given with <a href="harp_geoutils.tilekey-1.html#rowcount">rowCount</a>() and <a href="harp_geoutils.tilekey-1.html#columncount">columnCount</a>().</p>
+					<p>Tile keys can be created from and converted into various alternative formats:</p>
+					<ul>
+						<li><a href="harp_geoutils.tilekey-1.html#toquadkey">toQuadKey</a>() / <a href="harp_geoutils.tilekey-1.html#fromquadkey">fromQuadKey</a>() - string representation 4-based</li>
+						<li><a href="harp_geoutils.tilekey-1.html#toheretile">toHereTile</a>() / <a href="harp_geoutils.tilekey-1.html#fromheretile">fromHereTile</a>() - string representation 10-based</li>
+						<li><a href="harp_geoutils.tilekey-1.html#mortoncode">mortonCode</a>() / <a href="harp_geoutils.tilekey-1.html#frommortoncode">fromMortonCode</a>() - number representation</li>
+					</ul>
+					<p>Note - as JavaScript&#39;s number type can hold 53 bits in its mantissa, only levels up to 26 can be
+					represented in the number representation returned by <a href="harp_geoutils.tilekey-1.html#mortoncode">mortonCode</a>().</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">TileKey</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#column" class="tsd-kind-icon">column</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#level" class="tsd-kind-icon">level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#row" class="tsd-kind-icon">row</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#addedsubheretile" class="tsd-kind-icon">added<wbr>Sub<wbr>Here<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#addedsubkey" class="tsd-kind-icon">added<wbr>Sub<wbr>Key</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#changedlevelby" class="tsd-kind-icon">changed<wbr>Level<wbr>By</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#changedlevelto" class="tsd-kind-icon">changed<wbr>Level<wbr>To</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#columncount" class="tsd-kind-icon">column<wbr>Count</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#equals" class="tsd-kind-icon">equals</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#getsubheretile" class="tsd-kind-icon">get<wbr>Sub<wbr>Here<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#mortoncode" class="tsd-kind-icon">morton<wbr>Code</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#parent" class="tsd-kind-icon">parent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#rowcount" class="tsd-kind-icon">row<wbr>Count</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#toheretile" class="tsd-kind-icon">to<wbr>Here<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.tilekey-1.html#toquadkey" class="tsd-kind-icon">to<wbr>Quad<wbr>Key</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_geoutils.tilekey-1.html#atcoords" class="tsd-kind-icon">at<wbr>Coords</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_geoutils.tilekey-1.html#columnsatlevel" class="tsd-kind-icon">columns<wbr>AtLevel</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_geoutils.tilekey-1.html#fromheretile" class="tsd-kind-icon">from<wbr>Here<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_geoutils.tilekey-1.html#frommortoncode" class="tsd-kind-icon">from<wbr>Morton<wbr>Code</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_geoutils.tilekey-1.html#fromquadkey" class="tsd-kind-icon">from<wbr>Quad<wbr>Key</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_geoutils.tilekey-1.html#fromrowcolumnlevel" class="tsd-kind-icon">from<wbr>Row<wbr>Column<wbr>Level</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_geoutils.tilekey-1.html#parentmortoncode" class="tsd-kind-icon">parent<wbr>Morton<wbr>Code</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="harp_geoutils.tilekey-1.html#rowsatlevel" class="tsd-kind-icon">rows<wbr>AtLevel</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Tile<wbr>Key<span class="tsd-signature-symbol">(</span>row<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, column<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L237">@here/harp-geoutils/lib/tiling/TileKey.ts:237</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs a new immutable instance of a <code>TileKey</code>.</p>
+								</div>
+								<p>For the better readability, <a href="harp_geoutils.tilekey-1.html#fromrowcolumnlevel">TileKey.fromRowColumnLevel</a> should be preferred.</p>
+								<p>Note - row and column must not be greater than the maximum rows/columns for the given level.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>row: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Represents the row in the quadtree.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>column: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Represents the column in the quadtree.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Represents the level in the quadtree.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="column" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> column</h3>
+					<div class="tsd-signature tsd-kind-icon">column<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L250">@here/harp-geoutils/lib/tiling/TileKey.ts:250</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Represents the column in the quadtree.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="level" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> level</h3>
+					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L250">@here/harp-geoutils/lib/tiling/TileKey.ts:250</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Represents the level in the quadtree.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="row" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> row</h3>
+					<div class="tsd-signature tsd-kind-icon">row<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L250">@here/harp-geoutils/lib/tiling/TileKey.ts:250</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Represents the row in the quadtree.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addedsubheretile" class="tsd-anchor"></a>
+					<h3>added<wbr>Sub<wbr>Here<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">added<wbr>Sub<wbr>Here<wbr>Tile<span class="tsd-signature-symbol">(</span>sub<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L412">@here/harp-geoutils/lib/tiling/TileKey.ts:412</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the absolute quadkey that is constructed from its sub HERE tile key.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sub: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The sub HERE key.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+							<p>The absolute tile key in the quadtree.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addedsubkey" class="tsd-anchor"></a>
+					<h3>added<wbr>Sub<wbr>Key</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">added<wbr>Sub<wbr>Key<span class="tsd-signature-symbol">(</span>sub<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L396">@here/harp-geoutils/lib/tiling/TileKey.ts:396</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the absolute quadkey that is constructed from its sub quadkey.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sub: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The sub key.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+							<p>The absolute tile key in the quadtree.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="changedlevelby" class="tsd-anchor"></a>
+					<h3>changed<wbr>Level<wbr>By</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">changed<wbr>Level<wbr>By<span class="tsd-signature-symbol">(</span>delta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L273">@here/harp-geoutils/lib/tiling/TileKey.ts:273</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a new tile key at a level that differs from this tile&#39;s level by delta.</p>
+								</div>
+								<p>Equivalent to <code>changedLevelTo(level() + delta)</code>.</p>
+								<p>Note - root key is returned if <code>delta</code> is smaller than the level of this tile key.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>delta: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The numeric difference between the current level and the requested level.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="changedlevelto" class="tsd-anchor"></a>
+					<h3>changed<wbr>Level<wbr>To</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">changed<wbr>Level<wbr>To<span class="tsd-signature-symbol">(</span>level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L299">@here/harp-geoutils/lib/tiling/TileKey.ts:299</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a new tile key at the requested level.</p>
+								</div>
+								<p>If the requested level is smaller than the tile&#39;s level, then the key of an ancestor of this
+									tile is returned. If the requested level is larger than the tile&#39;s level, then the key of
+									first child or grandchild of this tile is returned, for example, the child with the lowest
+									row and column number. If the requested level equals this tile&#39;s level, then the tile key
+								itself is returned. If the requested level is negative, the root tile key is returned.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The requested level.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="columncount" class="tsd-anchor"></a>
+					<h3>column<wbr>Count</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">column<wbr>Count<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L462">@here/harp-geoutils/lib/tiling/TileKey.ts:462</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the number of available columns in the tile&#39;s <a href="harp_geoutils.tilekey-1.html#level">level</a>.</p>
+								</div>
+								<p>This is 2 to the power of the level.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="equals" class="tsd-anchor"></a>
+					<h3>equals</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">(</span>qnr<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L386">@here/harp-geoutils/lib/tiling/TileKey.ts:386</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Equality operator.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>qnr: <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The tile key to compare to.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if this tile key has identical row, column and level, <code>false</code> otherwise.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getsubheretile" class="tsd-anchor"></a>
+					<h3>get<wbr>Sub<wbr>Here<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Sub<wbr>Here<wbr>Tile<span class="tsd-signature-symbol">(</span>delta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L440">@here/harp-geoutils/lib/tiling/TileKey.ts:440</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a sub quadkey that is relative to its parent.</p>
+								</div>
+								<p>This function can be used to generate sub keys that are relative to a parent that is delta
+								levels up in the quadtree.</p>
+								<p>This function can be used to create shortened keys for quads on lower levels if the parent is
+								known.</p>
+								<p>Note - the sub quadkeys fit in a 16-bit unsigned integer if the <code>delta</code> is smaller than 8. If
+								<code>delta</code> is smaller than 16, the sub quadkey fits into an unsigned 32-bit integer.</p>
+								<p>Deltas larger than 16 are not supported.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>delta: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The number of levels relative to its parent quadkey. Must be greater or equal
+										to 0 and smaller than 16.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>The quadkey relative to its parent that is <code>delta</code> levels up the tree.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="mortoncode" class="tsd-anchor"></a>
+					<h3>morton<wbr>Code</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">morton<wbr>Code<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L310">@here/harp-geoutils/lib/tiling/TileKey.ts:310</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts the tile key to a numeric code representation.</p>
+								</div>
+								<p>You can create a tile key from a numeric Morton code with <a href="harp_geoutils.tilekey-1.html#frommortoncode">fromMortonCode</a>.</p>
+								<p>Note - only levels &lt;= 26 are supported.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="parent" class="tsd-anchor"></a>
+					<h3>parent</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L257">@here/harp-geoutils/lib/tiling/TileKey.ts:257</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a tile key representing the parent of the tile addressed by this tile key.</p>
+								</div>
+								<p>Throws an exception is this tile is already the root.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="rowcount" class="tsd-anchor"></a>
+					<h3>row<wbr>Count</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">row<wbr>Count<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L453">@here/harp-geoutils/lib/tiling/TileKey.ts:453</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the number of available rows in the tile&#39;s <a href="harp_geoutils.tilekey-1.html#level">level</a>.</p>
+								</div>
+								<p>This is 2 to the power of the level.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="toheretile" class="tsd-anchor"></a>
+					<h3>to<wbr>Here<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Here<wbr>Tile<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L339">@here/harp-geoutils/lib/tiling/TileKey.ts:339</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts the tile key into a string for using in REST API calls.</p>
+								</div>
+								<p>The string is a quadkey Morton code representation as a string.</p>
+								<p>You can convert back from a quadkey string with <a href="harp_geoutils.tilekey-1.html#fromheretile">fromHereTile</a>.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="toquadkey" class="tsd-anchor"></a>
+					<h3>to<wbr>Quad<wbr>Key</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Quad<wbr>Key<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L357">@here/harp-geoutils/lib/tiling/TileKey.ts:357</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts the tile key into a string for using in REST API calls.</p>
+								</div>
+								<p>If the tile is the root tile, the quadkey is &#39;-&#39;. Otherwise the string is a number to the
+								base of 4, but without the leading 1, with the following properties:</p>
+								<ol>
+									<li>the number of digits equals the level.</li>
+									<li>removing the last digit gives the parent tile&#39;s quadkey string, i.e. appending 0,1,2,3
+									to a quadkey string gives the tiles&#39;s children.</li>
+								</ol>
+								<p>You can convert back from a quadkey string with <a href="harp_geoutils.tilekey-1.html#fromquadkey">fromQuadKey</a>.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="atcoords" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> at<wbr>Coords</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">at<wbr>Coords<span class="tsd-signature-symbol">(</span>level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, coordX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, coordY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, totalWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, totalHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L210">@here/harp-geoutils/lib/tiling/TileKey.ts:210</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the closest matching <code>TileKey</code> in a cartesian coordinate system.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The level for the tile key.</p>
+									</div>
+								</li>
+								<li>
+									<h5>coordX: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The X coordinate.</p>
+									</div>
+								</li>
+								<li>
+									<h5>coordY: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The Y coordinate.</p>
+									</div>
+								</li>
+								<li>
+									<h5>totalWidth: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The maximum X coordinate.</p>
+									</div>
+								</li>
+								<li>
+									<h5>totalHeight: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The maximum Y coordinate.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+							<p>A new tile key at the given level that includes the given coordinates.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="columnsatlevel" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> columns<wbr>AtLevel</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">columns<wbr>AtLevel<span class="tsd-signature-symbol">(</span>level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L184">@here/harp-geoutils/lib/tiling/TileKey.ts:184</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the number of available columns at a given level.</p>
+								</div>
+								<p>This is 2 to the power of the level.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The level for which to return the number of columns.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The available columns at the given level.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="fromheretile" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Here<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">from<wbr>Here<wbr>Tile<span class="tsd-signature-symbol">(</span>quadkey64<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L170">@here/harp-geoutils/lib/tiling/TileKey.ts:170</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a tile key from a heretile code string.</p>
+								</div>
+								<p>The string can be created with <a href="harp_geoutils.tilekey-1.html#toheretile">toHereTile</a>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>quadkey64: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The string representation of the HERE tile key.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+							<p>A new instance of <code>TileKey</code>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="frommortoncode" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Morton<wbr>Code</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">from<wbr>Morton<wbr>Code<span class="tsd-signature-symbol">(</span>quadKey64<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L139">@here/harp-geoutils/lib/tiling/TileKey.ts:139</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a tile key from a numeric Morton code representation.</p>
+								</div>
+								<p>You can convert a tile key into a numeric Morton code with <a href="harp_geoutils.tilekey-1.html#mortoncode">mortonCode</a>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>quadKey64: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The Morton code to be converted.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+							<p>A new instance of <a href="../modules/harp_geoutils.html#tilekey">TileKey</a>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="fromquadkey" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Quad<wbr>Key</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">from<wbr>Quad<wbr>Key<span class="tsd-signature-symbol">(</span>quadkey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L114">@here/harp-geoutils/lib/tiling/TileKey.ts:114</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a tile key from a quad string.</p>
+								</div>
+								<p>The quad string can be created with <a href="harp_geoutils.tilekey-1.html#toquadkey">toQuadKey</a>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>quadkey: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The quadkey to convert.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+							<p>A new instance of <code>TileKey</code>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="fromrowcolumnlevel" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Row<wbr>Column<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">from<wbr>Row<wbr>Column<wbr>Level<span class="tsd-signature-symbol">(</span>row<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, column<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L102">@here/harp-geoutils/lib/tiling/TileKey.ts:102</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a tile key.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>row: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The requested row. Must be less than 2 to the power of level.</p>
+									</div>
+								</li>
+								<li>
+									<h5>column: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The requested column. Must be less than 2 to the power of level.</p>
+									</div>
+								</li>
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The requested level.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="parentmortoncode" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> parent<wbr>Morton<wbr>Code</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">parent<wbr>Morton<wbr>Code<span class="tsd-signature-symbol">(</span>mortonCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L232">@here/harp-geoutils/lib/tiling/TileKey.ts:232</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the Morton code of the parent tile key of the given Morton code.</p>
+								</div>
+								<p>Note: The parent key of the root key is the root key itself.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mortonCode: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A Morton code, for example, obtained from <a href="harp_geoutils.tilekey-1.html#mortoncode">mortonCode</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The Morton code of the parent tile.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="rowsatlevel" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> rows<wbr>AtLevel</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">rows<wbr>AtLevel<span class="tsd-signature-symbol">(</span>level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKey.ts#L196">@here/harp-geoutils/lib/tiling/TileKey.ts:196</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the number of available rows at a given level.</p>
+								</div>
+								<p>This is 2 to the power of the level.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The level for which to return the number of rows.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The available rows at the given level.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_geoutils.html">harp-<wbr>geoutils</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_geoutils.mathutils-1.html">Math<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_geoutils.tilekeyutils-1.html">Tile<wbr>Key<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+						<ul>
+							<li class="current tsd-kind-class tsd-parent-kind-module">
+								<a href="harp_geoutils.tilekey-1.html" class="tsd-kind-icon">Tile<wbr>Key</a>
+								<ul>
+									<li class=" tsd-kind-constructor tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#constructor" class="tsd-kind-icon">constructor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#column" class="tsd-kind-icon">column</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#level" class="tsd-kind-icon">level</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#row" class="tsd-kind-icon">row</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#addedsubheretile" class="tsd-kind-icon">added<wbr>Sub<wbr>Here<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#addedsubkey" class="tsd-kind-icon">added<wbr>Sub<wbr>Key</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#changedlevelby" class="tsd-kind-icon">changed<wbr>Level<wbr>By</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#changedlevelto" class="tsd-kind-icon">changed<wbr>Level<wbr>To</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#columncount" class="tsd-kind-icon">column<wbr>Count</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#equals" class="tsd-kind-icon">equals</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#getsubheretile" class="tsd-kind-icon">get<wbr>Sub<wbr>Here<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#mortoncode" class="tsd-kind-icon">morton<wbr>Code</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#parent" class="tsd-kind-icon">parent</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#rowcount" class="tsd-kind-icon">row<wbr>Count</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#toheretile" class="tsd-kind-icon">to<wbr>Here<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.tilekey-1.html#toquadkey" class="tsd-kind-icon">to<wbr>Quad<wbr>Key</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_geoutils.tilekey-1.html#atcoords" class="tsd-kind-icon">at<wbr>Coords</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_geoutils.tilekey-1.html#columnsatlevel" class="tsd-kind-icon">columns<wbr>AtLevel</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_geoutils.tilekey-1.html#fromheretile" class="tsd-kind-icon">from<wbr>Here<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_geoutils.tilekey-1.html#frommortoncode" class="tsd-kind-icon">from<wbr>Morton<wbr>Code</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_geoutils.tilekey-1.html#fromquadkey" class="tsd-kind-icon">from<wbr>Quad<wbr>Key</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_geoutils.tilekey-1.html#fromrowcolumnlevel" class="tsd-kind-icon">from<wbr>Row<wbr>Column<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_geoutils.tilekey-1.html#parentmortoncode" class="tsd-kind-icon">parent<wbr>Morton<wbr>Code</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<a href="harp_geoutils.tilekey-1.html#rowsatlevel" class="tsd-kind-icon">rows<wbr>AtLevel</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1536 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>harp-atlas-tools | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="harp_atlas_tools.html">harp-atlas-tools</a>
+				</li>
+			</ul>
+			<h1>Package harp-atlas-tools</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<a href="#package-content---the-tools" id="package-content---the-tools" style="color: inherit; text-decoration: none;">
+						<h1>Package content - the tools</h1>
+					</a>
+					<p>HARP atlas tools are build in Node.js environment (see: <a href="https://nodejs.org">https://nodejs.org</a>) so you will
+					need to install some prerequisities to use them:</p>
+					<ul>
+						<li><strong>Node.js</strong></li>
+						<li>java script package manager, for example <strong>npm</strong> which is distributed with Node.js or <strong>yarn</strong>.</li>
+						<li><strong>npx</strong>, the npm package runner, that simplifies usage of CLI tools (in the newest versions of npm it is installed automatically).</li>
+					</ul>
+					<p>There are two complementary applications in the package and they are distributed as command line tools (CLI), thus after installing:</p>
+					<pre><code>npm <span class="hljs-keyword">install</span> harp-atlas-tools</code></pre><p>in directory of your choice you will have two applications available:</p>
+					<ul>
+						<li>harp-atlas-generator</li>
+						<li>harp-sprites-generator</li>
+					</ul>
+					<p>You may simply launch them from you command line shell, using <strong>npx</strong>, adding <strong>--help</strong> option allows to see their short version of usage manual:</p>
+					<pre><code>npx harp-atlas-generator <span class="hljs-comment">--help</span>
+npx harp-sprites-generator <span class="hljs-comment">--help</span></code></pre>
+					<a href="#harp-atlas-generator" id="harp-atlas-generator" style="color: inherit; text-decoration: none;">
+						<h1><strong>harp-atlas-generator</strong></h1>
+					</a>
+					<p>The main usage of this <strong>tool</strong> is to create single image file containing all assets for specific
+						use case. Such file is ussually refered as <strong>Texture Atlas</strong> or <strong>Sprites Atlas</strong> because it
+						actually contains multiple sprites (images) that occupy atlas regions. There there are several
+					advantages of such approach:</p>
+					<ul>
+						<li>single header only, that stores image format meta-data (less storage consumption),</li>
+						<li>shorter loading times (single file instead of many),</li>
+						<li>sometimes better assets organization (single file instead of folders structure),</li>
+						<li>performance optimization - when rendering features are grouped in the pipeline you may expect
+							less cache misses and most importantly decrease texture switches which are crucial in GPU
+							oriented rendering engines. Simply said if all features in the render batch share the same
+							texture (<strong>texture atlas</strong>) there is not need to change render states and most importantly
+						reload textures to VRAM.</li>
+					</ul>
+					<p>As with any other CLI tools, you may simply launch it from you command line shell, launch it with <strong>--help</strong> option to see the short user manual:</p>
+					<pre><code>npx harp-atlas-generator <span class="hljs-comment">--help</span></code></pre>
+					<a href="#simple-configuration-options" id="simple-configuration-options" style="color: inherit; text-decoration: none;">
+						<h2>Simple configuration options</h2>
+					</a>
+					<p>Although most of the tool options are self explanatory, it is good to explain few of them in details.</p>
+					<table>
+						<thead>
+							<tr>
+								<th>Option</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody><tr>
+								<td><code>-i, --in [path]</code></td>
+								<td>Input path, gives a path to directory or expression (using wildcards) for filtering input files.</td>
+							</tr>
+							<tr>
+								<td><code>-o, --out [file]</code></td>
+								<td>This will be a path to newly created sprite atlas files, saved in PNG image format, so please do not add extension here, two files will be created: image with <em>.png</em> extension and JSON descriptor file with <em>.json</em> extension.</td>
+							</tr>
+							<tr>
+								<td><code>-p, --padding [number]</code></td>
+								<td>Spacing between icons in the output atlas image.</td>
+							</tr>
+							<tr>
+								<td><code>-w, --width [number]</code></td>
+								<td>Predefined width for every sprite in atlas, if you set this parameter to zero, (or leave default) and set <code>-h --height</code> parameter to some other value sprites will get their width based on height set and to preserve original image aspect ratio. If both -w and -h are set to zero original image size is applied.</td>
+							</tr>
+							<tr>
+								<td><code>-h, --height [number]</code></td>
+								<td>Simillar to width but defines height of sprite in atlas, zero leaves original size or constraints height to width (if is set) while preserving aspect ratio.</td>
+							</tr>
+							<tr>
+								<td><code>-m, --minify</code></td>
+								<td>Parameter switch that enables output JSON optimization, less storage space used, but hard to read for human.</td>
+							</tr>
+							<tr>
+								<td><code>-v, --verbose</code></td>
+								<td>Turn on <strong>Verbose mode</strong> giving extended logging output.</td>
+							</tr>
+							<tr>
+								<td><code>-j, --jobs [number]</code></td>
+								<td>Number of processing threads (virtually).</td>
+							</tr>
+							<tr>
+								<td><code>-c, --processConfig [path]</code></td>
+								<td>Sets the path to special JSON configuration file with pre-processing steps to be performed.</td>
+							</tr>
+					</tbody></table>
+					<blockquote>
+						<p><strong>Important note</strong></p>
+						<p>If you are not sure to install entire package via <strong>npm</strong>, but have cloned repository you may still run in from root package directory <code>@here/harp-atlas-tools</code>. Just install
+						dependencies localy and use <strong>yarn run</strong> command instead of <strong>npx</strong>:</p>
+						<pre><code>yarn
+yarn <span class="hljs-keyword">run</span><span class="bash"> harp-atlas-generator --<span class="hljs-built_in">help</span></span></code></pre><p>So basically in this setup you may replace all <strong>npx</strong> commands with <strong>yarn run</strong>.</p>
+					</blockquote>
+					<a href="#advanced-configuration" id="advanced-configuration" style="color: inherit; text-decoration: none;">
+						<h2>Advanced configuration</h2>
+					</a>
+					<p>The most of <em>magic</em> during atlas creation or sprites pre-processing may be done via processing configuration
+					file, passed with <strong>-c, --processConfig</strong> parameter.</p>
+					<p>Sample configuration which converts icons to grayscale, add backgrounds and inverts colors while giving them
+					night mode look &amp; feel is presented below:</p>
+					<pre><code class="language-JSON">{
+    <span class="hljs-attr">&quot;processingSteps&quot;</span>: [
+        { <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Grayscale&quot;</span>, <span class="hljs-attr">&quot;method&quot;</span>: <span class="hljs-string">&quot;Average&quot;</span> },
+        { <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;AddBackground&quot;</span>, <span class="hljs-attr">&quot;image&quot;</span>: <span class="hljs-string">&quot;resources-dev/backgrounds/icon-bg-17x17.png&quot;</span>, <span class="hljs-attr">&quot;offset&quot;</span>: { <span class="hljs-attr">&quot;x&quot;</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">&quot;y&quot;</span>: <span class="hljs-number">3</span> } },
+        { <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;InvertColor&quot;</span>}
+    ]
+}</code></pre>
+					<p>The same effect may be achieved with slightly more advanced config, even with fully colored background image :</p>
+					<pre><code class="language-JSON">{
+    <span class="hljs-attr">&quot;processingSteps&quot;</span>: [
+        { <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;CombineImages&quot;</span>, <span class="hljs-attr">&quot;image&quot;</span>: <span class="hljs-string">&quot;resources-dev/backgrounds/icon-bg-17x17.png&quot;</span>, <span class="hljs-attr">&quot;blendMode&quot;</span> : <span class="hljs-string">&quot;BlendAlpha&quot;</span>, <span class="hljs-attr">&quot;sizeRef&quot;</span>: <span class="hljs-string">&quot;Dst&quot;</span>, <span class="hljs-attr">&quot;offset&quot;</span>: { <span class="hljs-attr">&quot;x&quot;</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">&quot;y&quot;</span>: <span class="hljs-number">3</span> } },
+        { <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Grayscale&quot;</span>, <span class="hljs-attr">&quot;method&quot;</span>: <span class="hljs-string">&quot;Average&quot;</span> },
+        { <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;InvertColor&quot;</span>}
+    ]
+}</code></pre>
+					<p>Basically configuration starts with <strong>processingSteps</strong> node which defines array of objects (steps). Processing
+						may be performed parallely (see &#39;-jobs&#39; param) for different images, but for single image, the processing order is
+						always preserved. So simply said you may achieve totally different effects by changing the order of processing
+					steps defined here.</p>
+					<p>Each step is again defined as JSON object, with one common attribute - <strong>name</strong> being the most significant, such
+						as it decides what kind of operation you wish to perform on images. Each operation usually have its&#39; own
+					attributes set that may define different behaviour (i.e. blending modes), additional input image (for adding backgrounds, foregrounds or blending other layers).</p>
+					<p>For full set of operations available and their parameters please refer to:
+					<a href="https://github.com/heremaps/harp.gl/tree/master/%40here/harp-atlas-tools/src/ImageProcessing.ts">ImageProcessing.ts</a></p>
+					<a href="#harp-sprites-generator---complementary-tool" id="harp-sprites-generator---complementary-tool" style="color: inherit; text-decoration: none;">
+						<h1><strong>harp-sprites-generator</strong> - complementary tool</h1>
+					</a>
+					<p>Although the <strong>harp-atlas-generator</strong> tool is flexible enough for most use cases, it may be neccessary to
+						perform different images processing for some sub-sets of input images. As example, you may need to resize
+						only few images of input set while leaving original size, but adding foreground to few others.
+						For this purpose you may use <strong>harp-sprites-generator</strong>. The tool which performs images post-processing with
+						same configuration rules as <strong>harp-atlas-generator</strong> (see: <a href="#simple-configuration-options">Simple configuration options</a>), but instead of merging all images into atlas, it outputs
+					<strong>sprite</strong> files speparatelly to specified directory output directory. This way you may spread your work into few steps:</p>
+					<ol>
+						<li>Sub-set A (img0.png, img1.png) preprocessing:</li>
+					</ol>
+					<pre><code><span class="hljs-attribute">npx</span> harp-sprites-generator -i <span class="hljs-regexp">*.png</span> -o <span class="hljs-string">&#x27;intermediate&#x27;</span> -c <span class="hljs-string">&#x27;resizeConf.json&#x27;</span></code></pre><ol start="2">
+						<li>Sub-set B (ico0.svg, ico2.svg ...) preprocessing:</li>
+					</ol>
+					<pre><code><span class="hljs-attribute">npx</span> harp-sprites-generator -i <span class="hljs-regexp">*.svg</span> -o <span class="hljs-string">&#x27;intermediate&#x27;</span> -c <span class="hljs-string">&#x27;resizeConf.json&#x27;</span></code></pre><ol start="3">
+						<li>Merging outputs from 1 and 2 into single sprite atlas:</li>
+					</ol>
+					<pre><code><span class="hljs-attribute">npx</span> harp-atlas-generator -i <span class="hljs-string">&#x27;intermediate/*&#x27;</span> -o <span class="hljs-string">&#x27;atlas&#x27;</span></code></pre><hr>
+					<a href="#creating-generic-icons-set" id="creating-generic-icons-set" style="color: inherit; text-decoration: none;">
+						<h1>Creating <em>generic</em> icons set</h1>
+					</a>
+					<p>Since the icons that come with <strong>harp.gl</strong> (<a href="https://github.com/heremaps/harp.gl">https://github.com/heremaps/harp.gl</a>) have a license that
+						limits its usage depending on what map data is being displayed, another set of icons may be
+						required.
+						To create another set of icons, the popular and freely available maki icons can be used
+					(<a href="https://labs.mapbox.com/maki-icons/">https://labs.mapbox.com/maki-icons/</a>).</p>
+					<p>The process of generating them is not difficult, and harp-atlas-tools will help in doing so.
+						It utilizes Node.js environment to run a CLI script that converts the vector format (SVG) maki icons,
+						into single PNG sprite sheet which will contain all icons in form of single atlas, both with appropriate
+						JSON file describing the particular icon&#39;s position and region within it. In order to use
+					<strong>harp-atlas-tools</strong> firstly download package using manager of your choice, for example:</p>
+					<pre><code>npm <span class="hljs-keyword">install</span> harp-atlas-tools</code></pre><p>The process of creating complete icons set (sprites-sheet) is simple, but it&#39;s good to know some insights in
+						order to understand the output.
+						Firstly download the &#39;maki-icons&#39; set and extract them into some local folder of you choice, for convinience
+						let&#39;s call it:
+					<code>resources-tmp</code>.</p>
+					<pre><code>mkdir resources-tmp &amp;&amp; <span class="hljs-keyword">cd</span> resources-tmp
+curl -L https:<span class="hljs-string">//github.com/mapbox/maki/tarball/master</span> | tar -xz <span class="hljs-params">--strip=1</span> <span class="hljs-params">--wildcards</span> *<span class="hljs-string">/icons</span>
+<span class="hljs-keyword">cd</span> <span class="hljs-string">..</span></code></pre><p>You should now have a lot of SVG (vector) graphics in the folder <code>resources-tmp/icons</code>. Some of them have <code>-11</code>
+						suffix some ends with <code>-15</code>. This are to sizes (11x11 px and 15x15 px) of maki icons available.
+						It&#39;s a good time to choose which version is more convinient for your purposes, or maybe you will need both.
+					Let&#39;s see that steps to achieve this.</p>
+					<p>Maybe you have already noticed that &#39;maki-icons&#39; set constains clip arts that do not have a background,
+						which allow easy styling, but the such icons do not have any border, and may easily be overlooked on the map.
+						To make them look like <em>real</em> icons, a background should be added, and atlas creation tool actually allows for it.
+						Firstly you will need some background graphics (frame) that improves their usability and visibility.
+						Some simple backgrounds are already prepared in the <strong>harp-atlas-tools</strong> package directory
+					under <code>resources-dev/backgrounds</code> for your convinience. It should reside at <code>node_modules/@here/harp-atlas-tools/</code> sub-folder of your installation directory.</p>
+					<p>In order to simplify paths you may copy it to you current folder or create sym-link to it (you do not need to do it if your work in the root package directory: <code>@here/harp-atlas-tools</code>):</p>
+					<pre><code>cp -R node_modules<span class="hljs-regexp">/@here/</span>harp-atlas-tools/resources-dev resources-dev</code></pre><p>or</p>
+					<pre><code><span class="hljs-built_in">ln</span> -s node_modules/@here/harp-atlas-tools/<span class="hljs-built_in">resources</span>-dev <span class="hljs-built_in">resources</span>-dev</code></pre><p>Before proceeding make sure there is a folder in your current workspace <code>resources-dev/backgrounds</code> containing these two images named:</p>
+					<pre><code><span class="hljs-attribute">icon</span>-bg-<span class="hljs-number">17</span>x<span class="hljs-number">17</span>.png
+<span class="hljs-attribute">icon</span>-bg-<span class="hljs-number">22</span>x<span class="hljs-number">22</span>.png</code></pre><p>These backgrounds are perfectly matching &#39;maki-icons&#39; set, for <em>11px</em> and <em>15px</em> icons respectively. You just need
+						proper <strong>tool</strong> configuration that will merge each SVG graphics with background. Such configs should be already
+					there in the node package installed under <code>resources-dev/configs</code> folder (the folder you already coppied above):</p>
+					<pre><code><span class="hljs-attribute">maki</span>-day-<span class="hljs-number">11</span>.json,
+<span class="hljs-attribute">maki</span>-day-<span class="hljs-number">15</span>.json,</code></pre><p>Feel free to modify and adjust those configs or even use them as reference for your own icons set. They differ
+						only with background image size used. Configuration files inform generator that each single icon will get composed
+						with a background image that we provide. Because we need background bigger then maki clip-art itself, the post-processing step takes background image size as reference for output, thus our script will generate the icons
+					in the sizes of <strong>17x17</strong> and <strong>22x22</strong> respectivelly.</p>
+					<hr>
+					<p>You may probably noticed that there is slight problem if we want to pack all icons into singe atlas, because some
+					<code>maki-icons</code> will require bigger background and some of them smaller (depending on the suffix).</p>
+					<p>To solve this problem you may create atlas in three steps. Firstly prepare bigger version of maki icons, processing them with <strong>harp-sprites-generator</strong>, next do the same with smaller icons sizes and then merge them all together
+						with <strong>harp-atlas-generator</strong> yet without any special configuration, thought you have already post-processed icons
+					to final shape.</p>
+					<p>Let&#39;s follow this process in details.</p>
+					<ol>
+						<li>Firstly launch the texture generator tool for 15 pixels size maki icons running CLI command:</li>
+					</ol>
+					<pre><code>npx harp-sprites-generator -i <span class="hljs-string">&quot;resources-tmp/icons/*-15.svg&quot;</span> -o <span class="hljs-string">&quot;resources-tmp/sprites_day&quot;</span> -<span class="hljs-keyword">c</span> <span class="hljs-string">&quot;resources-dev/configs/maki-day-15.json&quot;</span> -v</code></pre><p>Sprites generator should export all SVG files as PNGs to <code>resources-tmp/sprites_day</code> folder, if you would like
+						to know what happens behind the scene please take a look configuration file being used:
+					<code>resources-dev/configs/maki-day-15.json</code></p>
+					<blockquote>
+						<p>Note</p>
+						<p><strong>-v</strong> parameter at the end of CLI call is optional and simply says &gt;log everything on console (<em>Verbose mode</em>).</p>
+					</blockquote>
+					<ol start="2">
+						<li>Secondly launch the same process, but for smaller icons size and with different process config:</li>
+					</ol>
+					<pre><code>npx harp-sprites-generator -i <span class="hljs-string">&quot;resources-tmp/icons/*-11.svg&quot;</span> -o <span class="hljs-string">&quot;resources-tmp/sprites_day&quot;</span> -<span class="hljs-keyword">c</span> <span class="hljs-string">&quot;resources-dev/configs/maki-day-11.json&quot;</span> -v</code></pre><p>Now you should have all sprites (with suffixes <code>-11.png</code> and <code>-15.png</code>) exported in <code>resources-tmp/sprites_day</code>
+					folder, so it&#39;s only one step away to create final atlas from them.</p>
+					<ol start="3">
+						<li>Run atlas generator on pre-processed icons set:</li>
+					</ol>
+					<pre><code><span class="hljs-attribute">npx</span> harp-atlas-generator -i <span class="hljs-string">&quot;resources-tmp/sprites_day/*&quot;</span> -o <span class="hljs-string">&quot;resources/maki_icons_day&quot;</span> -v</code></pre><p>The resulting file <code>maki_icons_day.png</code> and <code>maki_icons_day.json</code> will be written to the folder <code>resources</code>. These are
+					sprite sheet image (or so called texture atlas) and its JSON descriptor file.</p>
+					<p>There are also few other configurations that allows to get somehow fancier results such us night-mode icons:</p>
+					<pre><code><span class="hljs-attribute">maki</span>-night-<span class="hljs-number">11</span>.json,
+<span class="hljs-attribute">maki</span>-night-<span class="hljs-number">15</span>.json.</code></pre><p>or colored ones:</p>
+					<pre><code><span class="hljs-attribute">maki</span>-red-<span class="hljs-literal">on</span>-white-<span class="hljs-number">11</span>.json,
+<span class="hljs-attribute">maki</span>-red-<span class="hljs-literal">on</span>-white-<span class="hljs-number">15</span>.json.</code></pre><p>Spend some time to play with them to see how different effects you may achive by using tool post-processing
+					features.</p>
+					<p>If you are curious, just check out how simple is to create night version of <code>maki</code> icons set:</p>
+					<pre><code>yarn <span class="hljs-keyword">run</span><span class="bash"> harp-sprites-generator -i <span class="hljs-string">&quot;resources-tmp/icons/*-11.svg&quot;</span> -o <span class="hljs-string">&quot;resources-tmp/sprites_night&quot;</span> -c <span class="hljs-string">&quot;resources-dev/configs/maki-night-11.json&quot;</span> -v</span>
+
+yarn <span class="hljs-keyword">run</span><span class="bash"> harp-sprites-generator -i <span class="hljs-string">&quot;resources-tmp/icons/*-15.svg&quot;</span> -o <span class="hljs-string">&quot;resources-tmp/sprites_night&quot;</span> -c <span class="hljs-string">&quot;resources-dev/configs/maki-night-15.json&quot;</span> -v</span>
+
+npx harp-atlas-generator -i <span class="hljs-string">&quot;resources-tmp/sprites_night/*&quot;</span> -o <span class="hljs-string">&quot;resources/maki_icons_night&quot;</span> -v</code></pre><hr>
+					<a href="#the-sprites-atlas" id="the-sprites-atlas" style="color: inherit; text-decoration: none;">
+						<h1>The Sprites Atlas</h1>
+					</a>
+					<p>The sprite atlas generated by <strong>harp-atlas-generator</strong> uses SpriteSmith notation, that looks like this:</p>
+					<pre><code class="language-JSON">{
+    &quot;aerialway-11&quot;: { &quot;x&quot;: 335, &quot;y&quot;: 198, &quot;width&quot;: 17, &quot;height&quot;: 17 },
+    &quot;aerialway-15&quot;: { &quot;x&quot;: 0, &quot;y&quot;: 0, &quot;width&quot;: 22, &quot;height&quot;: 22 },
+    &quot;airfield-11&quot;: { &quot;x&quot;: 299, &quot;y&quot;: 270, &quot;width&quot;: 17, &quot;height&quot;: 17 },
+    &quot;airfield-15&quot;: { &quot;x&quot;: 23, &quot;y&quot;: 184, &quot;width&quot;: 22, &quot;height&quot;: 22 },
+    ...
+}</code></pre>
+					<p>JSON file presented above contains the specification for:</p>
+					<ul>
+						<li><strong>aerialway-11</strong>,</li>
+						<li><strong>aerialway-15</strong>,</li>
+						<li><strong>airfield-11</strong>,</li>
+						<li><strong>airfield-15</strong></li>
+					</ul>
+					<p>icons.</p>
+					<p>The area defined by <strong>x/y/width/height</strong> specifies the part of atlas to be used for the specific icon,
+						in one case <strong>aerialway-11</strong>. <strong>aerialway</strong> is the maki code, and <strong>-11</strong> shows that it
+					is the smaller of the two. To select the icon for a map data item, few things are involved, cause we need to supply the <em>link</em> in theme style definition between layer data and icon name. This can be done in several ways:</p>
+					<ul>
+						<li>the theme defines which layer data field is used as base for texture name (<code>imageTextureField</code>) and which prefix/suffix is applied (<code>imageTexturePrefix</code>, <code>imageTexturePosix</code>) for the final texture name,</li>
+						<li>the <code>poiName</code> is used as a selector for the sprite atlas icon directly or indirectly by using <strong>POI table</strong>,</li>
+						<li>the resulting <code>iconName</code> from <strong>POI Table</strong> is extended via style to choose one of the desired icon sizes via <code>imageTexturePosix</code> name suffix ( &quot;-11&quot; or &quot;-15&quot;),</li>
+					</ul>
+					<p>For example, if there is a feature in the layer <strong>pois</strong> which contains &quot;aerialway&quot; in the
+					field <code>kind</code>, the <strong>icon name</strong> &quot;aerialway-11&quot; should be computed by the theme.</p>
+					<a href="#using-the-atlas" id="using-the-atlas" style="color: inherit; text-decoration: none;">
+						<h1>Using the atlas</h1>
+					</a>
+					<p>In order to explain the process, let&#39;s see sample theme configuration for Tilezen data source.</p>
+					<a href="#declaring-the-usage-in-the-theme-file" id="declaring-the-usage-in-the-theme-file" style="color: inherit; text-decoration: none;">
+						<h2>Declaring the usage in the Theme File</h2>
+					</a>
+					<p>To actually use the sprite atlas as a source of POI icons, some modifications need to be done in the <strong>theme file</strong>.</p>
+					<p>First of all sprite atlas need to be loaded, to make that happen, declare its use in the <strong>images</strong> json object just at the root node:</p>
+					<pre><code class="language-JSON">{
+    ...
+    &quot;images&quot;: {
+        &quot;icons_day_maki&quot;: {
+            &quot;url&quot;: &quot;maki_icons_day.png&quot;,
+            &quot;preload&quot;: true,
+            &quot;atlas&quot;: &quot;maki_icons_day.json&quot;
+        }
+    },
+    ...
+}</code></pre>
+					<p>Next thing you need to do is to define styling for <code>pois</code> or any other layer that exposes POIs info via decoder of your choice. Let&#39;s present example how it would look for Tilezen tile format which encapsulates POIs information in <code>pois</code> layer with <code>kind</code> property that allows for distinguishing between POI object types.</p>
+					<blockquote>
+						<p>Note</p>
+						<p>Full list of POIs types in Tilezen specification may be found here:
+						<a href="https://tilezen.readthedocs.io/en/latest/layers/#points-of-interest">Tilezen POI layer</a></p>
+					</blockquote>
+					<p>It is clear that you need to map <code>kind</code> property value to the name of your exported icon in atlas sheet.</p>
+					<p>You could do it manually for every POI type (<code>kind</code>) by defining style for each of POIs, but you may also utilize so called <strong>PoiTable</strong> which defines this mapping in separate file
+					so styling will be simple as it:</p>
+					<pre><code class="language-JSON">{
+    ...
+    &quot;poiTables&quot;: [
+        {
+            &quot;name&quot;: &quot;tilezenMakiPoiTable&quot;,
+            &quot;url&quot;: &quot;poi_table_maki.json&quot;,
+            &quot;useAltNamesForKey&quot;: true
+        }
+    ],
+    &quot;styles&quot;: {
+        &quot;tilezen&quot;: [
+            {
+                &quot;description&quot;: &quot;POIs in tilezen format using Maki icons&quot;,
+                &quot;when&quot;: &quot;$layer == &#x27;pois&#x27; &amp;&amp; has(kind)&quot;,
+                &quot;technique&quot;: &quot;labeled-icon&quot;,
+                &quot;attr&quot;: {
+                    &quot;poiTable&quot;: &quot;tilezenMakiPoiTable&quot;,
+                    &quot;poiNameField&quot;: &quot;kind&quot;,
+                    &quot;imageTexturePosix&quot;: &quot;-15&quot;,
+                    &quot;size&quot;: 16,
+                    &quot;vAlignment&quot;: &quot;Center&quot;,
+                    &quot;hAlignment&quot;: &quot;Center&quot;,
+                    ...
+                },
+                &quot;final&quot;: true
+            },
+            ...
+        ]
+    }
+}</code></pre>
+					<p>Some things may require explanation. Firstly we declare <strong>PoiTable</strong> which defines mapping from <code>poiNameField</code> to custom icons names. Because one icon may serve for several POIs <code>kind</code> we declare usage of
+					alternative names (<code>useAltNamesForKey</code>). This way we have defined N:1 mapping from Tilezen POI names (<code>kind</code>s) to icon defined in atlas.</p>
+					<p>Sample <strong>PoiTabe</strong> table may look like this:</p>
+					<pre><code class="language-JSON">&quot;poiList&quot;: [
+    {
+      &quot;name&quot;: &quot;Restaurant&quot;,
+      &quot;altNames&quot;: [
+        &quot;bbq&quot;,
+        &quot;ice_cream&quot;,
+        &quot;restaurant&quot;
+      ],
+      &quot;visible&quot;: true,
+      &quot;stackMode&quot;: &quot;yes&quot;,
+      &quot;iconName&quot;: &quot;restaurant&quot;,
+      &quot;priority&quot;: 88,
+      &quot;iconMinLevel&quot;: 18,
+      &quot;iconMaxLevel&quot;: 20,
+      &quot;textMinLevel&quot;: 18,
+      &quot;textMaxLevel&quot;: 20
+    },
+    ...
+]</code></pre>
+					<p>You may probably noted that we do not define exact image name in <strong>POI Table</strong> field <strong>iconName</strong> (it could be <strong>restaurant-11</strong> or <strong>restaurant-15</strong>), this is because our <strong>maki</strong> icons set contains two icons sizes . We define only the base name in table field (<strong>&quot;iconName&quot;: &quot;restaurant&quot;</strong>) and the rest (posix) is added via styling mechanism (<strong>&quot;imageTexturePosix&quot;: &quot;-15&quot;</strong>). This allows for better flexibility cause you may
+					decide to use different icons sizes depending on zoom level or any other styling conditionals.</p>
+					<p>Different styles (sizes, colors, etc.) may be implemented by using <strong>when</strong> or <strong>in</strong> -statements to select for which icons a specific style should be used, but still utilizing the same <strong>POI Table</strong> definition.</p>
+					<a href="#the-poi-table" id="the-poi-table" style="color: inherit; text-decoration: none;">
+						<h3>The POI Table</h3>
+					</a>
+					<p>The <strong>POI Table</strong> (file <strong>poi_table_maki.json</strong>) presented here is used in conjunction
+						with the sprite atlas and the map data in Tilezen format. It is used to specify in more detail how a specific
+						icon should be displayed, without having to specify it in the theme file(s) for every single POI
+					type.</p>
+					<a href="#style-in-theme" id="style-in-theme" style="color: inherit; text-decoration: none;">
+						<h3>Style in Theme</h3>
+					</a>
+					<p>The property <strong>poiTable</strong> is used to selected which one of the POI tables declared at the
+					beginning of the them file.</p>
+					<p>The property <strong>poiNameField</strong> specifies which field should be used as the name of the POI in the
+					POI Table.</p>
+					<p>The property <strong>imageTexturePosix</strong> defines the posix that should be added to <strong>iconName</strong> attribute defined in
+					<strong>POI Table</strong> to construct the final texture name.</p>
+					<pre><code class="language-JSON">...
+ &quot;poiTables&quot;: [
+        {
+            &quot;name&quot;: &quot;tilezenMakiPoiTable&quot;,
+            &quot;url&quot;: &quot;poi_table_maki.json&quot;,
+            &quot;useAltNamesForKey&quot;: true
+        }
+    ],
+    &quot;styles&quot;: {
+        &quot;tilezen&quot;: [
+            {
+                ...
+                &quot;when&quot;: &quot;$layer == &#x27;pois&#x27; &amp;&amp; has(kind)&quot;,
+                &quot;technique&quot;: &quot;labeled-icon&quot;,
+                &quot;attr&quot;: {
+                    &quot;poiTable&quot;: &quot;tilezenMakiPoiTable&quot;,
+                    &quot;poiNameField&quot;: &quot;kind&quot;,
+                    &quot;imageTexturePosix&quot;: &quot;-15&quot;,
+                    ...
+                }
+            }
+        ]
+    }
+...</code></pre>
+					<p>Similarly you may use <strong>imageTexturePrefix</strong>, so final texture is created from both of them with following pattern:</p>
+					<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">imageTexturePrefix</span>&gt;</span>poiTable[poiNameField].iconName<span class="hljs-tag">&lt;<span class="hljs-name">imageTexturePosix</span>&gt;</span></code></pre><p>where <code>poiTable[poiNameField]</code> means a lookup into Poi Table object, <code>iconName</code> is object property and <code>imageTexturePrefix</code> and <code>imageTexturePosix</code> are optional fields of style <code>att</code> object.</p>
+					<a href="#poi-table-content" id="poi-table-content" style="color: inherit; text-decoration: none;">
+						<h4>POI Table Content</h4>
+					</a>
+					<p>Without going into all details here, the field <strong>name</strong> is used to identify a table entry. The
+						strings in <strong>altNames</strong> are optional, alternative names, all identifying the same table entry. The
+					values in <strong>name</strong> and <strong>altNames</strong> have to be unique.</p>
+					<p>The field <strong>iconName</strong> is being used to identify the actual icon in the sprite atlas. Please note that it is possible to add prefix and posix to this name via style attributes: <strong>imageTexturePrefix</strong> and <strong>imageTexturePosix</strong>.</p>
+					<pre><code class="language-JSON">...
+    {
+      &quot;name&quot;: &quot;Restaurant&quot;,
+      &quot;altNames&quot;: [
+        &quot;bbq&quot;,
+        &quot;ice_cream&quot;,
+        &quot;restaurant&quot;
+      ],
+      &quot;visible&quot;: true,
+      &quot;stackMode&quot;: &quot;yes&quot;,
+      &quot;iconName&quot;: &quot;eatdrink_main&quot;,
+      &quot;priority&quot;: 88,
+      &quot;iconMinLevel&quot;: 18,
+      &quot;iconMaxLevel&quot;: 20,
+      &quot;textMinLevel&quot;: 18,
+      &quot;textMaxLevel&quot;: 20
+    },
+...</code></pre>
+					<hr>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>References</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_atlas_tools.html#atlasoptions" class="tsd-kind-icon">Atlas<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_atlas_tools.html#processingoptions" class="tsd-kind-icon">Processing<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_atlas_tools.html#generatesprites" class="tsd-kind-icon">generate<wbr>Sprites</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_atlas_tools.html#generatespritesatlas" class="tsd-kind-icon">generate<wbr>Sprites<wbr>Atlas</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/harp_atlas_tools.grayscalemethod.html" class="tsd-kind-icon">Grayscale<wbr>Method</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/harp_atlas_tools.imageformat.html" class="tsd-kind-icon">Image<wbr>Format</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/harp_atlas_tools.loglevel.html" class="tsd-kind-icon">Log<wbr>Level</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/harp_atlas_tools.resultimagesizespecifier.html" class="tsd-kind-icon">Result<wbr>Image<wbr>Size<wbr>Specifier</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.addbackground.html" class="tsd-kind-icon">Add<wbr>Background</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.addforeground.html" class="tsd-kind-icon">Add<wbr>Foreground</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.blendimages.html" class="tsd-kind-icon">Blend<wbr>Images</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.colorutils.html" class="tsd-kind-icon">Color<wbr>Utils</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.colorize.html" class="tsd-kind-icon">Colorize</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.combineimages.html" class="tsd-kind-icon">Combine<wbr>Images</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.filesystem.html" class="tsd-kind-icon">File<wbr>System</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.grayscale.html" class="tsd-kind-icon">Grayscale</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.imagebitmapdecoderconstructor.html" class="tsd-kind-icon">Image<wbr>Bitmap<wbr>Decoder<wbr>Constructor</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.imagebitmapencoderconstructor.html" class="tsd-kind-icon">Image<wbr>Bitmap<wbr>Encoder<wbr>Constructor</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.imagefactory.html" class="tsd-kind-icon">Image<wbr>Factory</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.imageutils.html" class="tsd-kind-icon">Image<wbr>Utils</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.imagevectordecoderconstructor.html" class="tsd-kind-icon">Image<wbr>Vector<wbr>Decoder<wbr>Constructor</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.imagevectorencoderconstructor.html" class="tsd-kind-icon">Image<wbr>Vector<wbr>Encoder<wbr>Constructor</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.invertcolor.html" class="tsd-kind-icon">Invert<wbr>Color</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.maskimage.html" class="tsd-kind-icon">Mask<wbr>Image</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_atlas_tools.resize.html" class="tsd-kind-icon">Resize</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.atlasoptions-1.html" class="tsd-kind-icon">Atlas<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.imagedecoder.html" class="tsd-kind-icon">Image<wbr>Decoder</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.imagedecoderconstructor.html" class="tsd-kind-icon">Image<wbr>Decoder<wbr>Constructor</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.imageencoder.html" class="tsd-kind-icon">Image<wbr>Encoder</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.imageencoderconstructor.html" class="tsd-kind-icon">Image<wbr>Encoder<wbr>Constructor</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.imageprocessor.html" class="tsd-kind-icon">Image<wbr>Processor</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.logger.html" class="tsd-kind-icon">Logger</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.offset.html" class="tsd-kind-icon">Offset</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.processingoptions-1.html" class="tsd-kind-icon">Processing<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.rgb.html" class="tsd-kind-icon">RGB</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-kind-icon">RGBA</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="harp_atlas_tools.html#blendoperation" class="tsd-kind-icon">Blend<wbr>Operation</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="harp_atlas_tools.html#color" class="tsd-kind-icon">Color</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="harp_atlas_tools.html#coloroperation" class="tsd-kind-icon">Color<wbr>Operation</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="harp_atlas_tools.html#maskoperation" class="tsd-kind-icon">Mask<wbr>Operation</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#blendalpha" class="tsd-kind-icon">Blend<wbr>Alpha</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#blendalphapremultiplied" class="tsd-kind-icon">Blend<wbr>Alpha<wbr>Premultiplied</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#blendmultiply" class="tsd-kind-icon">Blend<wbr>Multiply</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#blendmultiplyrgb" class="tsd-kind-icon">Blend<wbr>MultiplyRGB</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#blendoverlay" class="tsd-kind-icon">Blend<wbr>Overlay</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#blendscreen" class="tsd-kind-icon">Blend<wbr>Screen</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#colorgrayscaleaverage" class="tsd-kind-icon">Color<wbr>Grayscale<wbr>Average</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#colorgrayscalelightness" class="tsd-kind-icon">Color<wbr>Grayscale<wbr>Lightness</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#colorgrayscaleluminosity" class="tsd-kind-icon">Color<wbr>Grayscale<wbr>Luminosity</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#colorinvert" class="tsd-kind-icon">Color<wbr>Invert</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#maskalpha" class="tsd-kind-icon">Mask<wbr>Alpha</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#generatesprites-1" class="tsd-kind-icon">generate<wbr>Sprites</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#generatespritesatlas-1" class="tsd-kind-icon">generate<wbr>Sprites<wbr>Atlas</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_atlas_tools.html#getlogger" class="tsd-kind-icon">get<wbr>Logger</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>References</h2>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="atlasoptions" class="tsd-anchor"></a>
+					<h3>Atlas<wbr>Options</h3>
+					Re-exports <a href="../interfaces/harp_atlas_tools.atlasoptions-1.html">AtlasOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="processingoptions" class="tsd-anchor"></a>
+					<h3>Processing<wbr>Options</h3>
+					Re-exports <a href="../interfaces/harp_atlas_tools.processingoptions-1.html">ProcessingOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="generatesprites" class="tsd-anchor"></a>
+					<h3>generate<wbr>Sprites</h3>
+					Re-exports <a href="harp_atlas_tools.html#generatesprites-1">generateSprites</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="generatespritesatlas" class="tsd-anchor"></a>
+					<h3>generate<wbr>Sprites<wbr>Atlas</h3>
+					Re-exports <a href="harp_atlas_tools.html#generatespritesatlas-1">generateSpritesAtlas</a>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="blendoperation" class="tsd-anchor"></a>
+					<h3>Blend<wbr>Operation</h3>
+					<div class="tsd-signature tsd-kind-icon">Blend<wbr>Operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/BlendOperations.ts#L9">@here/harp-atlas-tools/src/BlendOperations.ts:9</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>dst: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+											</li>
+											<li>
+												<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="color" class="tsd-anchor"></a>
+					<h3>Color</h3>
+					<div class="tsd-signature tsd-kind-icon">Color<span class="tsd-signature-symbol">:</span> <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/ImageFactory.ts#L10">@here/harp-atlas-tools/src/ImageFactory.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="coloroperation" class="tsd-anchor"></a>
+					<h3>Color<wbr>Operation</h3>
+					<div class="tsd-signature tsd-kind-icon">Color<wbr>Operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/ColorOperations.ts#L9">@here/harp-atlas-tools/src/ColorOperations.ts:9</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="maskoperation" class="tsd-anchor"></a>
+					<h3>Mask<wbr>Operation</h3>
+					<div class="tsd-signature tsd-kind-icon">Mask<wbr>Operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, mask<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/MaskOperations.ts#L9">@here/harp-atlas-tools/src/MaskOperations.ts:9</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, mask<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>dst: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+											</li>
+											<li>
+												<h5>mask: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="blendalpha" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Blend<wbr>Alpha</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Blend<wbr>Alpha<span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/BlendOperations.ts#L21">@here/harp-atlas-tools/src/BlendOperations.ts:21</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Normal blend mode with uses src (top) layer over dst (bottom) image whenever it is opaque.</p>
+								</div>
+								<p>If source pixel is semi-transulent color mixing occurs, but most typical use case is
+								merging src layer into the dst layer using simple (b over a) alpha compositing.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dst: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>destination color, that may be considered as background color.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>source color, that is overlaid on the background color.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>blending result (color).</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="blendalphapremultiplied" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Blend<wbr>Alpha<wbr>Premultiplied</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Blend<wbr>Alpha<wbr>Premultiplied<span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/BlendOperations.ts#L44">@here/harp-atlas-tools/src/BlendOperations.ts:44</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Blend mode which blits src (top) layer over dst image without taking is alpha into account.</p>
+								</div>
+								<p>In this blend mode background (dst) image alpha is ignored when mixing pixel colors.
+								The effect is that dst image is considered to be fully opaque.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dst: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>destination or background color,</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>source color beeing overlaid on the destination.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>blending result (color).</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="blendmultiply" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Blend<wbr>Multiply</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Blend<wbr>Multiply<span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/BlendOperations.ts#L67">@here/harp-atlas-tools/src/BlendOperations.ts:67</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Multiplies each pixel of the top layer with the corresponding pixel for the bottom layer.</p>
+								</div>
+								<p>This mode is symmetric, so exchanging layers (source and destination) doe not change
+									the result. Multiply blend mode is equivalent to a quadratic curve, or gamma correction
+								with γ=2, final result of this blend mode is darker picture.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dst: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>destination color.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>source color.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>resulting color after blending operation.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="blendmultiplyrgb" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Blend<wbr>MultiplyRGB</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Blend<wbr>MultiplyRGB<span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/BlendOperations.ts#L94">@here/harp-atlas-tools/src/BlendOperations.ts:94</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Multiplies colors while preserving its components range (clamp) and alpha unchanged.</p>
+								</div>
+								<p>The effect of that operation is that destination image is colorized with source
+									color, so if destination is stored in grayscale it changes to source color while
+								preserving smooth gradient transitions. Source color alpha is ignored here.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dst: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>base surface color.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>multiplication factor (color).</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>multiplied color.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="blendoverlay" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Blend<wbr>Overlay</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Blend<wbr>Overlay<span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/BlendOperations.ts#L146">@here/harp-atlas-tools/src/BlendOperations.ts:146</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>In screen blend mode the colors in of layers are inverted, multiplied, and then inverted again.</p>
+								</div>
+								<p>This yields the opposite effect to multiply. The result is a brighter picture.
+									This mode is symmetric, so exchanging layers (source and destination) doe not change
+								the result. The final result of this blend mode is brighter picture.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dst: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>destination color.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>source color.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>resulting color after blending operation.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="blendscreen" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Blend<wbr>Screen</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Blend<wbr>Screen<span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/BlendOperations.ts#L119">@here/harp-atlas-tools/src/BlendOperations.ts:119</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>In screen blend mode the colors in of layers are inverted, multiplied, and then inverted again.</p>
+								</div>
+								<p>This yields the opposite effect to multiply. The result is a brighter picture.
+									This mode is symmetric, so exchanging layers (source and destination) doe not change
+								the result. The final result of this blend mode is brighter picture.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dst: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>destination color.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>source color.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>resulting color after blending operation.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="colorgrayscaleaverage" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Color<wbr>Grayscale<wbr>Average</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Color<wbr>Grayscale<wbr>Average<span class="tsd-signature-symbol">(</span>src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/ColorOperations.ts#L65">@here/harp-atlas-tools/src/ColorOperations.ts:65</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts color to grayscale using compontents averaging method.</p>
+								</div>
+								<p>The average method simply averages the values of all 3 components:
+									(R + G + B) / 3.
+									This method may not produce natural pictures since all three different colors have
+									different wavelength thus in rallity their contribution to the image formation is
+								different, in average approach their contribution is assumed to be the same.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>source color.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>grayscale converted color.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="colorgrayscalelightness" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Color<wbr>Grayscale<wbr>Lightness</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Color<wbr>Grayscale<wbr>Lightness<span class="tsd-signature-symbol">(</span>src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/ColorOperations.ts#L40">@here/harp-atlas-tools/src/ColorOperations.ts:40</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts color to grayscale using lightness method.</p>
+								</div>
+								<p>The lightness method averages the most prominent and least prominent colors:
+									(max(R, G, B) + min(R, G, B)) / 2.
+								This method tends to reduce overal contrast of the image.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>source color.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>grayscale converted color.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="colorgrayscaleluminosity" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Color<wbr>Grayscale<wbr>Luminosity</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Color<wbr>Grayscale<wbr>Luminosity<span class="tsd-signature-symbol">(</span>src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/ColorOperations.ts#L89">@here/harp-atlas-tools/src/ColorOperations.ts:89</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts color to grayscale using luminosity method.</p>
+								</div>
+								<p>This method is slightly more sophisticated version of the averaging method.
+									It also averages the color components values, but it uses a weighted average to take
+									into account for human perception. Because human eye is more sensitive to green than
+									other colors, green compound is weighted most heavily. The weighter formula for
+									luminosity is:
+								0.21<em>R + 0.72</em>G + 0.07*B.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>source color.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>grayscale converted color.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="colorinvert" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Color<wbr>Invert</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Color<wbr>Invert<span class="tsd-signature-symbol">(</span>src<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/ColorOperations.ts#L17">@here/harp-atlas-tools/src/ColorOperations.ts:17</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Inverts color component wiselly without changing its alpha factor.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>src: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>source color.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>inverted color.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="maskalpha" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Mask<wbr>Alpha</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Mask<wbr>Alpha<span class="tsd-signature-symbol">(</span>dst<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a>, mask<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/MaskOperations.ts#L22">@here/harp-atlas-tools/src/MaskOperations.ts:22</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Standard alpha mask which is applied over dst image whenever it is opaque.</p>
+								</div>
+								<p>If mask pixel has alpha bigger then zero then color is unchanged otherwise color is
+									changed to fully transparent black piksel. Even if destination image does not specify
+								alpha channel value, resulting image will have alpha information afterwards.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dst: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>destination color, that may be considered as input color being masked.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>mask: <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>mask color, that decides if input image is unchaged or fully-transparent.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-signature-type">RGBA</a></h4>
+							<p>masking result (color).</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="generatesprites-1" class="tsd-anchor"></a>
+					<h3>generate<wbr>Sprites</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Sprites<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.processingoptions-1.html" class="tsd-signature-type">ProcessingOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/AtlasGenerator.ts#L53">@here/harp-atlas-tools/src/AtlasGenerator.ts:53</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="../interfaces/harp_atlas_tools.processingoptions-1.html" class="tsd-signature-type">ProcessingOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="generatespritesatlas-1" class="tsd-anchor"></a>
+					<h3>generate<wbr>Sprites<wbr>Atlas</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Sprites<wbr>Atlas<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.atlasoptions-1.html" class="tsd-signature-type">AtlasOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/AtlasGenerator.ts#L85">@here/harp-atlas-tools/src/AtlasGenerator.ts:85</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="../interfaces/harp_atlas_tools.atlasoptions-1.html" class="tsd-signature-type">AtlasOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getlogger" class="tsd-anchor"></a>
+					<h3>get<wbr>Logger</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Logger<span class="tsd-signature-symbol">(</span>verbose<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_atlas_tools.logger.html" class="tsd-signature-type">Logger</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-atlas-tools/src/Logger.ts#L20">@here/harp-atlas-tools/src/Logger.ts:20</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>verbose: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_atlas_tools.logger.html" class="tsd-signature-type">Logger</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="harp_atlas_tools.html">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+						<ul>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#atlasoptions" class="tsd-kind-icon">Atlas<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#processingoptions" class="tsd-kind-icon">Processing<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#generatesprites" class="tsd-kind-icon">generate<wbr>Sprites</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#generatespritesatlas" class="tsd-kind-icon">generate<wbr>Sprites<wbr>Atlas</a>
+							</li>
+							<li class=" tsd-kind-enum tsd-parent-kind-module">
+								<a href="../enums/harp_atlas_tools.grayscalemethod.html" class="tsd-kind-icon">Grayscale<wbr>Method</a>
+							</li>
+							<li class=" tsd-kind-enum tsd-parent-kind-module">
+								<a href="../enums/harp_atlas_tools.imageformat.html" class="tsd-kind-icon">Image<wbr>Format</a>
+							</li>
+							<li class=" tsd-kind-enum tsd-parent-kind-module">
+								<a href="../enums/harp_atlas_tools.loglevel.html" class="tsd-kind-icon">Log<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-enum tsd-parent-kind-module">
+								<a href="../enums/harp_atlas_tools.resultimagesizespecifier.html" class="tsd-kind-icon">Result<wbr>Image<wbr>Size<wbr>Specifier</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.addbackground.html" class="tsd-kind-icon">Add<wbr>Background</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.addforeground.html" class="tsd-kind-icon">Add<wbr>Foreground</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.blendimages.html" class="tsd-kind-icon">Blend<wbr>Images</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.colorutils.html" class="tsd-kind-icon">Color<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.colorize.html" class="tsd-kind-icon">Colorize</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.combineimages.html" class="tsd-kind-icon">Combine<wbr>Images</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.filesystem.html" class="tsd-kind-icon">File<wbr>System</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.grayscale.html" class="tsd-kind-icon">Grayscale</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.imagebitmapdecoderconstructor.html" class="tsd-kind-icon">Image<wbr>Bitmap<wbr>Decoder<wbr>Constructor</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.imagebitmapencoderconstructor.html" class="tsd-kind-icon">Image<wbr>Bitmap<wbr>Encoder<wbr>Constructor</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.imagefactory.html" class="tsd-kind-icon">Image<wbr>Factory</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.imageutils.html" class="tsd-kind-icon">Image<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.imagevectordecoderconstructor.html" class="tsd-kind-icon">Image<wbr>Vector<wbr>Decoder<wbr>Constructor</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.imagevectorencoderconstructor.html" class="tsd-kind-icon">Image<wbr>Vector<wbr>Encoder<wbr>Constructor</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.invertcolor.html" class="tsd-kind-icon">Invert<wbr>Color</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.maskimage.html" class="tsd-kind-icon">Mask<wbr>Image</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_atlas_tools.resize.html" class="tsd-kind-icon">Resize</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.atlasoptions-1.html" class="tsd-kind-icon">Atlas<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.imagedecoder.html" class="tsd-kind-icon">Image<wbr>Decoder</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.imagedecoderconstructor.html" class="tsd-kind-icon">Image<wbr>Decoder<wbr>Constructor</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.imageencoder.html" class="tsd-kind-icon">Image<wbr>Encoder</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.imageencoderconstructor.html" class="tsd-kind-icon">Image<wbr>Encoder<wbr>Constructor</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.imageprocessor.html" class="tsd-kind-icon">Image<wbr>Processor</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.logger.html" class="tsd-kind-icon">Logger</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.offset.html" class="tsd-kind-icon">Offset</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.processingoptions-1.html" class="tsd-kind-icon">Processing<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.rgb.html" class="tsd-kind-icon">RGB</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_atlas_tools.rgba.html" class="tsd-kind-icon">RGBA</a>
+							</li>
+							<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#blendoperation" class="tsd-kind-icon">Blend<wbr>Operation</a>
+							</li>
+							<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#color" class="tsd-kind-icon">Color</a>
+							</li>
+							<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#coloroperation" class="tsd-kind-icon">Color<wbr>Operation</a>
+							</li>
+							<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#maskoperation" class="tsd-kind-icon">Mask<wbr>Operation</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#blendalpha" class="tsd-kind-icon">Blend<wbr>Alpha</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#blendalphapremultiplied" class="tsd-kind-icon">Blend<wbr>Alpha<wbr>Premultiplied</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#blendmultiply" class="tsd-kind-icon">Blend<wbr>Multiply</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#blendmultiplyrgb" class="tsd-kind-icon">Blend<wbr>MultiplyRGB</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#blendoverlay" class="tsd-kind-icon">Blend<wbr>Overlay</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#blendscreen" class="tsd-kind-icon">Blend<wbr>Screen</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#colorgrayscaleaverage" class="tsd-kind-icon">Color<wbr>Grayscale<wbr>Average</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#colorgrayscalelightness" class="tsd-kind-icon">Color<wbr>Grayscale<wbr>Lightness</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#colorgrayscaleluminosity" class="tsd-kind-icon">Color<wbr>Grayscale<wbr>Luminosity</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#colorinvert" class="tsd-kind-icon">Color<wbr>Invert</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#maskalpha" class="tsd-kind-icon">Mask<wbr>Alpha</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#generatesprites-1" class="tsd-kind-icon">generate<wbr>Sprites</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#generatespritesatlas-1" class="tsd-kind-icon">generate<wbr>Sprites<wbr>Atlas</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_atlas_tools.html#getlogger" class="tsd-kind-icon">get<wbr>Logger</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

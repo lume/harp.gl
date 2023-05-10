@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CustomDatasourceExample | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="harp_examples.html">harp-examples</a>
+				</li>
+				<li>
+					<a href="harp_examples.customdatasourceexample.html">CustomDatasourceExample</a>
+				</li>
+			</ul>
+			<h1>Namespace CustomDatasourceExample</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This example shows how to create your own datasource with following features:</p>
+						<ol>
+							<li>Decoding and processing in a web-worker</li>
+							<li>Usage of the styling engine in a custom datasource</li>
+							<li>Creation of three.js objects in a web-worker</li>
+							<li>Creating data that appears above and below ground level</li>
+						</ol>
+					</div>
+					<p>To achieve all this we have to implement a custom decoder:</p>
+					<pre><code class="language-typescript"></code></pre>
+					<p>A decoder is a class that encapsulates all the work that should be done in
+					a web-worker (i.e. decoding and processing).</p>
+					<p>In this example we derive from <a href="../classes/harp_mapview_decoder.themedtiledecoder.html">ThemedTileDecoder</a> b/c we also want to use
+						the styling capabilities of harp.gl. If styling is not needed one could also
+					derive from <a href="../interfaces/harp_datasource_protocol.itiledecoder-1.html">ITileDecoder</a> directly.</p>
+					<p>The main entry point for the decoder is the <a href="../classes/harp_mapview_decoder.themedtiledecoder.html#decodethemedtile">ThemedTileDecoder.decodeThemedTile</a>
+						method (or <a href="../interfaces/harp_datasource_protocol.itiledecoder-1.html#decodetile">ITileDecoder.decodeTile</a> if no styling is needed). All CPU intensive
+						work, like decoding and processing, should go here, because this method is executed
+						in a web-worker. The input to this method (<code>data</code>) is coming from the main-thread
+					and is the result of the <a href="../classes/harp_mapview_decoder.dataprovider-1.html#gettile">DataProvider.getTile</a> method.</p>
+					<p>The <a href="../classes/harp_mapview_decoder.dataprovider-1.html">DataProvider</a> is the component that is telling harp.gl where to get the data from.
+						The main method that has to be implemented is the <a href="../classes/harp_mapview_decoder.dataprovider-1.html#gettile">DataProvider.getTile</a> method.
+						This method is executed in the main thread and should not do any CPU intense work.
+						Normally you would just do a fetch here. The result is passed to a web-worker and gets
+						processed further. In this example we don&#39;t fetch any data, but just create some data on the
+					fly.</p>
+					<pre><code class="language-typescript"></code></pre>
+					<p>Finally we can create our <code>CustomDataSource</code>:</p>
+					<pre><code class="language-typescript"></code></pre>
+					<p>As you can see there is no functionality added but everything is used from <a href="../classes/harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.
+						It is not mandatory to create a derived class but most likely it is needed at some point to
+					add custom logic.</p>
+					<p>The more interesting part is the instantiation of our <code>CustomDataSource</code>:</p>
+					<pre><code class="language-typescript"></code></pre>
+					<p>There are two ways to tell the <a href="../classes/harp_mapview.datasource-1.html">DataSource</a> about our decoder. Either by setting a
+						<a href="../interfaces/harp_mapview_decoder.tiledatasourceoptions-1.html#decoder">decoder</a> instance or by specifying a
+						<a href="../interfaces/harp_mapview_decoder.tiledatasourceoptions-1.html#concurrentdecoderservicename">concurrentDecoderServiceName</a>.
+						The first approach would result in decoding the data in the main thread. That might
+						be useful for debugging or simple data sources, but we want to show the decoding in
+						a web-worker here, so we use
+					<a href="../interfaces/harp_mapview_decoder.tiledatasourceoptions-1.html#concurrentdecoderservicename">concurrentDecoderServiceName</a>.</p>
+					<p>To understand the
+						<a href="../interfaces/harp_mapview_decoder.tiledatasourceoptions-1.html#concurrentdecoderservicename">concurrentDecoderServiceName</a>
+						parameter we have to first understand the decoder bundle. All web-workers that are
+						created by harp.gl are loading the decoder bundle that
+					was specified in <a href="../interfaces/harp_mapview.mapviewoptions-1.html#decoderurl">MapViewOptions.decoderUrl</a> when creating the <a href="../classes/harp_mapview.mapview-1.html">MapView</a>:</p>
+					<pre><code class="language-typescript"></code></pre>
+					<p>By default the url of the decoder bundle is &quot;decoder.bundle.js&quot; and is generated out of
+						<a href="https://github.com/heremaps/harp.gl/blob/master/%40here/harp-examples/decoder/decoder.ts" class="external">decoder.ts</a>
+						(Assuming you created your app with the
+					<a href="https://github.com/heremaps/harp.gl/blob/master/docs/GettingStartedGuide.md#yeoman" class="external">Yeoman generator</a>).</p>
+					<p>The <a href="../classes/harp_examples.customdecoder.html">CustomDecoder</a> has to be registered in the <a href="../classes/harp_mapview_decoder.workerservicemanager.html">WorkerServiceManager</a> during the
+					initialization of the decoder bundle. This is done in <a href="../classes/harp_examples.customdecoderservice.html#start">CustomDecoderService.start</a></p>
+					<pre><code class="language-typescript"></code></pre>
+					<p>We call <a href="../classes/harp_examples.customdecoderservice.html#start">CustomDecoderService.start</a> in the previously mentioned decoder.ts.</p>
+					<pre><code class="language-typescript"></code></pre>
+					<p>To properly geometry that is considerable higher or lower than the ground level, the bounding
+						boxes of the <a href="../classes/harp_mapview.tile-1.html">Tile</a>s have to be enlarged to contain that geometry. If that is not done, the
+					tile may not be rendered at all, or the geometry may be clipped in some circumstances.</p>
+					<p>In this example, the line is rendered at an altitude of -100m, making the line appear on
+					ground level when zoomed out, but increasingly far below ground level when zoomed in.</p>
+				</div>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="harp_examples.html">harp-<wbr>examples</a>
+						<ul>
+							<li class="current tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_examples.customdatasourceexample.html">Custom<wbr>Datasource<wbr>Example</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-namespace tsd-parent-kind-module">
+						<a href="harp_examples.customdatasourceexample.html" class="tsd-kind-icon">Custom<wbr>Datasource<wbr>Example</a>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

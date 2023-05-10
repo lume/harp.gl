@@ -1,0 +1,399 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TileKeyUtils | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="harp_geoutils.html">harp-geoutils</a>
+				</li>
+				<li>
+					<a href="harp_geoutils.tilekeyutils-1.html">TileKeyUtils</a>
+				</li>
+			</ul>
+			<h1>Namespace TileKeyUtils</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_geoutils.tilekeyutils-1.html#extractoffsetandmortonkeyfromkey" class="tsd-kind-icon">extract<wbr>Offset<wbr>And<wbr>Morton<wbr>Key<wbr>From<wbr>Key</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_geoutils.tilekeyutils-1.html#geocoordinatestotilekey" class="tsd-kind-icon">geo<wbr>Coordinates<wbr>ToTile<wbr>Key</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_geoutils.tilekeyutils-1.html#georectangletotilekeys" class="tsd-kind-icon">geo<wbr>Rectangle<wbr>ToTile<wbr>Keys</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_geoutils.tilekeyutils-1.html#getkeyfortilekeyandoffset" class="tsd-kind-icon">get<wbr>Key<wbr>For<wbr>Tile<wbr>Key<wbr>And<wbr>Offset</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_geoutils.tilekeyutils-1.html#getparentkeyfromkey" class="tsd-kind-icon">get<wbr>Parent<wbr>Key<wbr>From<wbr>Key</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_geoutils.tilekeyutils-1.html#worldcoordinatestotilekey" class="tsd-kind-icon">world<wbr>Coordinates<wbr>ToTile<wbr>Key</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="extractoffsetandmortonkeyfromkey" class="tsd-anchor"></a>
+					<h3>extract<wbr>Offset<wbr>And<wbr>Morton<wbr>Key<wbr>From<wbr>Key</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">extract<wbr>Offset<wbr>And<wbr>Morton<wbr>Key<wbr>From<wbr>Key<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bitshift<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>mortonCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKeyUtils.ts#L166">@here/harp-geoutils/lib/tiling/TileKeyUtils.ts:166</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Extracts the offset and morton key from the given key (must be created by:
+									<a href="harp_geoutils.tilekeyutils-1.html#getkeyfortilekeyandoffset">getKeyForTileKeyAndOffset</a>)</p>
+								</div>
+								<p>Note, we can&#39;t use bitshift operators in Javascript because they work on 32-bit integers, and
+								would truncate the numbers, hence using powers of two.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>key: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Key to extract offset and morton key.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> bitshift: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 4</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>How many bits to shift by, must be the same as was used when creating the
+										key.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>mortonCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>morton<wbr>Code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="geocoordinatestotilekey" class="tsd-anchor"></a>
+					<h3>geo<wbr>Coordinates<wbr>ToTile<wbr>Key</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">geo<wbr>Coordinates<wbr>ToTile<wbr>Key<span class="tsd-signature-symbol">(</span>tilingScheme<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a>, geoPoint<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a>, level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKeyUtils.ts#L20">@here/harp-geoutils/lib/tiling/TileKeyUtils.ts:20</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tilingScheme: <a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a></h5>
+								</li>
+								<li>
+									<h5>geoPoint: <a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a></h5>
+								</li>
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="georectangletotilekeys" class="tsd-anchor"></a>
+					<h3>geo<wbr>Rectangle<wbr>ToTile<wbr>Keys</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">geo<wbr>Rectangle<wbr>ToTile<wbr>Keys<span class="tsd-signature-symbol">(</span>tilingScheme<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a>, geoBox<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.geobox-1.html" class="tsd-signature-type">GeoBox</a>, level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKeyUtils.ts#L60">@here/harp-geoutils/lib/tiling/TileKeyUtils.ts:60</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tilingScheme: <a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a></h5>
+								</li>
+								<li>
+									<h5>geoBox: <a href="../classes/harp_geoutils.geobox-1.html" class="tsd-signature-type">GeoBox</a></h5>
+								</li>
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getkeyfortilekeyandoffset" class="tsd-anchor"></a>
+					<h3>get<wbr>Key<wbr>For<wbr>Tile<wbr>Key<wbr>And<wbr>Offset</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Key<wbr>For<wbr>Tile<wbr>Key<wbr>And<wbr>Offset<span class="tsd-signature-symbol">(</span>tileKey<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a>, offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bitshift<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKeyUtils.ts#L146">@here/harp-geoutils/lib/tiling/TileKeyUtils.ts:146</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a unique key based on the supplied parameters. Note, the uniqueness is bounded by the
+										bitshift. The [[TileKey.mortonCode()]] supports currently up to 26 levels (this is because
+										26*2 equals 52, and 2^52 is the highest bit that can be set in an integer in Javascript), the
+										bitshift reduces this accordingly, so given the default bitshift of four, we support up to 24
+									levels. Given the current support up to level 19 this should be fine.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tileKey: <a href="../classes/harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The unique {@link @here/harp-geoutils#TileKey}
+										from which to compute the unique key.</p>
+									</div>
+								</li>
+								<li>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>How much the given {@link @here/harp-geoutils#TileKey} is offset</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> bitshift: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 4</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>How much space we have to store the offset. The default of 4 means we have
+										enough space to store 16 unique tiles in a single view.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getparentkeyfromkey" class="tsd-anchor"></a>
+					<h3>get<wbr>Parent<wbr>Key<wbr>From<wbr>Key</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Parent<wbr>Key<wbr>From<wbr>Key<span class="tsd-signature-symbol">(</span>calculatedKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bitshift<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKeyUtils.ts#L192">@here/harp-geoutils/lib/tiling/TileKeyUtils.ts:192</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the key of the parent. Key must have been computed using the function
+									<a href="harp_geoutils.tilekeyutils-1.html#getkeyfortilekeyandoffset">getKeyForTileKeyAndOffset</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>calculatedKey: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Key to decompose</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> bitshift: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 4</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Bit shift used to create the key</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="worldcoordinatestotilekey" class="tsd-anchor"></a>
+					<h3>world<wbr>Coordinates<wbr>ToTile<wbr>Key</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">world<wbr>Coordinates<wbr>ToTile<wbr>Key<span class="tsd-signature-symbol">(</span>tilingScheme<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a>, worldPoint<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a>, level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/tiling/TileKeyUtils.ts#L31">@here/harp-geoutils/lib/tiling/TileKeyUtils.ts:31</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tilingScheme: <a href="../classes/harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a></h5>
+								</li>
+								<li>
+									<h5>worldPoint: <a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+								</li>
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="harp_geoutils.html">harp-<wbr>geoutils</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_geoutils.mathutils-1.html">Math<wbr>Utils</a>
+							</li>
+							<li class="current tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_geoutils.tilekeyutils-1.html">Tile<wbr>Key<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-namespace tsd-parent-kind-module">
+						<a href="harp_geoutils.tilekeyutils-1.html" class="tsd-kind-icon">Tile<wbr>Key<wbr>Utils</a>
+						<ul>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_geoutils.tilekeyutils-1.html#extractoffsetandmortonkeyfromkey" class="tsd-kind-icon">extract<wbr>Offset<wbr>And<wbr>Morton<wbr>Key<wbr>From<wbr>Key</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_geoutils.tilekeyutils-1.html#geocoordinatestotilekey" class="tsd-kind-icon">geo<wbr>Coordinates<wbr>ToTile<wbr>Key</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_geoutils.tilekeyutils-1.html#georectangletotilekeys" class="tsd-kind-icon">geo<wbr>Rectangle<wbr>ToTile<wbr>Keys</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_geoutils.tilekeyutils-1.html#getkeyfortilekeyandoffset" class="tsd-kind-icon">get<wbr>Key<wbr>For<wbr>Tile<wbr>Key<wbr>And<wbr>Offset</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_geoutils.tilekeyutils-1.html#getparentkeyfromkey" class="tsd-kind-icon">get<wbr>Parent<wbr>Key<wbr>From<wbr>Key</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_geoutils.tilekeyutils-1.html#worldcoordinatestotilekey" class="tsd-kind-icon">world<wbr>Coordinates<wbr>ToTile<wbr>Key</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

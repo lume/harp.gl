@@ -1,0 +1,1916 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MapViewUtils | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="harp_mapview.html">harp-mapview</a>
+				</li>
+				<li>
+					<a href="harp_mapview.mapviewutils-1.html">MapViewUtils</a>
+				</li>
+			</ul>
+			<h1>Namespace MapViewUtils</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>MapView utilities: View transformations, camera setup, view bounds computation...</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/harp_mapview.mapviewutils-1.attitude.html" class="tsd-kind-icon">Attitude</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/harp_mapview.mapviewutils-1.memoryusage.html" class="tsd-kind-icon">Memory<wbr>Usage</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/harp_mapview.mapviewutils-1.orbitparams.html" class="tsd-kind-icon">Orbit<wbr>Params</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#max_tilt_deg" class="tsd-kind-icon">MAX_<wbr>TILT_<wbr>DEG</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#max_tilt_rad" class="tsd-kind-icon">MAX_<wbr>TILT_<wbr>RAD</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#calculatescreensizebyfocallength" class="tsd-kind-icon">calculate<wbr>Screen<wbr>Size<wbr>ByFocal<wbr>Length</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#calculateworldsizebyfocallength" class="tsd-kind-icon">calculate<wbr>World<wbr>Size<wbr>ByFocal<wbr>Length</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#estimateobject3dsize" class="tsd-kind-icon">estimate<wbr>Object3d<wbr>Size</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#getbrowserlanguages" class="tsd-kind-icon">get<wbr>Browser<wbr>Languages</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#calculatedepthfromclipdistance" class="tsd-kind-icon">calculate<wbr>Depth<wbr>From<wbr>Clip<wbr>Distance</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#calculatedistancefromzoomlevel" class="tsd-kind-icon">calculate<wbr>Distance<wbr>From<wbr>Zoom<wbr>Level</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#calculatedistancetogroundfromzoomlevel" class="tsd-kind-icon">calculate<wbr>Distance<wbr>ToGround<wbr>From<wbr>Zoom<wbr>Level</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#calculatefocallengthbyverticalfov" class="tsd-kind-icon">calculate<wbr>Focal<wbr>Length<wbr>ByVertical<wbr>Fov</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#calculatefovbyfocallength" class="tsd-kind-icon">calculate<wbr>Fov<wbr>ByFocal<wbr>Length</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#calculatehorizontalfovbyverticalfov" class="tsd-kind-icon">calculate<wbr>Horizontal<wbr>Fov<wbr>ByVertical<wbr>Fov</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#calculateverticalfovbyhorizontalfov" class="tsd-kind-icon">calculate<wbr>Vertical<wbr>Fov<wbr>ByHorizontal<wbr>Fov</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#calculatezoomlevelfromdistance" class="tsd-kind-icon">calculate<wbr>Zoom<wbr>Level<wbr>From<wbr>Distance</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#cameratoworlddistance" class="tsd-kind-icon">camera<wbr>ToWorld<wbr>Distance</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#closetofrustum" class="tsd-kind-icon">close<wbr>ToFrustum</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#constraintargetanddistancetoviewbounds" class="tsd-kind-icon">constrain<wbr>Target<wbr>And<wbr>Distance<wbr>ToView<wbr>Bounds</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#extractattitude" class="tsd-kind-icon">extract<wbr>Attitude</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#extractcameratilt" class="tsd-kind-icon">extract<wbr>Camera<wbr>Tilt</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#extractsphericalcoordinatesfromlocation" class="tsd-kind-icon">extract<wbr>Spherical<wbr>Coordinates<wbr>From<wbr>Location</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#extracttiltanglefromlocation" class="tsd-kind-icon">extract<wbr>Tilt<wbr>Angle<wbr>From<wbr>Location</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#getcameracoordinatesfromtargetcoordinates" class="tsd-kind-icon">get<wbr>Camera<wbr>Coordinates<wbr>From<wbr>Target<wbr>Coordinates</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#getcamerafrustumplanes" class="tsd-kind-icon">get<wbr>Camera<wbr>Frustum<wbr>Planes</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#getcamerapositionfromtargetcoordinates" class="tsd-kind-icon">get<wbr>Camera<wbr>Position<wbr>From<wbr>Target<wbr>Coordinates</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#getcamerarotationattarget" class="tsd-kind-icon">get<wbr>Camera<wbr>Rotation<wbr>AtTarget</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#getgeotargetfromcamera" class="tsd-kind-icon">get<wbr>Geo<wbr>Target<wbr>From<wbr>Camera</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#gettargetanddistance" class="tsd-kind-icon">get<wbr>Target<wbr>And<wbr>Distance</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#getworldtargetfromcamera" class="tsd-kind-icon">get<wbr>World<wbr>Target<wbr>From<wbr>Camera</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#mapviewisloading" class="tsd-kind-icon">map<wbr>View<wbr>IsLoading</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#orbitaroundscreenpoint" class="tsd-kind-icon">orbit<wbr>Around<wbr>Screen<wbr>Point</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#pancameraaboveflatmap" class="tsd-kind-icon">pan<wbr>Camera<wbr>Above<wbr>Flat<wbr>Map</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#pancameraaroundglobe" class="tsd-kind-icon">pan<wbr>Camera<wbr>Around<wbr>Globe</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#raycastgeocoordinates" class="tsd-kind-icon">ray<wbr>Cast<wbr>Geo<wbr>Coordinates</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#raycastworldcoordinates" class="tsd-kind-icon">ray<wbr>Cast<wbr>World<wbr>Coordinates</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#rotate" class="tsd-kind-icon">rotate</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#setrotation" class="tsd-kind-icon">set<wbr>Rotation</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="harp_mapview.mapviewutils-1.html#zoomontargetposition" class="tsd-kind-icon">zoom<wbr>OnTarget<wbr>Position</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="max_tilt_deg" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MAX_<wbr>TILT_<wbr>DEG</h3>
+					<div class="tsd-signature tsd-kind-icon">MAX_<wbr>TILT_<wbr>DEG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">89</span><span class="tsd-signature-symbol"> = 89</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L103">@here/harp-mapview/lib/Utils.ts:103</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="max_tilt_rad" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MAX_<wbr>TILT_<wbr>RAD</h3>
+					<div class="tsd-signature tsd-kind-icon">MAX_<wbr>TILT_<wbr>RAD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = MAX_TILT_DEG * THREE.MathUtils.DEG2RAD</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L104">@here/harp-mapview/lib/Utils.ts:104</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="calculatescreensizebyfocallength" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> calculate<wbr>Screen<wbr>Size<wbr>ByFocal<wbr>Length</h3>
+					<div class="tsd-signature tsd-kind-icon">calculate<wbr>Screen<wbr>Size<wbr>ByFocal<wbr>Length<span class="tsd-signature-symbol">:</span> <a href="harp_mapview.camerautils-1.html#convertworldtoscreensize" class="tsd-signature-type">convertWorldToScreenSize</a><span class="tsd-signature-symbol"> = CameraUtils.convertWorldToScreenSize</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1718">@here/harp-mapview/lib/Utils.ts:1718</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use <a href="harp_mapview.camerautils-1.html#convertworldtoscreensize">CameraUtils.convertWorldToScreenSize</a>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="calculateworldsizebyfocallength" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> calculate<wbr>World<wbr>Size<wbr>ByFocal<wbr>Length</h3>
+					<div class="tsd-signature tsd-kind-icon">calculate<wbr>World<wbr>Size<wbr>ByFocal<wbr>Length<span class="tsd-signature-symbol">:</span> <a href="harp_mapview.camerautils-1.html#convertscreentoworldsize" class="tsd-signature-type">convertScreenToWorldSize</a><span class="tsd-signature-symbol"> = CameraUtils.convertScreenToWorldSize</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1723">@here/harp-mapview/lib/Utils.ts:1723</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use <a href="harp_mapview.camerautils-1.html#convertscreentoworldsize">CameraUtils.convertScreenToWorldSize</a>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="estimateobject3dsize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> estimate<wbr>Object3d<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">estimate<wbr>Object3d<wbr>Size<span class="tsd-signature-symbol">:</span> <a href="harp_mapview.object3dutils.html#estimatesize" class="tsd-signature-type">estimateSize</a><span class="tsd-signature-symbol"> = Object3DUtils.estimateSize</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1728">@here/harp-mapview/lib/Utils.ts:1728</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd></dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="getbrowserlanguages" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Browser<wbr>Languages</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Browser<wbr>Languages<span class="tsd-signature-symbol">:</span> <a href="harp_utils.domutils-3.html#getbrowserlanguages" class="tsd-signature-type">getBrowserLanguages</a><span class="tsd-signature-symbol"> = DOMUtils.getBrowserLanguages</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1782">@here/harp-mapview/lib/Utils.ts:1782</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>Use {@link @here/harp-utils#DOMUtils.getBrowserLanguages}</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="calculatedepthfromclipdistance" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Depth<wbr>From<wbr>Clip<wbr>Distance</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Depth<wbr>From<wbr>Clip<wbr>Distance<span class="tsd-signature-symbol">(</span>clipDistance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1651">@here/harp-mapview/lib/Utils.ts:1651</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Translates a linear clip-space distance value to the actual value stored in the depth buffer.
+											This is useful as the depth values are not stored in the depth buffer linearly, and this can
+										lead into confusing behavior when not taken into account.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>clipDistance: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Distance from the camera in clip space (range: [0, 1]).</p>
+									</div>
+								</li>
+								<li>
+									<h5>camera: <span class="tsd-signature-type">Camera</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Camera applying the perspective projection.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="calculatedistancefromzoomlevel" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Distance<wbr>From<wbr>Zoom<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Distance<wbr>From<wbr>Zoom<wbr>Level<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>focalLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span>, zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1606">@here/harp-mapview/lib/Utils.ts:1606</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculates and returns the distance to the target point.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>focalLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Necessary subset of MapView properties to compute the distance.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>focal<wbr>Length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The zoom level to get the equivalent height to.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="calculatedistancetogroundfromzoomlevel" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Distance<wbr>ToGround<wbr>From<wbr>Zoom<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Distance<wbr>ToGround<wbr>From<wbr>Zoom<wbr>Level<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PerspectiveCamera</span><span class="tsd-signature-symbol">; </span>focalLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> }</span>, zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1591">@here/harp-mapview/lib/Utils.ts:1591</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculates and returns the distance from the ground, which is needed to put the camera to
+										this height, to see the size of the area that would be covered by one tile for the given zoom
+									level.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <span class="tsd-signature-symbol">{ </span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PerspectiveCamera</span><span class="tsd-signature-symbol">; </span>focalLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Instance of MapView.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PerspectiveCamera</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>focal<wbr>Length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="calculatefocallengthbyverticalfov" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Focal<wbr>Length<wbr>ByVertical<wbr>Fov</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Focal<wbr>Length<wbr>ByVertical<wbr>Fov<span class="tsd-signature-symbol">(</span>vFov<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1694">@here/harp-mapview/lib/Utils.ts:1694</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <a href="harp_mapview.camerautils-1.html#setverticalfov">CameraUtils.setVerticalFov</a>.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>vFov: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="calculatefovbyfocallength" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Fov<wbr>ByFocal<wbr>Length</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Fov<wbr>ByFocal<wbr>Length<span class="tsd-signature-symbol">(</span>focalLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1706">@here/harp-mapview/lib/Utils.ts:1706</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <a href="harp_mapview.camerautils-1.html#setfocallength">CameraUtils.setFocalLength</a>.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>focalLength: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="calculatehorizontalfovbyverticalfov" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Horizontal<wbr>Fov<wbr>ByVertical<wbr>Fov</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Horizontal<wbr>Fov<wbr>ByVertical<wbr>Fov<span class="tsd-signature-symbol">(</span>vFov<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, aspect<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1685">@here/harp-mapview/lib/Utils.ts:1685</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <a href="harp_mapview.camerautils-1.html#gethorizontalfov">CameraUtils.getHorizontalFov</a>.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>vFov: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>aspect: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="calculateverticalfovbyhorizontalfov" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Vertical<wbr>Fov<wbr>ByHorizontal<wbr>Fov</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Vertical<wbr>Fov<wbr>ByHorizontal<wbr>Fov<span class="tsd-signature-symbol">(</span>hFov<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, aspect<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1678">@here/harp-mapview/lib/Utils.ts:1678</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>hFov: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>aspect: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="calculatezoomlevelfromdistance" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Zoom<wbr>Level<wbr>From<wbr>Distance</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Zoom<wbr>Level<wbr>From<wbr>Distance<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>focalLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>maxZoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>minZoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span>, distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1629">@here/harp-mapview/lib/Utils.ts:1629</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculates the zoom level, which corresponds to the current distance from
+										camera to lookAt point.
+										Therefore the zoom level is a <code>float</code> and not an <code>int</code>. The height of the camera can be in
+										between zoom levels. By setting the zoom level, you change the height position of the camera
+										in away that the field of view of the camera should be able to cover one tile for the given
+									zoom level.</p>
+								</div>
+								<p>As an example for this, when you have a tile of zoom level 14 in front of the camera and you
+									set the zoom level of the camera to 14, then you are able to see the whole tile in front of
+								you.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>focalLength<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>maxZoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>minZoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Subset of necessary <a href="harp_mapview.html#mapview">MapView</a> properties.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>focal<wbr>Length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>max<wbr>Zoom<wbr>Level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>min<wbr>Zoom<wbr>Level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>distance: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The distance in meters, which are scene units in <a href="harp_mapview.html#mapview">MapView</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="cameratoworlddistance" class="tsd-anchor"></a>
+					<h3>camera<wbr>ToWorld<wbr>Distance</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">camera<wbr>ToWorld<wbr>Distance<span class="tsd-signature-symbol">(</span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1670">@here/harp-mapview/lib/Utils.ts:1670</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Translates a linear distance value [0..1], where 1 is the distance to the far plane, into
+										[0..cameraFar].</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>distance: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Distance from the camera (range: [0, 1]).</p>
+									</div>
+								</li>
+								<li>
+									<h5>camera: <span class="tsd-signature-type">Camera</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Camera applying the perspective projection.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="closetofrustum" class="tsd-anchor"></a>
+					<h3>close<wbr>ToFrustum</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">close<wbr>ToFrustum<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, eps<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1763">@here/harp-mapview/lib/Utils.ts:1763</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>point: <span class="tsd-signature-type">Vector3</span></h5>
+								</li>
+								<li>
+									<h5>camera: <span class="tsd-signature-type">Camera</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> eps: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1e-13</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="constraintargetanddistancetoviewbounds" class="tsd-anchor"></a>
+					<h3>constrain<wbr>Target<wbr>And<wbr>Distance<wbr>ToView<wbr>Bounds</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">constrain<wbr>Target<wbr>And<wbr>Distance<wbr>ToView<wbr>Bounds<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span>, distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L563">@here/harp-mapview/lib/Utils.ts:563</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constrains given camera target and distance to {@link MapView.maxBounds}.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd><p>The resulting
+											target and distance will keep the view within the maximum bounds for a camera with tilt and
+										yaw set to 0.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">Vector3</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The camera target.</p>
+									</div>
+								</li>
+								<li>
+									<h5>distance: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The camera distance.</p>
+									</div>
+								</li>
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The map view whose maximum bounds will be used as constraints.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>constrained target and distance, or the unchanged input arguments if the view
+							does not have maximum bounds set.</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="extractattitude" class="tsd-anchor"></a>
+					<h3>extract<wbr>Attitude</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">extract<wbr>Attitude<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> }</span>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object3D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.mapviewutils-1.attitude.html" class="tsd-signature-type">Attitude</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1361">@here/harp-mapview/lib/Utils.ts:1361</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Extracts yaw, pitch, and roll rotation in radians.</p>
+									<ul>
+										<li>Yaw : Rotation around the vertical axis, counter-clockwise (as opposed to azimuth),
+										starting north.</li>
+										<li>Pitch :Rotation around the horizontal axis.</li>
+										<li>Roll : Rotation around the view axis.</li>
+									</ul>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles">https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <span class="tsd-signature-symbol">{ </span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>object: <span class="tsd-signature-type">Object3D</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The [[THREE.Object3D]] instance to extract the rotations from.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_mapview.mapviewutils-1.attitude.html" class="tsd-signature-type">Attitude</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="extractcameratilt" class="tsd-anchor"></a>
+					<h3>extract<wbr>Camera<wbr>Tilt</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">extract<wbr>Camera<wbr>Tilt<span class="tsd-signature-symbol">(</span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1316">@here/harp-mapview/lib/Utils.ts:1316</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Extracts current camera tilt angle in radians.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use MapView.tilt</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>camera: <span class="tsd-signature-type">Camera</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The [[Camera]] in use.</p>
+									</div>
+								</li>
+								<li>
+									<h5>projection: <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The {@link @here/harp-geoutils#Projection} used to
+										convert between geo and world coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="extractsphericalcoordinatesfromlocation" class="tsd-anchor"></a>
+					<h3>extract<wbr>Spherical<wbr>Coordinates<wbr>From<wbr>Location</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">extract<wbr>Spherical<wbr>Coordinates<wbr>From<wbr>Location<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> }</span>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object3D</span>, location<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>azimuth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>tilt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1424">@here/harp-mapview/lib/Utils.ts:1424</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the spherical coordinates in radian of the object to the coordinates of <code>point</code>.</p>
+								</div>
+								<p>Note: this method can be used to get the direction that an object points to, when <code>location</code>
+									is the target of that object, by adding PI to it. Otherwise it only returns the spherical
+								coordinates of <code>object</code> in the tangent space of <code>location</code>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <span class="tsd-signature-symbol">{ </span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="harp_mapview.html#mapview">MapView</a> instance to consider.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>object: <span class="tsd-signature-type">Object3D</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object to get the coordinates from.</p>
+									</div>
+								</li>
+								<li>
+									<h5>location: <a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The reference point.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>azimuth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>tilt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>azimuth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>tilt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="extracttiltanglefromlocation" class="tsd-anchor"></a>
+					<h3>extract<wbr>Tilt<wbr>Angle<wbr>From<wbr>Location</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">extract<wbr>Tilt<wbr>Angle<wbr>From<wbr>Location<span class="tsd-signature-symbol">(</span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object3D</span>, location<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a>, tiltAxis<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">THREE.Vector3</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1483">@here/harp-mapview/lib/Utils.ts:1483</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the tilt angle (in radians) of the object relative to the coordinates of <code>location</code>.</p>
+								</div>
+								<p>Note: this method can be used to get the direction that an object points to, when <code>location</code>
+									is the target of that object, by adding PI to it. Otherwise it only returns the tilt angle
+								(in radians) of <code>object</code> in the tangent space of <code>location</code>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>projection: <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The {@link @here/harp-geoutils#Projection} used when
+										converting from geo to world coordinates.</p>
+									</div>
+								</li>
+								<li>
+									<h5>object: <span class="tsd-signature-type">Object3D</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object to get the coordinates from.</p>
+									</div>
+								</li>
+								<li>
+									<h5>location: <a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The reference point.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> tiltAxis: <span class="tsd-signature-type">THREE.Vector3</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional axis used to define the rotation about which the object&#39;s tilt
+											occurs, the direction vector to the location from the camera is projected on the plane with
+										the given angle.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getcameracoordinatesfromtargetcoordinates" class="tsd-anchor"></a>
+					<h3>get<wbr>Camera<wbr>Coordinates<wbr>From<wbr>Target<wbr>Coordinates</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Camera<wbr>Coordinates<wbr>From<wbr>Target<wbr>Coordinates<span class="tsd-signature-symbol">(</span>targetCoordinates<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a>, distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, yawDeg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pitchDeg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1081">@here/harp-mapview/lib/Utils.ts:1081</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>use getCameraPositionFromTargetCoordinates instead</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>targetCoordinates: <a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a></h5>
+								</li>
+								<li>
+									<h5>distance: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>yawDeg: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>pitchDeg: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getcamerafrustumplanes" class="tsd-anchor"></a>
+					<h3>get<wbr>Camera<wbr>Frustum<wbr>Planes</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Camera<wbr>Frustum<wbr>Planes<span class="tsd-signature-symbol">(</span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PerspectiveCamera</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>bottom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>far<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>left<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>near<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>right<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>top<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1521">@here/harp-mapview/lib/Utils.ts:1521</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get perspective camera frustum planes distances.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>camera: <span class="tsd-signature-type">PerspectiveCamera</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>bottom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>far<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>left<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>near<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>right<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>top<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>all plane distances in helper object.</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>bottom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>far<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>left<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>near<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>right<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>top<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getcamerapositionfromtargetcoordinates" class="tsd-anchor"></a>
+					<h3>get<wbr>Camera<wbr>Position<wbr>From<wbr>Target<wbr>Coordinates</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Camera<wbr>Position<wbr>From<wbr>Target<wbr>Coordinates<span class="tsd-signature-symbol">(</span>targetCoordinates<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a>, distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, yawDeg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pitchDeg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a>, result<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L764">@here/harp-mapview/lib/Utils.ts:764</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the {@link @here/harp-geoutils#GeoCoordinates} of the camera,
+										given its target coordinates on the map and its
+									zoom, yaw and pitch.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>targetCoordinates: <a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Coordinates of the center of the view.</p>
+									</div>
+								</li>
+								<li>
+									<h5>distance: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Distance to the target in meters.</p>
+									</div>
+								</li>
+								<li>
+									<h5>yawDeg: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Camera yaw in degrees.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pitchDeg: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Camera pitch in degrees.</p>
+									</div>
+								</li>
+								<li>
+									<h5>projection: <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Active MapView, needed to get the camera fov and map projection.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> result: <span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> = new THREE.Vector3()</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional output vector.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vector3</span></h4>
+							<p>Camera position in world space.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getcamerarotationattarget" class="tsd-anchor"></a>
+					<h3>get<wbr>Camera<wbr>Rotation<wbr>AtTarget</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Camera<wbr>Rotation<wbr>AtTarget<span class="tsd-signature-symbol">(</span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a>, target<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a>, yawDeg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pitchDeg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, result<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Quaternion</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Quaternion</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1258">@here/harp-mapview/lib/Utils.ts:1258</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the rotation of the camera according to yaw and pitch in degrees. The computations
+										hinge on the current <code>projection</code> and <code>target</code>, because yaw and pitch are defined in
+									tangent space of the target point.</p>
+								</div>
+								<p><strong>Note:</strong> <code>yaw == 0 &amp;&amp; pitch == 0</code> will north up the map and you will look downwards onto the
+								map.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>projection: <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Current projection.</p>
+									</div>
+								</li>
+								<li>
+									<h5>target: <a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The camera target.</p>
+									</div>
+								</li>
+								<li>
+									<h5>yawDeg: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Yaw in degrees, counter-clockwise (as opposed to azimuth), starting north.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pitchDeg: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Pitch in degrees.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> result: <span class="tsd-signature-type">Quaternion</span><span class="tsd-signature-symbol"> = new THREE.Quaternion()</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Quaternion</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getgeotargetfromcamera" class="tsd-anchor"></a>
+					<h3>get<wbr>Geo<wbr>Target<wbr>From<wbr>Camera</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Geo<wbr>Target<wbr>From<wbr>Camera<span class="tsd-signature-symbol">(</span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a>, elevation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L503">@here/harp-mapview/lib/Utils.ts:503</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculate target (focus) point geo-coordinates for given camera.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p>getTargetPositionFromCamera</p>
+									</dd>
+									<dt>deprecated</dt>
+									<dd><p>This function is for internal use only and will be removed in the future. Use
+										MapView.worldTarget instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>camera: <span class="tsd-signature-type">Camera</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The camera looking on target point.</p>
+									</div>
+								</li>
+								<li>
+									<h5>projection: <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The geo-projection used.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> elevation: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional elevation above (or below) sea level measured in world units.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="gettargetanddistance" class="tsd-anchor"></a>
+					<h3>get<wbr>Target<wbr>And<wbr>Distance</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Target<wbr>And<wbr>Distance<span class="tsd-signature-symbol">(</span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, elevationProvider<span class="tsd-signature-symbol">?: </span><a href="harp_mapview.html#elevationprovider" class="tsd-signature-type">ElevationProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>final<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L698">@here/harp-mapview/lib/Utils.ts:698</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>internal</dt>
+									<dd><p>Computes the target for a given camera and the distance between them.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>projection: <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The world space projection.</p>
+									</div>
+								</li>
+								<li>
+									<h5>camera: <span class="tsd-signature-type">Camera</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The camera whose target will be computed.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> elevationProvider: <a href="harp_mapview.html#elevationprovider" class="tsd-signature-type">ElevationProvider</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If provided, elevation at the camera position will be used.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>final<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>The target, the distance to it and a boolean flag set to false in case an elevation
+							provider was passed but the elevation was not available yet.</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>final<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getworldtargetfromcamera" class="tsd-anchor"></a>
+					<h3>get<wbr>World<wbr>Target<wbr>From<wbr>Camera</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>World<wbr>Target<wbr>From<wbr>Camera<span class="tsd-signature-symbol">(</span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a>, elevation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L526">@here/harp-mapview/lib/Utils.ts:526</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculate target (focus) point world coordinates for given camera position and orientation.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>This function is for internal use only and will be removed in the future.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>camera: <span class="tsd-signature-type">Camera</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The camera looking on target point.</p>
+									</div>
+								</li>
+								<li>
+									<h5>projection: <a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The geo-projection used.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> elevation: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional elevation above (or below) sea level in world units.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="mapviewisloading" class="tsd-anchor"></a>
+					<h3>map<wbr>View<wbr>IsLoading</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">map<wbr>View<wbr>IsLoading<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1737">@here/harp-mapview/lib/Utils.ts:1737</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if tiles or other content is currently being loaded.</p>
+								</div>
+								<p>This method can be removed once HARP-7932 is implemented.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if MapView has visible tiles or other content that is being loaded.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="orbitaroundscreenpoint" class="tsd-anchor"></a>
+					<h3>orbit<wbr>Around<wbr>Screen<wbr>Point</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">orbit<wbr>Around<wbr>Screen<wbr>Point<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a>, offsetX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, offsetY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, deltaAzimuth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, deltaTilt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxTiltAngle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">orbit<wbr>Around<wbr>Screen<wbr>Point<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a>, orbitParams<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_mapview.mapviewutils-1.orbitparams.html" class="tsd-signature-type">OrbitParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L256">@here/harp-mapview/lib/Utils.ts:256</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Orbits the camera around a given point on the screen.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use overload with <a href="../interfaces/harp_mapview.mapviewutils-1.orbitparams.html">OrbitParams</a> object parameter.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="harp_mapview.html#mapview">MapView</a> instance to manipulate.</p>
+									</div>
+								</li>
+								<li>
+									<h5>offsetX: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Orbit point in NDC space.</p>
+									</div>
+								</li>
+								<li>
+									<h5>offsetY: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Orbit point in NDC space.</p>
+									</div>
+								</li>
+								<li>
+									<h5>deltaAzimuth: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Delta azimuth in radians.</p>
+									</div>
+								</li>
+								<li>
+									<h5>deltaTilt: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Delta tilt in radians.</p>
+									</div>
+								</li>
+								<li>
+									<h5>maxTiltAngle: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The maximum tilt between the camera and its target in radian.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L271">@here/harp-mapview/lib/Utils.ts:271</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Orbits the camera around a given point on the screen.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="harp_mapview.html#mapview">MapView</a> instance to manipulate.</p>
+									</div>
+								</li>
+								<li>
+									<h5>orbitParams: <a href="../interfaces/harp_mapview.mapviewutils-1.orbitparams.html" class="tsd-signature-type">OrbitParams</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p><a href="../interfaces/harp_mapview.mapviewutils-1.orbitparams.html">OrbitParams</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="pancameraaboveflatmap" class="tsd-anchor"></a>
+					<h3>pan<wbr>Camera<wbr>Above<wbr>Flat<wbr>Map</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">pan<wbr>Camera<wbr>Above<wbr>Flat<wbr>Map<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a>, offsetX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, offsetY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1166">@here/harp-mapview/lib/Utils.ts:1166</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Pans the camera according to the projection.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Instance of MapView.</p>
+									</div>
+								</li>
+								<li>
+									<h5>offsetX: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>offsetY: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="pancameraaroundglobe" class="tsd-anchor"></a>
+					<h3>pan<wbr>Camera<wbr>Around<wbr>Globe</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">pan<wbr>Camera<wbr>Around<wbr>Globe<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a>, fromWorld<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span>, toWorld<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1184">@here/harp-mapview/lib/Utils.ts:1184</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The function doing a pan in the spherical space
+										when <a href="harp_mapview.html#mapview">MapView</a>&#39;s active <a href="../enums/harp_geoutils.projectiontype-1.html">ProjectionType</a>
+									is spherical. In other words, the function that rotates the camera around the globe.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>MapView instance.</p>
+									</div>
+								</li>
+								<li>
+									<h5>fromWorld: <span class="tsd-signature-type">Vector3</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Start vector representing the scene position of a geolocation.</p>
+									</div>
+								</li>
+								<li>
+									<h5>toWorld: <span class="tsd-signature-type">Vector3</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>End vector representing the scene position of a geolocation.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="raycastgeocoordinates" class="tsd-anchor"></a>
+					<h3>ray<wbr>Cast<wbr>Geo<wbr>Coordinates</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">ray<wbr>Cast<wbr>Geo<wbr>Coordinates<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a>, pointOnScreenXinNDC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pointOnScreenYinNDC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1565">@here/harp-mapview/lib/Utils.ts:1565</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Casts a ray in NDC space from the current view of the camera and returns the intersection
+										point of that ray against the map in geo coordinates. The return value can be <code>null</code> when
+									the raycast is above the horizon.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Instance of MapView.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pointOnScreenXinNDC: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>pointOnScreenYinNDC: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+							<p>Intersection geo coordinates, or <code>null</code> if raycast is above the horizon.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="raycastworldcoordinates" class="tsd-anchor"></a>
+					<h3>ray<wbr>Cast<wbr>World<wbr>Coordinates</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">ray<wbr>Cast<wbr>World<wbr>Coordinates<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span><span class="tsd-signature-symbol">; </span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> }</span>, pointOnScreenXinNDC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pointOnScreenYinNDC<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, elevation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1112">@here/harp-mapview/lib/Utils.ts:1112</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Casts a ray in NDC space from the current map view and returns the intersection point of that
+									ray wih the map in world space.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span><span class="tsd-signature-symbol">; </span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Instance of MapView.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pointOnScreenXinNDC: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>X coordinate in NDC space.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pointOnScreenYinNDC: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Y coordinate in NDC space.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> elevation: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional param used to offset the ground plane. Used when wanting to pan
+										based on a plane at some altitude. Necessary for example when panning with terrain.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+							<p>Intersection coordinates, or <code>null</code> if raycast failed.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="rotate" class="tsd-anchor"></a>
+					<h3>rotate</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">rotate<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PerspectiveCamera</span><span class="tsd-signature-symbol">; </span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> }</span>, deltaYawDeg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, deltaPitchDeg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, maxTiltAngleRad<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1206">@here/harp-mapview/lib/Utils.ts:1206</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Rotates the camera by the given delta yaw and delta pitch. The pitch will be clamped to the
+									maximum possible tilt to the new target, and under the horizon in sphere projection.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <span class="tsd-signature-symbol">{ </span>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PerspectiveCamera</span><span class="tsd-signature-symbol">; </span>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="harp_mapview.html#mapview">MapView</a> instance in use.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PerspectiveCamera</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>projection<span class="tsd-signature-symbol">: </span><a href="../classes/harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h5>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>deltaYawDeg: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Delta yaw in degrees.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> deltaPitchDeg: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Delta pitch in degrees.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> maxTiltAngleRad: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Math.PI / 4</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Max tilt angle in radians.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="setrotation" class="tsd-anchor"></a>
+					<h3>set<wbr>Rotation</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Rotation<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a>, yawDeg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pitchDeg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L1297">@here/harp-mapview/lib/Utils.ts:1297</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the rotation of the camera according to yaw and pitch in degrees. The computations hinge
+										on the current projection and <code>geoCenter</code>, because yaw and pitch are defined in tangent
+									space. In particular, <code>MapView#geoCenter</code> needs to be set before calling <code>setRotation</code>.</p>
+								</div>
+								<p><strong>Note:</strong> <code>yaw == 0 &amp;&amp; pitch == 0</code> will north up the map and you will look downwards onto the
+								map.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Instance of MapView.</p>
+									</div>
+								</li>
+								<li>
+									<h5>yawDeg: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Yaw in degrees, counter-clockwise (as opposed to azimuth), starting north.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pitchDeg: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Pitch in degrees.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="zoomontargetposition" class="tsd-anchor"></a>
+					<h3>zoom<wbr>OnTarget<wbr>Position</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">zoom<wbr>OnTarget<wbr>Position<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a>, targetNDCx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, targetNDCy<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxTiltAngle<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/Utils.ts#L144">@here/harp-mapview/lib/Utils.ts:144</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Zooms and moves the map in such a way that the given target position remains at the same
+									position after the zoom.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="../classes/harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Instance of MapView.</p>
+									</div>
+								</li>
+								<li>
+									<h5>targetNDCx: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Target x position in NDC space.</p>
+									</div>
+								</li>
+								<li>
+									<h5>targetNDCy: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Target y position in NDC space.</p>
+									</div>
+								</li>
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The desired zoom level.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> maxTiltAngle: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = MAX_TILT_RAD</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The maximum tilt angle to comply by, in globe projection, in radian.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>false</code> if requested zoom cannot be achieved due to the map view&#39;s maximum bounds
+							<a href="../classes/harp_mapview.mapview-1.html#geomaxbounds">MapView.geoMaxBounds</a>,<code>true</code> otherwise.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="harp_mapview.html">harp-<wbr>mapview</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_mapview.camerautils-1.html">Camera<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_mapview.copyrightinfo-1.html">Copyright<wbr>Info</a>
+							</li>
+							<li class="current tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_mapview.mapviewutils-1.html">Map<wbr>View<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_mapview.object3dutils.html">Object3DUtils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_mapview.tileoffsetutils-1.html">Tile<wbr>Offset<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-namespace tsd-parent-kind-module">
+						<a href="harp_mapview.mapviewutils-1.html" class="tsd-kind-icon">Map<wbr>View<wbr>Utils</a>
+						<ul>
+							<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+								<a href="../interfaces/harp_mapview.mapviewutils-1.attitude.html" class="tsd-kind-icon">Attitude</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+								<a href="../interfaces/harp_mapview.mapviewutils-1.memoryusage.html" class="tsd-kind-icon">Memory<wbr>Usage</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+								<a href="../interfaces/harp_mapview.mapviewutils-1.orbitparams.html" class="tsd-kind-icon">Orbit<wbr>Params</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#max_tilt_deg" class="tsd-kind-icon">MAX_<wbr>TILT_<wbr>DEG</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#max_tilt_rad" class="tsd-kind-icon">MAX_<wbr>TILT_<wbr>RAD</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#calculatescreensizebyfocallength" class="tsd-kind-icon">calculate<wbr>Screen<wbr>Size<wbr>ByFocal<wbr>Length</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#calculateworldsizebyfocallength" class="tsd-kind-icon">calculate<wbr>World<wbr>Size<wbr>ByFocal<wbr>Length</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#estimateobject3dsize" class="tsd-kind-icon">estimate<wbr>Object3d<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#getbrowserlanguages" class="tsd-kind-icon">get<wbr>Browser<wbr>Languages</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#calculatedepthfromclipdistance" class="tsd-kind-icon">calculate<wbr>Depth<wbr>From<wbr>Clip<wbr>Distance</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#calculatedistancefromzoomlevel" class="tsd-kind-icon">calculate<wbr>Distance<wbr>From<wbr>Zoom<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#calculatedistancetogroundfromzoomlevel" class="tsd-kind-icon">calculate<wbr>Distance<wbr>ToGround<wbr>From<wbr>Zoom<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#calculatefocallengthbyverticalfov" class="tsd-kind-icon">calculate<wbr>Focal<wbr>Length<wbr>ByVertical<wbr>Fov</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#calculatefovbyfocallength" class="tsd-kind-icon">calculate<wbr>Fov<wbr>ByFocal<wbr>Length</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#calculatehorizontalfovbyverticalfov" class="tsd-kind-icon">calculate<wbr>Horizontal<wbr>Fov<wbr>ByVertical<wbr>Fov</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#calculateverticalfovbyhorizontalfov" class="tsd-kind-icon">calculate<wbr>Vertical<wbr>Fov<wbr>ByHorizontal<wbr>Fov</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#calculatezoomlevelfromdistance" class="tsd-kind-icon">calculate<wbr>Zoom<wbr>Level<wbr>From<wbr>Distance</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#cameratoworlddistance" class="tsd-kind-icon">camera<wbr>ToWorld<wbr>Distance</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#closetofrustum" class="tsd-kind-icon">close<wbr>ToFrustum</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#constraintargetanddistancetoviewbounds" class="tsd-kind-icon">constrain<wbr>Target<wbr>And<wbr>Distance<wbr>ToView<wbr>Bounds</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#extractattitude" class="tsd-kind-icon">extract<wbr>Attitude</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#extractcameratilt" class="tsd-kind-icon">extract<wbr>Camera<wbr>Tilt</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#extractsphericalcoordinatesfromlocation" class="tsd-kind-icon">extract<wbr>Spherical<wbr>Coordinates<wbr>From<wbr>Location</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#extracttiltanglefromlocation" class="tsd-kind-icon">extract<wbr>Tilt<wbr>Angle<wbr>From<wbr>Location</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#getcameracoordinatesfromtargetcoordinates" class="tsd-kind-icon">get<wbr>Camera<wbr>Coordinates<wbr>From<wbr>Target<wbr>Coordinates</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#getcamerafrustumplanes" class="tsd-kind-icon">get<wbr>Camera<wbr>Frustum<wbr>Planes</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#getcamerapositionfromtargetcoordinates" class="tsd-kind-icon">get<wbr>Camera<wbr>Position<wbr>From<wbr>Target<wbr>Coordinates</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#getcamerarotationattarget" class="tsd-kind-icon">get<wbr>Camera<wbr>Rotation<wbr>AtTarget</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#getgeotargetfromcamera" class="tsd-kind-icon">get<wbr>Geo<wbr>Target<wbr>From<wbr>Camera</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#gettargetanddistance" class="tsd-kind-icon">get<wbr>Target<wbr>And<wbr>Distance</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#getworldtargetfromcamera" class="tsd-kind-icon">get<wbr>World<wbr>Target<wbr>From<wbr>Camera</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#mapviewisloading" class="tsd-kind-icon">map<wbr>View<wbr>IsLoading</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#orbitaroundscreenpoint" class="tsd-kind-icon">orbit<wbr>Around<wbr>Screen<wbr>Point</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#pancameraaboveflatmap" class="tsd-kind-icon">pan<wbr>Camera<wbr>Above<wbr>Flat<wbr>Map</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#pancameraaroundglobe" class="tsd-kind-icon">pan<wbr>Camera<wbr>Around<wbr>Globe</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#raycastgeocoordinates" class="tsd-kind-icon">ray<wbr>Cast<wbr>Geo<wbr>Coordinates</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#raycastworldcoordinates" class="tsd-kind-icon">ray<wbr>Cast<wbr>World<wbr>Coordinates</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#rotate" class="tsd-kind-icon">rotate</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#setrotation" class="tsd-kind-icon">set<wbr>Rotation</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-namespace">
+								<a href="harp_mapview.mapviewutils-1.html#zoomontargetposition" class="tsd-kind-icon">zoom<wbr>OnTarget<wbr>Position</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

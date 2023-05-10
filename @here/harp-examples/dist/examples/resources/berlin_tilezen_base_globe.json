@@ -1,0 +1,75 @@
+{
+    "extends": "berlin_tilezen_base.json",
+    "definitions": {
+        "northPoleColor": {
+            "type": "color",
+            "value": "#436981"
+        },
+        "southPoleColor": {
+            "type": "color",
+            "value": "#87959a"
+        }
+    },
+    "sky": {
+        "type": "cubemap",
+        "positiveX": "Sky_px.png",
+        "negativeX": "Sky_nx.png",
+        "positiveY": "Sky_py.png",
+        "negativeY": "Sky_ny.png",
+        "positiveZ": "Sky_pz.png",
+        "negativeZ": "Sky_nz.png"
+    },
+    "fog": {
+        "color": "#300A00",
+        "startRatio": 0.9
+    },
+    "clearColor": "#87959A",
+    "lights": [
+        {
+            "type": "ambient",
+            "color": "#FFFFFF",
+            "name": "ambientLight",
+            "intensity": 0.9
+        },
+        {
+            "type": "directional",
+            "color": "#CCCBBB",
+            "name": "light1",
+            "intensity": 0.8,
+            "direction": {
+                "x": 1,
+                "y": 5,
+                "z": 0.5
+            }
+        },
+        {
+            "type": "directional",
+            "color": "#F4DB9C",
+            "name": "light2",
+            "intensity": 0.8,
+            "direction": {
+                "x": -1,
+                "y": -3,
+                "z": 1
+            }
+        }
+    ],
+    "styles": {
+        "polar": [
+            {
+                "description": "North pole",
+                "when": ["==", ["get", "kind"], "north_pole"],
+                "technique": "fill",
+                "renderOrder": 5,
+                "color": ["ref", "northPoleColor"]
+            },
+            {
+                "description": "South pole",
+                "when": ["==", ["get", "kind"], "south_pole"],
+                "technique": "fill",
+                "renderOrder": 5,
+                "color": ["ref", "southPoleColor"]
+            }
+        ]
+    }
+}

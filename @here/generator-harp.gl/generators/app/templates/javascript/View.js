@@ -24,7 +24,8 @@ export class View {
             decoderUrl: "decoder.bundle.js"
         });
         const dataSource = new VectorTileDataSource({
-            authenticationCode: "<%= apikey %>"
+            // authenticationCode: "<%= apikey %>"
+            authenticationCode: "xpAjPxiB0OxFnxGsE2PgX6U1fSVTbawMVEahb-eaT1g"
         });
         mapView.addDataSource(dataSource);
         MapControls.create(mapView);

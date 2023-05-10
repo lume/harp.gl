@@ -1,0 +1,869 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Projection | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_geoutils.html">harp-geoutils</a>
+				</li>
+				<li>
+					<a href="harp_geoutils.projection-1.html">Projection</a>
+				</li>
+			</ul>
+			<h1>Class Projection</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p><code>Projection</code> is used to convert positions from geo coordinates to world coordinates and vice
+						versa.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Projection</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="harp_geoutils.projection-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="harp_geoutils.projection-1.html#unitscale" class="tsd-kind-icon">unit<wbr>Scale</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="harp_geoutils.projection-1.html#type" class="tsd-kind-icon">type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.projection-1.html#getscalefactor" class="tsd-kind-icon">get<wbr>Scale<wbr>Factor</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.projection-1.html#grounddistance" class="tsd-kind-icon">ground<wbr>Distance</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.projection-1.html#localtangentspace" class="tsd-kind-icon">local<wbr>Tangent<wbr>Space</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="harp_geoutils.projection-1.html#projectbox" class="tsd-kind-icon">project<wbr>Box</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="harp_geoutils.projection-1.html#projectpoint" class="tsd-kind-icon">project<wbr>Point</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.projection-1.html#scalepointtosurface" class="tsd-kind-icon">scale<wbr>Point<wbr>ToSurface</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="harp_geoutils.projection-1.html#surfacenormal" class="tsd-kind-icon">surface<wbr>Normal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.projection-1.html#unprojectaltitude" class="tsd-kind-icon">unproject<wbr>Altitude</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.projection-1.html#unprojectbox" class="tsd-kind-icon">unproject<wbr>Box</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="harp_geoutils.projection-1.html#unprojectpoint" class="tsd-kind-icon">unproject<wbr>Point</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="harp_geoutils.projection-1.html#worldextent" class="tsd-kind-icon">world<wbr>Extent</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Projection<span class="tsd-signature-symbol">(</span>unitScale<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L39">@here/harp-geoutils/lib/projection/Projection.ts:39</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs the Projection</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>unitScale: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>How to transform the projected coordinates to world units.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="unitscale" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> unit<wbr>Scale</h3>
+					<div class="tsd-signature tsd-kind-icon">unit<wbr>Scale<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L46">@here/harp-geoutils/lib/projection/Projection.ts:46</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>How to transform the projected coordinates to world units.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="type" class="tsd-anchor"></a>
+					<h3>type</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> type<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/harp_geoutils.projectiontype-1.html" class="tsd-signature-type">ProjectionType</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L39">@here/harp-geoutils/lib/projection/Projection.ts:39</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The type of this [Projection].</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/harp_geoutils.projectiontype-1.html" class="tsd-signature-type">ProjectionType</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getscalefactor" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> get<wbr>Scale<wbr>Factor</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Scale<wbr>Factor<span class="tsd-signature-symbol">(</span>worldPoint<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L173">@here/harp-geoutils/lib/projection/Projection.ts:173</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the scaling factor that must be used to convert the units used by <code>worldPoint</code> to
+									meters.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldPoint: <a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position in world coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="grounddistance" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> ground<wbr>Distance</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">ground<wbr>Distance<span class="tsd-signature-symbol">(</span>worldPoint<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L199">@here/harp-geoutils/lib/projection/Projection.ts:199</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the signed distance between the given coordinates and
+									the closest point on the surface.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldPoint: <a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position in world coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="localtangentspace" class="tsd-anchor"></a>
+					<h3>local<wbr>Tangent<wbr>Space</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">local<wbr>Tangent<wbr>Space<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a>, result<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.transformlike-1.html" class="tsd-signature-type">TransformLike</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.transformlike-1.html" class="tsd-signature-type">TransformLike</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L88">@here/harp-geoutils/lib/projection/Projection.ts:88</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the <a href="../modules/harp_geoutils.html#transformlike">TransformLike</a> of the local tangent space at the given point.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>point: <a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The geo / world coordinates.</p>
+									</div>
+								</li>
+								<li>
+									<h5>result: <a href="../interfaces/harp_geoutils.transformlike-1.html" class="tsd-signature-type">TransformLike</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../modules/harp_geoutils.html#transformlike">TransformLike</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_geoutils.transformlike-1.html" class="tsd-signature-type">TransformLike</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="projectbox" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> project<wbr>Box</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">project<wbr>Box<span class="tsd-signature-symbol">(</span>geoBox<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.geobox-1.html" class="tsd-signature-type">GeoBox</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.box3like-1.html" class="tsd-signature-type">Box3Like</a></li>
+						<li class="tsd-signature tsd-kind-icon">project<wbr>Box&lt;WorldBoundingBox&gt;<span class="tsd-signature-symbol">(</span>geoBox<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.geobox-1.html" class="tsd-signature-type">GeoBox</a>, result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WorldBoundingBox</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WorldBoundingBox</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L135">@here/harp-geoutils/lib/projection/Projection.ts:135</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Projects bounds in geo coordinates to a bounding box in world coordinates.</p>
+								</div>
+								<p>Example:</p>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> bounds = projection.projectBox(geoBox);
+<span class="hljs-built_in">console</span>.log(bounds.min, bounds.max);</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>geoBox: <a href="harp_geoutils.geobox-1.html" class="tsd-signature-type">GeoBox</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The bounding box in geo coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_geoutils.box3like-1.html" class="tsd-signature-type">Box3Like</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L149">@here/harp-geoutils/lib/projection/Projection.ts:149</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Projects bounds in geo coordinates to a bounding box in world coordinates.</p>
+								</div>
+								<p>Example:</p>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> bounds = projection.projectBox(geoBox, <span class="hljs-keyword">new</span> THREE.Box3());
+<span class="hljs-built_in">console</span>.log(bounds.min, bounds.max);</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>WorldBoundingBox<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.box3like-1.html" class="tsd-signature-type">Box3Like</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/harp_geoutils.orientedbox3like-1.html" class="tsd-signature-type">OrientedBox3Like</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>geoBox: <a href="harp_geoutils.geobox-1.html" class="tsd-signature-type">GeoBox</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The bounding box in geo coordinates.</p>
+									</div>
+								</li>
+								<li>
+									<h5>result: <span class="tsd-signature-type">WorldBoundingBox</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The resulting <a href="../modules/harp_geoutils.html#orientedbox3like">OrientedBox3Like</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">WorldBoundingBox</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="projectpoint" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> project<wbr>Point</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">project<wbr>Point&lt;WorldCoordinates&gt;<span class="tsd-signature-symbol">(</span>geoPoint<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a>, result<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">WorldCoordinates</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WorldCoordinates</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L77">@here/harp-geoutils/lib/projection/Projection.ts:77</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Projects a point from geo coordinates (latitude, longitude, altitude) to world coordinates
+									(x,y,z).</p>
+								</div>
+								<p>Example:</p>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> worldPos = <span class="hljs-keyword">new</span> THREE.Vector3();
+projection.projectPoint(geoPos, worldPos);</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>WorldCoordinates<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>geoPoint: <a href="../interfaces/harp_geoutils.geocoordinateslike-1.html" class="tsd-signature-type">GeoCoordinatesLike</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position in geo coordinates.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> result: <a href="" class="tsd-signature-type">WorldCoordinates</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The optional object used to store the resulting world position, result must
+										implement <a href="../modules/harp_geoutils.html#vector3like">Vector3Like</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">WorldCoordinates</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="scalepointtosurface" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> scale<wbr>Point<wbr>ToSurface</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">scale<wbr>Point<wbr>ToSurface<span class="tsd-signature-symbol">(</span>worldPoint<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L206">@here/harp-geoutils/lib/projection/Projection.ts:206</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Scales the given world coordinates to the surface.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldPoint: <a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position in world coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="surfacenormal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> surface<wbr>Normal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">surface<wbr>Normal<span class="tsd-signature-symbol">(</span>worldPoint<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></li>
+						<li class="tsd-signature tsd-kind-icon">surface<wbr>Normal&lt;Normal&gt;<span class="tsd-signature-symbol">(</span>worldPoint<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a>, result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Normal</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Normal</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L180">@here/harp-geoutils/lib/projection/Projection.ts:180</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the surface normal at the given world position.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldPoint: <a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position in world coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L188">@here/harp-geoutils/lib/projection/Projection.ts:188</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the surface normal at the given world position.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>Normal<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldPoint: <a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position in world coordinates.</p>
+									</div>
+								</li>
+								<li>
+									<h5>result: <span class="tsd-signature-type">Normal</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Normal</span></h4>
+							<p>The resulting normal vector.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="unprojectaltitude" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> unproject<wbr>Altitude</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">unproject<wbr>Altitude<span class="tsd-signature-symbol">(</span>worldPoint<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L122">@here/harp-geoutils/lib/projection/Projection.ts:122</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the altitude at the given world position (x,y,z) in meters.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldPoint: <a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position in world coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="unprojectbox" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> unproject<wbr>Box</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">unproject<wbr>Box<span class="tsd-signature-symbol">(</span>worldBox<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.box3like-1.html" class="tsd-signature-type">Box3Like</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.geobox-1.html" class="tsd-signature-type">GeoBox</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L165">@here/harp-geoutils/lib/projection/Projection.ts:165</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts a bounding box in world coordinates to a bounding box in geo coordinates.</p>
+								</div>
+								<p>Example:</p>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> geoPos = projection.unprojectPoint(worldPos);
+<span class="hljs-built_in">console</span>.log(geoPos.latitude, geoPos.longitude, geoPos.altitude);</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldBox: <a href="../interfaces/harp_geoutils.box3like-1.html" class="tsd-signature-type">Box3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The bounding box in world coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.geobox-1.html" class="tsd-signature-type">GeoBox</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="unprojectpoint" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> unproject<wbr>Point</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">unproject<wbr>Point<span class="tsd-signature-symbol">(</span>worldPoint<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L115">@here/harp-geoutils/lib/projection/Projection.ts:115</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the geo coordinates (latitude, longitude, altitude) from the given world position
+									(x,y,z).</p>
+								</div>
+								<p>Example:</p>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> geoPos = projection.unprojectPoint(worldPos);
+<span class="hljs-built_in">console</span>.log(geoPos.latitude, geoPos.longitude, geoPos.altitude);</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>worldPoint: <a href="../interfaces/harp_geoutils.vector3like-1.html" class="tsd-signature-type">Vector3Like</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position in world coordinates.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.geocoordinates-1.html" class="tsd-signature-type">GeoCoordinates</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="worldextent" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> world<wbr>Extent</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">world<wbr>Extent&lt;Bounds&gt;<span class="tsd-signature-symbol">(</span>minElevation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxElevation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, result<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">Bounds</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Bounds</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-geoutils/lib/projection/Projection.ts#L57">@here/harp-geoutils/lib/projection/Projection.ts:57</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the world extents in world coordinates.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>Bounds<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_geoutils.box3like-1.html" class="tsd-signature-type">Box3Like</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>minElevation: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The minimum elevation in meters.</p>
+									</div>
+								</li>
+								<li>
+									<h5>maxElevation: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The maximum elevation in meters.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> result: <a href="" class="tsd-signature-type">Bounds</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The optional object that will be used to create the resulting bounding box.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Bounds</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_geoutils.html">harp-<wbr>geoutils</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_geoutils.mathutils-1.html">Math<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_geoutils.tilekeyutils-1.html">Tile<wbr>Key<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+						<ul>
+							<li class="current tsd-kind-class tsd-parent-kind-module">
+								<a href="harp_geoutils.projection-1.html" class="tsd-kind-icon">Projection</a>
+								<ul>
+									<li class=" tsd-kind-constructor tsd-parent-kind-class">
+										<a href="harp_geoutils.projection-1.html#constructor" class="tsd-kind-icon">constructor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class">
+										<a href="harp_geoutils.projection-1.html#unitscale" class="tsd-kind-icon">unit<wbr>Scale</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+										<a href="harp_geoutils.projection-1.html#type" class="tsd-kind-icon">type</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.projection-1.html#getscalefactor" class="tsd-kind-icon">get<wbr>Scale<wbr>Factor</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.projection-1.html#grounddistance" class="tsd-kind-icon">ground<wbr>Distance</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.projection-1.html#localtangentspace" class="tsd-kind-icon">local<wbr>Tangent<wbr>Space</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+										<a href="harp_geoutils.projection-1.html#projectbox" class="tsd-kind-icon">project<wbr>Box</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+										<a href="harp_geoutils.projection-1.html#projectpoint" class="tsd-kind-icon">project<wbr>Point</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.projection-1.html#scalepointtosurface" class="tsd-kind-icon">scale<wbr>Point<wbr>ToSurface</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+										<a href="harp_geoutils.projection-1.html#surfacenormal" class="tsd-kind-icon">surface<wbr>Normal</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.projection-1.html#unprojectaltitude" class="tsd-kind-icon">unproject<wbr>Altitude</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.projection-1.html#unprojectbox" class="tsd-kind-icon">unproject<wbr>Box</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class">
+										<a href="harp_geoutils.projection-1.html#unprojectpoint" class="tsd-kind-icon">unproject<wbr>Point</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+										<a href="harp_geoutils.projection-1.html#worldextent" class="tsd-kind-icon">world<wbr>Extent</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

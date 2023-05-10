@@ -1,0 +1,665 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ExprVisitor | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_datasource_protocol.html">harp-datasource-protocol</a>
+				</li>
+				<li>
+					<a href="harp_datasource_protocol.exprvisitor-2.html">ExprVisitor</a>
+				</li>
+			</ul>
+			<h1>Interface ExprVisitor&lt;Result, Context&gt;</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A visitor for <a href="../modules/harp_datasource_protocol.html#expr">Expr</a> nodes.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>internal</dt>
+						<dd></dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>Result</h4>
+					</li>
+					<li>
+						<h4>Context</h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ExprVisitor</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitbooleanliteralexpr" class="tsd-kind-icon">visit<wbr>Boolean<wbr>Literal<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitcallexpr" class="tsd-kind-icon">visit<wbr>Call<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitcaseexpr" class="tsd-kind-icon">visit<wbr>Case<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visithasattributeexpr" class="tsd-kind-icon">visit<wbr>Has<wbr>Attribute<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitinterpolateexpr" class="tsd-kind-icon">visit<wbr>Interpolate<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitlookupexpr" class="tsd-kind-icon">visit<wbr>Lookup<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitmatchexpr" class="tsd-kind-icon">visit<wbr>Match<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitnullliteralexpr" class="tsd-kind-icon">visit<wbr>Null<wbr>Literal<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitnumberliteralexpr" class="tsd-kind-icon">visit<wbr>Number<wbr>Literal<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitobjectliteralexpr" class="tsd-kind-icon">visit<wbr>Object<wbr>Literal<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitstepexpr" class="tsd-kind-icon">visit<wbr>Step<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitstringliteralexpr" class="tsd-kind-icon">visit<wbr>String<wbr>Literal<wbr>Expr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="harp_datasource_protocol.exprvisitor-2.html#visitvarexpr" class="tsd-kind-icon">visit<wbr>Var<wbr>Expr</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitbooleanliteralexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Boolean<wbr>Literal<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Boolean<wbr>Literal<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.booleanliteralexpr-2.html" class="tsd-signature-type">BooleanLiteralExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L33">@here/harp-datasource-protocol/lib/Expr.ts:33</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.booleanliteralexpr-2.html" class="tsd-signature-type">BooleanLiteralExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitcallexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Call<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Call<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.callexpr-2.html" class="tsd-signature-type">CallExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L39">@here/harp-datasource-protocol/lib/Expr.ts:39</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.callexpr-2.html" class="tsd-signature-type">CallExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitcaseexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Case<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Case<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.caseexpr-2.html" class="tsd-signature-type">CaseExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L42">@here/harp-datasource-protocol/lib/Expr.ts:42</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.caseexpr-2.html" class="tsd-signature-type">CaseExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visithasattributeexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Has<wbr>Attribute<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Has<wbr>Attribute<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.hasattributeexpr-2.html" class="tsd-signature-type">HasAttributeExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L38">@here/harp-datasource-protocol/lib/Expr.ts:38</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.hasattributeexpr-2.html" class="tsd-signature-type">HasAttributeExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitinterpolateexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Interpolate<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Interpolate<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.interpolateexpr-2.html" class="tsd-signature-type">InterpolateExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L44">@here/harp-datasource-protocol/lib/Expr.ts:44</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.interpolateexpr-2.html" class="tsd-signature-type">InterpolateExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitlookupexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Lookup<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Lookup<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.lookupexpr-2.html" class="tsd-signature-type">LookupExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L40">@here/harp-datasource-protocol/lib/Expr.ts:40</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.lookupexpr-2.html" class="tsd-signature-type">LookupExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitmatchexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Match<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Match<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.matchexpr-2.html" class="tsd-signature-type">MatchExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L41">@here/harp-datasource-protocol/lib/Expr.ts:41</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.matchexpr-2.html" class="tsd-signature-type">MatchExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitnullliteralexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Null<wbr>Literal<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Null<wbr>Literal<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.nullliteralexpr-2.html" class="tsd-signature-type">NullLiteralExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L32">@here/harp-datasource-protocol/lib/Expr.ts:32</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.nullliteralexpr-2.html" class="tsd-signature-type">NullLiteralExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitnumberliteralexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Number<wbr>Literal<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Number<wbr>Literal<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.numberliteralexpr-2.html" class="tsd-signature-type">NumberLiteralExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L34">@here/harp-datasource-protocol/lib/Expr.ts:34</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.numberliteralexpr-2.html" class="tsd-signature-type">NumberLiteralExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitobjectliteralexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Object<wbr>Literal<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Object<wbr>Literal<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.objectliteralexpr-2.html" class="tsd-signature-type">ObjectLiteralExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L36">@here/harp-datasource-protocol/lib/Expr.ts:36</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.objectliteralexpr-2.html" class="tsd-signature-type">ObjectLiteralExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitstepexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Step<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Step<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.stepexpr-2.html" class="tsd-signature-type">StepExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L43">@here/harp-datasource-protocol/lib/Expr.ts:43</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.stepexpr-2.html" class="tsd-signature-type">StepExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitstringliteralexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>String<wbr>Literal<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>String<wbr>Literal<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.stringliteralexpr-2.html" class="tsd-signature-type">StringLiteralExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L35">@here/harp-datasource-protocol/lib/Expr.ts:35</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.stringliteralexpr-2.html" class="tsd-signature-type">StringLiteralExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="visitvarexpr" class="tsd-anchor"></a>
+					<h3>visit<wbr>Var<wbr>Expr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">visit<wbr>Var<wbr>Expr<span class="tsd-signature-symbol">(</span>expr<span class="tsd-signature-symbol">: </span><a href="../classes/harp_datasource_protocol.varexpr-2.html" class="tsd-signature-type">VarExpr</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Result</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-datasource-protocol/lib/Expr.ts#L37">@here/harp-datasource-protocol/lib/Expr.ts:37</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expr: <a href="../classes/harp_datasource_protocol.varexpr-2.html" class="tsd-signature-type">VarExpr</a></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Result</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html">harp-<wbr>datasource-<wbr>protocol</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_datasource_protocol.colorutils-1.html">Color<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_datasource_protocol.threebufferutils-1.html">Three<wbr>Buffer<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_datasource_protocol.workerdecoderprotocol-1.html">Worker<wbr>Decoder<wbr>Protocol</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_datasource_protocol.workerserviceprotocol-1.html">Worker<wbr>Service<wbr>Protocol</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/harp_datasource_protocol.workertilerprotocol-1.html">Worker<wbr>Tiler<wbr>Protocol</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+						<ul>
+							<li class="current tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
+								<a href="harp_datasource_protocol.exprvisitor-2.html" class="tsd-kind-icon">Expr<wbr>Visitor</a>
+								<ul>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitbooleanliteralexpr" class="tsd-kind-icon">visit<wbr>Boolean<wbr>Literal<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitcallexpr" class="tsd-kind-icon">visit<wbr>Call<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitcaseexpr" class="tsd-kind-icon">visit<wbr>Case<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visithasattributeexpr" class="tsd-kind-icon">visit<wbr>Has<wbr>Attribute<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitinterpolateexpr" class="tsd-kind-icon">visit<wbr>Interpolate<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitlookupexpr" class="tsd-kind-icon">visit<wbr>Lookup<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitmatchexpr" class="tsd-kind-icon">visit<wbr>Match<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitnullliteralexpr" class="tsd-kind-icon">visit<wbr>Null<wbr>Literal<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitnumberliteralexpr" class="tsd-kind-icon">visit<wbr>Number<wbr>Literal<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitobjectliteralexpr" class="tsd-kind-icon">visit<wbr>Object<wbr>Literal<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitstepexpr" class="tsd-kind-icon">visit<wbr>Step<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitstringliteralexpr" class="tsd-kind-icon">visit<wbr>String<wbr>Literal<wbr>Expr</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-interface">
+										<a href="harp_datasource_protocol.exprvisitor-2.html#visitvarexpr" class="tsd-kind-icon">visit<wbr>Var<wbr>Expr</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

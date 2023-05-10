@@ -25,7 +25,7 @@ const commonConfig = {
                     [{
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: '..'
+                            publicPath: '.'
                         }
                     },
                     {

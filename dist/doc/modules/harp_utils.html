@@ -1,0 +1,2763 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>harp-utils | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="harp_utils.html">harp-utils</a>
+				</li>
+			</ul>
+			<h1>Package harp-utils</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<a href="#hereharp-utils" id="hereharp-utils" style="color: inherit; text-decoration: none;">
+						<h1>@here/harp-utils</h1>
+					</a>
+					<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
+						<h2>Overview</h2>
+					</a>
+					<p>This module provides utility classes. Such as, but not limited to:</p>
+					<ul>
+						<li>logging</li>
+						<li>caching</li>
+						<li>URL resolving</li>
+						<li>Simple Math</li>
+					</ul>
+					<a href="#logger" id="logger" style="color: inherit; text-decoration: none;">
+						<h2>Logger</h2>
+					</a>
+					<p>Custom logger for writing messages to browser console or separate window.
+						Messages could be filtered by log names or completely disabled via URI parameters or UI.
+					Logger name is required and cannot be empty.</p>
+					<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { LoggerManager, LogLevel } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@here/harp-utils&#x27;</span>;
+
+<span class="hljs-keyword">const</span> loggerManager = LoggerManager.instance;
+
+<span class="hljs-comment">// Create named logger and configure it to Warn log level.</span>
+<span class="hljs-keyword">const</span> logger: ILogger = loggerManager.create(<span class="hljs-string">&#x27;my logger&#x27;</span>, {
+    <span class="hljs-attr">level</span>: LogLevel.Warn
+});
+
+<span class="hljs-comment">// Warning &#x27;my logger: something&#x27; logged to output.</span>
+logger.warn(<span class="hljs-string">&#x27;something...&#x27;</span>);
+
+<span class="hljs-comment">// Won&#x27;t be logged because log level is &#x27;warn&#x27;.</span>
+logger.log(<span class="hljs-string">&#x27;not logged...&#x27;</span>);
+
+<span class="hljs-comment">// Now, message is logged.</span>
+logger.level = LogLevel.Log;
+logger.log(<span class="hljs-string">&#x27;logged...&#x27;</span>);
+
+<span class="hljs-comment">// Be good developer. Free resources after you done.</span>
+<span class="hljs-comment">// Unregister logger from global registry.</span>
+loggerManager.dispose(logger);
+</code></pre>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>References</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#apikeyauthentication" class="tsd-kind-icon">Api<wbr>Key<wbr>Authentication</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#apikeyauthentication-1" class="tsd-kind-icon">Api<wbr>Key<wbr>Authentication</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#apikeyauthentication-2" class="tsd-kind-icon">Api<wbr>Key<wbr>Authentication</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#appidauthentication" class="tsd-kind-icon">App<wbr>IdAuthentication</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#appidauthentication-1" class="tsd-kind-icon">App<wbr>IdAuthentication</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#appidauthentication-2" class="tsd-kind-icon">App<wbr>IdAuthentication</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#authenticationprovider" class="tsd-kind-icon">Authentication<wbr>Provider</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#authenticationprovider-1" class="tsd-kind-icon">Authentication<wbr>Provider</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#authenticationprovider-2" class="tsd-kind-icon">Authentication<wbr>Provider</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#cachedresource" class="tsd-kind-icon">Cached<wbr>Resource</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#cachedresource-1" class="tsd-kind-icon">Cached<wbr>Resource</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#cachedresource-2" class="tsd-kind-icon">Cached<wbr>Resource</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#consolechannel" class="tsd-kind-icon">Console<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#consolechannel-1" class="tsd-kind-icon">Console<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#consolechannel-2" class="tsd-kind-icon">Console<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#consolechannel-3" class="tsd-kind-icon">Console<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#contextlogger" class="tsd-kind-icon">Context<wbr>Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#contextlogger-1" class="tsd-kind-icon">Context<wbr>Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#contextlogger-2" class="tsd-kind-icon">Context<wbr>Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#domutils" class="tsd-kind-icon">DOMUtils</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#domutils-1" class="tsd-kind-icon">DOMUtils</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#domutils-2" class="tsd-kind-icon">DOMUtils</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#groupedprioritylist" class="tsd-kind-icon">Grouped<wbr>Priority<wbr>List</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#groupedprioritylist-1" class="tsd-kind-icon">Grouped<wbr>Priority<wbr>List</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#groupedprioritylist-2" class="tsd-kind-icon">Grouped<wbr>Priority<wbr>List</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#ichannel" class="tsd-kind-icon">IChannel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#ichannel-1" class="tsd-kind-icon">IChannel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#ichannel-2" class="tsd-kind-icon">IChannel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#ichannel-3" class="tsd-kind-icon">IChannel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#icontextlogger" class="tsd-kind-icon">IContext<wbr>Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#icontextlogger-1" class="tsd-kind-icon">IContext<wbr>Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#icontextlogger-2" class="tsd-kind-icon">IContext<wbr>Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#ilogger" class="tsd-kind-icon">ILogger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#ilogger-1" class="tsd-kind-icon">ILogger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#ilogger-2" class="tsd-kind-icon">ILogger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#ilogger-3" class="tsd-kind-icon">ILogger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#isimplechannel" class="tsd-kind-icon">ISimple<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#isimplechannel-1" class="tsd-kind-icon">ISimple<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#isimplechannel-2" class="tsd-kind-icon">ISimple<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#iworkerchannelmessage" class="tsd-kind-icon">IWorker<wbr>Channel<wbr>Message</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#iworkerchannelmessage-1" class="tsd-kind-icon">IWorker<wbr>Channel<wbr>Message</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#iworkerchannelmessage-2" class="tsd-kind-icon">IWorker<wbr>Channel<wbr>Message</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#iworkerchannelmessage-3" class="tsd-kind-icon">IWorker<wbr>Channel<wbr>Message</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loglevel" class="tsd-kind-icon">Log<wbr>Level</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loglevel-1" class="tsd-kind-icon">Log<wbr>Level</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loglevel-2" class="tsd-kind-icon">Log<wbr>Level</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loglevel-3" class="tsd-kind-icon">Log<wbr>Level</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#logger" class="tsd-kind-icon">Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#logger-1" class="tsd-kind-icon">Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#logger-2" class="tsd-kind-icon">Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#logger-3" class="tsd-kind-icon">Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loggermanager" class="tsd-kind-icon">Logger<wbr>Manager</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loggermanager-1" class="tsd-kind-icon">Logger<wbr>Manager</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loggermanager-2" class="tsd-kind-icon">Logger<wbr>Manager</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loggermanager-3" class="tsd-kind-icon">Logger<wbr>Manager</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loggeroptions" class="tsd-kind-icon">Logger<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loggeroptions-1" class="tsd-kind-icon">Logger<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loggeroptions-2" class="tsd-kind-icon">Logger<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#loggeroptions-3" class="tsd-kind-icon">Logger<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#math2d" class="tsd-kind-icon">Math2D</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#math2d-1" class="tsd-kind-icon">Math2D</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#math2d-2" class="tsd-kind-icon">Math2D</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#mathutils" class="tsd-kind-icon">Math<wbr>Utils</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#mathutils-1" class="tsd-kind-icon">Math<wbr>Utils</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#mathutils-2" class="tsd-kind-icon">Math<wbr>Utils</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#multichannel" class="tsd-kind-icon">Multi<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#multichannel-1" class="tsd-kind-icon">Multi<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#multichannel-2" class="tsd-kind-icon">Multi<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#multichannel-3" class="tsd-kind-icon">Multi<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#performancetimer" class="tsd-kind-icon">Performance<wbr>Timer</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#performancetimer-1" class="tsd-kind-icon">Performance<wbr>Timer</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#performancetimer-2" class="tsd-kind-icon">Performance<wbr>Timer</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prefixmapuriresolver" class="tsd-kind-icon">Prefix<wbr>Map<wbr>Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prefixmapuriresolver-1" class="tsd-kind-icon">Prefix<wbr>Map<wbr>Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prefixmapuriresolver-2" class="tsd-kind-icon">Prefix<wbr>Map<wbr>Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prefixuriresolverdefinition" class="tsd-kind-icon">Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prefixuriresolverdefinition-1" class="tsd-kind-icon">Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prefixuriresolverdefinition-2" class="tsd-kind-icon">Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prioritylistelement" class="tsd-kind-icon">Priority<wbr>List<wbr>Element</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prioritylistelement-1" class="tsd-kind-icon">Priority<wbr>List<wbr>Element</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prioritylistelement-2" class="tsd-kind-icon">Priority<wbr>List<wbr>Element</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prioritylistgroup" class="tsd-kind-icon">Priority<wbr>List<wbr>Group</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prioritylistgroup-1" class="tsd-kind-icon">Priority<wbr>List<wbr>Group</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prioritylistgroup-2" class="tsd-kind-icon">Priority<wbr>List<wbr>Group</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prioritylistgroupmap" class="tsd-kind-icon">Priority<wbr>List<wbr>Group<wbr>Map</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prioritylistgroupmap-1" class="tsd-kind-icon">Priority<wbr>List<wbr>Group<wbr>Map</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#prioritylistgroupmap-2" class="tsd-kind-icon">Priority<wbr>List<wbr>Group<wbr>Map</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#relativeuriresolver" class="tsd-kind-icon">Relative<wbr>Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#relativeuriresolver-1" class="tsd-kind-icon">Relative<wbr>Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#relativeuriresolver-2" class="tsd-kind-icon">Relative<wbr>Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#task" class="tsd-kind-icon">Task</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#task-1" class="tsd-kind-icon">Task</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#task-2" class="tsd-kind-icon">Task</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#taskqueue" class="tsd-kind-icon">Task<wbr>Queue</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#taskqueue-1" class="tsd-kind-icon">Task<wbr>Queue</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#taskqueue-2" class="tsd-kind-icon">Task<wbr>Queue</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#taskqueueoptions" class="tsd-kind-icon">Task<wbr>Queue<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#taskqueueoptions-1" class="tsd-kind-icon">Task<wbr>Queue<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#taskqueueoptions-2" class="tsd-kind-icon">Task<wbr>Queue<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#tokenauthentication" class="tsd-kind-icon">Token<wbr>Authentication</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#tokenauthentication-1" class="tsd-kind-icon">Token<wbr>Authentication</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#tokenauthentication-2" class="tsd-kind-icon">Token<wbr>Authentication</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#uriresolver" class="tsd-kind-icon">Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#uriresolver-1" class="tsd-kind-icon">Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#uriresolver-2" class="tsd-kind-icon">Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#workerchannel_msg_type" class="tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#workerchannel_msg_type-1" class="tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#workerchannel_msg_type-2" class="tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#workerchannel_msg_type-3" class="tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#workerchannel" class="tsd-kind-icon">Worker<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#workerchannel-1" class="tsd-kind-icon">Worker<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#workerchannel-2" class="tsd-kind-icon">Worker<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#workerchannel-3" class="tsd-kind-icon">Worker<wbr>Channel</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#applymixins" class="tsd-kind-icon">apply<wbr>Mixins</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#applymixins-1" class="tsd-kind-icon">apply<wbr>Mixins</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#applymixins-2" class="tsd-kind-icon">apply<wbr>Mixins</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#applymixinswithoutproperties" class="tsd-kind-icon">apply<wbr>Mixins<wbr>Without<wbr>Properties</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#applymixinswithoutproperties-1" class="tsd-kind-icon">apply<wbr>Mixins<wbr>Without<wbr>Properties</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#applymixinswithoutproperties-2" class="tsd-kind-icon">apply<wbr>Mixins<wbr>Without<wbr>Properties</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#assertexists" class="tsd-kind-icon">assert<wbr>Exists</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#assertexists-1" class="tsd-kind-icon">assert<wbr>Exists</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#assertexists-2" class="tsd-kind-icon">assert<wbr>Exists</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#baseurl-1" class="tsd-kind-icon">base<wbr>Url</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#baseurl-2" class="tsd-kind-icon">base<wbr>Url</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#chaincallbacks" class="tsd-kind-icon">chain<wbr>Callbacks</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#chaincallbacks-1" class="tsd-kind-icon">chain<wbr>Callbacks</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#chaincallbacks-2" class="tsd-kind-icon">chain<wbr>Callbacks</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#clonedeep" class="tsd-kind-icon">clone<wbr>Deep</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#clonedeep-1" class="tsd-kind-icon">clone<wbr>Deep</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#clonedeep-2" class="tsd-kind-icon">clone<wbr>Deep</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#composeuriresolvers" class="tsd-kind-icon">compose<wbr>Uri<wbr>Resolvers</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#composeuriresolvers-1" class="tsd-kind-icon">compose<wbr>Uri<wbr>Resolvers</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#composeuriresolvers-2" class="tsd-kind-icon">compose<wbr>Uri<wbr>Resolvers</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#convertfragmentshadertowebgl2" class="tsd-kind-icon">convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#convertfragmentshadertowebgl2-1" class="tsd-kind-icon">convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#convertfragmentshadertowebgl2-2" class="tsd-kind-icon">convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#convertvertexshadertowebgl2" class="tsd-kind-icon">convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#convertvertexshadertowebgl2-1" class="tsd-kind-icon">convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#convertvertexshadertowebgl2-2" class="tsd-kind-icon">convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#getappbaseurl" class="tsd-kind-icon">get<wbr>App<wbr>Base<wbr>Url</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#getappbaseurl-1" class="tsd-kind-icon">get<wbr>App<wbr>Base<wbr>Url</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#getoptionvalue" class="tsd-kind-icon">get<wbr>Option<wbr>Value</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#getoptionvalue-1" class="tsd-kind-icon">get<wbr>Option<wbr>Value</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#getoptionvalue-2" class="tsd-kind-icon">get<wbr>Option<wbr>Value</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#geturlhostandprotocol" class="tsd-kind-icon">get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#geturlhostandprotocol-1" class="tsd-kind-icon">get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#geturlhostandprotocol-2" class="tsd-kind-icon">get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#geturlorigin" class="tsd-kind-icon">get<wbr>Url<wbr>Origin</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#geturlorigin-1" class="tsd-kind-icon">get<wbr>Url<wbr>Origin</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#geturlorigin-2" class="tsd-kind-icon">get<wbr>Url<wbr>Origin</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#pick" class="tsd-kind-icon">pick</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#pick-1" class="tsd-kind-icon">pick</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#pick-2" class="tsd-kind-icon">pick</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#resolvereferenceuri" class="tsd-kind-icon">resolve<wbr>Reference<wbr>Uri</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#resolvereferenceuri-1" class="tsd-kind-icon">resolve<wbr>Reference<wbr>Uri</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#resolvereferenceuri-2" class="tsd-kind-icon">resolve<wbr>Reference<wbr>Uri</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#samplebilinear" class="tsd-kind-icon">sample<wbr>Bilinear</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#samplebilinear-1" class="tsd-kind-icon">sample<wbr>Bilinear</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_utils.html#samplebilinear-2" class="tsd-kind-icon">sample<wbr>Bilinear</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Namespaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="harp_utils.domutils-3.html" class="tsd-kind-icon">DOMUtils</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="harp_utils.math2d-3.html" class="tsd-kind-icon">Math2D</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="harp_utils.mathutils-3.html" class="tsd-kind-icon">Math<wbr>Utils</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/harp_utils.loglevel-4.html" class="tsd-kind-icon">Log<wbr>Level</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.consolechannel-4.html" class="tsd-kind-icon">Console<wbr>Channel</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.contextlogger-3.html" class="tsd-kind-icon">Context<wbr>Logger</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/harp_utils.groupedprioritylist-3.html" class="tsd-kind-icon">Grouped<wbr>Priority<wbr>List</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.logger-4.html" class="tsd-kind-icon">Logger</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.loggermanager-4.html" class="tsd-kind-icon">Logger<wbr>Manager</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.loggermanagerimpl.html" class="tsd-kind-icon">Logger<wbr>Manager<wbr>Impl</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.loggeroptions-4.html" class="tsd-kind-icon">Logger<wbr>Options</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.multichannel-4.html" class="tsd-kind-icon">Multi<wbr>Channel</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.performancetimer-3.html" class="tsd-kind-icon">Performance<wbr>Timer</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.prefixmapuriresolver-3.html" class="tsd-kind-icon">Prefix<wbr>Map<wbr>Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/harp_utils.prioritylistgroup-3.html" class="tsd-kind-icon">Priority<wbr>List<wbr>Group</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.relativeuriresolver-3.html" class="tsd-kind-icon">Relative<wbr>Uri<wbr>Resolver</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.taskqueue-3.html" class="tsd-kind-icon">Task<wbr>Queue</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_utils.workerchannel-4.html" class="tsd-kind-icon">Worker<wbr>Channel</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.apikeyauthentication-3.html" class="tsd-kind-icon">Api<wbr>Key<wbr>Authentication</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.appidauthentication-3.html" class="tsd-kind-icon">App<wbr>IdAuthentication</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.cachedresource-3.html" class="tsd-kind-icon">Cached<wbr>Resource</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.ichannel-4.html" class="tsd-kind-icon">IChannel</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.icontextlogger-3.html" class="tsd-kind-icon">IContext<wbr>Logger</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.ilogger-4.html" class="tsd-kind-icon">ILogger</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.iloggermanager.html" class="tsd-kind-icon">ILogger<wbr>Manager</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.isimplechannel-3.html" class="tsd-kind-icon">ISimple<wbr>Channel</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.iworkerchannelmessage-4.html" class="tsd-kind-icon">IWorker<wbr>Channel<wbr>Message</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.prefixuriresolverdefinition-3.html" class="tsd-kind-icon">Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.prioritylistelement-3.html" class="tsd-kind-icon">Priority<wbr>List<wbr>Element</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.task-3.html" class="tsd-kind-icon">Task</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.taskqueueoptions-3.html" class="tsd-kind-icon">Task<wbr>Queue<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.tokenauthentication-3.html" class="tsd-kind-icon">Token<wbr>Authentication</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_utils.uriresolver-3.html" class="tsd-kind-icon">Uri<wbr>Resolver</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="harp_utils.html#authenticationprovider-3" class="tsd-kind-icon">Authentication<wbr>Provider</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="harp_utils.html#prioritylistgroupmap-3" class="tsd-kind-icon">Priority<wbr>List<wbr>Group<wbr>Map</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="harp_utils.html#workerchannel_msg_type-4" class="tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#applymixins-3" class="tsd-kind-icon">apply<wbr>Mixins</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#applymixinswithoutproperties-3" class="tsd-kind-icon">apply<wbr>Mixins<wbr>Without<wbr>Properties</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="harp_utils.html#assertexists-3" class="tsd-kind-icon">assert<wbr>Exists</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#baseurl-3" class="tsd-kind-icon">base<wbr>Url</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="harp_utils.html#chaincallbacks-3" class="tsd-kind-icon">chain<wbr>Callbacks</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="harp_utils.html#clonedeep-3" class="tsd-kind-icon">clone<wbr>Deep</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#composeuriresolvers-3" class="tsd-kind-icon">compose<wbr>Uri<wbr>Resolvers</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#convertfragmentshadertowebgl2-3" class="tsd-kind-icon">convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#convertvertexshadertowebgl2-3" class="tsd-kind-icon">convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#getappbaseurl-2" class="tsd-kind-icon">get<wbr>App<wbr>Base<wbr>Url</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="harp_utils.html#getoptionvalue-3" class="tsd-kind-icon">get<wbr>Option<wbr>Value</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#geturlhostandprotocol-3" class="tsd-kind-icon">get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#geturlorigin-3" class="tsd-kind-icon">get<wbr>Url<wbr>Origin</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="harp_utils.html#pick-3" class="tsd-kind-icon">pick</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#resolvereferenceuri-3" class="tsd-kind-icon">resolve<wbr>Reference<wbr>Uri</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_utils.html#samplebilinear-3" class="tsd-kind-icon">sample<wbr>Bilinear</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>References</h2>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="apikeyauthentication" class="tsd-anchor"></a>
+					<h3>Api<wbr>Key<wbr>Authentication</h3>
+					Re-exports <a href="../interfaces/harp_utils.apikeyauthentication-3.html">ApiKeyAuthentication</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="apikeyauthentication-1" class="tsd-anchor"></a>
+					<h3>Api<wbr>Key<wbr>Authentication</h3>
+					Re-exports <a href="../interfaces/harp_utils.apikeyauthentication-3.html">ApiKeyAuthentication</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="apikeyauthentication-2" class="tsd-anchor"></a>
+					<h3>Api<wbr>Key<wbr>Authentication</h3>
+					Re-exports <a href="../interfaces/harp_utils.apikeyauthentication-3.html">ApiKeyAuthentication</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="appidauthentication" class="tsd-anchor"></a>
+					<h3>App<wbr>IdAuthentication</h3>
+					Re-exports <a href="../interfaces/harp_utils.appidauthentication-3.html">AppIdAuthentication</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="appidauthentication-1" class="tsd-anchor"></a>
+					<h3>App<wbr>IdAuthentication</h3>
+					Re-exports <a href="../interfaces/harp_utils.appidauthentication-3.html">AppIdAuthentication</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="appidauthentication-2" class="tsd-anchor"></a>
+					<h3>App<wbr>IdAuthentication</h3>
+					Re-exports <a href="../interfaces/harp_utils.appidauthentication-3.html">AppIdAuthentication</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="authenticationprovider" class="tsd-anchor"></a>
+					<h3>Authentication<wbr>Provider</h3>
+					Re-exports <a href="harp_utils.html#authenticationprovider-3">AuthenticationProvider</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="authenticationprovider-1" class="tsd-anchor"></a>
+					<h3>Authentication<wbr>Provider</h3>
+					Re-exports <a href="harp_utils.html#authenticationprovider-3">AuthenticationProvider</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="authenticationprovider-2" class="tsd-anchor"></a>
+					<h3>Authentication<wbr>Provider</h3>
+					Re-exports <a href="harp_utils.html#authenticationprovider-3">AuthenticationProvider</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="cachedresource" class="tsd-anchor"></a>
+					<h3>Cached<wbr>Resource</h3>
+					Re-exports <a href="../interfaces/harp_utils.cachedresource-3.html">CachedResource</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="cachedresource-1" class="tsd-anchor"></a>
+					<h3>Cached<wbr>Resource</h3>
+					Re-exports <a href="../interfaces/harp_utils.cachedresource-3.html">CachedResource</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="cachedresource-2" class="tsd-anchor"></a>
+					<h3>Cached<wbr>Resource</h3>
+					Re-exports <a href="../interfaces/harp_utils.cachedresource-3.html">CachedResource</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="consolechannel" class="tsd-anchor"></a>
+					<h3>Console<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.consolechannel-4.html">ConsoleChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="consolechannel-1" class="tsd-anchor"></a>
+					<h3>Console<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.consolechannel-4.html">ConsoleChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="consolechannel-2" class="tsd-anchor"></a>
+					<h3>Console<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.consolechannel-4.html">ConsoleChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="consolechannel-3" class="tsd-anchor"></a>
+					<h3>Console<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.consolechannel-4.html">ConsoleChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="contextlogger" class="tsd-anchor"></a>
+					<h3>Context<wbr>Logger</h3>
+					Re-exports <a href="../classes/harp_utils.contextlogger-3.html">ContextLogger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="contextlogger-1" class="tsd-anchor"></a>
+					<h3>Context<wbr>Logger</h3>
+					Re-exports <a href="../classes/harp_utils.contextlogger-3.html">ContextLogger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="contextlogger-2" class="tsd-anchor"></a>
+					<h3>Context<wbr>Logger</h3>
+					Re-exports <a href="../classes/harp_utils.contextlogger-3.html">ContextLogger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="domutils" class="tsd-anchor"></a>
+					<h3>DOMUtils</h3>
+					Re-exports <a href="harp_utils.domutils-3.html">DOMUtils</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="domutils-1" class="tsd-anchor"></a>
+					<h3>DOMUtils</h3>
+					Re-exports <a href="harp_utils.domutils-3.html">DOMUtils</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="domutils-2" class="tsd-anchor"></a>
+					<h3>DOMUtils</h3>
+					Re-exports <a href="harp_utils.domutils-3.html">DOMUtils</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="groupedprioritylist" class="tsd-anchor"></a>
+					<h3>Grouped<wbr>Priority<wbr>List</h3>
+					Re-exports <a href="../classes/harp_utils.groupedprioritylist-3.html">GroupedPriorityList</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="groupedprioritylist-1" class="tsd-anchor"></a>
+					<h3>Grouped<wbr>Priority<wbr>List</h3>
+					Re-exports <a href="../classes/harp_utils.groupedprioritylist-3.html">GroupedPriorityList</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="groupedprioritylist-2" class="tsd-anchor"></a>
+					<h3>Grouped<wbr>Priority<wbr>List</h3>
+					Re-exports <a href="../classes/harp_utils.groupedprioritylist-3.html">GroupedPriorityList</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="ichannel" class="tsd-anchor"></a>
+					<h3>IChannel</h3>
+					Re-exports <a href="../interfaces/harp_utils.ichannel-4.html">IChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="ichannel-1" class="tsd-anchor"></a>
+					<h3>IChannel</h3>
+					Re-exports <a href="../interfaces/harp_utils.ichannel-4.html">IChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="ichannel-2" class="tsd-anchor"></a>
+					<h3>IChannel</h3>
+					Re-exports <a href="../interfaces/harp_utils.ichannel-4.html">IChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="ichannel-3" class="tsd-anchor"></a>
+					<h3>IChannel</h3>
+					Re-exports <a href="../interfaces/harp_utils.ichannel-4.html">IChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="icontextlogger" class="tsd-anchor"></a>
+					<h3>IContext<wbr>Logger</h3>
+					Re-exports <a href="../interfaces/harp_utils.icontextlogger-3.html">IContextLogger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="icontextlogger-1" class="tsd-anchor"></a>
+					<h3>IContext<wbr>Logger</h3>
+					Re-exports <a href="../interfaces/harp_utils.icontextlogger-3.html">IContextLogger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="icontextlogger-2" class="tsd-anchor"></a>
+					<h3>IContext<wbr>Logger</h3>
+					Re-exports <a href="../interfaces/harp_utils.icontextlogger-3.html">IContextLogger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="ilogger" class="tsd-anchor"></a>
+					<h3>ILogger</h3>
+					Re-exports <a href="../interfaces/harp_utils.ilogger-4.html">ILogger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="ilogger-1" class="tsd-anchor"></a>
+					<h3>ILogger</h3>
+					Re-exports <a href="../interfaces/harp_utils.ilogger-4.html">ILogger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="ilogger-2" class="tsd-anchor"></a>
+					<h3>ILogger</h3>
+					Re-exports <a href="../interfaces/harp_utils.ilogger-4.html">ILogger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="ilogger-3" class="tsd-anchor"></a>
+					<h3>ILogger</h3>
+					Re-exports <a href="../interfaces/harp_utils.ilogger-4.html">ILogger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isimplechannel" class="tsd-anchor"></a>
+					<h3>ISimple<wbr>Channel</h3>
+					Re-exports <a href="../interfaces/harp_utils.isimplechannel-3.html">ISimpleChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isimplechannel-1" class="tsd-anchor"></a>
+					<h3>ISimple<wbr>Channel</h3>
+					Re-exports <a href="../interfaces/harp_utils.isimplechannel-3.html">ISimpleChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isimplechannel-2" class="tsd-anchor"></a>
+					<h3>ISimple<wbr>Channel</h3>
+					Re-exports <a href="../interfaces/harp_utils.isimplechannel-3.html">ISimpleChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="iworkerchannelmessage" class="tsd-anchor"></a>
+					<h3>IWorker<wbr>Channel<wbr>Message</h3>
+					Re-exports <a href="../interfaces/harp_utils.iworkerchannelmessage-4.html">IWorkerChannelMessage</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="iworkerchannelmessage-1" class="tsd-anchor"></a>
+					<h3>IWorker<wbr>Channel<wbr>Message</h3>
+					Re-exports <a href="../interfaces/harp_utils.iworkerchannelmessage-4.html">IWorkerChannelMessage</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="iworkerchannelmessage-2" class="tsd-anchor"></a>
+					<h3>IWorker<wbr>Channel<wbr>Message</h3>
+					Re-exports <a href="../interfaces/harp_utils.iworkerchannelmessage-4.html">IWorkerChannelMessage</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="iworkerchannelmessage-3" class="tsd-anchor"></a>
+					<h3>IWorker<wbr>Channel<wbr>Message</h3>
+					Re-exports <a href="../interfaces/harp_utils.iworkerchannelmessage-4.html">IWorkerChannelMessage</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loglevel" class="tsd-anchor"></a>
+					<h3>Log<wbr>Level</h3>
+					Re-exports <a href="../enums/harp_utils.loglevel-4.html">LogLevel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loglevel-1" class="tsd-anchor"></a>
+					<h3>Log<wbr>Level</h3>
+					Re-exports <a href="../enums/harp_utils.loglevel-4.html">LogLevel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loglevel-2" class="tsd-anchor"></a>
+					<h3>Log<wbr>Level</h3>
+					Re-exports <a href="../enums/harp_utils.loglevel-4.html">LogLevel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loglevel-3" class="tsd-anchor"></a>
+					<h3>Log<wbr>Level</h3>
+					Re-exports <a href="../enums/harp_utils.loglevel-4.html">LogLevel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="logger" class="tsd-anchor"></a>
+					<h3>Logger</h3>
+					Re-exports <a href="../classes/harp_utils.logger-4.html">Logger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="logger-1" class="tsd-anchor"></a>
+					<h3>Logger</h3>
+					Re-exports <a href="../classes/harp_utils.logger-4.html">Logger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="logger-2" class="tsd-anchor"></a>
+					<h3>Logger</h3>
+					Re-exports <a href="../classes/harp_utils.logger-4.html">Logger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="logger-3" class="tsd-anchor"></a>
+					<h3>Logger</h3>
+					Re-exports <a href="../classes/harp_utils.logger-4.html">Logger</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loggermanager" class="tsd-anchor"></a>
+					<h3>Logger<wbr>Manager</h3>
+					Re-exports <a href="../classes/harp_utils.loggermanager-4.html">LoggerManager</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loggermanager-1" class="tsd-anchor"></a>
+					<h3>Logger<wbr>Manager</h3>
+					Re-exports <a href="../classes/harp_utils.loggermanager-4.html">LoggerManager</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loggermanager-2" class="tsd-anchor"></a>
+					<h3>Logger<wbr>Manager</h3>
+					Re-exports <a href="../classes/harp_utils.loggermanager-4.html">LoggerManager</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loggermanager-3" class="tsd-anchor"></a>
+					<h3>Logger<wbr>Manager</h3>
+					Re-exports <a href="../classes/harp_utils.loggermanager-4.html">LoggerManager</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loggeroptions" class="tsd-anchor"></a>
+					<h3>Logger<wbr>Options</h3>
+					Re-exports <a href="../classes/harp_utils.loggeroptions-4.html">LoggerOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loggeroptions-1" class="tsd-anchor"></a>
+					<h3>Logger<wbr>Options</h3>
+					Re-exports <a href="../classes/harp_utils.loggeroptions-4.html">LoggerOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loggeroptions-2" class="tsd-anchor"></a>
+					<h3>Logger<wbr>Options</h3>
+					Re-exports <a href="../classes/harp_utils.loggeroptions-4.html">LoggerOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="loggeroptions-3" class="tsd-anchor"></a>
+					<h3>Logger<wbr>Options</h3>
+					Re-exports <a href="../classes/harp_utils.loggeroptions-4.html">LoggerOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="math2d" class="tsd-anchor"></a>
+					<h3>Math2D</h3>
+					Re-exports <a href="harp_utils.math2d-3.html">Math2D</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="math2d-1" class="tsd-anchor"></a>
+					<h3>Math2D</h3>
+					Re-exports <a href="harp_utils.math2d-3.html">Math2D</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="math2d-2" class="tsd-anchor"></a>
+					<h3>Math2D</h3>
+					Re-exports <a href="harp_utils.math2d-3.html">Math2D</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="mathutils" class="tsd-anchor"></a>
+					<h3>Math<wbr>Utils</h3>
+					Re-exports <a href="harp_utils.mathutils-3.html">MathUtils</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="mathutils-1" class="tsd-anchor"></a>
+					<h3>Math<wbr>Utils</h3>
+					Re-exports <a href="harp_utils.mathutils-3.html">MathUtils</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="mathutils-2" class="tsd-anchor"></a>
+					<h3>Math<wbr>Utils</h3>
+					Re-exports <a href="harp_utils.mathutils-3.html">MathUtils</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="multichannel" class="tsd-anchor"></a>
+					<h3>Multi<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.multichannel-4.html">MultiChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="multichannel-1" class="tsd-anchor"></a>
+					<h3>Multi<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.multichannel-4.html">MultiChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="multichannel-2" class="tsd-anchor"></a>
+					<h3>Multi<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.multichannel-4.html">MultiChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="multichannel-3" class="tsd-anchor"></a>
+					<h3>Multi<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.multichannel-4.html">MultiChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="performancetimer" class="tsd-anchor"></a>
+					<h3>Performance<wbr>Timer</h3>
+					Re-exports <a href="../classes/harp_utils.performancetimer-3.html">PerformanceTimer</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="performancetimer-1" class="tsd-anchor"></a>
+					<h3>Performance<wbr>Timer</h3>
+					Re-exports <a href="../classes/harp_utils.performancetimer-3.html">PerformanceTimer</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="performancetimer-2" class="tsd-anchor"></a>
+					<h3>Performance<wbr>Timer</h3>
+					Re-exports <a href="../classes/harp_utils.performancetimer-3.html">PerformanceTimer</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prefixmapuriresolver" class="tsd-anchor"></a>
+					<h3>Prefix<wbr>Map<wbr>Uri<wbr>Resolver</h3>
+					Re-exports <a href="../classes/harp_utils.prefixmapuriresolver-3.html">PrefixMapUriResolver</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prefixmapuriresolver-1" class="tsd-anchor"></a>
+					<h3>Prefix<wbr>Map<wbr>Uri<wbr>Resolver</h3>
+					Re-exports <a href="../classes/harp_utils.prefixmapuriresolver-3.html">PrefixMapUriResolver</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prefixmapuriresolver-2" class="tsd-anchor"></a>
+					<h3>Prefix<wbr>Map<wbr>Uri<wbr>Resolver</h3>
+					Re-exports <a href="../classes/harp_utils.prefixmapuriresolver-3.html">PrefixMapUriResolver</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prefixuriresolverdefinition" class="tsd-anchor"></a>
+					<h3>Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</h3>
+					Re-exports <a href="../interfaces/harp_utils.prefixuriresolverdefinition-3.html">PrefixUriResolverDefinition</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prefixuriresolverdefinition-1" class="tsd-anchor"></a>
+					<h3>Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</h3>
+					Re-exports <a href="../interfaces/harp_utils.prefixuriresolverdefinition-3.html">PrefixUriResolverDefinition</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prefixuriresolverdefinition-2" class="tsd-anchor"></a>
+					<h3>Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</h3>
+					Re-exports <a href="../interfaces/harp_utils.prefixuriresolverdefinition-3.html">PrefixUriResolverDefinition</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prioritylistelement" class="tsd-anchor"></a>
+					<h3>Priority<wbr>List<wbr>Element</h3>
+					Re-exports <a href="../interfaces/harp_utils.prioritylistelement-3.html">PriorityListElement</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prioritylistelement-1" class="tsd-anchor"></a>
+					<h3>Priority<wbr>List<wbr>Element</h3>
+					Re-exports <a href="../interfaces/harp_utils.prioritylistelement-3.html">PriorityListElement</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prioritylistelement-2" class="tsd-anchor"></a>
+					<h3>Priority<wbr>List<wbr>Element</h3>
+					Re-exports <a href="../interfaces/harp_utils.prioritylistelement-3.html">PriorityListElement</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prioritylistgroup" class="tsd-anchor"></a>
+					<h3>Priority<wbr>List<wbr>Group</h3>
+					Re-exports <a href="../classes/harp_utils.prioritylistgroup-3.html">PriorityListGroup</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prioritylistgroup-1" class="tsd-anchor"></a>
+					<h3>Priority<wbr>List<wbr>Group</h3>
+					Re-exports <a href="../classes/harp_utils.prioritylistgroup-3.html">PriorityListGroup</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prioritylistgroup-2" class="tsd-anchor"></a>
+					<h3>Priority<wbr>List<wbr>Group</h3>
+					Re-exports <a href="../classes/harp_utils.prioritylistgroup-3.html">PriorityListGroup</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prioritylistgroupmap" class="tsd-anchor"></a>
+					<h3>Priority<wbr>List<wbr>Group<wbr>Map</h3>
+					Re-exports <a href="harp_utils.html#prioritylistgroupmap-3">PriorityListGroupMap</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prioritylistgroupmap-1" class="tsd-anchor"></a>
+					<h3>Priority<wbr>List<wbr>Group<wbr>Map</h3>
+					Re-exports <a href="harp_utils.html#prioritylistgroupmap-3">PriorityListGroupMap</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="prioritylistgroupmap-2" class="tsd-anchor"></a>
+					<h3>Priority<wbr>List<wbr>Group<wbr>Map</h3>
+					Re-exports <a href="harp_utils.html#prioritylistgroupmap-3">PriorityListGroupMap</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="relativeuriresolver" class="tsd-anchor"></a>
+					<h3>Relative<wbr>Uri<wbr>Resolver</h3>
+					Re-exports <a href="../classes/harp_utils.relativeuriresolver-3.html">RelativeUriResolver</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="relativeuriresolver-1" class="tsd-anchor"></a>
+					<h3>Relative<wbr>Uri<wbr>Resolver</h3>
+					Re-exports <a href="../classes/harp_utils.relativeuriresolver-3.html">RelativeUriResolver</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="relativeuriresolver-2" class="tsd-anchor"></a>
+					<h3>Relative<wbr>Uri<wbr>Resolver</h3>
+					Re-exports <a href="../classes/harp_utils.relativeuriresolver-3.html">RelativeUriResolver</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="task" class="tsd-anchor"></a>
+					<h3>Task</h3>
+					Re-exports <a href="../interfaces/harp_utils.task-3.html">Task</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="task-1" class="tsd-anchor"></a>
+					<h3>Task</h3>
+					Re-exports <a href="../interfaces/harp_utils.task-3.html">Task</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="task-2" class="tsd-anchor"></a>
+					<h3>Task</h3>
+					Re-exports <a href="../interfaces/harp_utils.task-3.html">Task</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="taskqueue" class="tsd-anchor"></a>
+					<h3>Task<wbr>Queue</h3>
+					Re-exports <a href="../classes/harp_utils.taskqueue-3.html">TaskQueue</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="taskqueue-1" class="tsd-anchor"></a>
+					<h3>Task<wbr>Queue</h3>
+					Re-exports <a href="../classes/harp_utils.taskqueue-3.html">TaskQueue</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="taskqueue-2" class="tsd-anchor"></a>
+					<h3>Task<wbr>Queue</h3>
+					Re-exports <a href="../classes/harp_utils.taskqueue-3.html">TaskQueue</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="taskqueueoptions" class="tsd-anchor"></a>
+					<h3>Task<wbr>Queue<wbr>Options</h3>
+					Re-exports <a href="../interfaces/harp_utils.taskqueueoptions-3.html">TaskQueueOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="taskqueueoptions-1" class="tsd-anchor"></a>
+					<h3>Task<wbr>Queue<wbr>Options</h3>
+					Re-exports <a href="../interfaces/harp_utils.taskqueueoptions-3.html">TaskQueueOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="taskqueueoptions-2" class="tsd-anchor"></a>
+					<h3>Task<wbr>Queue<wbr>Options</h3>
+					Re-exports <a href="../interfaces/harp_utils.taskqueueoptions-3.html">TaskQueueOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="tokenauthentication" class="tsd-anchor"></a>
+					<h3>Token<wbr>Authentication</h3>
+					Re-exports <a href="../interfaces/harp_utils.tokenauthentication-3.html">TokenAuthentication</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="tokenauthentication-1" class="tsd-anchor"></a>
+					<h3>Token<wbr>Authentication</h3>
+					Re-exports <a href="../interfaces/harp_utils.tokenauthentication-3.html">TokenAuthentication</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="tokenauthentication-2" class="tsd-anchor"></a>
+					<h3>Token<wbr>Authentication</h3>
+					Re-exports <a href="../interfaces/harp_utils.tokenauthentication-3.html">TokenAuthentication</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="uriresolver" class="tsd-anchor"></a>
+					<h3>Uri<wbr>Resolver</h3>
+					Re-exports <a href="../interfaces/harp_utils.uriresolver-3.html">UriResolver</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="uriresolver-1" class="tsd-anchor"></a>
+					<h3>Uri<wbr>Resolver</h3>
+					Re-exports <a href="../interfaces/harp_utils.uriresolver-3.html">UriResolver</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="uriresolver-2" class="tsd-anchor"></a>
+					<h3>Uri<wbr>Resolver</h3>
+					Re-exports <a href="../interfaces/harp_utils.uriresolver-3.html">UriResolver</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="workerchannel_msg_type" class="tsd-anchor"></a>
+					<h3>WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</h3>
+					Re-exports <a href="harp_utils.html#workerchannel_msg_type-4">WORKERCHANNEL_MSG_TYPE</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="workerchannel_msg_type-1" class="tsd-anchor"></a>
+					<h3>WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</h3>
+					Re-exports <a href="harp_utils.html#workerchannel_msg_type-4">WORKERCHANNEL_MSG_TYPE</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="workerchannel_msg_type-2" class="tsd-anchor"></a>
+					<h3>WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</h3>
+					Re-exports <a href="harp_utils.html#workerchannel_msg_type-4">WORKERCHANNEL_MSG_TYPE</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="workerchannel_msg_type-3" class="tsd-anchor"></a>
+					<h3>WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</h3>
+					Re-exports <a href="harp_utils.html#workerchannel_msg_type-4">WORKERCHANNEL_MSG_TYPE</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="workerchannel" class="tsd-anchor"></a>
+					<h3>Worker<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.workerchannel-4.html">WorkerChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="workerchannel-1" class="tsd-anchor"></a>
+					<h3>Worker<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.workerchannel-4.html">WorkerChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="workerchannel-2" class="tsd-anchor"></a>
+					<h3>Worker<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.workerchannel-4.html">WorkerChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="workerchannel-3" class="tsd-anchor"></a>
+					<h3>Worker<wbr>Channel</h3>
+					Re-exports <a href="../classes/harp_utils.workerchannel-4.html">WorkerChannel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="applymixins" class="tsd-anchor"></a>
+					<h3>apply<wbr>Mixins</h3>
+					Re-exports <a href="harp_utils.html#applymixins-3">applyMixins</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="applymixins-1" class="tsd-anchor"></a>
+					<h3>apply<wbr>Mixins</h3>
+					Re-exports <a href="harp_utils.html#applymixins-3">applyMixins</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="applymixins-2" class="tsd-anchor"></a>
+					<h3>apply<wbr>Mixins</h3>
+					Re-exports <a href="harp_utils.html#applymixins-3">applyMixins</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="applymixinswithoutproperties" class="tsd-anchor"></a>
+					<h3>apply<wbr>Mixins<wbr>Without<wbr>Properties</h3>
+					Re-exports <a href="harp_utils.html#applymixinswithoutproperties-3">applyMixinsWithoutProperties</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="applymixinswithoutproperties-1" class="tsd-anchor"></a>
+					<h3>apply<wbr>Mixins<wbr>Without<wbr>Properties</h3>
+					Re-exports <a href="harp_utils.html#applymixinswithoutproperties-3">applyMixinsWithoutProperties</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="applymixinswithoutproperties-2" class="tsd-anchor"></a>
+					<h3>apply<wbr>Mixins<wbr>Without<wbr>Properties</h3>
+					Re-exports <a href="harp_utils.html#applymixinswithoutproperties-3">applyMixinsWithoutProperties</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="assertexists" class="tsd-anchor"></a>
+					<h3>assert<wbr>Exists</h3>
+					Re-exports <a href="harp_utils.html#assertexists-3">assertExists</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="assertexists-1" class="tsd-anchor"></a>
+					<h3>assert<wbr>Exists</h3>
+					Re-exports <a href="harp_utils.html#assertexists-3">assertExists</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="assertexists-2" class="tsd-anchor"></a>
+					<h3>assert<wbr>Exists</h3>
+					Re-exports <a href="harp_utils.html#assertexists-3">assertExists</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="baseurl" class="tsd-anchor"></a>
+					<h3>base<wbr>Url</h3>
+					Re-exports <a href="harp_utils.html#baseurl-3">baseUrl</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="baseurl-1" class="tsd-anchor"></a>
+					<h3>base<wbr>Url</h3>
+					Re-exports <a href="harp_utils.html#baseurl-3">baseUrl</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="baseurl-2" class="tsd-anchor"></a>
+					<h3>base<wbr>Url</h3>
+					Re-exports <a href="harp_utils.html#baseurl-3">baseUrl</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="chaincallbacks" class="tsd-anchor"></a>
+					<h3>chain<wbr>Callbacks</h3>
+					Re-exports <a href="harp_utils.html#chaincallbacks-3">chainCallbacks</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="chaincallbacks-1" class="tsd-anchor"></a>
+					<h3>chain<wbr>Callbacks</h3>
+					Re-exports <a href="harp_utils.html#chaincallbacks-3">chainCallbacks</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="chaincallbacks-2" class="tsd-anchor"></a>
+					<h3>chain<wbr>Callbacks</h3>
+					Re-exports <a href="harp_utils.html#chaincallbacks-3">chainCallbacks</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="clonedeep" class="tsd-anchor"></a>
+					<h3>clone<wbr>Deep</h3>
+					Re-exports <a href="harp_utils.html#clonedeep-3">cloneDeep</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="clonedeep-1" class="tsd-anchor"></a>
+					<h3>clone<wbr>Deep</h3>
+					Re-exports <a href="harp_utils.html#clonedeep-3">cloneDeep</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="clonedeep-2" class="tsd-anchor"></a>
+					<h3>clone<wbr>Deep</h3>
+					Re-exports <a href="harp_utils.html#clonedeep-3">cloneDeep</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="composeuriresolvers" class="tsd-anchor"></a>
+					<h3>compose<wbr>Uri<wbr>Resolvers</h3>
+					Re-exports <a href="harp_utils.html#composeuriresolvers-3">composeUriResolvers</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="composeuriresolvers-1" class="tsd-anchor"></a>
+					<h3>compose<wbr>Uri<wbr>Resolvers</h3>
+					Re-exports <a href="harp_utils.html#composeuriresolvers-3">composeUriResolvers</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="composeuriresolvers-2" class="tsd-anchor"></a>
+					<h3>compose<wbr>Uri<wbr>Resolvers</h3>
+					Re-exports <a href="harp_utils.html#composeuriresolvers-3">composeUriResolvers</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="convertfragmentshadertowebgl2" class="tsd-anchor"></a>
+					<h3>convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</h3>
+					Re-exports <a href="harp_utils.html#convertfragmentshadertowebgl2-3">convertFragmentShaderToWebGL2</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="convertfragmentshadertowebgl2-1" class="tsd-anchor"></a>
+					<h3>convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</h3>
+					Re-exports <a href="harp_utils.html#convertfragmentshadertowebgl2-3">convertFragmentShaderToWebGL2</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="convertfragmentshadertowebgl2-2" class="tsd-anchor"></a>
+					<h3>convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</h3>
+					Re-exports <a href="harp_utils.html#convertfragmentshadertowebgl2-3">convertFragmentShaderToWebGL2</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="convertvertexshadertowebgl2" class="tsd-anchor"></a>
+					<h3>convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</h3>
+					Re-exports <a href="harp_utils.html#convertvertexshadertowebgl2-3">convertVertexShaderToWebGL2</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="convertvertexshadertowebgl2-1" class="tsd-anchor"></a>
+					<h3>convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</h3>
+					Re-exports <a href="harp_utils.html#convertvertexshadertowebgl2-3">convertVertexShaderToWebGL2</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="convertvertexshadertowebgl2-2" class="tsd-anchor"></a>
+					<h3>convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</h3>
+					Re-exports <a href="harp_utils.html#convertvertexshadertowebgl2-3">convertVertexShaderToWebGL2</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="getappbaseurl" class="tsd-anchor"></a>
+					<h3>get<wbr>App<wbr>Base<wbr>Url</h3>
+					Re-exports <a href="harp_utils.html#getappbaseurl-2">getAppBaseUrl</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="getappbaseurl-1" class="tsd-anchor"></a>
+					<h3>get<wbr>App<wbr>Base<wbr>Url</h3>
+					Re-exports <a href="harp_utils.html#getappbaseurl-2">getAppBaseUrl</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="getoptionvalue" class="tsd-anchor"></a>
+					<h3>get<wbr>Option<wbr>Value</h3>
+					Re-exports <a href="harp_utils.html#getoptionvalue-3">getOptionValue</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="getoptionvalue-1" class="tsd-anchor"></a>
+					<h3>get<wbr>Option<wbr>Value</h3>
+					Re-exports <a href="harp_utils.html#getoptionvalue-3">getOptionValue</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="getoptionvalue-2" class="tsd-anchor"></a>
+					<h3>get<wbr>Option<wbr>Value</h3>
+					Re-exports <a href="harp_utils.html#getoptionvalue-3">getOptionValue</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geturlhostandprotocol" class="tsd-anchor"></a>
+					<h3>get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</h3>
+					Re-exports <a href="harp_utils.html#geturlhostandprotocol-3">getUrlHostAndProtocol</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geturlhostandprotocol-1" class="tsd-anchor"></a>
+					<h3>get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</h3>
+					Re-exports <a href="harp_utils.html#geturlhostandprotocol-3">getUrlHostAndProtocol</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geturlhostandprotocol-2" class="tsd-anchor"></a>
+					<h3>get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</h3>
+					Re-exports <a href="harp_utils.html#geturlhostandprotocol-3">getUrlHostAndProtocol</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geturlorigin" class="tsd-anchor"></a>
+					<h3>get<wbr>Url<wbr>Origin</h3>
+					Re-exports <a href="harp_utils.html#geturlorigin-3">getUrlOrigin</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geturlorigin-1" class="tsd-anchor"></a>
+					<h3>get<wbr>Url<wbr>Origin</h3>
+					Re-exports <a href="harp_utils.html#geturlorigin-3">getUrlOrigin</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="geturlorigin-2" class="tsd-anchor"></a>
+					<h3>get<wbr>Url<wbr>Origin</h3>
+					Re-exports <a href="harp_utils.html#geturlorigin-3">getUrlOrigin</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="pick" class="tsd-anchor"></a>
+					<h3>pick</h3>
+					Re-exports <a href="harp_utils.html#pick-3">pick</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="pick-1" class="tsd-anchor"></a>
+					<h3>pick</h3>
+					Re-exports <a href="harp_utils.html#pick-3">pick</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="pick-2" class="tsd-anchor"></a>
+					<h3>pick</h3>
+					Re-exports <a href="harp_utils.html#pick-3">pick</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="resolvereferenceuri" class="tsd-anchor"></a>
+					<h3>resolve<wbr>Reference<wbr>Uri</h3>
+					Re-exports <a href="harp_utils.html#resolvereferenceuri-3">resolveReferenceUri</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="resolvereferenceuri-1" class="tsd-anchor"></a>
+					<h3>resolve<wbr>Reference<wbr>Uri</h3>
+					Re-exports <a href="harp_utils.html#resolvereferenceuri-3">resolveReferenceUri</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="resolvereferenceuri-2" class="tsd-anchor"></a>
+					<h3>resolve<wbr>Reference<wbr>Uri</h3>
+					Re-exports <a href="harp_utils.html#resolvereferenceuri-3">resolveReferenceUri</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="samplebilinear" class="tsd-anchor"></a>
+					<h3>sample<wbr>Bilinear</h3>
+					Re-exports <a href="harp_utils.html#samplebilinear-3">sampleBilinear</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="samplebilinear-1" class="tsd-anchor"></a>
+					<h3>sample<wbr>Bilinear</h3>
+					Re-exports <a href="harp_utils.html#samplebilinear-3">sampleBilinear</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="samplebilinear-2" class="tsd-anchor"></a>
+					<h3>sample<wbr>Bilinear</h3>
+					Re-exports <a href="harp_utils.html#samplebilinear-3">sampleBilinear</a>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="authenticationprovider-3" class="tsd-anchor"></a>
+					<h3>Authentication<wbr>Provider</h3>
+					<div class="tsd-signature tsd-kind-icon">Authentication<wbr>Provider<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/AuthenticationUtils.ts#L10">@here/harp-utils/lib/AuthenticationUtils.ts:10</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Authentification token/code provider.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="prioritylistgroupmap-3" class="tsd-anchor"></a>
+					<h3>Priority<wbr>List<wbr>Group<wbr>Map</h3>
+					<div class="tsd-signature tsd-kind-icon">Priority<wbr>List<wbr>Group<wbr>Map&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><a href="../classes/harp_utils.prioritylistgroup-3.html" class="tsd-signature-type">PriorityListGroup</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/GroupedPriorityList.ts#L54">@here/harp-utils/lib/GroupedPriorityList.ts:54</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The <code>PriorityListGroupMap</code> is a map to map the (integer) priority to a <a href="harp_utils.html#prioritylistgroup">PriorityListGroup</a>.</p>
+						</div>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_utils.prioritylistelement-3.html" class="tsd-signature-type">PriorityListElement</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="workerchannel_msg_type-4" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</h3>
+					<div class="tsd-signature tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"worker-channel-message"</span><span class="tsd-signature-symbol"> = &quot;worker-channel-message&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/Logger/WorkerChannel.ts#L12">@here/harp-utils/lib/Logger/WorkerChannel.ts:12</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="applymixins-3" class="tsd-anchor"></a>
+					<h3>apply<wbr>Mixins</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">apply<wbr>Mixins<span class="tsd-signature-symbol">(</span>derivedCtor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, baseCtors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/Mixins.ts#L15">@here/harp-utils/lib/Mixins.ts:15</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Copy methods and properties from one prototype into another.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://www.typescriptlang.org/docs/handbook/mixins.html">https://www.typescriptlang.org/docs/handbook/mixins.html</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>derivedCtor: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Class to mix methods and properties into.</p>
+									</div>
+								</li>
+								<li>
+									<h5>baseCtors: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Class to take all methods and properties from.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="applymixinswithoutproperties-3" class="tsd-anchor"></a>
+					<h3>apply<wbr>Mixins<wbr>Without<wbr>Properties</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">apply<wbr>Mixins<wbr>Without<wbr>Properties<span class="tsd-signature-symbol">(</span>derivedCtor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, baseCtors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/Mixins.ts#L31">@here/harp-utils/lib/Mixins.ts:31</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Copy methods from one prototype into another.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://www.typescriptlang.org/docs/handbook/mixins.html">https://www.typescriptlang.org/docs/handbook/mixins.html</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>derivedCtor: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Class to mix methods into.</p>
+									</div>
+								</li>
+								<li>
+									<h5>baseCtors: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Class to take all methods from.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="assertexists-3" class="tsd-anchor"></a>
+					<h3>assert<wbr>Exists</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">assert<wbr>Exists&lt;T&gt;<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/assert.ts#L32">@here/harp-utils/lib/assert.ts:32</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>element: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> message: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="baseurl-3" class="tsd-anchor"></a>
+					<h3>base<wbr>Url</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">base<wbr>Url<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/UrlUtils.ts#L71">@here/harp-utils/lib/UrlUtils.ts:71</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns base URL of given resource URL.</p>
+								</div>
+								<p><code>Url</code> with trailing slash are considered genuine &#39;locations&#39;, they are returned as is, however if
+								<code>url</code> ends with name component it is treated as &quot;leaf&quot;, so last path component is removed.</p>
+								<p>Standalone files (without any folder structure) are considered relative to <code>./</code>.</p>
+								<p>Examples:</p>
+								<pre><code>    https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/themes/</span>a.json -&gt; https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/themes/</span>
+    https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/themes/</span> -&gt; https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/themes/</span>
+    https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/themes -&gt; https:/</span><span class="hljs-regexp">/foo.com/</span> <span class="hljs-regexp">//</span> note, themes is treated as leaf
+    themes<span class="hljs-regexp">/day.json -&gt; themes/</span>
+    themes -&gt; ./</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="chaincallbacks-3" class="tsd-anchor"></a>
+					<h3>chain<wbr>Callbacks</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">chain<wbr>Callbacks&lt;T&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, f2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/Functions.ts#L10">@here/harp-utils/lib/Functions.ts:10</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Chains two functions for further assigning as one wrapped callback function</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>f1: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>f2: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="clonedeep-3" class="tsd-anchor"></a>
+					<h3>clone<wbr>Deep</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">clone<wbr>Deep&lt;T&gt;<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/ObjectUtils.ts#L16">@here/harp-utils/lib/ObjectUtils.ts:16</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deep clone of object.</p>
+								</div>
+								<p>Like <code>JSON.parse(JSON.stringify(obj))</code>, but supports basic javascript types (string, number,
+								object), <code>Date</code> and <code>RegExp</code>s and cycles.</p>
+								<p>Throws error if enounters object with <code>prototype</code> assuming that in general class instances
+								cannot be reliably cloned by generic algorithm.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>obj: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="composeuriresolvers-3" class="tsd-anchor"></a>
+					<h3>compose<wbr>Uri<wbr>Resolvers</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">compose<wbr>Uri<wbr>Resolvers<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>resolvers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/harp_utils.uriresolver-3.html" class="tsd-signature-type">UriResolver</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_utils.uriresolver-3.html" class="tsd-signature-type">UriResolver</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/UriResolver.ts#L91">@here/harp-utils/lib/UriResolver.ts:91</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Compose URI resolvers.</p>
+								</div>
+								<p>Creates new <a href="harp_utils.html#uriresolver">UriResolver</a> that applies resolvers in orders or arguments.</p>
+								<p>Example:</p>
+								<pre><code><span class="hljs-keyword">const</span> themeUrl = ...; <span class="hljs-comment">// url of parent object</span>
+<span class="hljs-keyword">const</span> childUrlResolver = composeUrlResolvers(
+      <span class="hljs-keyword">new</span> RelativeUriResolver(themeUrl),
+      defaultUrlResolver
+);</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>resolvers: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/harp_utils.uriresolver-3.html" class="tsd-signature-type">UriResolver</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_utils.uriresolver-3.html" class="tsd-signature-type">UriResolver</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="convertfragmentshadertowebgl2-3" class="tsd-anchor"></a>
+					<h3>convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2<span class="tsd-signature-symbol">(</span>fragmentShader<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/GlslUtils.ts#L27">@here/harp-utils/lib/GlslUtils.ts:27</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts webgl1-compatible fragment shader glsl code to webgl2.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fragmentShader: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>String containing the fragment shader glsl code.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>the converted glsl code.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="convertvertexshadertowebgl2-3" class="tsd-anchor"></a>
+					<h3>convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2<span class="tsd-signature-symbol">(</span>vertexShader<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/GlslUtils.ts#L13">@here/harp-utils/lib/GlslUtils.ts:13</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts webgl1-compatible vertex shader glsl code to webgl2.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>vertexShader: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>String containing the vertex shader glsl code.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>the converted glsl code.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getappbaseurl-2" class="tsd-anchor"></a>
+					<h3>get<wbr>App<wbr>Base<wbr>Url</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>App<wbr>Base<wbr>Url<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/UrlPlatformUtils.ts#L17">@here/harp-utils/lib/UrlPlatformUtils.ts:17</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get base URL for from where relative URLs will be loaded.</p>
+								</div>
+								<ul>
+									<li><p>In browser, it resolves to <code>baseUrl(location.href)</code> i.e document&#39;s base URL
+										(see: <a href="https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2">https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2</a>).</p>
+									</li>
+									<li><p>In node, it resolves to <code>file://${process.cwd()}</code>.</p>
+									</li>
+								</ul>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="getoptionvalue-3" class="tsd-anchor"></a>
+					<h3>get<wbr>Option<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Option<wbr>Value&lt;T&gt;<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Option<wbr>Value&lt;T&gt;<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Option<wbr>Value&lt;T&gt;<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Option<wbr>Value&lt;T&gt;<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, d<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Option<wbr>Value&lt;T&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/OptionsUtils.ts#L31">@here/harp-utils/lib/OptionsUtils.ts:31</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get first defined value.</p>
+								</div>
+								<p>Specialized &quot;replacement&quot; for <code>a || b || c</code> used frequently to get value from various sources
+									(defaults, configs  constants).
+									In contrast to <code>||</code>, this function provides proper typing for usual use cases (constant as last
+								argument) and correct treatment of <code>null</code> and <code>undefined</code>.</p>
+								<p>If last parameter is &quot;defined&quot; then return type is <code>T</code>, otherwise return type is <code>T | undefined</code>.</p>
+								<p>Usage example:</p>
+								<pre><code><span class="hljs-keyword">interface</span> Config {
+    x?: <span class="hljs-built_in">number</span>;
+}
+<span class="hljs-keyword">const</span> someConfig: Config = {};
+<span class="hljs-keyword">const</span> val: <span class="hljs-built_in">number</span> | <span class="hljs-literal">undefined</span> = <span class="hljs-literal">undefined</span>;
+<span class="hljs-keyword">const</span> DEFAULT = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">const</span> x = getOptionValue(val, someConfig.x, DEFAULT);
+    <span class="hljs-comment">// typeof x === &#x27;number&#x27; because DEFAULT is defined</span>
+<span class="hljs-keyword">const</span> y = getOptionValue(val, someConfig.x);
+    <span class="hljs-comment">// typeof y === &#x27;number | undefined&#x27; because someConfig.x is possibly undefined</span></code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>a: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/OptionsUtils.ts#L32">@here/harp-utils/lib/OptionsUtils.ts:32</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>a: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>b: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/OptionsUtils.ts#L33">@here/harp-utils/lib/OptionsUtils.ts:33</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>a: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>b: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>c: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/OptionsUtils.ts#L34">@here/harp-utils/lib/OptionsUtils.ts:34</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>a: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>b: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>c: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5>d: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/OptionsUtils.ts#L35">@here/harp-utils/lib/OptionsUtils.ts:35</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>values: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="geturlhostandprotocol-3" class="tsd-anchor"></a>
+					<h3>get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>protocol<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/UrlUtils.ts#L123">@here/harp-utils/lib/UrlUtils.ts:123</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Parse <code>host</code> and <code>protocol</code> part from URL.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>protocol<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>protocol<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="geturlorigin-3" class="tsd-anchor"></a>
+					<h3>get<wbr>Url<wbr>Origin</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Url<wbr>Origin<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/UrlUtils.ts#L102">@here/harp-utils/lib/UrlUtils.ts:102</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get <code>origin</code> part of URL.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>   <a href="https://example.com/foo">https://example.com/foo</a> -&gt; <a href="https://example.com">https://example.com</a>
+											//example.com:8080/ -&gt; //example.com:8080
+										file:///etc/hosts -&gt;</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>input URL</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>origin of given URL</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="pick-3" class="tsd-anchor"></a>
+					<h3>pick</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">pick&lt;T, K&gt;<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, props<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/ObjectUtils.ts#L71">@here/harp-utils/lib/ObjectUtils.ts:71</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Pick <code>props</code> from `object.</p>
+								</div>
+								<p>Runtime version of <code>Pick&lt;T,K&gt;</code>.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
+								</li>
+								<li>
+									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-type">T</span></h5>
+								</li>
+								<li>
+									<h5>props: <span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="resolvereferenceuri-3" class="tsd-anchor"></a>
+					<h3>resolve<wbr>Reference<wbr>Uri</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">resolve<wbr>Reference<wbr>Uri<span class="tsd-signature-symbol">(</span>parentUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, childUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/UrlUtils.ts#L37">@here/harp-utils/lib/UrlUtils.ts:37</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Resolve URI of referenced object w.r.t parent URI.</p>
+								</div>
+								<p>Resolves <code>childUri</code> as it would be loaded from location specified by <code>parentUri</code>.</p>
+								<p>If <code>childUri</code> is absolute, then it is returned unchanged.
+								If <code>childUri</code> is origin-absolute path, then only origin path is taken from <code>parentUri</code>.</p>
+								<p>See [[baseUri]] for reference how base URL of <code>parentUri</code> is determined.</p>
+								<p>Supports <code>http:</code>, <code>https:</code>, <code>file:</code>, <code>data:</code> schemes.</p>
+								<p>Examples:</p>
+								<pre><code><span class="hljs-regexp">//</span> normal case, child is sibling
+https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/themes/</span>day.json + images<span class="hljs-regexp">/foo.png -&gt; https:/</span><span class="hljs-regexp">/foo.com/</span>themes<span class="hljs-regexp">/images/</span>foo.png
+
+<span class="hljs-regexp">//</span> parent is <span class="hljs-string">&quot;folder&quot;</span>, so child is just located <span class="hljs-keyword">in</span> this folder
+https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/themes/</span> + images<span class="hljs-regexp">/foo.png -&gt; https:/</span><span class="hljs-regexp">/foo.com/</span>themes<span class="hljs-regexp">/images/</span>foo.png
+
+<span class="hljs-regexp">//</span> parent looks like leaf, so last component is stripped
+https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/themes + images/</span>foo.png -&gt; https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/images/</span>foo.png
+
+<span class="hljs-regexp">//</span> origin-absolute URL, takes only origin from parent
+https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/themes/</span>day.json + <span class="hljs-regexp">/fonts/</span>foo.json -&gt; https:<span class="hljs-regexp">//</span>foo.com<span class="hljs-regexp">/fonts/</span>foo.json</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parentUri: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>URI of parent resource</p>
+									</div>
+								</li>
+								<li>
+									<h5>childUri: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>URI of child as referenced from parent resource</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p><code>childUrl</code> as if anchored in location of <code>parentUrl</code></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="samplebilinear-3" class="tsd-anchor"></a>
+					<h3>sample<wbr>Bilinear</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">sample<wbr>Bilinear<span class="tsd-signature-symbol">(</span>texture<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TypedArray</span>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, u<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-utils/lib/SampleBilinear.ts#L26">@here/harp-utils/lib/SampleBilinear.ts:26</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a bilinear-interpolated texture sample for a given texture.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>texture: <span class="tsd-signature-type">TypedArray</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Two-dimensional texture to sample.</p>
+									</div>
+								</li>
+								<li>
+									<h5>width: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Texture width.</p>
+									</div>
+								</li>
+								<li>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Texture height.</p>
+									</div>
+								</li>
+								<li>
+									<h5>u: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number between 0 and 1 representing the location to sample in the width dimension.</p>
+									</div>
+								</li>
+								<li>
+									<h5>v: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number between 0 and 1 representing the location to sample in the height dimension.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="harp_utils.html">harp-<wbr>utils</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_utils.domutils-3.html">DOMUtils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_utils.math2d-3.html">Math2D</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_utils.mathutils-3.html">Math<wbr>Utils</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+						<ul>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#apikeyauthentication" class="tsd-kind-icon">Api<wbr>Key<wbr>Authentication</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#apikeyauthentication-1" class="tsd-kind-icon">Api<wbr>Key<wbr>Authentication</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#apikeyauthentication-2" class="tsd-kind-icon">Api<wbr>Key<wbr>Authentication</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#appidauthentication" class="tsd-kind-icon">App<wbr>IdAuthentication</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#appidauthentication-1" class="tsd-kind-icon">App<wbr>IdAuthentication</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#appidauthentication-2" class="tsd-kind-icon">App<wbr>IdAuthentication</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#authenticationprovider" class="tsd-kind-icon">Authentication<wbr>Provider</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#authenticationprovider-1" class="tsd-kind-icon">Authentication<wbr>Provider</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#authenticationprovider-2" class="tsd-kind-icon">Authentication<wbr>Provider</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#cachedresource" class="tsd-kind-icon">Cached<wbr>Resource</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#cachedresource-1" class="tsd-kind-icon">Cached<wbr>Resource</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#cachedresource-2" class="tsd-kind-icon">Cached<wbr>Resource</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#consolechannel" class="tsd-kind-icon">Console<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#consolechannel-1" class="tsd-kind-icon">Console<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#consolechannel-2" class="tsd-kind-icon">Console<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#consolechannel-3" class="tsd-kind-icon">Console<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#contextlogger" class="tsd-kind-icon">Context<wbr>Logger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#contextlogger-1" class="tsd-kind-icon">Context<wbr>Logger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#contextlogger-2" class="tsd-kind-icon">Context<wbr>Logger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#domutils" class="tsd-kind-icon">DOMUtils</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#domutils-1" class="tsd-kind-icon">DOMUtils</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#domutils-2" class="tsd-kind-icon">DOMUtils</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#groupedprioritylist" class="tsd-kind-icon">Grouped<wbr>Priority<wbr>List</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#groupedprioritylist-1" class="tsd-kind-icon">Grouped<wbr>Priority<wbr>List</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#groupedprioritylist-2" class="tsd-kind-icon">Grouped<wbr>Priority<wbr>List</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#ichannel" class="tsd-kind-icon">IChannel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#ichannel-1" class="tsd-kind-icon">IChannel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#ichannel-2" class="tsd-kind-icon">IChannel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#ichannel-3" class="tsd-kind-icon">IChannel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#icontextlogger" class="tsd-kind-icon">IContext<wbr>Logger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#icontextlogger-1" class="tsd-kind-icon">IContext<wbr>Logger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#icontextlogger-2" class="tsd-kind-icon">IContext<wbr>Logger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#ilogger" class="tsd-kind-icon">ILogger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#ilogger-1" class="tsd-kind-icon">ILogger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#ilogger-2" class="tsd-kind-icon">ILogger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#ilogger-3" class="tsd-kind-icon">ILogger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#isimplechannel" class="tsd-kind-icon">ISimple<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#isimplechannel-1" class="tsd-kind-icon">ISimple<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#isimplechannel-2" class="tsd-kind-icon">ISimple<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#iworkerchannelmessage" class="tsd-kind-icon">IWorker<wbr>Channel<wbr>Message</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#iworkerchannelmessage-1" class="tsd-kind-icon">IWorker<wbr>Channel<wbr>Message</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#iworkerchannelmessage-2" class="tsd-kind-icon">IWorker<wbr>Channel<wbr>Message</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#iworkerchannelmessage-3" class="tsd-kind-icon">IWorker<wbr>Channel<wbr>Message</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loglevel" class="tsd-kind-icon">Log<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loglevel-1" class="tsd-kind-icon">Log<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loglevel-2" class="tsd-kind-icon">Log<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loglevel-3" class="tsd-kind-icon">Log<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#logger" class="tsd-kind-icon">Logger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#logger-1" class="tsd-kind-icon">Logger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#logger-2" class="tsd-kind-icon">Logger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#logger-3" class="tsd-kind-icon">Logger</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loggermanager" class="tsd-kind-icon">Logger<wbr>Manager</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loggermanager-1" class="tsd-kind-icon">Logger<wbr>Manager</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loggermanager-2" class="tsd-kind-icon">Logger<wbr>Manager</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loggermanager-3" class="tsd-kind-icon">Logger<wbr>Manager</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loggeroptions" class="tsd-kind-icon">Logger<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loggeroptions-1" class="tsd-kind-icon">Logger<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loggeroptions-2" class="tsd-kind-icon">Logger<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#loggeroptions-3" class="tsd-kind-icon">Logger<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#math2d" class="tsd-kind-icon">Math2D</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#math2d-1" class="tsd-kind-icon">Math2D</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#math2d-2" class="tsd-kind-icon">Math2D</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#mathutils" class="tsd-kind-icon">Math<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#mathutils-1" class="tsd-kind-icon">Math<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#mathutils-2" class="tsd-kind-icon">Math<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#multichannel" class="tsd-kind-icon">Multi<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#multichannel-1" class="tsd-kind-icon">Multi<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#multichannel-2" class="tsd-kind-icon">Multi<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#multichannel-3" class="tsd-kind-icon">Multi<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#performancetimer" class="tsd-kind-icon">Performance<wbr>Timer</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#performancetimer-1" class="tsd-kind-icon">Performance<wbr>Timer</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#performancetimer-2" class="tsd-kind-icon">Performance<wbr>Timer</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prefixmapuriresolver" class="tsd-kind-icon">Prefix<wbr>Map<wbr>Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prefixmapuriresolver-1" class="tsd-kind-icon">Prefix<wbr>Map<wbr>Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prefixmapuriresolver-2" class="tsd-kind-icon">Prefix<wbr>Map<wbr>Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prefixuriresolverdefinition" class="tsd-kind-icon">Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prefixuriresolverdefinition-1" class="tsd-kind-icon">Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prefixuriresolverdefinition-2" class="tsd-kind-icon">Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prioritylistelement" class="tsd-kind-icon">Priority<wbr>List<wbr>Element</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prioritylistelement-1" class="tsd-kind-icon">Priority<wbr>List<wbr>Element</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prioritylistelement-2" class="tsd-kind-icon">Priority<wbr>List<wbr>Element</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prioritylistgroup" class="tsd-kind-icon">Priority<wbr>List<wbr>Group</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prioritylistgroup-1" class="tsd-kind-icon">Priority<wbr>List<wbr>Group</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prioritylistgroup-2" class="tsd-kind-icon">Priority<wbr>List<wbr>Group</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prioritylistgroupmap" class="tsd-kind-icon">Priority<wbr>List<wbr>Group<wbr>Map</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prioritylistgroupmap-1" class="tsd-kind-icon">Priority<wbr>List<wbr>Group<wbr>Map</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#prioritylistgroupmap-2" class="tsd-kind-icon">Priority<wbr>List<wbr>Group<wbr>Map</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#relativeuriresolver" class="tsd-kind-icon">Relative<wbr>Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#relativeuriresolver-1" class="tsd-kind-icon">Relative<wbr>Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#relativeuriresolver-2" class="tsd-kind-icon">Relative<wbr>Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#task" class="tsd-kind-icon">Task</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#task-1" class="tsd-kind-icon">Task</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#task-2" class="tsd-kind-icon">Task</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#taskqueue" class="tsd-kind-icon">Task<wbr>Queue</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#taskqueue-1" class="tsd-kind-icon">Task<wbr>Queue</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#taskqueue-2" class="tsd-kind-icon">Task<wbr>Queue</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#taskqueueoptions" class="tsd-kind-icon">Task<wbr>Queue<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#taskqueueoptions-1" class="tsd-kind-icon">Task<wbr>Queue<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#taskqueueoptions-2" class="tsd-kind-icon">Task<wbr>Queue<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#tokenauthentication" class="tsd-kind-icon">Token<wbr>Authentication</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#tokenauthentication-1" class="tsd-kind-icon">Token<wbr>Authentication</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#tokenauthentication-2" class="tsd-kind-icon">Token<wbr>Authentication</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#uriresolver" class="tsd-kind-icon">Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#uriresolver-1" class="tsd-kind-icon">Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#uriresolver-2" class="tsd-kind-icon">Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#workerchannel_msg_type" class="tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#workerchannel_msg_type-1" class="tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#workerchannel_msg_type-2" class="tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#workerchannel_msg_type-3" class="tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#workerchannel" class="tsd-kind-icon">Worker<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#workerchannel-1" class="tsd-kind-icon">Worker<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#workerchannel-2" class="tsd-kind-icon">Worker<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#workerchannel-3" class="tsd-kind-icon">Worker<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#applymixins" class="tsd-kind-icon">apply<wbr>Mixins</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#applymixins-1" class="tsd-kind-icon">apply<wbr>Mixins</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#applymixins-2" class="tsd-kind-icon">apply<wbr>Mixins</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#applymixinswithoutproperties" class="tsd-kind-icon">apply<wbr>Mixins<wbr>Without<wbr>Properties</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#applymixinswithoutproperties-1" class="tsd-kind-icon">apply<wbr>Mixins<wbr>Without<wbr>Properties</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#applymixinswithoutproperties-2" class="tsd-kind-icon">apply<wbr>Mixins<wbr>Without<wbr>Properties</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#assertexists" class="tsd-kind-icon">assert<wbr>Exists</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#assertexists-1" class="tsd-kind-icon">assert<wbr>Exists</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#assertexists-2" class="tsd-kind-icon">assert<wbr>Exists</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#baseurl-1" class="tsd-kind-icon">base<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#baseurl-2" class="tsd-kind-icon">base<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#chaincallbacks" class="tsd-kind-icon">chain<wbr>Callbacks</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#chaincallbacks-1" class="tsd-kind-icon">chain<wbr>Callbacks</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#chaincallbacks-2" class="tsd-kind-icon">chain<wbr>Callbacks</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#clonedeep" class="tsd-kind-icon">clone<wbr>Deep</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#clonedeep-1" class="tsd-kind-icon">clone<wbr>Deep</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#clonedeep-2" class="tsd-kind-icon">clone<wbr>Deep</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#composeuriresolvers" class="tsd-kind-icon">compose<wbr>Uri<wbr>Resolvers</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#composeuriresolvers-1" class="tsd-kind-icon">compose<wbr>Uri<wbr>Resolvers</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#composeuriresolvers-2" class="tsd-kind-icon">compose<wbr>Uri<wbr>Resolvers</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#convertfragmentshadertowebgl2" class="tsd-kind-icon">convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#convertfragmentshadertowebgl2-1" class="tsd-kind-icon">convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#convertfragmentshadertowebgl2-2" class="tsd-kind-icon">convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#convertvertexshadertowebgl2" class="tsd-kind-icon">convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#convertvertexshadertowebgl2-1" class="tsd-kind-icon">convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#convertvertexshadertowebgl2-2" class="tsd-kind-icon">convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#getappbaseurl" class="tsd-kind-icon">get<wbr>App<wbr>Base<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#getappbaseurl-1" class="tsd-kind-icon">get<wbr>App<wbr>Base<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#getoptionvalue" class="tsd-kind-icon">get<wbr>Option<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#getoptionvalue-1" class="tsd-kind-icon">get<wbr>Option<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#getoptionvalue-2" class="tsd-kind-icon">get<wbr>Option<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#geturlhostandprotocol" class="tsd-kind-icon">get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#geturlhostandprotocol-1" class="tsd-kind-icon">get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#geturlhostandprotocol-2" class="tsd-kind-icon">get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#geturlorigin" class="tsd-kind-icon">get<wbr>Url<wbr>Origin</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#geturlorigin-1" class="tsd-kind-icon">get<wbr>Url<wbr>Origin</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#geturlorigin-2" class="tsd-kind-icon">get<wbr>Url<wbr>Origin</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#pick" class="tsd-kind-icon">pick</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#pick-1" class="tsd-kind-icon">pick</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#pick-2" class="tsd-kind-icon">pick</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#resolvereferenceuri" class="tsd-kind-icon">resolve<wbr>Reference<wbr>Uri</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#resolvereferenceuri-1" class="tsd-kind-icon">resolve<wbr>Reference<wbr>Uri</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#resolvereferenceuri-2" class="tsd-kind-icon">resolve<wbr>Reference<wbr>Uri</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#samplebilinear" class="tsd-kind-icon">sample<wbr>Bilinear</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#samplebilinear-1" class="tsd-kind-icon">sample<wbr>Bilinear</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_utils.html#samplebilinear-2" class="tsd-kind-icon">sample<wbr>Bilinear</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_utils.domutils-3.html" class="tsd-kind-icon">DOMUtils</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_utils.math2d-3.html" class="tsd-kind-icon">Math2D</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="harp_utils.mathutils-3.html" class="tsd-kind-icon">Math<wbr>Utils</a>
+							</li>
+							<li class=" tsd-kind-enum tsd-parent-kind-module">
+								<a href="../enums/harp_utils.loglevel-4.html" class="tsd-kind-icon">Log<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.consolechannel-4.html" class="tsd-kind-icon">Console<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.contextlogger-3.html" class="tsd-kind-icon">Context<wbr>Logger</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+								<a href="../classes/harp_utils.groupedprioritylist-3.html" class="tsd-kind-icon">Grouped<wbr>Priority<wbr>List</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.logger-4.html" class="tsd-kind-icon">Logger</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.loggermanager-4.html" class="tsd-kind-icon">Logger<wbr>Manager</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.loggermanagerimpl.html" class="tsd-kind-icon">Logger<wbr>Manager<wbr>Impl</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.loggeroptions-4.html" class="tsd-kind-icon">Logger<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.multichannel-4.html" class="tsd-kind-icon">Multi<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.performancetimer-3.html" class="tsd-kind-icon">Performance<wbr>Timer</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.prefixmapuriresolver-3.html" class="tsd-kind-icon">Prefix<wbr>Map<wbr>Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+								<a href="../classes/harp_utils.prioritylistgroup-3.html" class="tsd-kind-icon">Priority<wbr>List<wbr>Group</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.relativeuriresolver-3.html" class="tsd-kind-icon">Relative<wbr>Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.taskqueue-3.html" class="tsd-kind-icon">Task<wbr>Queue</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_utils.workerchannel-4.html" class="tsd-kind-icon">Worker<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.apikeyauthentication-3.html" class="tsd-kind-icon">Api<wbr>Key<wbr>Authentication</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.appidauthentication-3.html" class="tsd-kind-icon">App<wbr>IdAuthentication</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.cachedresource-3.html" class="tsd-kind-icon">Cached<wbr>Resource</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.ichannel-4.html" class="tsd-kind-icon">IChannel</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.icontextlogger-3.html" class="tsd-kind-icon">IContext<wbr>Logger</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.ilogger-4.html" class="tsd-kind-icon">ILogger</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.iloggermanager.html" class="tsd-kind-icon">ILogger<wbr>Manager</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.isimplechannel-3.html" class="tsd-kind-icon">ISimple<wbr>Channel</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.iworkerchannelmessage-4.html" class="tsd-kind-icon">IWorker<wbr>Channel<wbr>Message</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.prefixuriresolverdefinition-3.html" class="tsd-kind-icon">Prefix<wbr>Uri<wbr>Resolver<wbr>Definition</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.prioritylistelement-3.html" class="tsd-kind-icon">Priority<wbr>List<wbr>Element</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.task-3.html" class="tsd-kind-icon">Task</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.taskqueueoptions-3.html" class="tsd-kind-icon">Task<wbr>Queue<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.tokenauthentication-3.html" class="tsd-kind-icon">Token<wbr>Authentication</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_utils.uriresolver-3.html" class="tsd-kind-icon">Uri<wbr>Resolver</a>
+							</li>
+							<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+								<a href="harp_utils.html#authenticationprovider-3" class="tsd-kind-icon">Authentication<wbr>Provider</a>
+							</li>
+							<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+								<a href="harp_utils.html#prioritylistgroupmap-3" class="tsd-kind-icon">Priority<wbr>List<wbr>Group<wbr>Map</a>
+							</li>
+							<li class=" tsd-kind-variable tsd-parent-kind-module">
+								<a href="harp_utils.html#workerchannel_msg_type-4" class="tsd-kind-icon">WORKERCHANNEL_<wbr>MSG_<wbr>TYPE</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#applymixins-3" class="tsd-kind-icon">apply<wbr>Mixins</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#applymixinswithoutproperties-3" class="tsd-kind-icon">apply<wbr>Mixins<wbr>Without<wbr>Properties</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+								<a href="harp_utils.html#assertexists-3" class="tsd-kind-icon">assert<wbr>Exists</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#baseurl-3" class="tsd-kind-icon">base<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+								<a href="harp_utils.html#chaincallbacks-3" class="tsd-kind-icon">chain<wbr>Callbacks</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+								<a href="harp_utils.html#clonedeep-3" class="tsd-kind-icon">clone<wbr>Deep</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#composeuriresolvers-3" class="tsd-kind-icon">compose<wbr>Uri<wbr>Resolvers</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#convertfragmentshadertowebgl2-3" class="tsd-kind-icon">convert<wbr>Fragment<wbr>Shader<wbr>ToWebGL2</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#convertvertexshadertowebgl2-3" class="tsd-kind-icon">convert<wbr>Vertex<wbr>Shader<wbr>ToWebGL2</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#getappbaseurl-2" class="tsd-kind-icon">get<wbr>App<wbr>Base<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+								<a href="harp_utils.html#getoptionvalue-3" class="tsd-kind-icon">get<wbr>Option<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#geturlhostandprotocol-3" class="tsd-kind-icon">get<wbr>Url<wbr>Host<wbr>And<wbr>Protocol</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#geturlorigin-3" class="tsd-kind-icon">get<wbr>Url<wbr>Origin</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+								<a href="harp_utils.html#pick-3" class="tsd-kind-icon">pick</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#resolvereferenceuri-3" class="tsd-kind-icon">resolve<wbr>Reference<wbr>Uri</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_utils.html#samplebilinear-3" class="tsd-kind-icon">sample<wbr>Bilinear</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

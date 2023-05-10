@@ -1,0 +1,286 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@docs/fallback | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_docs_fallback.html">@docs/fallback</a>
+				</li>
+			</ul>
+			<h1>Package @docs/fallback</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<a href="#fallback" id="fallback" style="color: inherit; text-decoration: none;">
+						<h1>Fallback</h1>
+					</a>
+					<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
+						<h2>Overview</h2>
+					</a>
+					<p>Fallback is a term used to describe the use of existing cached <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s at a different storage level as a <em>temporary</em> replacement for <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s that are still loading.</p>
+					<p>According to the <a href="https://dictionary.cambridge.org/dictionary/english/fallback">Cambridge dictionary</a> &quot;fallback&quot; means:</p>
+					<blockquote>
+						<p>&quot;A fallback plan or position can be used if other plans do not succeed or other things are not available&quot;</p>
+					</blockquote>
+					<p>Fallback is used whenever the camera moves / changes and the requested <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s are not yet loaded. This can happen for example when panning, zooming, tilting, rotating etc, however the situations which show it the most vividly are when zooming in and out.</p>
+					<p>Note, sometimes there is a distinction between fallback and fallforward, in this case it just means which direction the <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s are searched (fallback always means to search lower levels). However in general, the term fallback is intended to be used for both cases, because as described in the definition above it fits both cases.</p>
+					<a href="#zooming-out" id="zooming-out" style="color: inherit; text-decoration: none;">
+						<h3>Zooming out</h3>
+					</a>
+					<p>When zooming out, we wait for the requested <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s to load and show the visible descendent <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s from the cache until the loaded <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s are complete, here is an example jumping from zoom level 10 to 8.</p>
+					<img src="../media/fallback/fallbackzoomout.gif" alt="Fallback normal speed" width="450"/>
+					<p>Here is the same example slowed down:</p>
+					<img src="../media/fallback/fallbackzoomoutslow.gif" alt="Fallback slowed down" width="450"/>
+					<p>The jump from zoom level 10 to 8 means that each tile at level 8 is composed of 16 tiles at level 10. This is easy to notice because the level 10 tiles showing Berlin are 1/4 the width and height.</p>
+					<a href="#zooming-in" id="zooming-in" style="color: inherit; text-decoration: none;">
+						<h3>Zooming in</h3>
+					</a>
+					<p>When zooming in, we continue to show the tiles that were already visible until the tile is finished loading.</p>
+					<img src="../media/fallback/fallbackzoomin.gif" alt="Fallback normal speed" width="450"/>
+					<p>Here is the same example slowed down:</p>
+					<img src="../media/fallback/fallbackzoominslow.gif" alt="Fallback slowed down" width="450"/>
+					<p>The problem however with this approach is that the tiles overlap each other, e.g. at level 10, each tile that is missing is filled with items in the cache, if there is a level 8 tile available, it is rendered, but this tile actually covers 16 level 10 tiles, so other neighbouring tiles that are already loaded and being rendered are overlaid on the lower zoom level tile. This has to be handled specially, see <a href="#Implementation-Details">Implementation Details</a> otherwise the difference in LOD causes issues especially for lines where the lower level tiles have a simplified line and therefore cause visible overlapping, here is a visual representation of how the tiles can overlap when the levels are different.</p>
+					<img src="../media/fallback/fallbackviz.svg" alt="Fallback vizualization" width="450" />
+					<p>Note, this issue only shows when the tiles are loading, once all tiles are loaded, we no longer need to fallback, i.e. this is what the final result will be:</p>
+					<img src="../media/fallback/fallbackfinalviz.svg" alt="Fallback vizualization loaded" width="450" />
+					<p>Image showing overlapping tiles and the issue it causes with roads and country borders overlapping.</p>
+					<img src="../media/fallback/overlappingtiles.png" alt="Overlapping tiles" width="450" />
+					<p>How this is solved is described in the <a href="#Implementation-Details">implementation details</a> section.</p>
+					<a href="#api" id="api" style="color: inherit; text-decoration: none;">
+						<h2>API</h2>
+					</a>
+					<p>There are two ways to configure the fallback logic</p>
+					<a href="#configure-search-depth" id="configure-search-depth" style="color: inherit; text-decoration: none;">
+						<h3>Configure search depth</h3>
+					</a>
+					<p>There are two options which configure how far the search for tiles in the cache goes, these are <a href="https://www.harp.gl/docs/master/doc/interfaces/harp_mapview.mapviewoptions-1.html#quadtreesearchdistanceup">quadTreeSearchDistanceUp</a> and <a href="https://www.harp.gl/docs/master/doc/interfaces/harp_mapview.mapviewoptions-1.html#quadtreesearchdistancedown">quadTreeSearchDistanceDown</a> can be set as part of the <a href="https://www.harp.gl/docs/master/doc/interfaces/harp_mapview.mapviewoptions-1.html">MapViewOptions</a>.</p>
+					<p>The <a href="https://www.harp.gl/docs/master/doc/interfaces/harp_mapview.mapviewoptions-1.html#quadtreesearchdistanceup">quadTreeSearchDistanceUp</a> parameter simply means the maximum number of levels to go up to search for a replacement ancestor tile, and as can be guessed the <a href="https://www.harp.gl/docs/master/doc/interfaces/harp_mapview.mapviewoptions-1.html#quadtreesearchdistancedown">quadTreeSearchDistanceDown</a> parameter means how many levels to search for descendant tiles.</p>
+					<p>Note, there can be a performance penalty when using these functions, especially the <a href="https://www.harp.gl/docs/master/doc/interfaces/harp_mapview.mapviewoptions-1.html#quadtreesearchdistancedown">quadTreeSearchDistanceDown</a> parameter, because if there are many higher level tiles in the cache, they will all be shown, so there may be a stuttering in the frame rate until all <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s are loaded.</p>
+					<p>Note, these values are consistent across all <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.datasource-1.html">DataSource</a>s.</p>
+					<a href="#enable--disable-datasource-fallback" id="enable--disable-datasource-fallback" style="color: inherit; text-decoration: none;">
+						<h3>Enable / Disable DataSource fallback</h3>
+					</a>
+					<p>There is also the ability to disable this behaviour for a specific DataSource, see <a href="https://www.harp.gl/docs/master/doc/interfaces/harp_mapview.datasourceoptions-1.html#allowoverlappingtiles">DataSourceOptions.allowOverlappingTiles</a>.</p>
+					<p>This is required for <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.datasource-1.html">DataSource</a>s which produce transparent <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s. Otherwise overlapping causes both transparent <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s to overlap causing a momentary difference in color (because of the blending), this manifests itself as flickering and is very distracting.</p>
+					<a href="#sequence-diagram" id="sequence-diagram" style="color: inherit; text-decoration: none;">
+						<h2>Sequence diagram</h2>
+					</a>
+					<p>There are 5 classes that are involved in the loading of <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s, following is a brief summary of the 3 classes that may not be familiar (it is assumed that knowledge of <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.mapview-1.html">MapView</a> and <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.datasource-1.html">DataSource</a> exists).</p>
+					<p>The <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.visibletileset-1.html">VisibleTileSet</a> is responsible for managing the list of visible <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s for the <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.mapview-1.html">MapView</a>, duties include caching, fallback, frustum culling, sorting by relavance etc.</p>
+					<p>The <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.frustumintersection.html">FrustumIntersection</a>&#39;s responsibility is to compute the list of visible <a href="https://www.harp.gl/docs/master/doc/classes/harp_geoutils.tilekey-1.html">TileKey</a>s based on the current camera&#39;s vantage point / view.</p>
+					<p>The <code>DataSourceCache</code> is an internal class which wraps a <a href="https://www.harp.gl/docs/master/doc/classes/harp_lrucache.lrucache-1.html">LRUCache</a> and makes it easy to access also by <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.datasource-1.html">DataSource</a></p>
+					<p>In order to understand the sequence diagram a bit better, please note the following:</p>
+					<ul>
+						<li>The <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.visibletileset-1.html">VisibleTileSet</a> has two separate lists of <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s, the visible <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a> list which is the set of <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s that we <em>would</em> like to render. I.e. it is the set of <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s that are requested from the <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.datasource-1.html">DataSource</a>s using the <a href="https://www.harp.gl/docs/master/doc/classes/harp_geoutils.tilekey-1.html">FrustumIntersection</a>s. The second list of <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s is the rendered list. This includes the <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s that are finally shown on the screen, each <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a> in this list has geometry that is fully loaded. Note, the levels of the <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s will differ, because some <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s are not loaded and hence we fallback to either ancestors or descendents of the <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>.</li>
+						<li>The <code>skipOverlappedTiles</code> function is an optimization to not render the background plane when the <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.datasource-1.html">DataSource</a> produces <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s that are fully covering, see <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.datasource-1.html#isfullycovering">DataSource.isFullyCovering</a>. The background plane is required for the fallback, see <a href="#Implementation-Details">implementation details</a> or the JIRA ticket <a href="https://saeljira.it.here.com/browse/HARP-7856">HARP-7856</a>.</li>
+						<li>The <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.visibletileset-1.html">VisibleTileSet</a> populates an object with the <code>DataSourceTileList</code> interface, this includes the list of visible &amp; rendered <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s, the associated <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.datasource-1.html">DataSource</a> and some other properties.</li>
+					</ul>
+					<a href="../media/fallback/visibletileset_computation.svg">
+						<img src="../media/fallback/visibletileset_computation.svg" title="VisibleTileSet Sequence Diagram" width="450"/>
+					</a>
+					<a href="#implementation-details" id="implementation-details" style="color: inherit; text-decoration: none;">
+						<h2>Implementation details</h2>
+					</a>
+					<p>The following list shows some of the details involved in the implementation of the fallback</p>
+					<ul>
+						<li>Each <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a> includes a hidden <a href="https://github.com/heremaps/harp.gl/blob/0788d89/@here/harp-mapview/lib/Tile.ts#L253">levelOffset</a>, this is an integer which shows which level offset the tile has to the current <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.mapview-1.html">MapView</a> zoom level. A <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a> that has a non zero <a href="https://github.com/heremaps/harp.gl/blob/0788d89/@here/harp-mapview/lib/Tile.ts#L253">levelOffset</a> is a fallback tile. It is used to offset the render order correctly.</li>
+						<li>Each <a href="https://www.harp.gl/docs/master/doc/modules/harp_mapview.html#tileobject-1">TileObject</a> in each <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a> needs to <a href="https://github.com/heremaps/harp.gl/blob/0788d89/@here/harp-mapview/lib/Tile.ts#L39">backup the render order</a>, this is because during fallback, the objects <a href="https://threejs.org/docs/#api/en/core/Object3D.renderOrder">renderOrder</a> is adjusted based on what <a href="https://github.com/heremaps/harp.gl/blob/0788d89/@here/harp-mapview/lib/Tile.ts#L253">levelOffset</a> it has, see how it is calculated <a href="https://github.com/heremaps/harp.gl/blob/0788d89/@here/harp-mapview/lib/MapView.ts#L3556">here</a>. We need to reset it when the <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a> is rendered normally (i.e. it isn&#39;t a fallback helper).</li>
+						<li>The <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.datasource-1.html">DataSource</a> has a property <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.datasource-1.html#addgroundplane">addGroundPlane</a> which dictates if the <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a> needs geometry (i.e. a background opaque plane) to hide lower level <a href="https://www.harp.gl/docs/master/doc/classes/harp_mapview.tile-1.html">Tile</a>s from showing through and causing artifacts.</li>
+					</ul>
+					<a href="#test-cases" id="test-cases" style="color: inherit; text-decoration: none;">
+						<h2>Test cases</h2>
+					</a>
+					<p>There are IBCT tests which are availabel internally in the @here/integration-tests repo, called <code>OmvMapRender</code>, the tests which check the fallback are called have <code>fallbackStyle: true</code> set, but this is unfortunately not public.</p>
+				</div>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_docs_fallback.html">@docs/fallback</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

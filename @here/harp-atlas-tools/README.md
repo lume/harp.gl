@@ -115,7 +115,7 @@ as it decides what kind of operation you wish to perform on images. Each operati
 attributes set that may define different behaviour (i.e. blending modes), additional input image (for adding backgrounds, foregrounds or blending other layers).
 
 For full set of operations available and their parameters please refer to:
-[ImageProcessing.ts](https://github.com/heremaps/harp.gl/tree/master/%40here/harp-atlas-tools/src/ImageProcessing.ts)
+[ImageProcessing.ts](https://github.com/lume/harp.gl/tree/master/%40here/harp-atlas-tools/src/ImageProcessing.ts)
 
 # **harp-sprites-generator** - complementary tool
 
@@ -148,7 +148,7 @@ npx harp-atlas-generator -i 'intermediate/*' -o 'atlas'
 
 # Creating _generic_ icons set
 
-Since the icons that come with **harp.gl** (https://github.com/heremaps/harp.gl) have a license that
+Since the icons that come with **harp.gl** (https://github.com/lume/harp.gl) have a license that
 limits its usage depending on what map data is being displayed, another set of icons may be
 required.
 To create another set of icons, the popular and freely available maki icons can be used

@@ -119,14 +119,14 @@ const getActualDecoderScriptUrl = () => {
         // eslint-disable-next-line no-console
         console.error(
             `harp.js: Unable to determine default location of 'harp-decoders(min).js'. ` +
-                `See https://github.com/heremaps/harp.gl/@here/harp.gl.`
+                `See https://github.com/lume/harp.gl/@here/harp.gl.`
         );
     }
     if (!WorkerLoader.dependencyUrlMapping.three) {
         // eslint-disable-next-line no-console
         console.error(
             `harp.js: Unable to determine location of 'three(.min).js'. ` +
-                "`See https://github.com/heremaps/harp.gl/@here/harp.gl.`"
+                "`See https://github.com/lume/harp.gl/@here/harp.gl.`"
         );
     }
     const isMinified = baseScriptUrl && baseScriptUrl.endsWith(".min.js");

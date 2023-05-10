@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>harp.gl</title>
+        <link rel="preload" href="./decoder.bundle.js" as="worker">
+        <link rel="preload" href="./index.bundle.js" as="script">
+
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="shortcut icon" href="resources/favicon.ico">
+
+        <script src="three.min.js" defer></script>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@here" />
+        <meta name="twitter:title" content="harp.gl" />
+        <meta name="twitter:description" content="3d web map rendering engine" />
+        <meta name="twitter:image" content="https://www.harp.gl/resources/background.jpg" />
+
+        <meta property="og:url" content="https://www.harp.gl" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="harp.gl" />
+        <meta property="og:description" content="3d web map rendering engine" />
+        <meta property="og:image" content="https://www.harp.gl/resources/background.jpg" />
+    <script defer src="index.bundle.js"></script><style type="text/css">:root {
+   --dark-text: #3f454d;
+   --section-padding: 100px 0;
+   --background: #1b222c;
+   --gradient: linear-gradient(to bottom right,#e7e1a0,#85e0ce);
+   --grid-gap: 50px;
+   --teal: #58d7be;
+   --header-height: 500px;
+ }
+
+html, body {
+   border: 0;
+   padding: 0;
+   margin: 0;
+   font-family: 'Fira Sans', sans-serif;
+   color: var(--dark-text);
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   background: #f8f8f8;
+}
+
+/* Main */
+
+h1, h2 {
+   font-weight: 500;
+}
+
+h1 {
+   font-size: 28px;
+}
+
+h2 {
+   font-size: 24px;
+}
+
+p {
+   font-size: 16px;
+   line-height: 24px;
+   color: white;
+   margin: 0;
+}
+
+.container {
+   max-width: 1100px;
+   margin: auto auto;
+   padding: 0 40px;
+}
+
+/* Header and Nav */
+
+header {
+   width: 100%;
+   height: var(--header-height);
+   background: var(--background);
+   background-image: url(./bd623eaadd0499621a916830c136edf8.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   box-sizing: border-box;
+   position: relative;
+   /* transition: .3s background-image ease-in-out; */
+}
+
+.header-container {
+   display: flex;
+   box-sizing: border-box;
+   height: 100%;
+   flex-direction: column;
+}
+
+#map {
+   position: absolute;
+   height: var(--header-height);
+   width: 100%;
+   border: 0;
+   pointer-events: none;
+   opacity: 0;
+   transition: opacity .5s ease-in-out;
+}
+
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   padding: 25px 0;
+   z-index: 1;
+   animation-name: feature-animation;
+   animation-duration: 1s;
+}
+
+nav .nav-item {
+   margin-left: 25px;
+   color: white;
+   text-decoration: none;
+   transition: .1s all;
+   font-weight: 400;
+   font-size: 14px;
+   text-transform: uppercase;
+}
+
+#docs-nav-mobile {
+   display: none;
+}
+
+.header-content {
+   height: var(--header-height);
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.header-title {
+   color: white;
+   font-size: 52px;
+   font-weight: 600;
+   margin-bottom: 20px;
+   animation-name: lead-animation;
+   animation-duration: 2s;
+}
+
+.header-desc {
+   color: white;
+   font-weight: 400;
+   font-size: 20px;
+   animation-name: lead-animation;
+   animation-delay: 0.5s;
+   animation-duration: 2s;
+   animation-fill-mode: forwards;
+   opacity: 0;
+}
+
+/* Features row */
+
+.features {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: var(--grid-gap);
+   margin: var(--section-padding);
+}
+
+.feature {
+   text-align: center;
+}
+
+.subtitle {
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   color: #5F5F5F;
+}
+
+.material-icons {
+   padding: 10px;
+   font-size: 40px;
+}
+
+
+/* Examples and Documentation */
+
+.links {
+   padding: var(--section-padding);
+   background: var(--background);
+
+}
+
+.links-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: var(--grid-gap);
+}
+
+.description {
+   min-height: 50px;
+}
+
+.gradient {
+   background: var(--gradient);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.button-link {
+   display: inline-block;
+   padding: 12px 30px;
+   background: var(--gradient);
+   color: var(--dark0-text);
+   font-family: 'Fira Sans', sans-serif;
+   font-size: 14px;
+   line-height: 16px;
+   font-weight: 500;
+   margin: 40px 0;
+   border: 0px solid transparent;
+   border-radius: 21px;
+   transition: .3s all;
+   text-decoration: none;
+}
+
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background: #272D37;
+   color: white;
+   font-size: 14px;
+   line-height: 16px;
+   font-weight: 500;
+   border: 2px solid transparent;
+   border-radius: 3px;
+   padding: 8px 28px 8px 20px;
+   display: inline;
+   font-family: 'Fira Sans', sans-serif;
+   /* width: 50%; */
+   margin: 20px 0;
+
+   background-image: linear-gradient(45deg, transparent 50%, white 50%), linear-gradient(135deg, white 50%, transparent 50%),linear-gradient(to right, #272D37, #272D37);
+   background-position:
+    calc(100% - 20px) calc(1em + 0px),
+    calc(100% - 15px) calc(1em + 0px),
+    100% 0;
+   background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+   background-repeat: no-repeat;
+}
+
+select:focus {
+   outline: none !important;
+   border:2px solid #193C42;
+   box-shadow: 0 0 5px #193C42;
+}
+
+.versions-notes {
+   color: grey;
+}
+
+/* Footer */
+
+footer {
+   background: #333942;
+}
+
+.footer {
+   display: flex;
+   padding-top: 60px;
+   padding-bottom: 60px;
+   align-items: center;
+   color: white;
+}
+
+.footer a {
+   color: white;
+   text-decoration: none;
+}
+
+.footer-title {
+   margin: 0;
+   margin-right: 120px;
+}
+
+/* Animation */
+@keyframes lead-animation {
+   0% {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0px);
+   }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+
+   .container {
+      padding: 0 20px;
+   }
+
+   #docs-nav-mobile {
+      display: inline;
+   }
+   #docs-nav {
+      display: none;
+   }
+
+   nav .nav-item {
+      margin-left: 10px;
+      color: white;
+      text-decoration: none;
+      transition: .1s all;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: uppercase;
+   }
+
+   .features {
+      grid-template-columns: 1fr;
+   }
+
+   .links-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .footer {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 60px;
+      padding-bottom: 60px;
+   }
+
+   .footer-title {
+      margin-bottom: 20px;
+   }
+}
+
+
+/*# sourceMappingURL=index.css.map*/</style></head>
+
+    <body>
+        <header>
+            <canvas id="map"></canvas>
+            <div class="container header-container">
+                <nav>
+                    <div class="logo"></div>
+                    <div>
+                        <a id="docs-nav-mobile" href="../../dist/doc/"
+                            class="nav-item">Docs</a>
+                        <a id="docs-nav" href="../../dist/doc/"
+                            class="nav-item">Documentation</a>
+                        <a id="examples-nav" href="../../@here/harp-examples/dist/examples/"
+                            class="nav-item">Examples</a>
+                        <a id="tutorial-nav" href="#/tutorials/harpgl(TODO)"
+                            class="nav-item">Tutorial</a>
+                        <a href="https://github.com/lume/harp.gl" class="nav-item">GitHub</a>
+                    </div>
+                </nav>
+                <div class="header-content">
+                    <div class="header-title">
+                        harp.gl
+                    </div>
+                    <div class="header-desc">
+                        3d web map rendering engine
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="features">
+                <div class="feature">
+                    <i class="material-icons">computer</i>
+                    <h2>
+                        Web first
+                    </h2>
+                    <div class="subtitle">
+                        harp.gl is built on modern web technologies like WebGL and three.js.
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <i class="material-icons">code</i>
+                    <h2>
+                        Open source
+                    </h2>
+                    <div class="subtitle">
+                        harp.gl is developed with the community in mind. Feature suggestion or bug
+                        report? Let us know on GitHub.
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <i class="material-icons">public</i>
+                    <h2>
+                        Flexible
+                    </h2>
+                    <div class="subtitle">
+                        Add any type of datasource such as GeoJSON, vector and raster tiles, or
+                        custom objects to the map.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="links">
+            <div class="container">
+                <div class="links-grid">
+                    <div>
+                        <h1 class="gradient">Documentation</h1>
+                        <p class="description">
+                            Learn how to use the harp.gl api, including information about the
+                            different modules, classes, and methods.
+                        </p>
+                        <a target="_blank" class="button-link docs-link" href="../../dist/doc/">
+                            Documentation
+                        </a>
+                    </div>
+                    <div>
+                        <h1 class="gradient">Examples</h1>
+                        <p class="description">
+                            Explore and play around with different live examples of harp.gl in
+                            action.
+                        </p>
+                        <a target="_blank" class="button-link examples-link" href="../../@here/harp-examples/dist/examples/">
+                            Examples
+                        </a>
+                    </div>
+                    <div>
+                        <p><label for="versions">Select the target release</label>:</p>
+                        <select id="versions" name="versions"></select>
+                        <p>Please note that latest includes bleeding edge changes. For a more stable
+                            build, try the most recent release.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container footer">
+                <div>
+                    <h1 class="footer-title">harp.gl</h2>
+                </div>
+                <div>
+                    <span>
+                        &copy; 2017-<span id="year"></span> <a target="_blank"
+                            href="https://here.com">HERE</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,2346 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>OmvDataSource | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/harp_omv_datasource.html">harp-omv-datasource</a>
+				</li>
+				<li>
+					<a href="harp_omv_datasource.omvdatasource-1.html">OmvDataSource</a>
+				</li>
+			</ul>
+			<h1>Class OmvDataSource&lt;TileType&gt;</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p><code>OmvDataSource</code> is used for the visualization of vector tiles
+						provided in the OMV format.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><pre><code class="language-typescript">   <span class="hljs-keyword">const</span> dataSource = <span class="hljs-keyword">new</span> OmvDataSource({
+       <span class="hljs-attr">baseUrl</span>: <span class="hljs-string">&quot;https://vector.hereapi.com/v2/vectortiles/base/mc&quot;</span>,
+       <span class="hljs-attr">authenticationCode</span>: apikey
+   });
+   mapView.addDataSource(dataSource);</code></pre>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>TileType<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="harp_vectortile_datasource.vectortiledatasource-1.html" class="tsd-signature-type">VectorTileDataSource</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">OmvDataSource</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#addgroundplane" class="tsd-kind-icon">add<wbr>Ground<wbr>Plane</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#allowoverlappingtiles" class="tsd-kind-icon">allow<wbr>Overlapping<wbr>Tiles</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#cacheable" class="tsd-kind-icon">cacheable</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#datasourceorder" class="tsd-kind-icon">data<wbr>Source<wbr>Order</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#enablepicking" class="tsd-kind-icon">enable<wbr>Picking</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#enabled" class="tsd-kind-icon">enabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="harp_omv_datasource.omvdatasource-1.html#languages" class="tsd-kind-icon">languages</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="harp_omv_datasource.omvdatasource-1.html#logger" class="tsd-kind-icon">logger</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="harp_omv_datasource.omvdatasource-1.html#m_decoder" class="tsd-kind-icon">m_<wbr>decoder</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#maxdatalevel" class="tsd-kind-icon">max<wbr>Data<wbr>Level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#maxdisplaylevel" class="tsd-kind-icon">max<wbr>Display<wbr>Level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#mindatalevel" class="tsd-kind-icon">min<wbr>Data<wbr>Level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#mindisplaylevel" class="tsd-kind-icon">min<wbr>Display<wbr>Level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#usegeometryloader" class="tsd-kind-icon">use<wbr>Geometry<wbr>Loader</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#decoder" class="tsd-kind-icon">decoder</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#mapview" class="tsd-kind-icon">map<wbr>View</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#maxgeometryheight" class="tsd-kind-icon">max<wbr>Geometry<wbr>Height</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#maxzoomlevel" class="tsd-kind-icon">max<wbr>Zoom<wbr>Level</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#mingeometryheight" class="tsd-kind-icon">min<wbr>Geometry<wbr>Height</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#minzoomlevel" class="tsd-kind-icon">min<wbr>Zoom<wbr>Level</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#projection" class="tsd-kind-icon">projection</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#storageleveloffset" class="tsd-kind-icon">storage<wbr>Level<wbr>Offset</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#stylesetname" class="tsd-kind-icon">style<wbr>Set<wbr>Name</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#attach" class="tsd-kind-icon">attach</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#cangettile" class="tsd-kind-icon">can<wbr>Get<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#clearcache" class="tsd-kind-icon">clear<wbr>Cache</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#clearfeaturestate" class="tsd-kind-icon">clear<wbr>Feature<wbr>State</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#connect" class="tsd-kind-icon">connect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#dataprovider" class="tsd-kind-icon">data<wbr>Provider</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#detach" class="tsd-kind-icon">detach</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#dispose" class="tsd-kind-icon">dispose</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#getdatazoomlevel" class="tsd-kind-icon">get<wbr>Data<wbr>Zoom<wbr>Level</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#getfeaturestate" class="tsd-kind-icon">get<wbr>Feature<wbr>State</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#gettileinfo" class="tsd-kind-icon">get<wbr>Tile<wbr>Info</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#gettilingscheme" class="tsd-kind-icon">get<wbr>Tiling<wbr>Scheme</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#haseventlistener" class="tsd-kind-icon">has<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#isdetached" class="tsd-kind-icon">is<wbr>Detached</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#isfullycovering" class="tsd-kind-icon">is<wbr>Fully<wbr>Covering</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#isvisible" class="tsd-kind-icon">is<wbr>Visible</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#ready" class="tsd-kind-icon">ready</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#removedatafilter" class="tsd-kind-icon">remove<wbr>Data<wbr>Filter</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#removefeaturestate" class="tsd-kind-icon">remove<wbr>Feature<wbr>State</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#requestupdate" class="tsd-kind-icon">request<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#setdatafilter" class="tsd-kind-icon">set<wbr>Data<wbr>Filter</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#setenableelevationoverlay" class="tsd-kind-icon">set<wbr>Enable<wbr>Elevation<wbr>Overlay</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#setfeaturestate" class="tsd-kind-icon">set<wbr>Feature<wbr>State</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#setlanguages" class="tsd-kind-icon">set<wbr>Languages</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#setpoliticalview" class="tsd-kind-icon">set<wbr>Political<wbr>View</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#settheme" class="tsd-kind-icon">set<wbr>Theme</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#shouldpreloadtiles" class="tsd-kind-icon">should<wbr>Preload<wbr>Tiles</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#shouldrendertext" class="tsd-kind-icon">should<wbr>Render<wbr>Text</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#shouldsubdivide" class="tsd-kind-icon">should<wbr>Subdivide</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="harp_omv_datasource.omvdatasource-1.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Omv<wbr>Data<wbr>Source<span class="tsd-signature-symbol">(</span>m_params<span class="tsd-signature-symbol">: </span><a href="../modules/harp_vectortile_datasource.html#omvwithrestclientparams-1" class="tsd-signature-type">OmvWithRestClientParams</a><span class="tsd-signature-symbol"> | </span><a href="../modules/harp_vectortile_datasource.html#omvwithcustomdataprovider-1" class="tsd-signature-type">OmvWithCustomDataProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_omv_datasource.omvdatasource-1.html" class="tsd-signature-type">OmvDataSource</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_vectortile_datasource.vectortiledatasource-1.html">VectorTileDataSource</a>.<a href="harp_vectortile_datasource.vectortiledatasource-1.html#constructor">constructor</a></p>
+								<p>Overrides <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts#L259">@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts:259</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>m_params: <a href="../modules/harp_vectortile_datasource.html#omvwithrestclientparams-1" class="tsd-signature-type">OmvWithRestClientParams</a><span class="tsd-signature-symbol"> | </span><a href="../modules/harp_vectortile_datasource.html#omvwithcustomdataprovider-1" class="tsd-signature-type">OmvWithCustomDataProvider</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="harp_omv_datasource.omvdatasource-1.html" class="tsd-signature-type">OmvDataSource</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="addgroundplane" class="tsd-anchor"></a>
+					<h3>add<wbr>Ground<wbr>Plane</h3>
+					<div class="tsd-signature tsd-kind-icon">add<wbr>Ground<wbr>Plane<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#addgroundplane">addGroundPlane</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L159">@here/harp-mapview/lib/DataSource.ts:159</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether the datasource should have a ground plane (this plane covers the tile entirely and
+								has the minimum possible renderOrder), this can be required in some cases when fallback
+								parent tiles need to be covered by the children, otherwise the content will overlap.
+							Default is false</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="allowoverlappingtiles" class="tsd-anchor"></a>
+					<h3>allow<wbr>Overlapping<wbr>Tiles</h3>
+					<div class="tsd-signature tsd-kind-icon">allow<wbr>Overlapping<wbr>Tiles<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#allowoverlappingtiles">allowOverlappingTiles</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L181">@here/harp-mapview/lib/DataSource.ts:181</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="cacheable" class="tsd-anchor"></a>
+					<h3>cacheable</h3>
+					<div class="tsd-signature tsd-kind-icon">cacheable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#cacheable">cacheable</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L141">@here/harp-mapview/lib/DataSource.ts:141</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set to <code>true</code> if the <a href="harp_mapview.mapview-1.html">MapView</a> can cache tiles produced by this <code>DataSource</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="datasourceorder" class="tsd-anchor"></a>
+					<h3>data<wbr>Source<wbr>Order</h3>
+					<div class="tsd-signature tsd-kind-icon">data<wbr>Source<wbr>Order<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#datasourceorder">dataSourceOrder</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L195">@here/harp-mapview/lib/DataSource.ts:195</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Overrides the default rendering order of this <code>DataSource</code>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>remarks</dt>
+							<dd><p>When <code>dataSourceOrder</code> is defined, all the objects created by this <code>DataSource</code>
+									will be rendered on top of the objects created by other <code>DataSource</code>s with
+								lower <code>dataSourceOrder</code> values.</p>
+							</dd>
+							<dt>defaultvalue</dt>
+							<dd><p>undefined</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="enablepicking" class="tsd-anchor"></a>
+					<h3>enable<wbr>Picking</h3>
+					<div class="tsd-signature tsd-kind-icon">enable<wbr>Picking<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#enablepicking">enablePicking</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L183">@here/harp-mapview/lib/DataSource.ts:183</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="enabled" class="tsd-anchor"></a>
+					<h3>enabled</h3>
+					<div class="tsd-signature tsd-kind-icon">enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#enabled">enabled</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L136">@here/harp-mapview/lib/DataSource.ts:136</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set to <code>true</code> if this <code>DataSource</code> is enabled; <code>false</code> otherwise.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="languages" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> languages</h3>
+					<div class="tsd-signature tsd-kind-icon">languages<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#languages">languages</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L233">@here/harp-mapview/lib/DataSource.ts:233</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p> An array of ISO 639-1 language codes.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="logger" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> logger</h3>
+					<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <a href="../interfaces/harp_utils.ilogger-4.html" class="tsd-signature-type">ILogger</a><span class="tsd-signature-symbol"> = LoggerManager.instance.create(&quot;TileDataSource&quot;)</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#logger">logger</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L126">@here/harp-mapview-decoder/lib/TileDataSource.ts:126</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="m_decoder" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> m_<wbr>decoder</h3>
+					<div class="tsd-signature tsd-kind-icon">m_<wbr>decoder<span class="tsd-signature-symbol">:</span> <a href="../interfaces/harp_datasource_protocol.itiledecoder-1.html" class="tsd-signature-type">ITileDecoder</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#m_decoder">m_decoder</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L127">@here/harp-mapview-decoder/lib/TileDataSource.ts:127</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="maxdatalevel" class="tsd-anchor"></a>
+					<h3>max<wbr>Data<wbr>Level</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Data<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 20</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#maxdatalevel">maxDataLevel</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L169">@here/harp-mapview/lib/DataSource.ts:169</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The maximum zoom level at which data is available.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="maxdisplaylevel" class="tsd-anchor"></a>
+					<h3>max<wbr>Display<wbr>Level</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Display<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 20</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#maxdisplaylevel">maxDisplayLevel</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L179">@here/harp-mapview/lib/DataSource.ts:179</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The maximum zoom level at which <a href="harp_mapview.datasource-1.html">DataSource</a> is displayed.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="mindatalevel" class="tsd-anchor"></a>
+					<h3>min<wbr>Data<wbr>Level</h3>
+					<div class="tsd-signature tsd-kind-icon">min<wbr>Data<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#mindatalevel">minDataLevel</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L164">@here/harp-mapview/lib/DataSource.ts:164</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The minimum zoom level at which data is available.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="mindisplaylevel" class="tsd-anchor"></a>
+					<h3>min<wbr>Display<wbr>Level</h3>
+					<div class="tsd-signature tsd-kind-icon">min<wbr>Display<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#mindisplaylevel">minDisplayLevel</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L174">@here/harp-mapview/lib/DataSource.ts:174</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The minimum zoom level at which <a href="harp_mapview.datasource-1.html">DataSource</a> is displayed.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#name">name</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L151">@here/harp-mapview/lib/DataSource.ts:151</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The unique name of a <code>DataSource</code> instance.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="usegeometryloader" class="tsd-anchor"></a>
+					<h3>use<wbr>Geometry<wbr>Loader</h3>
+					<div class="tsd-signature tsd-kind-icon">use<wbr>Geometry<wbr>Loader<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#usegeometryloader">useGeometryLoader</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L146">@here/harp-mapview/lib/DataSource.ts:146</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set to <code>true</code> if the loader should be used to get the tile contents.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="decoder" class="tsd-anchor"></a>
+					<h3>decoder</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> decoder<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.itiledecoder-1.html" class="tsd-signature-type">ITileDecoder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#decoder">decoder</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L181">@here/harp-mapview-decoder/lib/TileDataSource.ts:181</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the <a href="../interfaces/harp_datasource_protocol.itiledecoder-1.html">ITileDecoder</a> of this <code>ITileDataSource</code>, which has either been passed in with
+									the options, or has been supplied by the <a href="harp_mapview.concurrentdecoderfacade-1.html">ConcurrentDecoderFacade</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_datasource_protocol.itiledecoder-1.html" class="tsd-signature-type">ITileDecoder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="mapview" class="tsd-anchor"></a>
+					<h3>map<wbr>View</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> mapView<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#mapview">mapView</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L409">@here/harp-mapview/lib/DataSource.ts:409</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The <a href="harp_mapview.mapview-1.html">MapView</a> that is holding this <code>DataSource</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+					<a name="maxgeometryheight" class="tsd-anchor"></a>
+					<h3>max<wbr>Geometry<wbr>Height</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> maxGeometryHeight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> maxGeometryHeight<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#maxgeometryheight">maxGeometryHeight</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L599">@here/harp-mapview/lib/DataSource.ts:599</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Maximum geometry height above ground level this <code>DataSource</code> can produce.</p>
+								</div>
+								<p>Used in first stage of frustum culling before
+								{@link Tile.maxGeometryHeight} data is available.</p>
+								<dl class="tsd-comment-tags">
+									<dt>default</dt>
+									<dd><p>0.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#maxgeometryheight">maxGeometryHeight</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L603">@here/harp-mapview/lib/DataSource.ts:603</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Maximum geometry height above ground level this <code>DataSource</code> can produce.</p>
+								</div>
+								<p>Used in first stage of frustum culling before
+								{@link Tile.maxGeometryHeight} data is available.</p>
+								<dl class="tsd-comment-tags">
+									<dt>default</dt>
+									<dd><p>0.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+					<a name="maxzoomlevel" class="tsd-anchor"></a>
+					<h3>max<wbr>Zoom<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> maxZoomLevel<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> maxZoomLevel<span class="tsd-signature-symbol">(</span>level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#maxzoomlevel">maxZoomLevel</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L577">@here/harp-mapview/lib/DataSource.ts:577</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The maximum zoom level at which data is available or displayed at
+									(depending on <a href="harp_mapview.datasource-1.html">DataSource</a> subclass).</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <a href="harp_omv_datasource.omvdatasource-1.html#maxdatalevel">maxDataLevel</a> and <a href="harp_omv_datasource.omvdatasource-1.html#maxdisplaylevel">maxDisplayLevel</a> instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#maxzoomlevel">maxZoomLevel</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L584">@here/harp-mapview/lib/DataSource.ts:584</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The maximum zoom level at which data is available or displayed at
+									(depending on <a href="harp_mapview.datasource-1.html">DataSource</a> subclass).</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <a href="harp_omv_datasource.omvdatasource-1.html#maxdatalevel">maxDataLevel</a> and <a href="harp_omv_datasource.omvdatasource-1.html#maxdisplaylevel">maxDisplayLevel</a> instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+					<a name="mingeometryheight" class="tsd-anchor"></a>
+					<h3>min<wbr>Geometry<wbr>Height</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> minGeometryHeight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> minGeometryHeight<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#mingeometryheight">minGeometryHeight</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L616">@here/harp-mapview/lib/DataSource.ts:616</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Minimum geometry height below ground level this <code>DataSource</code> can produce. A negative number
+									specifies a value below ground level.</p>
+								</div>
+								<p>Used in first stage of frustum culling before
+								{@link Tile.minGeometryHeight} data is available.</p>
+								<dl class="tsd-comment-tags">
+									<dt>default</dt>
+									<dd><p>0.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#mingeometryheight">minGeometryHeight</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L620">@here/harp-mapview/lib/DataSource.ts:620</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Minimum geometry height below ground level this <code>DataSource</code> can produce. A negative number
+									specifies a value below ground level.</p>
+								</div>
+								<p>Used in first stage of frustum culling before
+								{@link Tile.minGeometryHeight} data is available.</p>
+								<dl class="tsd-comment-tags">
+									<dt>default</dt>
+									<dd><p>0.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+					<a name="minzoomlevel" class="tsd-anchor"></a>
+					<h3>min<wbr>Zoom<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> minZoomLevel<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> minZoomLevel<span class="tsd-signature-symbol">(</span>level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#minzoomlevel">minZoomLevel</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L558">@here/harp-mapview/lib/DataSource.ts:558</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The minimum zoom level at which data is available or displayed at
+									(depending on <a href="harp_mapview.datasource-1.html">DataSource</a> subclass).</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <a href="harp_omv_datasource.omvdatasource-1.html#mindatalevel">minDataLevel</a> and <a href="harp_omv_datasource.omvdatasource-1.html#mindisplaylevel">minDisplayLevel</a> instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#minzoomlevel">minZoomLevel</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L565">@here/harp-mapview/lib/DataSource.ts:565</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The minimum zoom level at which data is available or displayed at
+									(depending on <a href="harp_mapview.datasource-1.html">DataSource</a> subclass).</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use <a href="harp_omv_datasource.omvdatasource-1.html#mindatalevel">minDataLevel</a> and <a href="harp_omv_datasource.omvdatasource-1.html#mindisplaylevel">minDisplayLevel</a> instead.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="projection" class="tsd-anchor"></a>
+					<h3>projection</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> projection<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#projection">projection</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L425">@here/harp-mapview/lib/DataSource.ts:425</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The {@link @here/harp-geoutils#Projection} used by
+									the <a href="harp_mapview.mapview-1.html">MapView</a> that is holding this <code>DataSource</code>.</p>
+								</div>
+								<p>An <code>Error</code> is thrown if you call this method
+									before this <code>DataSource</code> has been added
+								to a <a href="harp_mapview.mapview-1.html">MapView</a>.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.projection-1.html" class="tsd-signature-type">Projection</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="storageleveloffset" class="tsd-anchor"></a>
+					<h3>storage<wbr>Level<wbr>Offset</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> storageLevelOffset<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> storageLevelOffset<span class="tsd-signature-symbol">(</span>levelOffset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_vectortile_datasource.vectortiledatasource-1.html">VectorTileDataSource</a>.<a href="harp_vectortile_datasource.vectortiledatasource-1.html#storageleveloffset">storageLevelOffset</a></p>
+								<p>Overrides <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#storageleveloffset">storageLevelOffset</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts#L378">@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts:378</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_vectortile_datasource.vectortiledatasource-1.html">VectorTileDataSource</a>.<a href="harp_vectortile_datasource.vectortiledatasource-1.html#storageleveloffset">storageLevelOffset</a></p>
+								<p>Overrides <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#storageleveloffset">storageLevelOffset</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts#L383">@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts:383</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>levelOffset: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+					<a name="stylesetname" class="tsd-anchor"></a>
+					<h3>style<wbr>Set<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> styleSetName<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> styleSetName<span class="tsd-signature-symbol">(</span>styleSetName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#stylesetname">styleSetName</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L352">@here/harp-mapview/lib/DataSource.ts:352</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the name of the [[StyleSet]] to use for the decoding.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#stylesetname">styleSetName</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L363">@here/harp-mapview/lib/DataSource.ts:363</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the name of the [[StyleSet]] to use for the decoding.
+										If this <a href="harp_mapview.datasource-1.html">DataSource</a> is already
+										attached to a <a href="harp_mapview.mapview-1.html">MapView</a>, this setter then reapplies
+										[[StyleSet]] with this name found in
+									<a href="harp_mapview.mapview-1.html">MapView</a>s theme.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>styleSetName: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="addeventlistener" class="tsd-anchor"></a>
+					<h3>add<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_materials.rawshadermaterial-1.html">RawShaderMaterial</a>.<a href="harp_materials.rawshadermaterial-1.html#addeventlistener">addEventListener</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:26</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a listener to an event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of event to listen to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function that gets called when the event is fired.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>event: <span class="tsd-signature-type">Event</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="attach" class="tsd-anchor"></a>
+					<h3>attach</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">attach<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#attach">attach</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L450">@here/harp-mapview/lib/DataSource.ts:450</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This method is called when this <code>DataSource</code> is added to a <a href="harp_mapview.mapview-1.html">MapView</a>.</p>
+								</div>
+								<p>Overrides of this method must invoke the definition of the super class.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The instance of the <a href="harp_mapview.mapview-1.html">MapView</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="cangettile" class="tsd-anchor"></a>
+					<h3>can<wbr>Get<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Get<wbr>Tile<span class="tsd-signature-symbol">(</span>zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileKey<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#cangettile">canGetTile</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L685">@here/harp-mapview/lib/DataSource.ts:685</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if <a href="harp_mapview.datasource-1.html">DataSource</a> can load tile with
+									given {@link @here/harp-geoutils#TileKey} and zoom level.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The zoom level of the <a href="harp_mapview.mapview-1.html">MapView</a>.</p>
+									</div>
+								</li>
+								<li>
+									<h5>tileKey: <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The unique identifier for a map tile.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the tile for the given {@link @here/harp-geoutils#TileKey} can be loaded.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="clearcache" class="tsd-anchor"></a>
+					<h3>clear<wbr>Cache</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Cache<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#clearcache">clearCache</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L381">@here/harp-mapview/lib/DataSource.ts:381</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Purges all the caching done by this <code>DataSource</code></p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="clearfeaturestate" class="tsd-anchor"></a>
+					<h3>clear<wbr>Feature<wbr>State</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Feature<wbr>State<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#clearfeaturestate">clearFeatureState</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L322">@here/harp-mapview/lib/DataSource.ts:322</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Clears the state of all the features of this <a href="harp_mapview.datasource-1.html">DataSource</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="connect" class="tsd-anchor"></a>
+					<h3>connect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_vectortile_datasource.vectortiledatasource-1.html">VectorTileDataSource</a>.<a href="harp_vectortile_datasource.vectortiledatasource-1.html#connect">connect</a></p>
+								<p>Overrides <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#connect">connect</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts#L308">@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts:308</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="dataprovider" class="tsd-anchor"></a>
+					<h3>data<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">data<wbr>Provider<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_mapview_decoder.dataprovider-1.html" class="tsd-signature-type">DataProvider</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#dataprovider">dataProvider</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L243">@here/harp-mapview-decoder/lib/TileDataSource.ts:243</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the <a href="harp_mapview_decoder.dataprovider-1.html">DataProvider</a> that has been passed in with the options.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="harp_mapview_decoder.dataprovider-1.html" class="tsd-signature-type">DataProvider</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="detach" class="tsd-anchor"></a>
+					<h3>detach</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">detach<span class="tsd-signature-symbol">(</span>mapView<span class="tsd-signature-symbol">: </span><a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#detach">detach</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L461">@here/harp-mapview/lib/DataSource.ts:461</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This method is called when this <code>DataSource</code> is removed from a <a href="harp_mapview.mapview-1.html">MapView</a>.</p>
+								</div>
+								<p>Overrides of this method must invoke the definition of the super class.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mapView: <a href="harp_mapview.mapview-1.html" class="tsd-signature-type">MapView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The instance of the <a href="harp_mapview.mapview-1.html">MapView</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="dispatchevent" class="tsd-anchor"></a>
+					<h3>dispatch<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">dispatch<wbr>Event<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_materials.rawshadermaterial-1.html">RawShaderMaterial</a>.<a href="harp_materials.rawshadermaterial-1.html#dispatchevent">dispatchEvent</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:46</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fire an event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-symbol">{ </span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-index-signature">
+											<h5><span class="tsd-signature-symbol">[</span>attachment: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="dispose" class="tsd-anchor"></a>
+					<h3>dispose</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#dispose">dispose</a></p>
+								<p>Overrides <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#dispose">dispose</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L166">@here/harp-mapview-decoder/lib/TileDataSource.ts:166</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getdatazoomlevel" class="tsd-anchor"></a>
+					<h3>get<wbr>Data<wbr>Zoom<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Data<wbr>Zoom<wbr>Level<span class="tsd-signature-symbol">(</span>zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#getdatazoomlevel">getDataZoomLevel</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L661">@here/harp-mapview/lib/DataSource.ts:661</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the data zoom level to use.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The zoom level of the <a href="harp_mapview.mapview-1.html">MapView</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The data zoom level to use.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getfeaturestate" class="tsd-anchor"></a>
+					<h3>get<wbr>Feature<wbr>State</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Feature<wbr>State<span class="tsd-signature-symbol">(</span>featureId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.valuemap-3.html" class="tsd-signature-type">ValueMap</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#getfeaturestate">getFeatureState</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L315">@here/harp-mapview/lib/DataSource.ts:315</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the state of the given feature id.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>featureId: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The id of the feature. Id numbers are deprecated in favor of strings.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/harp_datasource_protocol.valuemap-3.html" class="tsd-signature-type">ValueMap</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="gettile" class="tsd-anchor"></a>
+					<h3>get<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<span class="tsd-signature-symbol">(</span>tileKey<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a>, delayLoad<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TileType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#gettile">getTile</a></p>
+								<p>Overrides <a href="harp_mapview.datasource-1.html">DataSource</a>.<a href="harp_mapview.datasource-1.html#gettile">getTile</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L263">@here/harp-mapview-decoder/lib/TileDataSource.ts:263</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a <a href="harp_mapview.tile-1.html">Tile</a> and start the asynchronous download of the tile content. The <a href="harp_mapview.tile-1.html">Tile</a> will
+										be empty, but the download and decoding will be scheduled immediately. <a href="harp_mapview.tile-1.html">Tile</a> instance is
+										initialized with default copyrights, concatenated with copyrights from copyright provider of
+									this data source.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>default</dt>
+									<dd><p>false.</p>
+									</dd>
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tileKey: <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Quadtree address of the requested tile.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> delayLoad: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>If true, the Tile will be created, but Tile.load will not be called.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TileType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="gettileinfo" class="tsd-anchor"></a>
+					<h3>get<wbr>Tile<wbr>Info</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tile<wbr>Info<span class="tsd-signature-symbol">(</span>tileKey<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/harp_datasource_protocol.tileinfo-1.html" class="tsd-signature-type">TileInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#gettileinfo">getTileInfo</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L290">@here/harp-mapview-decoder/lib/TileDataSource.ts:290</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get <a href="../interfaces/harp_datasource_protocol.tileinfo-1.html">TileInfo</a> of a tile.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tileKey: <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Quadtree address of the requested tile.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/harp_datasource_protocol.tileinfo-1.html" class="tsd-signature-type">TileInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>A promise which will contain the <a href="../interfaces/harp_datasource_protocol.tileinfo-1.html">TileInfo</a> when resolved.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="gettilingscheme" class="tsd-anchor"></a>
+					<h3>get<wbr>Tiling<wbr>Scheme</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tiling<wbr>Scheme<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#gettilingscheme">getTilingScheme</a></p>
+								<p>Overrides <a href="harp_mapview.datasource-1.html">DataSource</a>.<a href="harp_mapview.datasource-1.html#gettilingscheme">getTilingScheme</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L248">@here/harp-mapview-decoder/lib/TileDataSource.ts:248</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="harp_geoutils.tilingscheme-1.html" class="tsd-signature-type">TilingScheme</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="haseventlistener" class="tsd-anchor"></a>
+					<h3>has<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_materials.rawshadermaterial-1.html">RawShaderMaterial</a>.<a href="harp_materials.rawshadermaterial-1.html#haseventlistener">hasEventListener</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:33</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if listener is added to an event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of event to listen to.</p>
+									</div>
+								</li>
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function that gets called when the event is fired.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>event: <span class="tsd-signature-type">Event</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="isdetached" class="tsd-anchor"></a>
+					<h3>is<wbr>Detached</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Detached<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#isdetached">isDetached</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L470">@here/harp-mapview/lib/DataSource.ts:470</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Whether this <code>DataSource</code> is detached from the <code>MapView</code></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="isfullycovering" class="tsd-anchor"></a>
+					<h3>is<wbr>Fully<wbr>Covering</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Fully<wbr>Covering<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#isfullycovering">isFullyCovering</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L393">@here/harp-mapview/lib/DataSource.ts:393</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Boolean which says whether a <a href="harp_mapview.datasource-1.html">DataSource</a> produces
+										tiles that fully cover the tile, i.e.
+										tiles underneath are completely hidden. Must be
+										overridden for <a href="harp_mapview.datasource-1.html">DataSource</a>&#39;s that don&#39;t
+										have a ground plane, but which still fully
+									cover the tile, e.g. web tiles.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="isvisible" class="tsd-anchor"></a>
+					<h3>is<wbr>Visible</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Visible<span class="tsd-signature-symbol">(</span>zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#isvisible">isVisible</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L673">@here/harp-mapview/lib/DataSource.ts:673</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if <a href="harp_mapview.datasource-1.html">DataSource</a> should be displayed for the zoom level.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The zoom level of the <a href="harp_mapview.mapview-1.html">MapView</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="ready" class="tsd-anchor"></a>
+					<h3>ready</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">ready<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#ready">ready</a></p>
+								<p>Overrides <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#ready">ready</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L173">@here/harp-mapview-decoder/lib/TileDataSource.ts:173</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removedatafilter" class="tsd-anchor"></a>
+					<h3>remove<wbr>Data<wbr>Filter</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Data<wbr>Filter<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_vectortile_datasource.vectortiledatasource-1.html">VectorTileDataSource</a>.<a href="harp_vectortile_datasource.vectortiledatasource-1.html#removedatafilter">removeDataFilter</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts#L333">@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts:333</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove the current data filter.
+									Will be applied to the decoder, which might be shared with other omv datasources.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removeeventlistener" class="tsd-anchor"></a>
+					<h3>remove<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_materials.rawshadermaterial-1.html">RawShaderMaterial</a>.<a href="harp_materials.rawshadermaterial-1.html#removeeventlistener">removeEventListener</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:40</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes a listener from an event type.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of the listener that gets removed.</p>
+									</div>
+								</li>
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The listener function that gets removed.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>event: <span class="tsd-signature-type">Event</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removefeaturestate" class="tsd-anchor"></a>
+					<h3>remove<wbr>Feature<wbr>State</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Feature<wbr>State<span class="tsd-signature-symbol">(</span>featureId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#removefeaturestate">removeFeatureState</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L345">@here/harp-mapview/lib/DataSource.ts:345</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes the state associated to the given feature.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>featureId: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The id of the feature. Id numbers are deprecated in favor of strings.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="requestupdate" class="tsd-anchor"></a>
+					<h3>request<wbr>Update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">request<wbr>Update<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#requestupdate">requestUpdate</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L724">@here/harp-mapview/lib/DataSource.ts:724</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sends a request to the <a href="harp_mapview.mapview-1.html">MapView</a> to redraw the scene.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setdatafilter" class="tsd-anchor"></a>
+					<h3>set<wbr>Data<wbr>Filter</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Data<wbr>Filter<span class="tsd-signature-symbol">(</span>filterDescription<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">OmvFeatureFilterDescription</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_vectortile_datasource.vectortiledatasource-1.html">VectorTileDataSource</a>.<a href="harp_vectortile_datasource.vectortiledatasource-1.html#setdatafilter">setDataFilter</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts#L347">@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts:347</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set a new data filter. Can also be done during
+										the creation of an <a href="harp_vectortile_datasource.vectortiledatasource-1.html">VectorTileDataSource</a>.
+									Will be applied to the decoder, which might be shared with other omv datasources.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>filterDescription: <span class="tsd-signature-type">OmvFeatureFilterDescription</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Data filter description created with
+										<a href="harp_vectortile_datasource.omvfeaturefilterdescriptionbuilder-1.html">OmvFeatureFilterDescriptionBuilder</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="setenableelevationoverlay" class="tsd-anchor"></a>
+					<h3>set<wbr>Enable<wbr>Elevation<wbr>Overlay</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Enable<wbr>Elevation<wbr>Overlay<span class="tsd-signature-symbol">(</span>enable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_vectortile_datasource.vectortiledatasource-1.html">VectorTileDataSource</a>.<a href="harp_vectortile_datasource.vectortiledatasource-1.html#setenableelevationoverlay">setEnableElevationOverlay</a></p>
+								<p>Overrides <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#setenableelevationoverlay">setEnableElevationOverlay</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts#L392">@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts:392</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>enable: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setfeaturestate" class="tsd-anchor"></a>
+					<h3>set<wbr>Feature<wbr>State</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Feature<wbr>State<span class="tsd-signature-symbol">(</span>featureId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, state<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.valuemap-3.html" class="tsd-signature-type">ValueMap</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#setfeaturestate">setFeatureState</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L336">@here/harp-mapview/lib/DataSource.ts:336</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the state of the given feature id.</p>
+								</div>
+								<pre><code class="language-typescript">dataSource.setFeatureState(featureId, { <span class="hljs-attr">enabled</span>: <span class="hljs-literal">true</span> });</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>featureId: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The id of the feature. Id numbers are deprecated in favor of strings.</p>
+									</div>
+								</li>
+								<li>
+									<h5>state: <a href="../interfaces/harp_datasource_protocol.valuemap-3.html" class="tsd-signature-type">ValueMap</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The new state of the feature.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="setlanguages" class="tsd-anchor"></a>
+					<h3>set<wbr>Languages</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Languages<span class="tsd-signature-symbol">(</span>languages<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#setlanguages">setLanguages</a></p>
+								<p>Overrides <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#setlanguages">setLanguages</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L202">@here/harp-mapview-decoder/lib/TileDataSource.ts:202</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>languages: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="setpoliticalview" class="tsd-anchor"></a>
+					<h3>set<wbr>Political<wbr>View</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Political<wbr>View<span class="tsd-signature-symbol">(</span>politicalView<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_vectortile_datasource.vectortiledatasource-1.html">VectorTileDataSource</a>.<a href="harp_vectortile_datasource.vectortiledatasource-1.html#setpoliticalview">setPoliticalView</a></p>
+								<p>Overrides <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#setpoliticalview">setPoliticalView</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts#L364">@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts:364</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> politicalView: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="settheme" class="tsd-anchor"></a>
+					<h3>set<wbr>Theme</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Theme<span class="tsd-signature-symbol">(</span>theme<span class="tsd-signature-symbol">: </span><a href="../interfaces/harp_datasource_protocol.theme-1.html" class="tsd-signature-type">Theme</a>, languages<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview_decoder.tiledatasource-1.html">TileDataSource</a>.<a href="harp_mapview_decoder.tiledatasource-1.html#settheme">setTheme</a></p>
+								<p>Overrides <a href="harp_mapview.datasource-1.html">DataSource</a>.<a href="harp_mapview.datasource-1.html#settheme">setTheme</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview-decoder/lib/TileDataSource.ts#L218">@here/harp-mapview-decoder/lib/TileDataSource.ts:218</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Apply the {@link @here/harp-datasource-protocol#Theme} to this data source.</p>
+								</div>
+								<p>Applies new {@here/harp-datasource-protocol StyleSet} and definitions from theme only
+								if matching styleset (see <code>styleSetName</code> property) is found in <code>theme</code>.</p>
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>theme: <a href="../interfaces/harp_datasource_protocol.theme-1.html" class="tsd-signature-type">Theme</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> languages: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<a name="shouldpreloadtiles" class="tsd-anchor"></a>
+					<h3>should<wbr>Preload<wbr>Tiles</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">should<wbr>Preload<wbr>Tiles<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_vectortile_datasource.vectortiledatasource-1.html">VectorTileDataSource</a>.<a href="harp_vectortile_datasource.vectortiledatasource-1.html#shouldpreloadtiles">shouldPreloadTiles</a></p>
+								<p>Overrides <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#shouldpreloadtiles">shouldPreloadTiles</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts#L359">@here/harp-vectortile-datasource/lib/VectorTileDataSource.ts:359</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>override</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="shouldrendertext" class="tsd-anchor"></a>
+					<h3>should<wbr>Render<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">should<wbr>Render<wbr>Text<span class="tsd-signature-symbol">(</span>zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileKey<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#shouldrendertext">shouldRenderText</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L717">@here/harp-mapview/lib/DataSource.ts:717</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if <a href="harp_mapview.mapview-1.html">MapView</a> should render the text
+										elements with the given {@link @here/harp-geoutils#TileKey} and
+									zoom level.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd><p>This is an additional check for the tiles that are already selected for rendering so the
+										default implementation returns <code>true</code>.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The zoom level.</p>
+									</div>
+								</li>
+								<li>
+									<h5>tileKey: <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The unique identifier for a map tile.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the text elements created for the
+							given {@link @here/harp-geoutils#TileKey} should be rendered.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="shouldsubdivide" class="tsd-anchor"></a>
+					<h3>should<wbr>Subdivide</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">should<wbr>Subdivide<span class="tsd-signature-symbol">(</span>zoomLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tileKey<span class="tsd-signature-symbol">: </span><a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#shouldsubdivide">shouldSubdivide</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L699">@here/harp-mapview/lib/DataSource.ts:699</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if <a href="harp_mapview.mapview-1.html">MapView</a> should traverse tiles
+										further with given {@link @here/harp-geoutils#TileKey} and
+									zoom level.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>zoomLevel: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The zoom level of the <a href="harp_mapview.mapview-1.html">MapView</a>.</p>
+									</div>
+								</li>
+								<li>
+									<h5>tileKey: <a href="harp_geoutils.tilekey-1.html" class="tsd-signature-type">TileKey</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The unique identifier for a map tile.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the subtiles of the given {@link @here/harp-geoutils#TileKey} should be
+							checked for collisions.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="updatetile" class="tsd-anchor"></a>
+					<h3>update<wbr>Tile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Tile<span class="tsd-signature-symbol">(</span>tile<span class="tsd-signature-symbol">: </span><a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="harp_mapview.backgrounddatasource.html">BackgroundDataSource</a>.<a href="harp_mapview.backgrounddatasource.html#updatetile">updateTile</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-mapview/lib/DataSource.ts#L538">@here/harp-mapview/lib/DataSource.ts:538</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This method is called by <a href="harp_mapview.mapview-1.html">MapView</a> before the
+										tile needs to be updated, for example after
+									a theme change.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tile: <a href="harp_mapview.tile-1.html" class="tsd-signature-type">Tile</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="harp_mapview.tile-1.html">Tile</a> to update.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="../modules/harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+						<ul>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="../modules/harp_omv_datasource.html#apiformat" class="tsd-kind-icon">APIFormat</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="../modules/harp_omv_datasource.html#authenticationmethod" class="tsd-kind-icon">Authentication<wbr>Method</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="../modules/harp_omv_datasource.html#geojsondataprovider" class="tsd-kind-icon">Geo<wbr>Json<wbr>Data<wbr>Provider</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="../modules/harp_omv_datasource.html#omvdatasource" class="tsd-kind-icon">Omv<wbr>Data<wbr>Source</a>
+							</li>
+							<li class="current tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+								<a href="harp_omv_datasource.omvdatasource-1.html" class="tsd-kind-icon">Omv<wbr>Data<wbr>Source</a>
+								<ul>
+									<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#constructor" class="tsd-kind-icon">constructor</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#addgroundplane" class="tsd-kind-icon">add<wbr>Ground<wbr>Plane</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#allowoverlappingtiles" class="tsd-kind-icon">allow<wbr>Overlapping<wbr>Tiles</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#cacheable" class="tsd-kind-icon">cacheable</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#datasourceorder" class="tsd-kind-icon">data<wbr>Source<wbr>Order</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#enablepicking" class="tsd-kind-icon">enable<wbr>Picking</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#enabled" class="tsd-kind-icon">enabled</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+										<a href="harp_omv_datasource.omvdatasource-1.html#languages" class="tsd-kind-icon">languages</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+										<a href="harp_omv_datasource.omvdatasource-1.html#logger" class="tsd-kind-icon">logger</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+										<a href="harp_omv_datasource.omvdatasource-1.html#m_decoder" class="tsd-kind-icon">m_<wbr>decoder</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#maxdatalevel" class="tsd-kind-icon">max<wbr>Data<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#maxdisplaylevel" class="tsd-kind-icon">max<wbr>Display<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#mindatalevel" class="tsd-kind-icon">min<wbr>Data<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#mindisplaylevel" class="tsd-kind-icon">min<wbr>Display<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#name" class="tsd-kind-icon">name</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#usegeometryloader" class="tsd-kind-icon">use<wbr>Geometry<wbr>Loader</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#decoder" class="tsd-kind-icon">decoder</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#mapview" class="tsd-kind-icon">map<wbr>View</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#maxgeometryheight" class="tsd-kind-icon">max<wbr>Geometry<wbr>Height</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#maxzoomlevel" class="tsd-kind-icon">max<wbr>Zoom<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#mingeometryheight" class="tsd-kind-icon">min<wbr>Geometry<wbr>Height</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#minzoomlevel" class="tsd-kind-icon">min<wbr>Zoom<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#projection" class="tsd-kind-icon">projection</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#storageleveloffset" class="tsd-kind-icon">storage<wbr>Level<wbr>Offset</a>
+									</li>
+									<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#stylesetname" class="tsd-kind-icon">style<wbr>Set<wbr>Name</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#attach" class="tsd-kind-icon">attach</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#cangettile" class="tsd-kind-icon">can<wbr>Get<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#clearcache" class="tsd-kind-icon">clear<wbr>Cache</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#clearfeaturestate" class="tsd-kind-icon">clear<wbr>Feature<wbr>State</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#connect" class="tsd-kind-icon">connect</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#dataprovider" class="tsd-kind-icon">data<wbr>Provider</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#detach" class="tsd-kind-icon">detach</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#dispose" class="tsd-kind-icon">dispose</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#getdatazoomlevel" class="tsd-kind-icon">get<wbr>Data<wbr>Zoom<wbr>Level</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#getfeaturestate" class="tsd-kind-icon">get<wbr>Feature<wbr>State</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#gettile" class="tsd-kind-icon">get<wbr>Tile</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#gettileinfo" class="tsd-kind-icon">get<wbr>Tile<wbr>Info</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#gettilingscheme" class="tsd-kind-icon">get<wbr>Tiling<wbr>Scheme</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#haseventlistener" class="tsd-kind-icon">has<wbr>Event<wbr>Listener</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#isdetached" class="tsd-kind-icon">is<wbr>Detached</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#isfullycovering" class="tsd-kind-icon">is<wbr>Fully<wbr>Covering</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#isvisible" class="tsd-kind-icon">is<wbr>Visible</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#ready" class="tsd-kind-icon">ready</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#removedatafilter" class="tsd-kind-icon">remove<wbr>Data<wbr>Filter</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#removefeaturestate" class="tsd-kind-icon">remove<wbr>Feature<wbr>State</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#requestupdate" class="tsd-kind-icon">request<wbr>Update</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#setdatafilter" class="tsd-kind-icon">set<wbr>Data<wbr>Filter</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#setenableelevationoverlay" class="tsd-kind-icon">set<wbr>Enable<wbr>Elevation<wbr>Overlay</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#setfeaturestate" class="tsd-kind-icon">set<wbr>Feature<wbr>State</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#setlanguages" class="tsd-kind-icon">set<wbr>Languages</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#setpoliticalview" class="tsd-kind-icon">set<wbr>Political<wbr>View</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#settheme" class="tsd-kind-icon">set<wbr>Theme</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#shouldpreloadtiles" class="tsd-kind-icon">should<wbr>Preload<wbr>Tiles</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#shouldrendertext" class="tsd-kind-icon">should<wbr>Render<wbr>Text</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#shouldsubdivide" class="tsd-kind-icon">should<wbr>Subdivide</a>
+									</li>
+									<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<a href="harp_omv_datasource.omvdatasource-1.html#updatetile" class="tsd-kind-icon">update<wbr>Tile</a>
+									</li>
+								</ul>
+							</li>
+							<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+								<a href="../modules/harp_omv_datasource.html#omvdatasourceparameters" class="tsd-kind-icon">Omv<wbr>Data<wbr>Source<wbr>Parameters</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

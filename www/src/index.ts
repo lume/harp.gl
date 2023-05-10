@@ -19,14 +19,14 @@ const theme = require("../resources/theme.json");
 
 import "../css/index.css";
 
-const s3Base = "https://www.harp.gl/docs/";
+// const s3Base = "https://www.harp.gl/docs/";
 
 //Update initial links to s3 base
-document.querySelector<HTMLAnchorElement>(".examples-link")!.href = s3Base + "master/examples/";
-document.querySelector<HTMLAnchorElement>(".docs-link")!.href = s3Base + "master/doc/";
-document.querySelector<HTMLAnchorElement>("#docs-nav")!.href = s3Base + "master/doc/";
-document.querySelector<HTMLAnchorElement>("#examples-nav")!.href = s3Base + "master/examples/";
-document.querySelector<HTMLAnchorElement>("#docs-nav-mobile")!.href = s3Base + "master/doc/";
+// document.querySelector<HTMLAnchorElement>(".examples-link")!.href = s3Base + "master/examples/";
+// document.querySelector<HTMLAnchorElement>(".docs-link")!.href = s3Base + "master/doc/";
+// document.querySelector<HTMLAnchorElement>("#docs-nav")!.href = s3Base + "master/doc/";
+// document.querySelector<HTMLAnchorElement>("#examples-nav")!.href = s3Base + "master/examples/";
+// document.querySelector<HTMLAnchorElement>("#docs-nav-mobile")!.href = s3Base + "master/doc/";
 
 //Update year
 (document.getElementById("year") as HTMLDivElement).innerText = `${new Date().getFullYear()}`;

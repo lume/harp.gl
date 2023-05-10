@@ -1,6 +1,6 @@
 # Harp.gl yeoman Generator
 
-Yeoman generator for [harp.gl](https://github.com/heremaps/harp.gl) based projects.
+Yeoman generator for [harp.gl](https://github.com/lume/harp.gl) based projects.
 
 ## Pre-requirements
 

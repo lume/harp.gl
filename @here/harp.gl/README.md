@@ -91,5 +91,5 @@ with `theme` loaded from `unpkg.com` CDN.
 # More info
 
 -   [Running example](http://harp.gl.s3-website-us-east-1.amazonaws.com/docs/master/examples/#getting-started_hello-world_js-bundle.html)
--   [Example source code](https://github.com/heremaps/harp.gl/blob/master/%40here/harp-examples/src/getting-started_hello-world_js-bundle.html)
--   [`harp.gl` Getting started guide](https://github.com/heremaps/harp.gl/blob/master/docs/GettingStartedGuide.md)
+-   [Example source code](https://github.com/lume/harp.gl/blob/master/%40here/harp-examples/src/getting-started_hello-world_js-bundle.html)
+-   [`harp.gl` Getting started guide](https://github.com/lume/harp.gl/blob/master/docs/GettingStartedGuide.md)

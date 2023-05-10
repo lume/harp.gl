@@ -1,0 +1,750 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>harp-map-controls | harp.gl</title>
+	<meta name="description" content="Documentation for harp.gl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">harp.gl</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="harp_map_controls.html">harp-map-controls</a>
+				</li>
+			</ul>
+			<h1>Package harp-map-controls</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<a href="#hereharp-map-controls" id="hereharp-map-controls" style="color: inherit; text-decoration: none;">
+						<h1>@here/harp-map-controls</h1>
+					</a>
+					<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
+						<h2>Overview</h2>
+					</a>
+					<p>This module provides MapControls and MapAnimations which implement a common default set of camera functionality in a map context.</p>
+					<a href="#using-the-mapanimations" id="using-the-mapanimations" style="color: inherit; text-decoration: none;">
+						<h3>Using the MapAnimations</h3>
+					</a>
+					<p>The MapAnimations can simply be added to the existing MapView. The animations should not start from
+						the beginning, but after a few seconds, so the MapView has time to load the data for the first tiles.
+					A timeOut of 2000ms should be fine for most situations.</p>
+					<a href="#camerarotationanimation" id="camerarotationanimation" style="color: inherit; text-decoration: none;">
+						<h3>CameraRotationAnimation</h3>
+					</a>
+					<p>For the CameraRotationAnimation, the
+						MapControls that may be employed to manipulate the view should also be passed in, so the camera
+					animation can pause during the manipulation.</p>
+					<pre><code class="language-typescript"><span class="hljs-keyword">const</span> camRot = <span class="hljs-keyword">new</span> CameraRotationAnimation(<span class="hljs-built_in">this</span>.mapView, <span class="hljs-built_in">this</span>.mapControls,
+    {
+        <span class="hljs-attr">axis</span>: <span class="hljs-keyword">new</span> THREE.Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>),
+        <span class="hljs-attr">duration</span>: (<span class="hljs-number">20.</span> * <span class="hljs-number">1000</span>),
+        <span class="hljs-attr">endAngle</span>: <span class="hljs-number">720</span>
+    });
+
+<span class="hljs-built_in">this</span>.mapView.addEventListener(<span class="hljs-string">&quot;render&quot;</span>, <span class="hljs-function">(<span class="hljs-params">event: RenderEvent</span>) =&gt;</span> {
+    camRot.update();
+})
+
+camRot.start();</code></pre>
+					<a href="#camerapananimation" id="camerapananimation" style="color: inherit; text-decoration: none;">
+						<h3>CameraPanAnimation</h3>
+					</a>
+					<p>The CameraPanAnimation is not connected to the MapControls. If moves along the specified path, while
+					the camera orientation is not changed, it may be animated independently.</p>
+					<pre><code class="language-typescript"><span class="hljs-built_in">this</span>.mapView.geoCenter = <span class="hljs-keyword">new</span> GeoCoordinates(<span class="hljs-number">52.515276</span>, <span class="hljs-number">13.377689000000002</span>, <span class="hljs-number">8000</span>);
+
+<span class="hljs-keyword">const</span> camPan = <span class="hljs-keyword">new</span> CameraPanAnimation(<span class="hljs-built_in">this</span>.mapView,
+    {
+        <span class="hljs-comment">// low level flight above Berlin</span>
+        <span class="hljs-comment">// duration: (40. * 1000),</span>
+        <span class="hljs-comment">// geoCoordinates: [</span>
+        <span class="hljs-comment">//     new GeoCoordinates(52.52006626, 13.40764352, 800),</span>
+        <span class="hljs-comment">//     new GeoCoordinates(52.48094817, 13.3909456, 800),</span>
+        <span class="hljs-comment">//     new GeoCoordinates(52.518611, 13.376111, 800)</span>
+        <span class="hljs-comment">// ],</span>
+
+        <span class="hljs-comment">// Longer lasting higher level flight above Germany and France.</span>
+        <span class="hljs-attr">duration</span>: (<span class="hljs-number">400.</span> * <span class="hljs-number">1000</span>),
+        <span class="hljs-attr">geoCoordinates</span>: [
+            <span class="hljs-keyword">new</span> GeoCoordinates(<span class="hljs-number">48.138137</span>, <span class="hljs-number">11.575682</span>, <span class="hljs-number">15000</span>),
+            <span class="hljs-keyword">new</span> GeoCoordinates(<span class="hljs-number">50.93873</span>, <span class="hljs-number">6.95236</span>, <span class="hljs-number">10000</span>),
+            <span class="hljs-keyword">new</span> GeoCoordinates(<span class="hljs-number">48.853190</span>, <span class="hljs-number">2.348585</span>, <span class="hljs-number">8000</span>)
+        ],
+
+        <span class="hljs-attr">repeat</span>: <span class="hljs-literal">Infinity</span>,
+        <span class="hljs-attr">interpolation</span>: InterpolationFunction.CatmullRom
+    });
+
+<span class="hljs-built_in">this</span>.mapView.addEventListener(<span class="hljs-string">&quot;render&quot;</span>, <span class="hljs-function">(<span class="hljs-params">event: RenderEvent</span>) =&gt;</span> {
+    camPan.update();
+})
+
+camPan.start();</code></pre>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>References</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#cameraanimation" class="tsd-kind-icon">Camera<wbr>Animation</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#cameraanimationbuilder" class="tsd-kind-icon">Camera<wbr>Animation<wbr>Builder</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#camerakeytrackanimation" class="tsd-kind-icon">Camera<wbr>Key<wbr>Track<wbr>Animation</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#camerakeytrackanimationoptions" class="tsd-kind-icon">Camera<wbr>Key<wbr>Track<wbr>Animation<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#camerapananimation" class="tsd-kind-icon">Camera<wbr>Pan<wbr>Animation</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#camerapananimationoptions" class="tsd-kind-icon">Camera<wbr>Pan<wbr>Animation<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#camerarotationanimation" class="tsd-kind-icon">Camera<wbr>Rotation<wbr>Animation</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#camerarotationanimationoptions" class="tsd-kind-icon">Camera<wbr>Rotation<wbr>Animation<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#controlpoint" class="tsd-kind-icon">Control<wbr>Point</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#controlpointoptions" class="tsd-kind-icon">Control<wbr>Point<wbr>Options</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#easingfunction" class="tsd-kind-icon">Easing<wbr>Function</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#eventnames" class="tsd-kind-icon">Event<wbr>Names</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#interpolationfunction" class="tsd-kind-icon">Interpolation<wbr>Function</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#longpresshandler" class="tsd-kind-icon">Long<wbr>Press<wbr>Handler</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#mapcontrols" class="tsd-kind-icon">Map<wbr>Controls</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#mapcontrolsui" class="tsd-kind-icon">Map<wbr>ControlsUI</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#tiltstate" class="tsd-kind-icon">Tilt<wbr>State</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#azimuthaltitudetodirection" class="tsd-kind-icon">azimuth<wbr>Altitude<wbr>ToDirection</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#calculatenormalizeddevicecoordinates" class="tsd-kind-icon">calculate<wbr>Normalized<wbr>Device<wbr>Coordinates</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#getwidthandheightfromcanvas" class="tsd-kind-icon">get<wbr>Width<wbr>And<wbr>Height<wbr>From<wbr>Canvas</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="harp_map_controls.html#safeparsedecimalint" class="tsd-kind-icon">safe<wbr>Parse<wbr>Decimal<wbr>Int</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/harp_map_controls.easingfunction-1.html" class="tsd-kind-icon">Easing<wbr>Function</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/harp_map_controls.eventnames-1.html" class="tsd-kind-icon">Event<wbr>Names</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/harp_map_controls.interpolationfunction-1.html" class="tsd-kind-icon">Interpolation<wbr>Function</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/harp_map_controls.tiltstate-1.html" class="tsd-kind-icon">Tilt<wbr>State</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_map_controls.cameraanimation-1.html" class="tsd-kind-icon">Camera<wbr>Animation</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_map_controls.cameraanimationbuilder-1.html" class="tsd-kind-icon">Camera<wbr>Animation<wbr>Builder</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_map_controls.camerakeytrackanimation-1.html" class="tsd-kind-icon">Camera<wbr>Key<wbr>Track<wbr>Animation</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_map_controls.camerapananimation-1.html" class="tsd-kind-icon">Camera<wbr>Pan<wbr>Animation</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_map_controls.camerarotationanimation-1.html" class="tsd-kind-icon">Camera<wbr>Rotation<wbr>Animation</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_map_controls.controlpoint-1.html" class="tsd-kind-icon">Control<wbr>Point</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_map_controls.longpresshandler-1.html" class="tsd-kind-icon">Long<wbr>Press<wbr>Handler</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_map_controls.mapcontrols-1.html" class="tsd-kind-icon">Map<wbr>Controls</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/harp_map_controls.mapcontrolsui-1.html" class="tsd-kind-icon">Map<wbr>ControlsUI</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_map_controls.camerakeytrackanimationoptions-1.html" class="tsd-kind-icon">Camera<wbr>Key<wbr>Track<wbr>Animation<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_map_controls.camerapananimationoptions-1.html" class="tsd-kind-icon">Camera<wbr>Pan<wbr>Animation<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_map_controls.camerarotationanimationoptions-1.html" class="tsd-kind-icon">Camera<wbr>Rotation<wbr>Animation<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/harp_map_controls.controlpointoptions-1.html" class="tsd-kind-icon">Control<wbr>Point<wbr>Options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_map_controls.html#azimuthaltitudetodirection-1" class="tsd-kind-icon">azimuth<wbr>Altitude<wbr>ToDirection</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_map_controls.html#calculatenormalizeddevicecoordinates-1" class="tsd-kind-icon">calculate<wbr>Normalized<wbr>Device<wbr>Coordinates</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_map_controls.html#getwidthandheightfromcanvas-1" class="tsd-kind-icon">get<wbr>Width<wbr>And<wbr>Height<wbr>From<wbr>Canvas</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="harp_map_controls.html#safeparsedecimalint-1" class="tsd-kind-icon">safe<wbr>Parse<wbr>Decimal<wbr>Int</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>References</h2>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="cameraanimation" class="tsd-anchor"></a>
+					<h3>Camera<wbr>Animation</h3>
+					Re-exports <a href="../classes/harp_map_controls.cameraanimation-1.html">CameraAnimation</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="cameraanimationbuilder" class="tsd-anchor"></a>
+					<h3>Camera<wbr>Animation<wbr>Builder</h3>
+					Re-exports <a href="../classes/harp_map_controls.cameraanimationbuilder-1.html">CameraAnimationBuilder</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="camerakeytrackanimation" class="tsd-anchor"></a>
+					<h3>Camera<wbr>Key<wbr>Track<wbr>Animation</h3>
+					Re-exports <a href="../classes/harp_map_controls.camerakeytrackanimation-1.html">CameraKeyTrackAnimation</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="camerakeytrackanimationoptions" class="tsd-anchor"></a>
+					<h3>Camera<wbr>Key<wbr>Track<wbr>Animation<wbr>Options</h3>
+					Re-exports <a href="../interfaces/harp_map_controls.camerakeytrackanimationoptions-1.html">CameraKeyTrackAnimationOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="camerapananimation" class="tsd-anchor"></a>
+					<h3>Camera<wbr>Pan<wbr>Animation</h3>
+					Re-exports <a href="../classes/harp_map_controls.camerapananimation-1.html">CameraPanAnimation</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="camerapananimationoptions" class="tsd-anchor"></a>
+					<h3>Camera<wbr>Pan<wbr>Animation<wbr>Options</h3>
+					Re-exports <a href="../interfaces/harp_map_controls.camerapananimationoptions-1.html">CameraPanAnimationOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="camerarotationanimation" class="tsd-anchor"></a>
+					<h3>Camera<wbr>Rotation<wbr>Animation</h3>
+					Re-exports <a href="../classes/harp_map_controls.camerarotationanimation-1.html">CameraRotationAnimation</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="camerarotationanimationoptions" class="tsd-anchor"></a>
+					<h3>Camera<wbr>Rotation<wbr>Animation<wbr>Options</h3>
+					Re-exports <a href="../interfaces/harp_map_controls.camerarotationanimationoptions-1.html">CameraRotationAnimationOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="controlpoint" class="tsd-anchor"></a>
+					<h3>Control<wbr>Point</h3>
+					Re-exports <a href="../classes/harp_map_controls.controlpoint-1.html">ControlPoint</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="controlpointoptions" class="tsd-anchor"></a>
+					<h3>Control<wbr>Point<wbr>Options</h3>
+					Re-exports <a href="../interfaces/harp_map_controls.controlpointoptions-1.html">ControlPointOptions</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="easingfunction" class="tsd-anchor"></a>
+					<h3>Easing<wbr>Function</h3>
+					Re-exports <a href="../enums/harp_map_controls.easingfunction-1.html">EasingFunction</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="eventnames" class="tsd-anchor"></a>
+					<h3>Event<wbr>Names</h3>
+					Re-exports <a href="../enums/harp_map_controls.eventnames-1.html">EventNames</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="interpolationfunction" class="tsd-anchor"></a>
+					<h3>Interpolation<wbr>Function</h3>
+					Re-exports <a href="../enums/harp_map_controls.interpolationfunction-1.html">InterpolationFunction</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="longpresshandler" class="tsd-anchor"></a>
+					<h3>Long<wbr>Press<wbr>Handler</h3>
+					Re-exports <a href="../classes/harp_map_controls.longpresshandler-1.html">LongPressHandler</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="mapcontrols" class="tsd-anchor"></a>
+					<h3>Map<wbr>Controls</h3>
+					Re-exports <a href="../classes/harp_map_controls.mapcontrols-1.html">MapControls</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="mapcontrolsui" class="tsd-anchor"></a>
+					<h3>Map<wbr>ControlsUI</h3>
+					Re-exports <a href="../classes/harp_map_controls.mapcontrolsui-1.html">MapControlsUI</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="tiltstate" class="tsd-anchor"></a>
+					<h3>Tilt<wbr>State</h3>
+					Re-exports <a href="../enums/harp_map_controls.tiltstate-1.html">TiltState</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="azimuthaltitudetodirection" class="tsd-anchor"></a>
+					<h3>azimuth<wbr>Altitude<wbr>ToDirection</h3>
+					Re-exports <a href="harp_map_controls.html#azimuthaltitudetodirection-1">azimuthAltitudeToDirection</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="calculatenormalizeddevicecoordinates" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Normalized<wbr>Device<wbr>Coordinates</h3>
+					Re-exports <a href="harp_map_controls.html#calculatenormalizeddevicecoordinates-1">calculateNormalizedDeviceCoordinates</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="getwidthandheightfromcanvas" class="tsd-anchor"></a>
+					<h3>get<wbr>Width<wbr>And<wbr>Height<wbr>From<wbr>Canvas</h3>
+					Re-exports <a href="harp_map_controls.html#getwidthandheightfromcanvas-1">getWidthAndHeightFromCanvas</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="safeparsedecimalint" class="tsd-anchor"></a>
+					<h3>safe<wbr>Parse<wbr>Decimal<wbr>Int</h3>
+					Re-exports <a href="harp_map_controls.html#safeparsedecimalint-1">safeParseDecimalInt</a>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="azimuthaltitudetodirection-1" class="tsd-anchor"></a>
+					<h3>azimuth<wbr>Altitude<wbr>ToDirection</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">azimuth<wbr>Altitude<wbr>ToDirection<span class="tsd-signature-symbol">(</span>azimuth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, altitude<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/Utils.ts#L36">@here/harp-map-controls/lib/Utils.ts:36</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the direction vector that is described by the given azimuth and altitude.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>azimuth: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Azimuth in radians.</p>
+									</div>
+								</li>
+								<li>
+									<h5>altitude: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Altitude in radians.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vector3</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="calculatenormalizeddevicecoordinates-1" class="tsd-anchor"></a>
+					<h3>calculate<wbr>Normalized<wbr>Device<wbr>Coordinates</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Normalized<wbr>Device<wbr>Coordinates<span class="tsd-signature-symbol">(</span>screenCoordinateX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, screenCoordinateY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, screenSizeX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, screenSizeY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector2</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/Utils.ts#L18">@here/harp-map-controls/lib/Utils.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Transforms the given point in screen space into NDC space by taking the given screen dimension
+									into account.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>screenCoordinateX: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>X coordinate in screen space.</p>
+									</div>
+								</li>
+								<li>
+									<h5>screenCoordinateY: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Y coordinate in screen space.</p>
+									</div>
+								</li>
+								<li>
+									<h5>screenSizeX: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Width of the reference screen size.</p>
+									</div>
+								</li>
+								<li>
+									<h5>screenSizeY: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Height of the reference screen size.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vector2</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getwidthandheightfromcanvas-1" class="tsd-anchor"></a>
+					<h3>get<wbr>Width<wbr>And<wbr>Height<wbr>From<wbr>Canvas</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Width<wbr>And<wbr>Height<wbr>From<wbr>Canvas<span class="tsd-signature-symbol">(</span>canvas<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/Utils.ts#L80">@here/harp-map-controls/lib/Utils.ts:80</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Extracts the CSS width and height of the given canvas if available, or width and height of the
+									canvas otherwise.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>canvas: <span class="tsd-signature-type">HTMLCanvasElement</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The canvas.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="safeparsedecimalint-1" class="tsd-anchor"></a>
+					<h3>safe<wbr>Parse<wbr>Decimal<wbr>Int</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">safe<wbr>Parse<wbr>Decimal<wbr>Int<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, fallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lume/harp.gl/blob/a43b9aa1/@here/harp-map-controls/lib/Utils.ts#L59">@here/harp-map-controls/lib/Utils.ts:59</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Safely parses decimal value into <code>number</code>.</p>
+								</div>
+								<p>Safely falls back to default value for <code>null</code>, <code>undefined</code>, <code>NaN</code>, empty strings, and strings
+								with characters other than digits.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>text: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number as a text to be parsed.</p>
+									</div>
+								</li>
+								<li>
+									<h5>fallback: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Default value, which is returned if <code>text</code> doesn&#39;t represent a valid number.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="harp_map_controls.html">harp-<wbr>map-<wbr>controls</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-module">
+						<a href="_docs_fallback.html" class="tsd-kind-icon">@docs/fallback</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_docs_label_rendering.html" class="tsd-kind-icon">@docs/label-<wbr>rendering</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_atlas_tools.html" class="tsd-kind-icon">harp-<wbr>atlas-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_datasource_protocol.html" class="tsd-kind-icon">harp-<wbr>datasource-<wbr>protocol</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_debug_datasource.html" class="tsd-kind-icon">harp-<wbr>debug-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_examples.html" class="tsd-kind-icon">harp-<wbr>examples</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_features_datasource.html" class="tsd-kind-icon">harp-<wbr>features-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_fetch.html" class="tsd-kind-icon">harp-<wbr>fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geojson_datasource.html" class="tsd-kind-icon">harp-<wbr>geojson-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geometry.html" class="tsd-kind-icon">harp-<wbr>geometry</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_geoutils.html" class="tsd-kind-icon">harp-<wbr>geoutils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_lines.html" class="tsd-kind-icon">harp-<wbr>lines</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_lrucache.html" class="tsd-kind-icon">harp-<wbr>lrucache</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-module">
+						<a href="harp_map_controls.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>controls</a>
+						<ul>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#cameraanimation" class="tsd-kind-icon">Camera<wbr>Animation</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#cameraanimationbuilder" class="tsd-kind-icon">Camera<wbr>Animation<wbr>Builder</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#camerakeytrackanimation" class="tsd-kind-icon">Camera<wbr>Key<wbr>Track<wbr>Animation</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#camerakeytrackanimationoptions" class="tsd-kind-icon">Camera<wbr>Key<wbr>Track<wbr>Animation<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#camerapananimation" class="tsd-kind-icon">Camera<wbr>Pan<wbr>Animation</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#camerapananimationoptions" class="tsd-kind-icon">Camera<wbr>Pan<wbr>Animation<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#camerarotationanimation" class="tsd-kind-icon">Camera<wbr>Rotation<wbr>Animation</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#camerarotationanimationoptions" class="tsd-kind-icon">Camera<wbr>Rotation<wbr>Animation<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#controlpoint" class="tsd-kind-icon">Control<wbr>Point</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#controlpointoptions" class="tsd-kind-icon">Control<wbr>Point<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#easingfunction" class="tsd-kind-icon">Easing<wbr>Function</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#eventnames" class="tsd-kind-icon">Event<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#interpolationfunction" class="tsd-kind-icon">Interpolation<wbr>Function</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#longpresshandler" class="tsd-kind-icon">Long<wbr>Press<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#mapcontrols" class="tsd-kind-icon">Map<wbr>Controls</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#mapcontrolsui" class="tsd-kind-icon">Map<wbr>ControlsUI</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#tiltstate" class="tsd-kind-icon">Tilt<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#azimuthaltitudetodirection" class="tsd-kind-icon">azimuth<wbr>Altitude<wbr>ToDirection</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#calculatenormalizeddevicecoordinates" class="tsd-kind-icon">calculate<wbr>Normalized<wbr>Device<wbr>Coordinates</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#getwidthandheightfromcanvas" class="tsd-kind-icon">get<wbr>Width<wbr>And<wbr>Height<wbr>From<wbr>Canvas</a>
+							</li>
+							<li class=" tsd-kind-reference tsd-parent-kind-module">
+								<a href="harp_map_controls.html#safeparsedecimalint" class="tsd-kind-icon">safe<wbr>Parse<wbr>Decimal<wbr>Int</a>
+							</li>
+							<li class=" tsd-kind-enum tsd-parent-kind-module">
+								<a href="../enums/harp_map_controls.easingfunction-1.html" class="tsd-kind-icon">Easing<wbr>Function</a>
+							</li>
+							<li class=" tsd-kind-enum tsd-parent-kind-module">
+								<a href="../enums/harp_map_controls.eventnames-1.html" class="tsd-kind-icon">Event<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-enum tsd-parent-kind-module">
+								<a href="../enums/harp_map_controls.interpolationfunction-1.html" class="tsd-kind-icon">Interpolation<wbr>Function</a>
+							</li>
+							<li class=" tsd-kind-enum tsd-parent-kind-module">
+								<a href="../enums/harp_map_controls.tiltstate-1.html" class="tsd-kind-icon">Tilt<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_map_controls.cameraanimation-1.html" class="tsd-kind-icon">Camera<wbr>Animation</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_map_controls.cameraanimationbuilder-1.html" class="tsd-kind-icon">Camera<wbr>Animation<wbr>Builder</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_map_controls.camerakeytrackanimation-1.html" class="tsd-kind-icon">Camera<wbr>Key<wbr>Track<wbr>Animation</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_map_controls.camerapananimation-1.html" class="tsd-kind-icon">Camera<wbr>Pan<wbr>Animation</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_map_controls.camerarotationanimation-1.html" class="tsd-kind-icon">Camera<wbr>Rotation<wbr>Animation</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_map_controls.controlpoint-1.html" class="tsd-kind-icon">Control<wbr>Point</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_map_controls.longpresshandler-1.html" class="tsd-kind-icon">Long<wbr>Press<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_map_controls.mapcontrols-1.html" class="tsd-kind-icon">Map<wbr>Controls</a>
+							</li>
+							<li class=" tsd-kind-class tsd-parent-kind-module">
+								<a href="../classes/harp_map_controls.mapcontrolsui-1.html" class="tsd-kind-icon">Map<wbr>ControlsUI</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_map_controls.camerakeytrackanimationoptions-1.html" class="tsd-kind-icon">Camera<wbr>Key<wbr>Track<wbr>Animation<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_map_controls.camerapananimationoptions-1.html" class="tsd-kind-icon">Camera<wbr>Pan<wbr>Animation<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_map_controls.camerarotationanimationoptions-1.html" class="tsd-kind-icon">Camera<wbr>Rotation<wbr>Animation<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-module">
+								<a href="../interfaces/harp_map_controls.controlpointoptions-1.html" class="tsd-kind-icon">Control<wbr>Point<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_map_controls.html#azimuthaltitudetodirection-1" class="tsd-kind-icon">azimuth<wbr>Altitude<wbr>ToDirection</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_map_controls.html#calculatenormalizeddevicecoordinates-1" class="tsd-kind-icon">calculate<wbr>Normalized<wbr>Device<wbr>Coordinates</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_map_controls.html#getwidthandheightfromcanvas-1" class="tsd-kind-icon">get<wbr>Width<wbr>And<wbr>Height<wbr>From<wbr>Canvas</a>
+							</li>
+							<li class=" tsd-kind-function tsd-parent-kind-module">
+								<a href="harp_map_controls.html#safeparsedecimalint-1" class="tsd-kind-icon">safe<wbr>Parse<wbr>Decimal<wbr>Int</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-module">
+						<a href="harp_map_theme.html" class="tsd-kind-icon">harp-<wbr>map-<wbr>theme</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_mapview.html" class="tsd-kind-icon">harp-<wbr>mapview</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_mapview_decoder.html" class="tsd-kind-icon">harp-<wbr>mapview-<wbr>decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_materials.html" class="tsd-kind-icon">harp-<wbr>materials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_olp_utils.html" class="tsd-kind-icon">harp-<wbr>olp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_omv_datasource.html" class="tsd-kind-icon">harp-<wbr>omv-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_test_utils.html" class="tsd-kind-icon">harp-<wbr>test-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_text_canvas.html" class="tsd-kind-icon">harp-<wbr>text-<wbr>canvas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_theme_tools.html" class="tsd-kind-icon">harp-<wbr>theme-<wbr>tools</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_transfer_manager.html" class="tsd-kind-icon">harp-<wbr>transfer-<wbr>manager</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_utils.html" class="tsd-kind-icon">harp-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_vectortile_datasource.html" class="tsd-kind-icon">harp-<wbr>vectortile-<wbr>datasource</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="harp_webtile_datasource.html" class="tsd-kind-icon">harp-<wbr>webtile-<wbr>datasource</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

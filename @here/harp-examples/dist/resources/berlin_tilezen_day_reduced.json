@@ -1,0 +1,1944 @@
+{
+    "sky": {
+        "type": "gradient",
+        "topColor": "#AAA69A",
+        "bottomColor": "#FBF6EE",
+        "groundColor": "#D4CDC0",
+        "monomialPower": 1
+    },
+    "fog": {
+        "color": "#FBF6EE",
+        "startRatio": 0.8
+    },
+    "clearColor": "#C3BDAE",
+    "lights": [
+        {
+            "type": "ambient",
+            "color": "#FBF6EF",
+            "name": "ambientLight",
+            "intensity": 0.8
+        },
+        {
+            "type": "directional",
+            "color": "#C8C4BC",
+            "name": "light1",
+            "intensity": 0.25,
+            "direction": {
+                "x": 1,
+                "y": 0,
+                "z": 1
+            }
+        },
+        {
+            "type": "directional",
+            "color": "#A29C87",
+            "name": "light2",
+            "intensity": 0.25,
+            "direction": {
+                "x": -1,
+                "y": 0,
+                "z": 0.3
+            }
+        }
+    ],
+    "defaultTextStyle": {
+        "name": "defaultTextStyle",
+        "color": "#A5A192",
+        "fontCatalogName": "fira"
+    },
+    "textStyles": [
+        {
+            "name": "smallSign",
+            "color": "#363532",
+            "fontCatalogName": "fira"
+        },
+        {
+            "name": "smallSignLight",
+            "color": "#EAEBE7",
+            "fontCatalogName": "fira"
+        },
+        {
+            "name": "placeMarker",
+            "color": "#E3EBDD",
+            "fontCatalogName": "fira"
+        }
+    ],
+    "fontCatalogs": [
+        {
+            "name": "fira",
+            "url": "fonts/Default_FontCatalog.json"
+        }
+    ],
+    "images": {
+        "icons_day_maki": {
+            "url": "maki_icons.png",
+            "preload": true,
+            "atlas": "maki_icons.json"
+        }
+    },
+    "styles": {
+        "tilezen": [
+            {
+                "description": "pier",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    [
+                        "any",
+                        ["==", ["get", "kind_detail"], "pier"],
+                        ["==", ["get", "landuse_kind"], "pier"]
+                    ]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 10,
+                "final": true,
+                "color": "#E4E0D4",
+                "lineWidth": ["interpolate", ["linear"], ["zoom"], 13, 1.5, 14, 1.2, 15, 0.9],
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "residential - background",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "minor_road"],
+                    [
+                        "any",
+                        ["==", ["get", "kind_detail"], "unclassified"],
+                        ["==", ["get", "kind_detail"], "residential"],
+                        ["==", ["get", "kind_detail"], "service"]
+                    ]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 11,
+                "color": "#C4BCA4",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    10,
+                    42,
+                    11,
+                    28,
+                    12,
+                    18,
+                    13,
+                    7,
+                    14,
+                    4
+                ],
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "residential - foreground",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "minor_road"],
+                    [
+                        "any",
+                        ["==", ["get", "kind_detail"], "unclassified"],
+                        ["==", ["get", "kind_detail"], "residential"],
+                        ["==", ["get", "kind_detail"], "service"]
+                    ]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 11.3,
+                "color": "#DCD8CB",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    10,
+                    38,
+                    11,
+                    24,
+                    12,
+                    13,
+                    13,
+                    5,
+                    14,
+                    3
+                ],
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "residential - labels",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "minor_road"],
+                    [
+                        "any",
+                        ["==", ["get", "kind_detail"], "unclassified"],
+                        ["==", ["get", "kind_detail"], "residential"],
+                        ["==", ["get", "kind_detail"], "service"]
+                    ]
+                ],
+                "technique": "text",
+                "renderOrder": 12,
+                "color": "#363531",
+                "size": 16,
+                "priority": 15,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "secondary",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "major_road"],
+                    ["==", ["get", "kind_detail"], "secondary"]
+                ],
+                "technique": "text",
+                "renderOrder": 12,
+                "color": "#363531",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "size": 16,
+                "priority": 15,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "major_road"],
+                    ["==", ["get", "kind_detail"], "secondary"]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 15.3,
+                "secondaryRenderOrder": 10.3,
+                "final": true,
+                "color": "#D7D3C3",
+                "secondaryColor": "#C4BCA4",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    7,
+                    180,
+                    8,
+                    110,
+                    9,
+                    45,
+                    10,
+                    30,
+                    11,
+                    20,
+                    12,
+                    12,
+                    13,
+                    7,
+                    14,
+                    5
+                ],
+                "secondaryWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    7,
+                    180,
+                    8,
+                    110,
+                    9,
+                    45,
+                    10,
+                    30,
+                    11,
+                    20,
+                    12,
+                    16,
+                    13,
+                    9,
+                    14,
+                    6
+                ],
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "tertiary",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "major_road"],
+                    ["in", ["get", "kind_detail"], ["literal", ["primary", "tertiary"]]]
+                ],
+                "technique": "text",
+                "renderOrder": 13,
+                "color": "#363531",
+                "size": 16,
+                "priority": 20,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "tertiary",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "major_road"],
+                    ["in", ["get", "kind_detail"], ["literal", ["primary", "tertiary"]]]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 10.3,
+                "color": "#C4BCA4",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    6,
+                    550,
+                    7,
+                    300,
+                    8,
+                    100,
+                    9,
+                    70,
+                    10,
+                    38,
+                    11,
+                    24,
+                    12,
+                    14,
+                    13,
+                    7,
+                    14,
+                    5
+                ],
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "tertiary",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "major_road"],
+                    ["in", ["get", "kind_detail"], ["literal", ["primary", "tertiary"]]]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 15.3,
+                "final": true,
+                "color": "#DDD9CA",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    5,
+                    830,
+                    6,
+                    410,
+                    7,
+                    220,
+                    8,
+                    100,
+                    9,
+                    50,
+                    10,
+                    30,
+                    11,
+                    20,
+                    12,
+                    11,
+                    13,
+                    6,
+                    14,
+                    4
+                ],
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "primary",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "highway"],
+                    [
+                        "any",
+                        ["==", ["get", "kind_detail"], "motorway"],
+                        ["==", ["get", "kind_detail"], "primary"]
+                    ]
+                ],
+                "technique": "text",
+                "renderOrder": 10,
+                "color": "#363531",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "size": 16,
+                "priority": 25,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "primary",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "highway"],
+                    [
+                        "any",
+                        ["==", ["get", "kind_detail"], "motorway"],
+                        ["==", ["get", "kind_detail"], "primary"]
+                    ]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 10.4,
+                "color": "#C4BCA4",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    6,
+                    700,
+                    7,
+                    400,
+                    8,
+                    250,
+                    9,
+                    120,
+                    10,
+                    50,
+                    11,
+                    33,
+                    12,
+                    16,
+                    13,
+                    11,
+                    14,
+                    7
+                ],
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "primary",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "highway"],
+                    [
+                        "any",
+                        ["==", ["get", "kind_detail"], "motorway"],
+                        ["==", ["get", "kind_detail"], "primary"]
+                    ]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 15.4,
+                "final": true,
+                "color": "#D1CDBC",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    5,
+                    830,
+                    6,
+                    550,
+                    7,
+                    300,
+                    8,
+                    150,
+                    9,
+                    70,
+                    10,
+                    35,
+                    11,
+                    22,
+                    12,
+                    12,
+                    13,
+                    8,
+                    14,
+                    6
+                ],
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "ferry",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "ferry"]
+                ],
+                "technique": "text",
+                "renderOrder": 10,
+                "color": "#606058",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "size": 14.4,
+                "priority": 25,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "ferry",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "ferry"]
+                ],
+                "technique": "dashed-line",
+                "renderOrder": 10,
+                "final": true,
+                "clipping": false,
+                "color": "#8E8F82",
+                "dashSize": [
+                    "step",
+                    ["zoom"],
+                    4000,
+                    7,
+                    2500,
+                    8,
+                    1500,
+                    9,
+                    1200,
+                    10,
+                    560,
+                    11,
+                    100,
+                    12,
+                    50,
+                    13,
+                    25,
+                    14,
+                    16,
+                    15,
+                    12,
+                    16,
+                    10
+                ],
+                "gapSize": [
+                    "step",
+                    ["zoom"],
+                    4000,
+                    7,
+                    2500,
+                    8,
+                    1500,
+                    9,
+                    1200,
+                    10,
+                    300,
+                    11,
+                    100,
+                    12,
+                    50,
+                    13,
+                    25,
+                    14,
+                    16,
+                    15,
+                    12,
+                    16,
+                    10
+                ],
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    5,
+                    320,
+                    6,
+                    160,
+                    7,
+                    80,
+                    8,
+                    40,
+                    9,
+                    15,
+                    10,
+                    9,
+                    11,
+                    6,
+                    12,
+                    3,
+                    13,
+                    1.5,
+                    14,
+                    1
+                ],
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "TODO",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    [
+                        "in",
+                        ["get", "kind_detail"],
+                        ["literal", ["driveway", "parking_aisle", "drive_through"]]
+                    ]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 10,
+                "final": true,
+                "color": "#BDB9AA",
+                "lineWidth": 5,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "pedestrian - background",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "path"],
+                    [
+                        "any",
+                        [
+                            "in",
+                            ["get", "kind_detail"],
+                            ["literal", ["pedestrian", "path", "footway"]]
+                        ],
+                        [
+                            "in",
+                            ["get", "landuse_kind"],
+                            [
+                                "literal",
+                                [
+                                    "park",
+                                    "residential",
+                                    "footway",
+                                    "garden",
+                                    "pedestrian",
+                                    "grass",
+                                    "allotments",
+                                    "forest",
+                                    "cemetery",
+                                    "natural_wood"
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 10.3,
+                "color": "#D2C9B1",
+                "lineWidth": 2,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "pedestrian - foreground",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "path"],
+                    [
+                        "any",
+                        [
+                            "in",
+                            ["get", "kind_detail"],
+                            ["literal", ["pedestrian", "path", "footway"]]
+                        ],
+                        [
+                            "in",
+                            ["get", "landuse_kind"],
+                            [
+                                "literal",
+                                [
+                                    "park",
+                                    "residential",
+                                    "footway",
+                                    "garden",
+                                    "pedestrian",
+                                    "grass",
+                                    "allotments",
+                                    "forest",
+                                    "cemetery",
+                                    "natural_wood"
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 12.3,
+                "color": "#CFCBBE",
+                "lineWidth": 1.5,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9,
+                "clipping": false
+            },
+            {
+                "description": "pedestrian - labels",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["!=", ["get", "kind"], "rail"],
+                    ["==", ["get", "kind"], "path"],
+                    [
+                        "any",
+                        [
+                            "in",
+                            ["get", "kind_detail"],
+                            ["literal", ["pedestrian", "path", "footway"]]
+                        ],
+                        [
+                            "in",
+                            ["get", "landuse_kind"],
+                            [
+                                "literal",
+                                [
+                                    "park",
+                                    "residential",
+                                    "footway",
+                                    "garden",
+                                    "pedestrian",
+                                    "grass",
+                                    "allotments",
+                                    "forest",
+                                    "cemetery",
+                                    "natural_wood"
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                "technique": "text",
+                "renderOrder": 12,
+                "color": "#363531",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "size": 16,
+                "priority": 15,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "tram",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "rail"],
+                    ["in", ["get", "kind_detail"], ["literal", ["rail", "light_rail", "tram"]]],
+                    ["==", ["get", "kind_detail"], "tram"]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 50,
+                "final": true,
+                "color": "#C4BFB1",
+                "lineWidth": ["interpolate", ["linear"], ["zoom"], 13, 1.5, 16, 0.75, 17, 0.4]
+            },
+            {
+                "description": "industrial_railway",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "rail"],
+                    ["in", ["get", "kind_detail"], ["literal", ["rail", "light_rail", "tram"]]],
+                    [
+                        "in",
+                        ["get", "service"],
+                        ["literal", ["siding", "industrial", "yard", "spur", "crossover"]]
+                    ]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 5,
+                "final": true,
+                "color": "#AFAB9D"
+            },
+            {
+                "description": "Railway+S-Bahn background",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "rail"],
+                    ["in", ["get", "kind_detail"], ["literal", ["rail", "light_rail", "tram"]]],
+                    ["!", ["get", "is_tunnel"]]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 5.2,
+                "color": "#AEA691",
+                "clipping": false,
+                "lineWidth": ["interpolate", ["linear"], ["zoom"], 13, 3.5, 14.6, 1.5, 15, 0.5]
+            },
+            {
+                "description": "Railway+S-Bahn background",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "rail"],
+                    ["in", ["get", "kind_detail"], ["literal", ["rail", "light_rail", "tram"]]],
+                    ["get", "is_tunnel"]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 5.1,
+                "color": "#B3AA92",
+                "clipping": false,
+                "lineWidth": ["interpolate", ["linear"], ["zoom"], 13, 3.5, 14, 2.5]
+            },
+            {
+                "description": "Railway+S-Bahn dashes",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "rail"],
+                    ["in", ["get", "kind_detail"], ["literal", ["rail", "light_rail", "tram"]]],
+                    ["!", ["get", "is_tunnel"]]
+                ],
+                "technique": "dashed-line",
+                "renderOrder": 5.25,
+                "final": true,
+                "color": "#9B9789",
+                "clipping": false,
+                "dashSize": 1,
+                "gapSize": ["step", ["zoom"], 100, 11, 40, 12, 24, 13, 30, 14, 25, 15, 15, 16, 8],
+                "lineWidth": ["interpolate", ["linear"], ["zoom"], 13.9, 3.5, 15, 1.75]
+            },
+            {
+                "description": "Railway+S-Bahn dashes",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "roads"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "rail"],
+                    ["in", ["get", "kind_detail"], ["literal", ["rail", "light_rail", "tram"]]],
+                    ["get", "is_tunnel"]
+                ],
+                "technique": "dashed-line",
+                "renderOrder": 5.15,
+                "final": true,
+                "color": "#D5D1C4",
+                "clipping": false,
+                "dashSize": ["step", ["zoom"], 100, 11, 40, 12, 24, 13, 30, 14, 25, 15, 15, 16, 8],
+                "gapSize": ["step", ["zoom"], 100, 11, 40, 12, 24, 13, 30, 14, 25, 15, 15, 16, 8],
+                "lineWidth": ["interpolate", ["linear"], ["zoom"], 13, 2.75, 14, 1.75]
+            },
+            {
+                "description": "water",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "water"],
+                    ["==", ["geometry-type"], "Polygon"]
+                ],
+                "technique": "fill",
+                "renderOrder": 5,
+                "color": "#B1AC9C"
+            },
+            {
+                "description": "water",
+                "when": ["==", ["get", "$layer"], "water"],
+                "technique": "text",
+                "color": "#696A60",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "opacity": 0.5,
+                "size": 12.8
+            },
+            {
+                "description": "country border",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "boundaries"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "country"]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 5,
+                "color": "#A7A291",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    1,
+                    5000,
+                    2,
+                    4000,
+                    3,
+                    3500,
+                    4,
+                    2500,
+                    5,
+                    1500,
+                    6,
+                    1000,
+                    7,
+                    500,
+                    8,
+                    250,
+                    9,
+                    125,
+                    10,
+                    60,
+                    11,
+                    40,
+                    12,
+                    20,
+                    13,
+                    10,
+                    14,
+                    5
+                ]
+            },
+            {
+                "description": "country border",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "boundaries"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "country"]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 5,
+                "color": "#8B8676",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    2,
+                    1000,
+                    3,
+                    700,
+                    4,
+                    500,
+                    5,
+                    250,
+                    6,
+                    110,
+                    7,
+                    45,
+                    8,
+                    25,
+                    9,
+                    15,
+                    10,
+                    10,
+                    11,
+                    7.5,
+                    12,
+                    5,
+                    13,
+                    2.5,
+                    14,
+                    1
+                ]
+            },
+            {
+                "description": "country border",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "boundaries"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "country"]
+                ],
+                "technique": "text",
+                "priority": 100,
+                "color": "#363532",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "size": 12.8
+            },
+            {
+                "description": "disputed border line",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "boundaries"],
+                    ["==", ["geometry-type"], "LineString"],
+                    [
+                        "in",
+                        ["get", "kind"],
+                        [
+                            "literal",
+                            [
+                                "disputed",
+                                "indefinite",
+                                "indeterminate",
+                                "lease_limit",
+                                "line_of_control",
+                                "overlay_limit"
+                            ]
+                        ]
+                    ]
+                ],
+                "technique": "dashed-line",
+                "renderOrder": 4.1,
+                "color": "#8B8676",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    2,
+                    4000,
+                    3,
+                    2600,
+                    4,
+                    1500,
+                    5,
+                    1000,
+                    6,
+                    720,
+                    7,
+                    520,
+                    8,
+                    270,
+                    9,
+                    140,
+                    10,
+                    90,
+                    11,
+                    60,
+                    12,
+                    30,
+                    13,
+                    15,
+                    14,
+                    10,
+                    15,
+                    5,
+                    16,
+                    2
+                ],
+                "dashSize": [
+                    "interpolate",
+                    ["cubic"],
+                    ["zoom"],
+                    10,
+                    1024,
+                    11,
+                    512,
+                    12,
+                    256,
+                    13,
+                    128,
+                    14,
+                    64
+                ],
+                "gapSize": [
+                    "interpolate",
+                    ["cubic"],
+                    ["zoom"],
+                    10,
+                    512,
+                    11,
+                    256,
+                    12,
+                    128,
+                    13,
+                    64,
+                    14,
+                    32
+                ]
+            },
+            {
+                "description": "disputed border line - text",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "boundaries"],
+                    ["==", ["geometry-type"], "LineString"],
+                    [
+                        "in",
+                        ["get", "kind"],
+                        [
+                            "literal",
+                            [
+                                "disputed",
+                                "indefinite",
+                                "indeterminate",
+                                "lease_limit",
+                                "line_of_control",
+                                "overlay_limit"
+                            ]
+                        ]
+                    ]
+                ],
+                "technique": "text",
+                "priority": 100,
+                "color": "#363532",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "size": 12.8
+            },
+            {
+                "description": "region border",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "boundaries"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "region"]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 4.1,
+                "color": "#7C7C7C",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    2,
+                    600,
+                    3,
+                    300,
+                    4,
+                    150,
+                    5,
+                    100,
+                    6,
+                    60,
+                    7,
+                    30,
+                    8,
+                    20,
+                    9,
+                    12,
+                    10,
+                    8,
+                    11,
+                    5,
+                    12,
+                    3,
+                    13,
+                    2,
+                    14,
+                    1
+                ]
+            },
+            {
+                "description": "region border",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "boundaries"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "region"]
+                ],
+                "technique": "solid-line",
+                "renderOrder": 4.1,
+                "color": "#7C7C7C",
+                "lineWidth": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    2,
+                    600,
+                    3,
+                    300,
+                    4,
+                    150,
+                    5,
+                    100,
+                    6,
+                    60,
+                    7,
+                    30,
+                    8,
+                    20,
+                    9,
+                    12,
+                    10,
+                    8,
+                    11,
+                    5,
+                    12,
+                    3,
+                    13,
+                    2,
+                    14,
+                    1
+                ]
+            },
+            {
+                "description": "region border",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "boundaries"],
+                    ["==", ["geometry-type"], "LineString"],
+                    ["==", ["get", "kind"], "region"]
+                ],
+                "technique": "text",
+                "priority": 90,
+                "color": "#363532",
+                "size": 12.8
+            },
+            {
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "boundaries"],
+                    ["==", ["geometry-type"], "Point"]
+                ],
+                "technique": "text",
+                "renderOrder": 7,
+                "color": "#363532",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "size": 27.2,
+                "priority": 200
+            },
+            {
+                "description": "urban",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["==", ["get", "kind"], "urban"]
+                ],
+                "technique": "fill",
+                "renderOrder": 0,
+                "opacity": 0.8,
+                "color": "#c9c3b3"
+            },
+            {
+                "description": "urban area",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["==", ["get", "kind"], "urban_area"]
+                ],
+                "technique": "none",
+                "renderOrder": 0.1,
+                "color": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    7,
+                    "#FAF6EF",
+                    8,
+                    "#FAF6EF",
+                    9,
+                    "#F2EEE5",
+                    10,
+                    "#F2EDE5",
+                    11,
+                    "#F1ECE3",
+                    12,
+                    "#FAF6EF"
+                ]
+            },
+            {
+                "description": "park",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    [
+                        "in",
+                        ["get", "kind"],
+                        [
+                            "literal",
+                            [
+                                "nature",
+                                "forest",
+                                "park",
+                                "wood",
+                                "natural_wood",
+                                "grass",
+                                "meadow",
+                                "village_green",
+                                "dog_park",
+                                "garden",
+                                "nature_reserve",
+                                "protected_area"
+                            ]
+                        ]
+                    ]
+                ],
+                "technique": "fill",
+                "renderOrder": 0.2,
+                "color": "#BEB9A8"
+            },
+            {
+                "description": "runway",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["==", ["get", "kind"], "runway"]
+                ],
+                "technique": "fill",
+                "renderOrder": 20,
+                "final": true,
+                "color": "#B8B2A1"
+            },
+            {
+                "description": "aerodrome",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["==", ["get", "kind"], "aerodrome"]
+                ],
+                "technique": "fill",
+                "renderOrder": 0.3,
+                "color": "#BCB5A6"
+            },
+            {
+                "description": "national_park",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["==", ["get", "kind"], "national_park"]
+                ],
+                "technique": "fill",
+                "renderOrder": 1,
+                "color": "#C0B9A4"
+            },
+            {
+                "description": "pitch",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["==", ["get", "kind"], "pitch"]
+                ],
+                "technique": "fill",
+                "renderOrder": 1,
+                "color": "#BCB6A6"
+            },
+            {
+                "description": "hospital",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["==", ["get", "kind"], "hospital"]
+                ],
+                "technique": "fill",
+                "renderOrder": 0.1,
+                "color": "#BEB7A7"
+            },
+            {
+                "description": "cemetery",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["==", ["get", "kind"], "cemetery"]
+                ],
+                "technique": "fill",
+                "renderOrder": 0.1,
+                "color": "#BCB6A6"
+            },
+            {
+                "description": "bridge",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["==", ["get", "kind"], "bridge"]
+                ],
+                "technique": "fill",
+                "renderOrder": 1,
+                "color": "#C4BFB0"
+            },
+            {
+                "description": "zoo",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    [
+                        "in",
+                        ["get", "kind"],
+                        ["literal", ["sport", "sports_centre", "attraction", "zoo"]]
+                    ]
+                ],
+                "technique": "fill",
+                "renderOrder": 1,
+                "color": "#B9B3A3"
+            },
+            {
+                "description": "religion",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["==", ["get", "kind"], "religion"]
+                ],
+                "technique": "fill",
+                "renderOrder": 1,
+                "color": "#EAF0E7"
+            },
+            {
+                "description": "industrial",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    [
+                        "in",
+                        ["get", "kind"],
+                        ["literal", ["common", "surface", "commercial", "military", "industrial"]]
+                    ]
+                ],
+                "technique": "fill",
+                "renderOrder": 0,
+                "color": "#BCB5A6"
+            },
+            {
+                "description": "farmyard",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    [
+                        "in",
+                        ["get", "kind"],
+                        ["literal", ["animal", "aviary", "zoo", "farm", "farmland", "farmyard"]]
+                    ]
+                ],
+                "technique": "fill",
+                "renderOrder": 0,
+                "color": "#F5F3DE"
+            },
+            {
+                "description": "beach",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "landuse"],
+                    ["==", ["geometry-type"], "Polygon"],
+                    ["any", ["==", ["get", "kind"], "beach"], ["$=", ["get", "kind"], "_site"]]
+                ],
+                "technique": "fill",
+                "renderOrder": 1,
+                "color": "#E0DBC8"
+            },
+            {
+                "description": "Earth layer",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "earth"],
+                    ["!=", ["get", "kind"], "island"]
+                ],
+                "technique": "text",
+                "priority": ["interpolate", ["linear"], ["zoom"], 2, 120, 3, 100, 4, 60],
+                "color": "#777065",
+                "fontVariant": "SmallCaps",
+                "opacity": 0.6
+            },
+            {
+                "description": "Earth layer",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "earth"],
+                    ["==", ["get", "kind"], "island"]
+                ],
+                "technique": "text",
+                "color": "#8F8B7B",
+                "opacity": 0.6,
+                "size": 16
+            },
+            {
+                "description": "country_pop_>10000000",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "country"],
+                    [">", ["number", ["get", "population"], 0], 10000000]
+                ],
+                "technique": "text",
+                "final": true,
+                "priority": 100,
+                "size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    1,
+                    11.2,
+                    2,
+                    12.8,
+                    3,
+                    19.2,
+                    4,
+                    22.4,
+                    5,
+                    25.6
+                ],
+                "color": "#777065",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "fontVariant": "SmallCaps",
+                "opacity": 0.8,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "country_pop_>1000000",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "country"],
+                    [">", ["number", ["get", "population"], 0], 1000000]
+                ],
+                "technique": "text",
+                "final": true,
+                "priority": 100,
+                "size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    1,
+                    8,
+                    2,
+                    9.6,
+                    3,
+                    12.8,
+                    4,
+                    16,
+                    5,
+                    19.2
+                ],
+                "color": "#777065",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "fontVariant": "SmallCaps",
+                "opacity": 0.8,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "country",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "country"]
+                ],
+                "technique": "text",
+                "final": true,
+                "priority": 90,
+                "size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    1,
+                    6.4,
+                    2,
+                    11.2,
+                    3,
+                    9.6,
+                    4,
+                    12.8,
+                    5,
+                    16
+                ],
+                "color": "#777065",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "fontVariant": "SmallCaps",
+                "opacity": 0.8,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "Places",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "region"]
+                ],
+                "technique": "none",
+                "size": ["interpolate", ["linear"], ["zoom"], 3, 9.6, 4, 10.88, 5, 12.8, 6, 14.4],
+                "priority": 65,
+                "color": "#413F39",
+                "fontVariant": "SmallCaps",
+                "opacity": 0.8,
+                "textFadeTime": 0.75,
+                "iconFadeTime": 0.5,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "locality_pop_>10000000",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "locality"],
+                    [
+                        "any",
+                        [">", ["number", ["get", "population"], 0], 10000000],
+                        ["has", "country_capital"]
+                    ]
+                ],
+                "technique": "text",
+                "final": true,
+                "fontStyle": "Bold",
+                "priority": 61,
+                "size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    1,
+                    9.6,
+                    2,
+                    11.2,
+                    3,
+                    12.8,
+                    4,
+                    14.4,
+                    5,
+                    16,
+                    6,
+                    19.2,
+                    7,
+                    22.4,
+                    8,
+                    25.6,
+                    9,
+                    28.8,
+                    10,
+                    32
+                ],
+                "color": "#41403B",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "locality_pop_>10000000",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "locality"],
+                    [
+                        "any",
+                        [">", ["number", ["get", "population"], 0], 10000000],
+                        ["has", "country_capital"]
+                    ]
+                ],
+                "technique": "text",
+                "final": true,
+                "priority": 61,
+                "size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    1,
+                    9.6,
+                    2,
+                    11.2,
+                    3,
+                    12.8,
+                    4,
+                    14.4,
+                    5,
+                    16,
+                    6,
+                    19.2,
+                    7,
+                    22.4,
+                    8,
+                    25.6,
+                    9,
+                    28.8,
+                    10,
+                    32
+                ],
+                "color": "#41403B",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "locality_pop_>1000000",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "locality"],
+                    [
+                        "any",
+                        [">", ["number", ["get", "population"], 0], 1000000],
+                        ["has", "region_capital"]
+                    ]
+                ],
+                "technique": "text",
+                "final": true,
+                "priority": 60,
+                "size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    2,
+                    9.6,
+                    3,
+                    11.2,
+                    4,
+                    12.8,
+                    5,
+                    14.4,
+                    6,
+                    16,
+                    7,
+                    19.2,
+                    8,
+                    22.4,
+                    9,
+                    25.6,
+                    10,
+                    28.8,
+                    11,
+                    32
+                ],
+                "color": "#41403B",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "locality_pop_>400000",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "locality"],
+                    ["has", "population"],
+                    [">", ["get", "population"], 400000]
+                ],
+                "technique": "text",
+                "final": true,
+                "priority": 59,
+                "size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    4,
+                    11.2,
+                    5,
+                    12.8,
+                    6,
+                    16,
+                    7,
+                    19.2,
+                    8,
+                    22.4,
+                    9,
+                    24,
+                    10,
+                    25.6,
+                    11,
+                    27.2
+                ],
+                "color": "#41403B",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "locality_pop_>100000",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "locality"],
+                    ["has", "population"],
+                    [">", ["get", "population"], 100000]
+                ],
+                "technique": "text",
+                "final": true,
+                "priority": 58,
+                "size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    4,
+                    9.6,
+                    5,
+                    11.2,
+                    6,
+                    12.8,
+                    7,
+                    16,
+                    8,
+                    19.2,
+                    9,
+                    20.8,
+                    10,
+                    22.4,
+                    11,
+                    24,
+                    12,
+                    25.6
+                ],
+                "color": "#41403B",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "locality_pop_>50000",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "locality"],
+                    ["has", "population"],
+                    [">", ["get", "population"], 50000]
+                ],
+                "technique": "text",
+                "final": true,
+                "priority": 57,
+                "size": ["interpolate", ["linear"], ["zoom"], 10, 16, 11, 19.2, 12, 22.4, 13, 24],
+                "color": "#41403B",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "locality_pop_>10000",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "locality"],
+                    ["has", "population"],
+                    [">", ["get", "population"], 10000]
+                ],
+                "technique": "text",
+                "final": true,
+                "priority": 56,
+                "size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    16,
+                    12,
+                    17.6,
+                    13,
+                    19.2,
+                    14,
+                    20.8,
+                    15,
+                    22.4
+                ],
+                "color": "#41403B",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "locality_pop_<=10000",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "places"],
+                    ["==", ["get", "kind"], "locality"],
+                    ["has", "population"],
+                    ["<=", ["get", "population"], 10000]
+                ],
+                "technique": "text",
+                "final": true,
+                "priority": 50,
+                "size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    12.8,
+                    12,
+                    14.4,
+                    13,
+                    16,
+                    14,
+                    17.6,
+                    15,
+                    19.2
+                ],
+                "color": "#41403B",
+                "backgroundColor": "#FFFFFF",
+                "backgroundOpacity": 0.5,
+                "textFadeTime": 0.75,
+                "fadeNear": 0.8,
+                "fadeFar": 0.9
+            },
+            {
+                "description": "building_geometry",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "buildings"],
+                    ["==", ["geometry-type"], "Polygon"]
+                ],
+                "technique": "extruded-polygon",
+                "minZoomLevel": 16,
+                "renderOrder": 2000,
+                "color": "#F2ECE0",
+                "opacity": 0.7,
+                "roughness": 1,
+                "metalness": 0.9,
+                "emissive": "#DFD6C6",
+                "emissiveIntensity": 0.84,
+                "footprint": true,
+                "maxSlope": 0.8799999999999999,
+                "lineWidth": 1,
+                "lineColor": "#BFBCB2",
+                "lineColorMix": 0,
+                "fadeNear": 0.9,
+                "fadeFar": 1,
+                "lineFadeNear": 0.1,
+                "lineFadeFar": 0.7
+            },
+            {
+                "description": "building_address",
+                "when": [
+                    "all",
+                    ["==", ["get", "$layer"], "buildings"],
+                    ["==", ["geometry-type"], "Point"],
+                    ["==", ["get", "kind"], "address"]
+                ],
+                "minZoomLevel": 18,
+                "technique": "text",
+                "renderOrder": 100,
+                "color": "#C0BDB1",
+                "label": "addr_housenumber",
+                "size": 14.4,
+                "opacity": 0.6,
+                "lineWidth": 1,
+                "fadeNear": 0.9,
+                "fadeFar": 1
+            }
+        ]
+    }
+}
