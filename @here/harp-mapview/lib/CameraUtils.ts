@@ -72,12 +72,13 @@ function setCameraParams(
 ): void {
     const viewportWidth = viewportHeight * camera.aspect;
     let hFov = computeFov(focalLength, ppalPoint.x, viewportWidth);
+    let adjustedFocalLength = focalLength;
 
     if (hFov < MIN_FOV_RAD || hFov > MAX_FOV_RAD) {
         // Invalid horizontal fov, clamp and compute again focal length and vertical fov.
         hFov = THREE.MathUtils.clamp(hFov, MIN_FOV_RAD, MAX_FOV_RAD);
-        const focalLength = computeFocalLengthFromFov(hFov, viewportWidth, ppalPoint.x);
-        verticalFov = computeFov(focalLength, ppalPoint.y, viewportHeight);
+        adjustedFocalLength = computeFocalLengthFromFov(hFov, viewportWidth, ppalPoint.x);
+        verticalFov = computeFov(adjustedFocalLength, ppalPoint.y, viewportHeight);
     }
 
     camera.fov = THREE.MathUtils.radToDeg(verticalFov);
@@ -87,12 +88,12 @@ function setCameraParams(
     } else {
         const width = viewportHeight * camera.aspect;
         camera.userData.fovs = {
-            top: computePosSideFov(focalLength, ppalPoint.y, viewportHeight),
-            right: computePosSideFov(focalLength, ppalPoint.x, width),
+            top: computePosSideFov(adjustedFocalLength, ppalPoint.y, viewportHeight),
+            right: computePosSideFov(adjustedFocalLength, ppalPoint.x, width),
             horizontal: hFov
         } as Fovs;
     }
-    camera.userData.focalLength = focalLength;
+    camera.userData.focalLength = adjustedFocalLength;
 }
 
 /**

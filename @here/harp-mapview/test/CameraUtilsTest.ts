@@ -167,4 +167,31 @@ describe("CameraUtils", function () {
             expect(actualPpOffset.y).lt(ppOffset.y).and.closeTo(ppOffset.y, 1e-3);
         });
     });
+
+    describe("horizontal fov clamping with focal length adjustment", function () {
+        it("correctly adjusts focal length when horizontal fov exceeds limits", function () {
+            // Set up a wide aspect ratio camera that would cause horizontal FOV issues
+            camera.aspect = 3.0; // Very wide aspect ratio
+            const height = 100;
+            const ppalPoint = { x: 0.8, y: 0 }; // Off-center principal point
+
+            CameraUtils.setPrincipalPoint(camera, ppalPoint);
+
+            // Set a vertical FOV that would result in horizontal FOV exceeding MAX_FOV_RAD
+            const verticalFov = Math.PI / 2; // 90 degrees
+            CameraUtils.setVerticalFov(camera, verticalFov, height);
+
+            // Verify that the focal length was adjusted correctly
+            const adjustedFocalLength = CameraUtils.getFocalLength(camera);
+            expect(adjustedFocalLength).to.be.greaterThan(0);
+
+            // Verify that horizontal FOV is within limits
+            const horizontalFov = CameraUtils.getHorizontalFov(camera);
+            expect(horizontalFov).to.be.at.most(MAX_FOV_RAD);
+
+            // Verify that the camera's FOV calculations are consistent
+            const expectedVerticalFov = CameraUtils.getVerticalFov(camera);
+            expect(expectedVerticalFov).to.be.greaterThan(0).and.at.most(MAX_FOV_RAD);
+        });
+    });
 });
